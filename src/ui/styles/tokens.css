@@ -182,8 +182,10 @@ body {
 }
 
 body {
-  font-family: "TAP Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
-  line-height: 1.2;
+  /* Keep the same interface type stack as TAPtoTALK. The bundled face stays
+     available for artwork-specific use, but screen copy follows the native
+     Korean UI font and its metrics. */
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
   color: var(--ink);
   /* The root owns it — see above. Painting it here as well would cover the
      root's colour over the app's own box, which is the whole screen. */

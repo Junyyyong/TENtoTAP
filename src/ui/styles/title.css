@@ -199,8 +199,20 @@
     width: min(58vw, 215px);
   }
 
+  .mode-list {
+    gap: 7px;
+  }
+
   .mode-btn {
-    padding: 12px 18px;
+    padding: 10px 18px;
+  }
+
+  .mode-name {
+    font-size: 19px;
+  }
+
+  .mode-desc {
+    font-size: 12px;
   }
 }
 
