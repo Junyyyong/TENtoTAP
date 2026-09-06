@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "TAP Sans KR";
+  src: url("/assets/fonts/NotoSansKR-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 /*
  * The palette comes off the wordmark: cyan-to-blue, pink-to-purple, and one
  * orange for the things that need to be found. Nothing else. If a new colour
@@ -174,7 +182,8 @@ body {
 }
 
 body {
-  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+  font-family: "TAP Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  line-height: 1.2;
   color: var(--ink);
   /* The root owns it — see above. Painting it here as well would cover the
      root's colour over the app's own box, which is the whole screen. */
