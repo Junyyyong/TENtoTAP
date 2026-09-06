@@ -76,3 +76,30 @@
 .tutorial-foot .wood-btn.hidden {
   display: none;
 }
+
+/* Match TAPtoTALK's gentle gold pulse on the next interaction targets. */
+.tutorial-screen .tutorial-target {
+  position: relative;
+  z-index: 1;
+  outline: 2px solid var(--warm);
+  outline-offset: 2px;
+  animation: tutorial-glow 1.1s ease-in-out infinite;
+}
+
+@keyframes tutorial-glow {
+  0%, 100% {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .42),
+      0 2px 0 var(--slab), 0 0 0 0 rgba(253, 208, 0, .18);
+  }
+  50% {
+    transform: translateY(-2px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .55),
+      0 3px 0 var(--slab), 0 0 0 7px rgba(253, 208, 0, .38);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tutorial-screen .tutorial-target {
+    animation: none;
+  }
+}

@@ -32,6 +32,8 @@ export interface BoardViewOptions {
    * small teaching board would blow up to enormous tiles without a cap.
    */
   maxTilePx?: number;
+  /** Persistent practice targets; selected tiles stop glowing. */
+  guidance?(): readonly number[];
 }
 
 /**
@@ -503,6 +505,7 @@ export class BoardView {
     const selected = new Set(this.selection);
     const hinted = new Set(this.hinted);
     const busted = new Set(this.busted);
+    const guided = new Set(this.options.guidance?.() ?? []);
     this.board.cells.forEach((cell, i) => {
       const tile = this.tiles[i]!;
       tile.textContent = cell.value > 0 ? String(cell.value) : "";
@@ -515,6 +518,7 @@ export class BoardView {
         selected.has(i) ? "sel" : "",
         busted.has(i) ? "bust" : "",
         hinted.has(i) ? "hint" : "",
+        guided.has(i) && !cell.cleared && !selected.has(i) ? "tutorial-target" : "",
       ]
         .filter(Boolean)
         .join(" ");

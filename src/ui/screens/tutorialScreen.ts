@@ -1,4 +1,5 @@
 import { isSelectionValid } from "../../core/rules";
+import { findHint } from "../../core/solver";
 import { nextTutorialStep, playTutorial, startTutorial } from "../../core/tutorialRun";
 import type { TutorialState } from "../../core/tutorialRun";
 import { TUTORIAL_STEPS } from "../../content/tutorial";
@@ -16,6 +17,7 @@ export class TutorialScreen {
   private onFinish: (() => void) | null = null;
   /** How many blocks the selection held last time it changed. */
   private held = 0;
+  private targets: readonly number[] = [];
 
   private readonly view: BoardView;
   private readonly instruction = el<HTMLParagraphElement>("tutorial-instruction");
@@ -40,6 +42,7 @@ export class TutorialScreen {
         this.held = values.length;
       },
       maxTilePx: 74,
+      guidance: () => this.targets,
     });
     this.nextBtn.addEventListener("click", () => this.advance());
     el<HTMLButtonElement>("btn-tutorial-skip").addEventListener("click", () => this.finish());
@@ -85,9 +88,11 @@ export class TutorialScreen {
 
   private render(): void {
     const step = TUTORIAL_STEPS[this.state.index]!;
+    this.targets = this.state.solved ? [] : findHint(this.state.board) ?? [];
     this.instruction.textContent = step.instruction;
     this.reward.textContent = this.state.solved ? step.reward : "";
     this.nextBtn.classList.toggle("hidden", !this.state.solved);
+    this.nextBtn.classList.toggle("tutorial-target", this.state.solved);
     this.nextBtn.textContent =
       this.state.index >= TUTORIAL_STEPS.length - 1 ? "Start" : "Next";
     if (this.state.solved) this.view.setInteractive(false);
