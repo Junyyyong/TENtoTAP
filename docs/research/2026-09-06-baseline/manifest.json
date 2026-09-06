@@ -1,0 +1,249 @@
+{
+  "capturedAt": "2026-09-06T11:58:13.714Z",
+  "revision": "6542a95f1f7a831fcdcc59f57d421e1432fdf4bc",
+  "sourceChanges": "",
+  "browser": "152.0.7977.76",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 4,
+  "method": "Local source; mobile Chromium emulation; controlled clock; seeded Math.random; fresh browser storage; finite transitions finished before capture, repeating guidance retained. Not an actual phone photograph or participant study.",
+  "captures": [
+    {
+      "id": "01-studio",
+      "caption": "커버 전 스튜디오 로고. 투명 PNG의 흰 글씨 포함.",
+      "file": "screenshots/01-studio.png",
+      "sha256": "96e0acdee26e431af20d4df7b50142e67cef2c46c55330414286f438677c6446",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "0%",
+        "00:00",
+        "0"
+      ]
+    },
+    {
+      "id": "02-cover",
+      "caption": "현재 커버. 모바일 화면에 맞춘 실제 표시 범위.",
+      "file": "screenshots/02-cover.png",
+      "sha256": "7725870b20509b201beef67eb8994b5a137ca26149916c2c839bb511d32cf200",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "0%",
+        "00:00",
+        "0"
+      ]
+    },
+    {
+      "id": "03-menu",
+      "caption": "세 게임 모드와 하단 메뉴.",
+      "file": "screenshots/03-menu.png",
+      "sha256": "9238b828967997c81eb7483491792cff53370c41c2e6a9a21d2f7117df54fa44",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "0%",
+        "00:00",
+        "0"
+      ]
+    },
+    {
+      "id": "04-level-select",
+      "caption": "60초 아이콘, 색으로 구분한 레벨 4개와 최고기록. 신규 프로필.",
+      "file": "screenshots/04-level-select.png",
+      "sha256": "27d3e914a7d6e9298c12923a6a39fce362a096b92123ef4ae1357d3b4d1351e9",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "0%",
+        "00:00",
+        "0"
+      ]
+    },
+    {
+      "id": "05-level-1",
+      "caption": "LEVEL 1 시작 판: 2×2.",
+      "file": "screenshots/05-level-1.png",
+      "sha256": "c9716662a58021627b1a92257f9704ac7b6581e4765375778c90e4d3a9a95b1c",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "01:00",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "id": "06-level-2",
+      "caption": "LEVEL 2 시작 판: 5×5.",
+      "file": "screenshots/06-level-2.png",
+      "sha256": "3f349abf6588647300f4225dd4fb02f2146f5f8601276f3bd8fbbc4f6d5e36a0",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "01:00",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "id": "07-level-3",
+      "caption": "LEVEL 3 시작 판: 7×7.",
+      "file": "screenshots/07-level-3.png",
+      "sha256": "bf272623de5dbda54b64ae020ba6be4adb6a7db268eac706f728689d883f2265",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "01:00",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "id": "08-level-4",
+      "caption": "LEVEL 4 시작 판: 9×9.",
+      "file": "screenshots/08-level-4.png",
+      "sha256": "e697f76b075332d1f5a1b9338581691739292604e2227087b6c4235026bab0fe",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "01:00",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "id": "09-endless-intro",
+      "caption": "endless 시작 안내.",
+      "file": "screenshots/09-endless-intro.png",
+      "sha256": "768bd99b878748b0fbaa1d741bc087ebef8a0ada7b71b28fc032e20f216008d3",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "01:00",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "id": "10-endless-game",
+      "caption": "endless 초기 게임판.",
+      "file": "screenshots/10-endless-game.png",
+      "sha256": "cfee21fe634f3e418d01e02413343bf526f5460c61813790cc61335bad7f6ba6",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "00:01",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "id": "09-timeless-intro",
+      "caption": "timeless 시작 안내.",
+      "file": "screenshots/09-timeless-intro.png",
+      "sha256": "49d2330fa46dfcae77eaeafbe8d332b58d08bb8090bf416bec56617195e13e35",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "00:01",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "id": "10-timeless-game",
+      "caption": "timeless 초기 게임판.",
+      "file": "screenshots/10-timeless-game.png",
+      "sha256": "66f31dfb27964c4cdcd3283065533067f88fc3c119a9c60f1a61722ffed69eb1",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "81",
+        "0",
+        "00:01"
+      ]
+    },
+    {
+      "id": "11-tutorial-1",
+      "caption": "How to Play 1단계. 금빛 안내 효과의 한 프레임.",
+      "file": "screenshots/11-tutorial-1.png",
+      "sha256": "ccae847ebb9fe2db876f3ef0f4af841979dcb6726e6deb22291f4a056b84d38e",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "81",
+        "0",
+        "00:01"
+      ]
+    },
+    {
+      "id": "12-tutorial-success",
+      "caption": "첫 연습 성공 후 Next 안내.",
+      "file": "screenshots/12-tutorial-success.png",
+      "sha256": "78ec3742604e2ef5a3ce1633107d00221f198fa5f2f61fd2b3d0c2377bb37878",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "81",
+        "0",
+        "00:01"
+      ]
+    },
+    {
+      "id": "11-tutorial-2",
+      "caption": "How to Play 2단계. 금빛 안내 효과의 한 프레임.",
+      "file": "screenshots/11-tutorial-2.png",
+      "sha256": "d1b2f112d6cf7b03317f632d293bb6bd689ec2b4841aede5d05fe8a46ce8802a",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "81",
+        "0",
+        "00:01"
+      ]
+    },
+    {
+      "id": "11-tutorial-3",
+      "caption": "How to Play 3단계. 금빛 안내 효과의 한 프레임.",
+      "file": "screenshots/11-tutorial-3.png",
+      "sha256": "a89c801df9dcb01f0cd97230a565eaa02be0da9649b82f3d2a0860436860a5a7",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "81",
+        "0",
+        "00:01"
+      ]
+    },
+    {
+      "id": "11-tutorial-4",
+      "caption": "How to Play 4단계. 금빛 안내 효과의 한 프레임.",
+      "file": "screenshots/11-tutorial-4.png",
+      "sha256": "4cac912a328969ac59df9630c8c1d84b21ead9fb12655aa22673e2687919d345",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "81",
+        "0",
+        "00:01"
+      ]
+    },
+    {
+      "id": "11-tutorial-5",
+      "caption": "How to Play 5단계. 금빛 안내 효과의 한 프레임.",
+      "file": "screenshots/11-tutorial-5.png",
+      "sha256": "0c12630813dec6ca148806a3be9aa3507893f83f3213fdb10fd5c4357d23e4c7",
+      "width": 1560,
+      "height": 3376,
+      "displayedClock": [
+        "81",
+        "0",
+        "00:01"
+      ]
+    }
+  ],
+  "errors": []
+}
