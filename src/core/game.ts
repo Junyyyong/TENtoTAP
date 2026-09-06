@@ -21,6 +21,8 @@ import type { Board, MatchResult, RunConfig } from "./types";
 export type GameStatus = "playing" | "won" | "lost" | "timeUp";
 
 export interface GameState {
+  boardsCleared?: number;
+  transitionMs?: number;
   config: RunConfig;
   board: Board;
   score: number;
@@ -131,6 +133,14 @@ function settleStatus(state: GameState): GameState {
   if (state.config.mode === "timeAttack") {
     if (state.remainingMs <= 0) return { ...state, status: "timeUp" };
     if (aliveCount(state.board) === 0 || !hasAnyMove(state.board, targetsOf(state.config))) {
+      if (state.config.timeAttackLevel) {
+        const cleared = aliveCount(state.board) === 0;
+        const size = Math.min(state.config.width + (cleared ? 1 : 0), state.config.maxBoardSize!);
+        const config = { ...state.config, width: size, rows: size };
+        const dealt = dealBoard(config, state.nextSeed);
+        return { ...state, config, ...dealt, startingCells: dealt.board.cells.length,
+          boardsCleared: (state.boardsCleared ?? 0) + (cleared ? 1 : 0), transitionMs: 350 };
+      }
       const dealt = dealBoard(state.config, state.nextSeed);
       return { ...state, board: dealt.board, nextSeed: dealt.nextSeed, status: "playing" };
     }
@@ -175,6 +185,11 @@ export function newGame(config: RunConfig, seed: number = randomSeed()): GameSta
  */
 export function tick(state: GameState, deltaMs: number): GameState {
   if (state.status !== "playing") return state;
+  if (state.transitionMs) {
+    const paused = Math.min(deltaMs, state.transitionMs);
+    state = { ...state, transitionMs: state.transitionMs - paused };
+    deltaMs -= paused;
+  }
   let next: GameState = { ...state, elapsedMs: state.elapsedMs + deltaMs };
 
   if (next.config.timeLimitMs !== undefined) {
@@ -304,6 +319,7 @@ export type Payout = "none" | "tiles" | "extension";
  * would drift the moment the thresholds moved.
  */
 export function payoutFor(state: GameState, before: number): Payout {
+  if (state.config.timeAttackLevel) return "none";
   if (state.config.mode !== "timeAttack") return "none";
   if (before < EXTENSION_AT && state.score >= EXTENSION_AT) return "extension";
   if (Math.floor(state.score / BONUS_EVERY) > Math.floor(before / BONUS_EVERY)) return "tiles";

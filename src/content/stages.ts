@@ -80,6 +80,14 @@ export const TIME_ATTACK_CONFIG: RunConfig = {
   keepBoard: true,
 };
 
+export function timeAttackConfig(level: number): RunConfig {
+  const ranges = [[2, 4], [5, 6], [7, 8], [9, 9]] as const;
+  const selected = Number.isInteger(level) && level >= 1 && level <= 4 ? level : 1;
+  const [width, maxBoardSize] = ranges[selected - 1]!;
+  return { ...TIME_ATTACK_CONFIG, deck: undefined, width, rows: width,
+    timeAttackLevel: selected, maxBoardSize };
+}
+
 /**
  * Endless is a survival mode: tiles keep landing and the run ends when a batch
  * has nowhere to go. The gap between batches shrinks as the run goes on, which

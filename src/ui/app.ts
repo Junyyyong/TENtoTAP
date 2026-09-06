@@ -16,7 +16,7 @@ import type { GameMode, RunConfig } from "../core/types";
 import { TOTAL_STAGES, chapterFor, isChapterFinale } from "../content/chapters";
 import { artFor, plateFor } from "../content/gallery";
 import type { Chapter } from "../content/chapters";
-import { TIMELESS_CONFIG, ENDLESS_CONFIG, TIME_ATTACK_CONFIG, stageConfig } from "../content/stages";
+import { TIMELESS_CONFIG, ENDLESS_CONFIG, TIME_ATTACK_CONFIG, stageConfig, timeAttackConfig } from "../content/stages";
 import { BoardView } from "./boardView";
 import { AppStateMachine } from "./appStateMachine";
 import { feedback } from "./feedback";
@@ -164,7 +164,7 @@ export class App {
       () => this.showChapters(),
     );
     this.intro = new IntroScreen(
-      (mode) => this.startMode(mode),
+      (mode, level) => this.startMode(mode, level),
       () => this.showTitle(),
     );
     this.settingsScreen = new SettingsScreen(
@@ -344,7 +344,7 @@ export class App {
     this.showTitle();
   }
 
-  private startMode(mode: GameMode): void {
+  private startMode(mode: GameMode, level = 1): void {
     if (mode === "story") {
       this.startStage(Math.min(this.progress.stage, TOTAL_STAGES));
       return;
@@ -353,7 +353,7 @@ export class App {
       this.daily = { ...this.daily, games: this.daily.games + 1 };
       saveDaily(this.daily);
     }
-    this.beginRun(CONFIGS[mode] ?? ENDLESS_CONFIG);
+    this.beginRun(mode === "timeAttack" ? timeAttackConfig(level) : CONFIGS[mode] ?? ENDLESS_CONFIG);
   }
 
   private startStage(stage: number): void {
@@ -434,6 +434,7 @@ export class App {
     this.state = state;
     this.recordScore();
     this.announceReward(before, state);
+    if (state.transitionMs) this.view.setBoard(state.board);
     this.render();
   }
 
@@ -551,8 +552,11 @@ export class App {
         this.progress = { ...this.progress, bestEndless: this.state.score };
         saveProgress(this.progress);
       }
-    } else if (mode === "timeAttack" && this.state.score > this.progress.bestTimeAttack) {
-      this.progress = { ...this.progress, bestTimeAttack: this.state.score };
+    } else if (mode === "timeAttack" && this.state.config.timeAttackLevel) {
+      const index = this.state.config.timeAttackLevel - 1;
+      const bestTimeAttackLevels = [...this.progress.bestTimeAttackLevels];
+      bestTimeAttackLevels[index] = Math.max(bestTimeAttackLevels[index] ?? 0, this.state.score);
+      this.progress = { ...this.progress, bestTimeAttackLevels };
       saveProgress(this.progress);
     } else if (mode === "timeless") {
       // Two records, and the one that counts is the second: the mode asks for
@@ -580,7 +584,7 @@ export class App {
       this.state.config.mode === "story"
         ? this.progress.bestStory
         : this.state.config.mode === "timeAttack"
-          ? this.progress.bestTimeAttack
+          ? this.progress.bestTimeAttackLevels[(this.state.config.timeAttackLevel ?? 1) - 1] ?? 0
           : this.state.config.mode === "timeless"
             ? this.progress.bestTimeless
             : this.progress.bestEndless;
@@ -588,6 +592,10 @@ export class App {
     // The board is a new object whenever anything changes it, tiles arriving
     // on their own timer included, so the view is re-pointed every render.
     this.view.sync(this.state.board);
+    if (this.state.config.timeAttackLevel) {
+      this.view.setInteractive(this.state.status === "playing" && !this.state.transitionMs);
+    }
+    el("screen-game").classList.toggle("board-arriving", !!this.state.transitionMs);
     if (this.state.status !== "playing" && this.flow.current === "inGame") this.finishRun();
   }
 
@@ -621,8 +629,9 @@ export class App {
       this.cheer.play("TIME OUT", score, () =>
         this.overlay.open({
           title: "Time up",
-          body: `Score ${score}\nBest ${this.progress.bestTimeAttack}`,
-          primary: { label: "Play again", action: () => this.startMode("timeAttack") },
+          body: `LEVEL ${config.timeAttackLevel}\nScore ${score}\nBoards cleared ${this.state.boardsCleared ?? 0}\nBest ${this.progress.bestTimeAttackLevels[(config.timeAttackLevel ?? 1) - 1] ?? 0}`,
+          primary: { label: "Play again", action: () => this.startMode("timeAttack", config.timeAttackLevel) },
+          secondary: { label: "Level select", action: () => this.showIntro("timeAttack") },
         }),
       );
       return;

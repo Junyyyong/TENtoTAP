@@ -40,6 +40,8 @@ export interface SpawnConfig {
  * rules themselves never change — only the board, the goal and the resources.
  */
 export interface RunConfig {
+  timeAttackLevel?: number;
+  maxBoardSize?: number;
   mode: GameMode;
   /** Board columns and rows. The board never grows, so this is its final size. */
   width: number;

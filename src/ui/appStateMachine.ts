@@ -27,7 +27,7 @@ const ALLOWED: Readonly<Record<AppState, readonly AppState[]>> = {
   paused: ["inGame", "mainMenu"],
   // The results panel offers the gallery, because the picture it just
   // handed over is in there.
-  result: ["inGame", "mainMenu", "story", "gallery", "stages"],
+  result: ["inGame", "mainMenu", "story", "gallery", "stages", "intro"],
   story: ["inGame", "mainMenu", "result"],
   gallery: ["mainMenu"],
   // Settings is a screen now, and the tutorial is reachable from it.

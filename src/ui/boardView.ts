@@ -475,7 +475,7 @@ export class BoardView {
     const byWidth = (box.width - padX - gap * (width - 1)) / width;
 
     const byHeight = (this.options.wrap.clientHeight - padY - gap * (rows - 1)) / rows;
-    const cap = this.options.maxTilePx ?? Infinity;
+    const cap = this.options.maxTilePx ?? 74;
     const tile = Math.max(MIN_TILE_PX, Math.floor(Math.min(byWidth, byHeight, cap)));
 
     // Re-measuring on every observer callback is cheap; re-writing the styles

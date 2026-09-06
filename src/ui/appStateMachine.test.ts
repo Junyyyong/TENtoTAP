@@ -54,9 +54,9 @@ describe("AppStateMachine", () => {
     machine.enter("intro");
     machine.enter("inGame");
     expect(machine.current).toBe("inGame");
-    // And the run replays from its own result panel, never back through here.
+    // Results can return here to choose another level.
     machine.enter("result");
-    expect(machine.canEnter("intro")).toBe(false);
+    expect(machine.canEnter("intro")).toBe(true);
   });
 
   it("rejects transitions that would skip required cleanup", () => {

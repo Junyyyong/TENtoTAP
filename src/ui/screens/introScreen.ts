@@ -37,13 +37,31 @@ export class IntroScreen {
   private readonly stats = el<HTMLElement>("intro-stats");
   private mode: GameMode = "timeAttack";
 
-  constructor(onStart: (mode: GameMode) => void, onBack: () => void) {
+  constructor(private readonly onStart: (mode: GameMode, level?: number) => void, onBack: () => void) {
     el<HTMLButtonElement>("btn-intro-back").addEventListener("click", onBack);
     el<HTMLButtonElement>("btn-intro-start").addEventListener("click", () => onStart(this.mode));
   }
 
   render(mode: GameMode, progress: Progress, bestEndlessTime: number): void {
     this.mode = mode;
+    const timed = mode === "timeAttack";
+    el("screen-intro").classList.toggle("has-levels", timed);
+    el("btn-intro-start").classList.toggle("hidden", timed);
+    this.stats.classList.toggle("hidden", timed);
+    const levels = el("time-levels");
+    levels.classList.toggle("hidden", !timed);
+    levels.replaceChildren(...(timed ? [1, 2, 3, 4].map((level) => {
+      const button = document.createElement("button");
+      button.className = `time-level time-level-${level}`;
+      const title = document.createElement("strong");
+      title.textContent = `LEVEL ${level}`;
+      const best = document.createElement("span");
+      const score = progress.bestTimeAttackLevels[level - 1] ?? 0;
+      best.textContent = `BEST ${score ? score.toLocaleString() : "—"}`;
+      button.append(title, best);
+      button.addEventListener("click", () => this.onStart("timeAttack", level));
+      return button;
+    }) : []));
     this.title.textContent = TITLES[mode] ?? "ENDLESS";
     /*
      * The one thing that says what the mode is.

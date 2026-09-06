@@ -102,7 +102,8 @@ export class Hud {
       this.stat(1, "TIME", formatClock(elapsedMs));
       this.stat(2, "COMBO", String(this.combo));
     } else if (config.mode === "timeAttack") {
-      this.runTitle.textContent = "TIME ATTACK";
+      this.runTitle.textContent = config.timeAttackLevel
+        ? `LEVEL ${config.timeAttackLevel} · ${config.width}×${config.rows}` : "TIME ATTACK";
       this.stat(0, "TIME", formatClock(remainingMs));
       this.stat(1, "SCORE", state.score.toLocaleString());
       this.stat(2, "COMBO", String(this.combo));
