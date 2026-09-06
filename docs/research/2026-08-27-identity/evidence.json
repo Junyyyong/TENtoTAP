@@ -1,0 +1,43 @@
+{
+  "title": "TAP to TEN과 극장 디자인",
+  "problem": "고정된 숫자 구성과 점수·잔여 숫자의 관계를 검토하고 시각 정체성을 정리했다.",
+  "change": "9×9 숫자 덱과 10/20/40/80 점수 곡선, 벨벳·황동 중심 극장 디자인을 도입했다.",
+  "outcome": "MAKEZERO에서 TAP to TEN으로 바뀌고 게임판과 배경·점수 표현이 달라졌다.",
+  "scenario": "game",
+  "capturedAt": "2026-09-06T12:13:22.297Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "152.0.7977.76",
+  "method": "Historical git archive in isolated temp directory; current Vite runtime; fresh storage; seeded Math.random and controlled clock; finite animations finished. No historical source changes. Not a historical phone photograph or participant experiment.",
+  "sides": {
+    "before": {
+      "revision": "38f51c0f28f216dd674a3ba7677cd21e974a3686",
+      "commitDate": "2026-08-26T14:58:41+00:00",
+      "commitMessage": "fix: the board no longer clips or floats in a margin\n\nTwo layout bugs that only showed on a real phone.\n\nThe board was clipped. It sizes its tiles by measuring the room it has, and\nthat measurement ran before the HUD did — so it sized against a box that still\nhad the previous run's timer bar showing and a one-line notice, then the chrome\nsettled and the board no longer fitted. The HUD now renders first.\n\nThe board floated in a wide margin. The dark frame was on .board-wrap, which\nstretches the full width, while the tiles are sized to fit both directions and\nso end up narrower. The frame moves to .board, which is exactly the size of the\ntiles it holds.\n\nRefitting is now driven by a ResizeObserver rather than window.resize. The\nwindow stays the same size while that box changes constantly — browser bars\nsliding away, a notice wrapping to two lines, the keyboard, a foldable opening.\nIt is safe from feedback because .board-wrap takes its height from flex and\nnever from the board inside it.\n\nOn short screens the chrome gives up its room before the tiles do: header,\nchips, timer and buttons shrink at 660px, and the notice goes at 520px. The\n16px tile floor is a last resort, not the first move.\n\ntests/browser/responsive.mjs is kept in the repo because unit tests cannot\nreach any of this — a board sized by measurement needs a real browser at a real\nsize to verify. It checks ten devices plus rotation both ways for clipping,\npage overflow and unusably small tiles. Playwright stays out of package.json;\nthe script says how to install it.",
+      "status": "captured",
+      "note": "",
+      "sha256": "322013221f84d8371e96b0723614ad5519edf4684d2bff2c8c3d846c2c1ad07f",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "0\n?\n타임어택\n1:00\n8\n1\n3\n2\n1\n3\n2\n3\n1\n3\n7\n4\n3\n7\n4\n1\n1\n9\n6\n2\n2\n1\n4\n2\n1\n5\n5\n1\n1\n8\n1\n1\n7\n1\n3\n3\n2\n3\n2\n1\n2\n2\n1\n4\n1\n5\n2\n2\n1\n6\n2\n2\n1\n2\n1\n1\n7\n2\n1\n4\n2\n4\n3\n8\n2\n7\n1\n1\n1\n2\n3\n2\n4\n6\n2\n6\n2\n\n77개 남음"
+    },
+    "after": {
+      "revision": "f018fc0d040aedcb999309b08c60650f8d976916",
+      "commitDate": "2026-08-27T00:36:30+00:00",
+      "commitMessage": "feat: TAP to TEN — an 81-tile deck and a Broadway skin\n\nEvery stage now deals the same deck: nine of each digit, 81 tiles on a 9x9\nboard. The counts are the puzzle rather than a random draw, which makes the\ngame the same for everyone and finally testable end to end.\n\nThe deck has a property worth knowing before touching it. 81 is odd and 5 only\npairs with itself, so pairing everything away leaves exactly one tile, and it\nis always a 5: the total is 405, every clear removes exactly ten, and that last\ndigit never moves. Three stars therefore means one tile left, not none.\n\nScoring becomes 10/20/40/80 — each extra tile doubles the reward. Chosen by\nsimulating the deck against several curves: clearing with pairs empties the\nboard to its last tile for 400, while chasing long chains tops out near 550 but\nstrands about 27 tiles. Stars reward the first and score the second, so a run\nhas to pick one. Spending 1s on a five-chain is what strands the 9s.\n\nThe look moves to a Broadway house — velvet, brass and marquee bulbs — with the\npalette entirely in tokens.css. The board is anchored to the top and the room\nbelow it is a stage floor for the dancer; art drops into #stage-floor and the\nCSS stands it on the floor, centred. On a short screen that space yields first\nand the board keeps its size.\n\nFixes a measurement bug the new frame exposed: getBoundingClientRect returns\nthe border box, so the frame's own border has to be subtracted along with its\npadding, or a nine-wide board overshoots by two pixels.\n\nDifficulty is now the hints and the star targets, since the deck is fixed. That\nalso means every stage is mathematically the same puzzle — noted in\nDECISIONS.md, along with what to change if stages should differ.\n\n80 unit tests, layout checked across ten screens plus rotation, and the four\nbrowser suites pass.",
+      "status": "captured",
+      "note": "",
+      "sha256": "7f2249d8097ea47fb425227a57984f61185b42d0f17324f38d3dafe54d7ff288",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "0\n?\n타임어택\n1:00\n3\n9\n5\n6\n9\n8\n6\n9\n7\n3\n6\n9\n3\n9\n4\n7\n5\n6\n4\n6\n6\n3\n2\n5\n5\n3\n7\n2\n9\n2\n1\n1\n7\n8\n6\n9\n9\n8\n8\n1\n7\n3\n8\n4\n4\n1\n2\n2\n6\n2\n5\n1\n1\n1\n8\n4\n1\n2\n7\n4\n5\n2\n7\n8\n4\n7\n3\n5\n4\n5\n5\n2\n8\n7\n9\n3\n4\n6\n8\n3\n1\n\n81개 남음"
+    }
+  }
+}

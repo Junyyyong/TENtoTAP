@@ -12,7 +12,7 @@ fs.mkdirSync(path.join(out, 'screenshots'), { recursive: true });
 const browser = await chromium.launch({ headless: true,
   executablePath: process.env.CHROME_PATH ?? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' });
 const page = await browser.newPage({ viewport: { width: 390, height: 844 },
-  deviceScaleFactor: 4, isMobile: true, hasTouch: true });
+  deviceScaleFactor: 2, isMobile: true, hasTouch: true });
 const errors = [], captures = [];
 page.on('pageerror', error => errors.push(error.message));
 const git = (...args) => execFileSync('git', args, { encoding: 'utf8' }).trim();
@@ -27,10 +27,10 @@ async function shot(id, caption) {
   const file = `screenshots/${id}.png`;
   await page.screenshot({ path: path.join(out, file), animations: 'allow' });
   const data = fs.readFileSync(path.join(out, file));
-  assert.equal(data.readUInt32BE(16), 1560);
-  assert.equal(data.readUInt32BE(20), 3376);
+  assert.equal(data.readUInt32BE(16), 780);
+  assert.equal(data.readUInt32BE(20), 1688);
   captures.push({ id, caption, file, sha256: createHash('sha256').update(data).digest('hex'),
-    width: 1560, height: 3376, displayedClock: await page.locator('#screen-game .run-stat-value').allTextContents() });
+    width: 780, height: 1688, displayedClock: await page.locator('#screen-game .run-stat-value').allTextContents() });
 }
 async function click(selector) {
   await page.locator(selector).click({ force: true });
@@ -87,8 +87,8 @@ try {
   }
   assert.deepEqual(errors, []);
   fs.writeFileSync(path.join(out, 'manifest.json'), JSON.stringify({ capturedAt: new Date().toISOString(),
-    revision: git('rev-parse', 'HEAD'), sourceChanges: git('diff', '--name-only', 'HEAD', '--', 'src', 'index.html', 'public'),
-    browser: browser.version(), viewport: { width:390, height:844 }, deviceScaleFactor:4,
+    revision: git('rev-parse', process.env.CAPTURE_REVISION ?? 'HEAD'), sourceChanges: git('diff', '--name-only', 'HEAD', '--', 'src', 'index.html', 'public'),
+    browser: browser.version(), viewport: { width:390, height:844 }, deviceScaleFactor:2,
     method: 'Local source; mobile Chromium emulation; controlled clock; seeded Math.random; fresh browser storage; finite transitions finished before capture, repeating guidance retained. Not an actual phone photograph or participant study.',
     captures, errors }, null, 2) + '\n');
   console.log(`Saved ${captures.length} PNGs; 4 level entry checks and 5 tutorial completion checks passed.`);

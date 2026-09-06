@@ -1,0 +1,43 @@
+{
+  "title": "튜토리얼 금빛 안내",
+  "problem": "TAPtoTALK처럼 눌러야 할 곳을 반짝이게 표시해 달라는 사용자 요청이 있었다.",
+  "change": "정답 숫자 중 미선택 숫자와 성공 후 Next/Start에 반복 효과를 적용했다.",
+  "outcome": "정답 위치를 시각적으로 알 수 있게 됐다. 학습 효과를 측정한 사용자 실험은 아니다.",
+  "scenario": "tutorial",
+  "capturedAt": "2026-09-06T12:13:40.946Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "152.0.7977.76",
+  "method": "Historical git archive in isolated temp directory; current Vite runtime; fresh storage; seeded Math.random and controlled clock; finite animations finished. No historical source changes. Not a historical phone photograph or participant experiment.",
+  "sides": {
+    "before": {
+      "revision": "162c40670141915333212d45a8c6381f361791c9",
+      "commitDate": "2026-09-06T11:13:47+09:00",
+      "commitMessage": "Preload game mode artwork",
+      "status": "captured",
+      "note": "",
+      "sha256": "95245d662aed95a74e906d40e929c105d77ca4ee217324a51d9cbd786e9fa0f4",
+      "errors": [],
+      "visibleScreens": [
+        "screen-tutorial"
+      ],
+      "text": "Skip\n\nTap numbers that add up to 10 and they clear.\nTry 4 and 6.\n\n4\n6\n3\n2"
+    },
+    "after": {
+      "revision": "0d3ee75cd402f03b3b0b85685e9946881918b396",
+      "commitDate": "2026-09-06T20:15:50+09:00",
+      "commitMessage": "Highlight tutorial interaction targets",
+      "status": "captured",
+      "note": "",
+      "sha256": "d7243dc71a7e9c8a665050d98327c7662eb937b35503a2f2146cd5b5f36b77a7",
+      "errors": [],
+      "visibleScreens": [
+        "screen-tutorial"
+      ],
+      "text": "Skip\n\nTap numbers that add up to 10 and they clear.\nTry 4 and 6.\n\n4\n6\n3\n2"
+    }
+  }
+}

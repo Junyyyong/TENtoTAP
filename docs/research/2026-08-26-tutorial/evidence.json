@@ -1,0 +1,43 @@
+{
+  "title": "체험형 튜토리얼",
+  "problem": "설명문만으로 규칙을 전달하는 대신 플레이로 익히게 하는 단계가 필요했다.",
+  "change": "유일한 정답 조합이 있는 연습판 다섯 개와 다시 보기·건너뛰기·개인 기록 화면을 추가했다.",
+  "outcome": "사용자가 숫자를 직접 지우며 규칙을 연습한다. 이전 버전은 튜토리얼이 없어 메뉴를 비교 맥락으로 제시한다.",
+  "scenario": "tutorial",
+  "capturedAt": "2026-09-06T12:13:19.995Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "152.0.7977.76",
+  "method": "Historical git archive in isolated temp directory; current Vite runtime; fresh storage; seeded Math.random and controlled clock; finite animations finished. No historical source changes. Not a historical phone photograph or participant experiment.",
+  "sides": {
+    "before": {
+      "revision": "59c83d1105974471477055854d4a858f1e632151",
+      "commitDate": "2026-08-26T08:12:25+00:00",
+      "commitMessage": "feat: endless becomes a survival mode\n\nTiles now keep arriving in endless. The board is a fixed frame dealt about\nhalf full, a batch lands every few seconds, and cleared squares stay open as\nthe room those batches land in — so the board neither grows nor collapses rows\nthe way a story stage does. The run ends when a batch has nowhere to go.\n\nBatches are whole sum-to-ten groups, never loose tiles. Dropping singles would\nbring back the problem that makes a random board unclearable: each clear\nremoves exactly ten, so the total's last digit never moves.\n\nThe gap between batches shortens as the run goes on, and that floor is the\nwhole mode. It has to sit just below how fast a person can actually play.\nSimulated against a bot that clears every N milliseconds:\n\n  floor 850ms   quick player 900s+ (never died)   slow player 107s\n  floor 650ms   quick player  587s                slow player 101s\n  floor 400ms   quick player   99s                slow player  62s\n\nToo high and a quick player outruns the spawner forever; too low and the floor\nkills everyone at the same rate, so playing well stops mattering. 650ms keeps a\ncasual run near two minutes while still paying for speed. pacing.test.ts\nsimulates the clock and guards both ends of that.\n\nTwo fixes this surfaced:\n\nThe board view held its own reference to the board, so tiles that arrived on a\ntimer rendered only after the player's next move. It now re-points at the\ncurrent board every render, keeping any half-built selection intact rather than\ncancelling it when a batch lands.\n\nA square nothing has ever stood on carries value 0 and renders blank. It was\nshowing a ghost 1 — the placeholder it was created with.\n\nDocs updated: the endless section in RULES.md, the spawn dials and their\nmeasurements in BALANCE.md, and the floor trade-off in DECISIONS.md.",
+      "status": "captured",
+      "note": "튜토리얼 도입 전: 해당 화면이 없어 실제 메뉴를 비교 맥락으로 캡처함.",
+      "sha256": "b78ba323f9a3c04963363ee9ecf81dd7c772cc93999faf34022ad4dcdb14971e",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "MAKEZERO\n\n이어서 10 만들기\n\n스토리\n스테이지 1 · 1장 · 첫 그루터기\n타임어택\n60초 도전\n무제한\n끝까지 지우기\n규칙 보기"
+    },
+    "after": {
+      "revision": "880f309ea4731be03782ba1ea8c7fad17b2f6d3d",
+      "commitDate": "2026-08-26T12:05:17+00:00",
+      "commitMessage": "feat: hands-on tutorial and a personal records screen\n\nThe tutorial teaches by making the player do it: five boards, each for one\nidea — a pair making ten, three tiles, the two 3s that look pairable but are\nonly six, a 9 and a 1 at opposite ends of the board, and a five-tile chain for\nthe 150. It opens on a first launch, can be skipped at any point, and is\nreplayable from the title.\n\nEvery tutorial board is built so exactly one combination adds up to ten, which\nlets the game's own rules judge the answer. There is no second 'is this the\nmove I meant?' check to drift out of step with them, and tutorial.test.ts\nenumerates every board to prove a second answer has not crept in. Boards may\nstill carry other tiles — those are the lesson, not noise.\n\nThe records screen collects what a player has to show for their time: best\ntime-attack and endless scores, the star earned on each of the twenty stages,\nand the running total. Stage grades are stored per stage, keeping the best a\nstage has ever earned.\n\nTwo smaller pieces this needed. BoardView takes an optional maximum tile size,\nsince a nine-tile teaching board would otherwise blow up to fill a phone\nscreen. Progress storage gained per-stage stars and a tutorial-seen flag, both\ndefaulted so an existing save loads unchanged.\n\n78 unit tests, plus browser passes over the tutorial (wrong move refused, all\nfive steps, skip, replay, does not nag on the second launch) and the records\nscreen.",
+      "status": "captured",
+      "note": "",
+      "sha256": "fcbe1c760ead0523dc6d8c1790e1c681ce8081bb976b0926929fee8149c32ca1",
+      "errors": [],
+      "visibleScreens": [
+        "screen-tutorial"
+      ],
+      "text": "건너뛰기\n\n숫자를 눌러 합이 10을 만들면 지워집니다.\n4와 6을 눌러보세요.\n\n4\n6\n3\n2"
+    }
+  }
+}

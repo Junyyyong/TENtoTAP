@@ -1,0 +1,43 @@
+{
+  "title": "TIMELESS 모드",
+  "problem": "시간 제한 없이 판을 비우는 새 모드와 탭·드래그 간 일관된 합계 판정이 필요했다.",
+  "change": "3bbb5d4의 새 모드를 TIMELESS로 명명하고 10·20·30을 순차적으로 판정하도록 정리했다.",
+  "outcome": "세 번째 모드가 생겼다. 비교 시작점은 새 모드 도입 전이며 여러 커밋을 묶는다.",
+  "scenario": "entry",
+  "capturedAt": "2026-09-06T12:13:36.619Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "152.0.7977.76",
+  "method": "Historical git archive in isolated temp directory; current Vite runtime; fresh storage; seeded Math.random and controlled clock; finite animations finished. No historical source changes. Not a historical phone photograph or participant experiment.",
+  "sides": {
+    "before": {
+      "revision": "0883e7adf4fd7b3654bc3e7215b42d87067bd55b",
+      "commitDate": "2026-09-01T00:18:53+09:00",
+      "commitMessage": "Redraw the bands at 300/600/1000/1400, and add the fifth dance (#32)\n\nFive bands now, each with its own word and its own clip: GOOD TRY!/1,\nGREAT!/3, AMAZING!/4, UNBELIEVABLE!!/2, and OH MY GOD~!/5 above 1400.\n\nThe word table and the clip table become one table again. They were split\nwhile their edges differed; these five change at exactly the same scores, and\nwhile that is true one table is the only arrangement that cannot drift. A test\nholds them to it: at every edge both the word and the clip have to change.\n\n`5.mp4` is real HEVC-with-alpha like the rest. It is 1456x1424 where the\nothers are 960x944 — the same on screen, since the clip is drawn to a width,\nbut 3.3MB of WebM and 9.1MB of HEVC against roughly half that for the others.\n\n\nClaude-Session: https://claude.ai/code/session_01KksbCsyuxr5ve9AxVR5jhx\n\nCo-authored-by: Claude Opus 5 <noreply@anthropic.com>",
+      "status": "captured",
+      "note": "",
+      "sha256": "7bc0c81629b3bd5fec19d9c704c58c849cb46acc43bedd88b16145f329cffaa2",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "TIME ATTACK\n60 seconds\nENDLESS\nPlay until the board fills\nHow to play\nSettings\nRules"
+    },
+    "after": {
+      "revision": "323486a249da6abaec9516ec0fc2f859ff9bbbc5",
+      "commitDate": "2026-09-01T16:03:47+09:00",
+      "commitMessage": "Call it TIMELESS, draw the take-back as a loop, and let sums climb (#34)\n\nThree changes to the new mode.\n\n**The name.** TIMELESS, in the code as well as on screen — `clearAll` becomes\n`timeless` throughout, config and saved record included. The `MAKE 10 · 20 · 30`\nline above the SUM box stays: that was never the name, it is the rule.\n\n**The rule.** Landing exactly on ten clears there and then; stepping over it to\neleven means the selection is heading for twenty, and past twenty it heads for\nthirty. Past thirty still busts. That makes the mode's own input rule\ndisappear: a selection was being held past ten only while the finger stayed\ndown, so a tap and a drag behaved differently. They behave the same now — what\nyou pick decides, not how you hold it — and the drag special case is gone.\nSingle-target modes were never affected either way.\n\n**The icon.** The take-back arrow was rendering as a dark blob: the drawn\nglyphs are outlines and nothing was saying so, so the browser filled the paths\nin black. They are stroked in the button's own colour now, and the arrow is a\nloop turning back on itself. The split icon was wrong the same way and is\nfixed with it.\n\n\nClaude-Session: https://claude.ai/code/session_01KksbCsyuxr5ve9AxVR5jhx\n\nCo-authored-by: Claude Opus 5 <noreply@anthropic.com>",
+      "status": "captured",
+      "note": "",
+      "sha256": "2f45d08038f18ffa18cad743454cac48490e635189c5654711c361848ded9987",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "TIME ATTACK\n60 seconds\nENDLESS\nPlay until the board fills\nTIMELESS\nClear the whole board. No clock\nHow to play\nSettings\nRules"
+    }
+  }
+}

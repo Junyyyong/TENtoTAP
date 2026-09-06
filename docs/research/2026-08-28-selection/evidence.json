@@ -1,0 +1,43 @@
+{
+  "title": "모드 시작 안내와 보드 공간",
+  "problem": "모드를 누르면 바로 시작됐고 HUD가 늘며 보드 너비가 줄어드는 문제가 있었다.",
+  "change": "스토리 선택 단계와 시간 모드 시작 안내를 추가하고 보드 공간 계산을 수정했다.",
+  "outcome": "타임어택 선택 시 바로 게임이 시작되던 흐름에서 START 전 안내 화면으로 바뀌었다.",
+  "scenario": "intro",
+  "capturedAt": "2026-09-06T12:13:29.646Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "152.0.7977.76",
+  "method": "Historical git archive in isolated temp directory; current Vite runtime; fresh storage; seeded Math.random and controlled clock; finite animations finished. No historical source changes. Not a historical phone photograph or participant experiment.",
+  "sides": {
+    "before": {
+      "revision": "4b6f23f3d502b7589ba12938c5ba1d982b0a7be7",
+      "commitDate": "2026-08-28T19:27:40+09:00",
+      "commitMessage": "Merge pull request #8 from Junyyyong/claude/google-play-game-feasibility-uijpdz\n\n목업 개편 1차 — 색 블록 · REVEAL/TIME/COMBO HUD · SUM 식 · 시간 기록",
+      "status": "captured",
+      "note": "",
+      "sha256": "ce91bb770421f1ff0c0a0daa817e426682b25b5f1b067cf967f424099c0eda11",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "TIME ATTACK\nTIME\n01:00\nSCORE\n0\nCOMBO\n0\n3\n9\n5\n6\n9\n8\n6\n9\n7\n3\n6\n9\n3\n9\n4\n7\n5\n6\n4\n6\n6\n3\n2\n5\n5\n3\n7\n2\n9\n2\n1\n1\n7\n8\n6\n9\n9\n8\n8\n1\n7\n3\n8\n4\n4\n1\n2\n2\n6\n2\n5\n1\n1\n1\n8\n4\n1\n2\n7\n4\n5\n2\n7\n8\n4\n7\n3\n5\n4\n5\n5\n2\n8\n7\n9\n3\n4\n6\n8\n3\n1\n\n10을 만들어 점수를 올리세요\n\nSUM\n=\n?"
+    },
+    "after": {
+      "revision": "dd86aaf5ba4b89215346661c7fadd6d72a32c41c",
+      "commitDate": "2026-08-28T22:13:13+09:00",
+      "commitMessage": "Give the board its room back, and put a choosing step in front of every mode (#9)\n\nThree things, from the mockup pass and the screenshot that came with it.\n\nThe board had quietly shrunk to 68% of the screen. `.board-wrap` carried an\n`aspect-ratio` while sitting on `flex: 0 1 auto`, so when the HUD grew the box\ngave up height — and the ratio dragged its width down with it. The frame now\ntakes whatever room the chrome leaves and nothing more; how many tiles fit is\nmeasured, not declared, so `--board-ratio` and the empty `#stage-floor` are\ngone. Back to 92% on every screen in the layout suite.\n\n\"갤러리 보기\" on the results panel threw instead of navigating: `result ->\ngallery` was not an allowed transition, so the player was left staring at the\nfinished board. Opened, with a regression test.\n\nAnd modes no longer start the instant they are tapped. Story runs ninety-nine\nstages with a different picture behind each, which is worth seeing before\ncommitting to one, so it goes through a chapter list, a 3x3 stage grid and a\ncard showing the picture (or `?`) and the time to beat. Time attack and endless\neach get one start screen built around the number that defines them; endless\nnow also keeps how long a run survived. The back arrow in a run leaves the way\nit came in — story to the grid, the timed modes to the title — while the\nresults panel replays in place rather than walking back out through the picker.\n\nThe two browser suites walk the new flow. 99 unit tests, layout and drag green.",
+      "status": "captured",
+      "note": "",
+      "sha256": "d8c8e9203d757ad1122a3bf42922cef010502df6b1c668221a2d0bc08f4f3120",
+      "errors": [],
+      "visibleScreens": [
+        "screen-intro"
+      ],
+      "text": "TIME ATTACK\n60\n\n60초 안에 최대한 많이 지우세요\n\nBEST SCORE\n0\nSTART"
+    }
+  }
+}

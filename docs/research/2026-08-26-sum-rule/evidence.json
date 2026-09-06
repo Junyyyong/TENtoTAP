@@ -1,0 +1,43 @@
+{
+  "title": "합계 10 규칙 단순화",
+  "problem": "합이 10이어도 위치 제약 때문에 거절되거나 가능한 조합이 남았는데 종료되는 문제가 보고됐다.",
+  "change": "앞선 2f371c8에서 같은 숫자 매칭을 없앤 뒤 이 커밋에서 직선·인접 조건과 무의미해진 셔플을 제거했다.",
+  "outcome": "어디에 있든 2~5개를 골라 합계 10이면 지워진다. 전후 비교는 직전 위치 제약 버전과 비교한다.",
+  "scenario": "rules",
+  "capturedAt": "2026-09-06T12:13:15.565Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "152.0.7977.76",
+  "method": "Historical git archive in isolated temp directory; current Vite runtime; fresh storage; seeded Math.random and controlled clock; finite animations finished. No historical source changes. Not a historical phone photograph or participant experiment.",
+  "sides": {
+    "before": {
+      "revision": "2f371c88f8100f461906af92b4fc8f4017571a21",
+      "commitDate": "2026-08-26T07:19:18+00:00",
+      "commitMessage": "feat: sum-to-ten only, line of sight, fixed board\n\nRemoves same-number matching. A selection now clears only when two to five\ntiles add up to exactly ten; repeated values inside a chain (1+1+8) are still\nfine. Connection becomes a single rule — a straight line, horizontal, vertical\nor diagonal, with no surviving tile in the way — replacing grid adjacency plus\nthe reading-order wrap that read as arbitrary on screen.\n\nThree things had to change with it, each because simulation said so:\n\nBoards are dealt as groups that already sum to ten rather than loose random\nnumbers. Every clear removes exactly ten, so the total's last digit never\nchanges; a random board is unclearable nine times in ten, and simulated runs\nfailed all 120 games with the board growing past 490 tiles.\n\nThe + action becomes a shuffle. Copying the survivors duplicated whatever the\nplayer was stuck on — without same-number matching nothing broke the loop, and\nleftovers climbed from 8 to 355 as more copies were spent. Shuffling keeps the\nnumbers and only moves them, so the board never grows.\n\nStage goals become star grades. A perfect clear turned out to depend on the\ndeal, not the player: on two of three sampled boards, 120 randomised\nplaythroughs never got below three tiles. Stars are scored on tiles left, with\ntargets set as a share of the board that tightens each stage.\n\nThe deal's group sizes work backwards from the obvious reading, so the comments\nsay so: many large groups make a board easier, since five values totalling ten\naverage two apiece and small numbers combine freely. Plain pairs spread the\nvalues out and strand the rigid 8s and 9s.\n\nThe board is dealt at a fixed size and never grows, so it is laid out to fit\nthe screen — 5x8 at stage 1 up to 10x15 at stage 20, tiles sized to the space\navailable. Nothing scrolls, which leaves one-finger drag free for selection.\n\nGreedy play now grades 2.42 stars at stage 1 falling to 0.92 at stage 20, every\nstage passable. 70 unit tests, plus browser passes over the rules, the layout at\nboth board extremes, and all three modes.",
+      "status": "captured",
+      "note": "",
+      "sha256": "d04e1571bec1612ea44313594a2017bebecf6d08d1a087889617b5cbe07d11c7",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "MAKEZERO\n\n이어서 10 만들기\n\n스토리\n스테이지 1 · 1장 · 첫 그루터기\n타임어택\n60초 도전\n무제한\n끝까지 지우기\n규칙 보기\n규칙\n\n숫자를 이어서 합이 정확히 10이 되면 지워집니다.\n2개부터 5개까지 이을 수 있고, 길수록 점수가 큽니다.\n\n2개 10점 · 3개 30점\n4개 70점 · 5개 150점\n\n가로·세로·대각선으로 직선을 그어 사이에 남은 숫자가 없으면 이어집니다. 지워진 칸은 몇 칸이든 통과합니다.\n막히면 섞기로 남은 숫자의 자리를 바꾸세요.\n\n닫기\n모드 선택"
+    },
+    "after": {
+      "revision": "5b6a5a6ed1dcc76c5859a81ba356191c0faa4df6",
+      "commitDate": "2026-08-26T07:54:44+00:00",
+      "commitMessage": "refactor: drop the position rule, reorganise into core/content/ui\n\nTiles may now be combined wherever they sit. A selection clears when two to\nfive surviving tiles add up to exactly ten, and nothing else is checked — no\nadjacency, no straight line, no line of sight. That answers both reports:\n1+1+1+7 totals ten and was only ever refused because the four tiles did not\nshare a line, and \"nothing left to connect\" fired while combinations were\nstill on the board.\n\nThe shuffle goes with it. Rearranging tiles cannot change a verdict that never\nlooks at position, so it had nothing left to do. A run now ends exactly when no\nvalues on the board can make ten, which core/solver.ts answers from the nine\nvalue counts rather than by walking the grid.\n\nTwo selection fixes this exposed: a tile that would push the running total past\nten now starts a fresh selection instead of piling onto an unclearable heap,\nand tapping the board outside any tile abandons the selection.\n\nStructure, since this will keep being edited:\n\n  src/core/     rules engine — no DOM, fully tested\n  src/content/  stage curve, star targets, chapters and lines\n  src/ui/       screens, split into title / hud / overlay / story\n  docs/         why it is built this way\n\nDependencies run one way, ui -> content -> core, so a skin change never reaches\nthe rules. The stylesheet is split to match, with the palette in tokens.css.\n\ndocs/DECISIONS.md records the findings that are counter-intuitive enough to be\nundone by accident: random boards are mathematically unclearable because each\nclear removes exactly ten and never changes the total's last digit; dealing\nmany large groups makes a board easier rather than harder; a perfect clear\ndepends on the deal, so three stars is a small number rather than an empty\nboard. Each entry carries the measurement behind it.\n\n57 unit tests, plus browser passes over the rules, the layout at both board\nextremes, all three modes and the chapter beat.",
+      "status": "captured",
+      "note": "",
+      "sha256": "1d91d923efee8182c6aba55747eccd03e4bbb25d6e7805664ba8647a8d35994a",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "MAKEZERO\n\n이어서 10 만들기\n\n스토리\n스테이지 1 · 1장 · 첫 그루터기\n타임어택\n60초 도전\n무제한\n끝까지 지우기\n규칙 보기\n규칙\n\n숫자를 골라 합이 정확히 10이 되면 지워집니다.\n2개부터 5개까지 고를 수 있고, 많이 고를수록 점수가 큽니다.\n\n2개 10점 · 3개 30점\n4개 70점 · 5개 150점\n\n어느 칸이든 상관없습니다. 멀리 떨어져 있어도, 사이에 무엇이 있어도 함께 고를 수 있습니다.\n같은 숫자끼리 지우는 규칙은 없습니다. 3+3은 6이라 지워지지 않아요.\n\n닫기\n모드 선택"
+    }
+  }
+}

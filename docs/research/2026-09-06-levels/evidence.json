@@ -1,0 +1,43 @@
+{
+  "title": "타임어택 네 레벨",
+  "problem": "작은 판부터 큰 판까지 선택하고 레벨별 최고기록을 보고 싶다는 요청이 있었다.",
+  "change": "ae2d7cf에서 네 레벨과 진행·기록을 구현하고 아이콘 박스와 18px/600 제목을 정리했다.",
+  "outcome": "START 대신 색이 다른 네 버튼과 BEST가 표시된다. 60초 고정, 단계별 보드 성장과 마지막 크기 반복으로 바뀌었다.",
+  "scenario": "intro",
+  "capturedAt": "2026-09-06T12:13:43.334Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "152.0.7977.76",
+  "method": "Historical git archive in isolated temp directory; current Vite runtime; fresh storage; seeded Math.random and controlled clock; finite animations finished. No historical source changes. Not a historical phone photograph or participant experiment.",
+  "sides": {
+    "before": {
+      "revision": "0d3ee75cd402f03b3b0b85685e9946881918b396",
+      "commitDate": "2026-09-06T20:15:50+09:00",
+      "commitMessage": "Highlight tutorial interaction targets",
+      "status": "captured",
+      "note": "",
+      "sha256": "7d5dc018692c4fa02e523fe806ec41c80d2836be2d2dea212c0d8bc1a19c1e04",
+      "errors": [],
+      "visibleScreens": [
+        "screen-intro"
+      ],
+      "text": "TIME ATTACK\n\nClear as much as you can in 60 seconds\n\nBEST SCORE\n0\nSTART"
+    },
+    "after": {
+      "revision": "6542a95f1f7a831fcdcc59f57d421e1432fdf4bc",
+      "commitDate": "2026-09-06T20:49:37+09:00",
+      "commitMessage": "Match mode icon sizes and lighten level labels",
+      "status": "captured",
+      "note": "",
+      "sha256": "99063ecddc41699ee7447492263ca66e85e34504f27d44c743dc79340b0db3c0",
+      "errors": [],
+      "visibleScreens": [
+        "screen-intro"
+      ],
+      "text": "TIME ATTACK\n\nClear as much as you can in 60 seconds\n\nLEVEL 1\nBEST —\nLEVEL 2\nBEST —\nLEVEL 3\nBEST —\nLEVEL 4\nBEST —"
+    }
+  }
+}

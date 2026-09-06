@@ -1,0 +1,43 @@
+{
+  "title": "밝은 종이색 디자인과 보상",
+  "problem": "흰 그림이 어두운 게임판에서 뜬금없는 흰 구멍처럼 보였다.",
+  "change": "밝은 종이색·마룬 글자·구분되는 숫자색으로 교체하고 당시 타임어택 점수 보상을 추가했다.",
+  "outcome": "전체 UI가 밝아졌다. 당시 보상은 이후 레벨 모드에서 제거됐으므로 현재 규칙으로 혼동하지 않는다.",
+  "scenario": "game",
+  "capturedAt": "2026-09-06T12:13:31.897Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "152.0.7977.76",
+  "method": "Historical git archive in isolated temp directory; current Vite runtime; fresh storage; seeded Math.random and controlled clock; finite animations finished. No historical source changes. Not a historical phone photograph or participant experiment.",
+  "sides": {
+    "before": {
+      "revision": "89bc587880bac2a8fcb92cb6b249cc798fec0553",
+      "commitDate": "2026-08-30T13:46:45+09:00",
+      "commitMessage": "Add files via upload",
+      "status": "captured",
+      "note": "",
+      "sha256": "98a1204e97a8697d013bfd654f34e6706b6a716fc0c4f3beff1405dd1b9c4e5c",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "TIME ATTACK\nTIME\n01:00\nSCORE\n0\nCOMBO\n0\n3\n9\n5\n6\n9\n8\n6\n9\n7\n3\n6\n9\n3\n9\n4\n7\n5\n6\n4\n6\n6\n3\n2\n5\n5\n3\n7\n2\n9\n2\n1\n1\n7\n8\n6\n9\n9\n8\n8\n1\n7\n3\n8\n4\n4\n1\n2\n2\n6\n2\n5\n1\n1\n1\n8\n4\n1\n2\n7\n4\n5\n2\n7\n8\n4\n7\n3\n5\n4\n5\n5\n2\n8\n7\n9\n3\n4\n6\n8\n3\n1\n\n10을 만들어 점수를 올리세요\n\nSUM\n=\n?"
+    },
+    "after": {
+      "revision": "07b08a6f2e21ba5bef7bbdfd103826334ac1cc33",
+      "commitDate": "2026-08-30T14:00:43+09:00",
+      "commitMessage": "Move to a paper skin, and pay time attack back for a good run (#14)\n\nThree things.\n\nThe cover becomes cover2 — 4837x9540 in, a 1080x2130 WebP out at 253KB. Its\n0.507 aspect is closer to a phone's than the old 0.447, so the `contain`\nmargins shrink with it. The old source is deleted.\n\nThe skin goes light, and the cover only confirmed the decision rather than\ndriving it. Clearing a block uncovers the picture hidden beneath, and those\npictures are toy renders on white — on a night-blue board every cleared square\nopened as a glaring white hole, all the way to the end of the stage, which\nundercuts the whole point of the mode. On paper the reveal is continuous.\nCream ground, maroon ink, the wordmark's orange and yellow for anything active.\n\nThe nine block colours are spaced around the wheel rather than chosen to\ntaste: the board is read in groups, so two confusable digits at 35px means the\neye beats the rules. 8 started as cyan, which put three blues on one board\nnext to 1 and 2, and is now chocolate — the one warm dark the paper carries.\nThe 81 hardcoded rgba values scattered through the screen files collapse into\n--panel, --slab, --recess, --sheen and --scrim, so the next skin change is one\nfile rather than nine.\n\nTime attack now pays for a good run, where before it only ran you out of tiles\nfaster. Every hundred points adds nine low tiles — nine is exactly one row on\na nine-wide board, and 1s, 2s and 3s are what long combinations are always\nstarved of, so it is fuel and not clutter. Five hundred buys thirty seconds\nand a fresh board, once: a second extension would turn a good run endless,\nwhich is the other mode. Both thresholds are read off the score rather than\nremembered, which works because the mode has no take-backs, so nothing new is\nstored. The HUD says what landed — a row appearing at the bottom of the board\nis not something a player racing a clock notices on their own.\n\n104 unit tests, layout, drag and feedback all green.",
+      "status": "captured",
+      "note": "",
+      "sha256": "78650a18a5736a1ed00775e1540fbf8e59520f5fd898837531f4e755cbd51257",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "TIME ATTACK\nTIME\n01:00\nSCORE\n0\nCOMBO\n0\n3\n9\n5\n6\n9\n8\n6\n9\n7\n3\n6\n9\n3\n9\n4\n7\n5\n6\n4\n6\n6\n3\n2\n5\n5\n3\n7\n2\n9\n2\n1\n1\n7\n8\n6\n9\n9\n8\n8\n1\n7\n3\n8\n4\n4\n1\n2\n2\n6\n2\n5\n1\n1\n1\n8\n4\n1\n2\n7\n4\n5\n2\n7\n8\n4\n7\n3\n5\n4\n5\n5\n2\n8\n7\n9\n3\n4\n6\n8\n3\n1\n\n10을 만들어 점수를 올리세요\n\nSUM\n=\n?"
+    }
+  }
+}

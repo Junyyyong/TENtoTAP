@@ -1,0 +1,43 @@
+{
+  "title": "생존형 엔드리스",
+  "problem": "엔드리스를 고정 판의 소진 방식에서 지속적인 압박이 있는 생존 방식으로 바꿨다.",
+  "change": "합계 10의 그룹이 시간에 따라 빈칸에 등장하고 등장 간격이 줄도록 했다.",
+  "outcome": "칸이 찬 상태에서 새 그룹을 놓을 수 없을 때 종료되며 생존 시간과 처리 속도가 중요해졌다.",
+  "scenario": "endless",
+  "capturedAt": "2026-09-06T12:13:17.633Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "152.0.7977.76",
+  "method": "Historical git archive in isolated temp directory; current Vite runtime; fresh storage; seeded Math.random and controlled clock; finite animations finished. No historical source changes. Not a historical phone photograph or participant experiment.",
+  "sides": {
+    "before": {
+      "revision": "5b6a5a6ed1dcc76c5859a81ba356191c0faa4df6",
+      "commitDate": "2026-08-26T07:54:44+00:00",
+      "commitMessage": "refactor: drop the position rule, reorganise into core/content/ui\n\nTiles may now be combined wherever they sit. A selection clears when two to\nfive surviving tiles add up to exactly ten, and nothing else is checked — no\nadjacency, no straight line, no line of sight. That answers both reports:\n1+1+1+7 totals ten and was only ever refused because the four tiles did not\nshare a line, and \"nothing left to connect\" fired while combinations were\nstill on the board.\n\nThe shuffle goes with it. Rearranging tiles cannot change a verdict that never\nlooks at position, so it had nothing left to do. A run now ends exactly when no\nvalues on the board can make ten, which core/solver.ts answers from the nine\nvalue counts rather than by walking the grid.\n\nTwo selection fixes this exposed: a tile that would push the running total past\nten now starts a fresh selection instead of piling onto an unclearable heap,\nand tapping the board outside any tile abandons the selection.\n\nStructure, since this will keep being edited:\n\n  src/core/     rules engine — no DOM, fully tested\n  src/content/  stage curve, star targets, chapters and lines\n  src/ui/       screens, split into title / hud / overlay / story\n  docs/         why it is built this way\n\nDependencies run one way, ui -> content -> core, so a skin change never reaches\nthe rules. The stylesheet is split to match, with the palette in tokens.css.\n\ndocs/DECISIONS.md records the findings that are counter-intuitive enough to be\nundone by accident: random boards are mathematically unclearable because each\nclear removes exactly ten and never changes the total's last digit; dealing\nmany large groups makes a board easier rather than harder; a perfect clear\ndepends on the deal, so three stars is a small number rather than an empty\nboard. Each entry carries the measurement behind it.\n\n57 unit tests, plus browser passes over the rules, the layout at both board\nextremes, all three modes and the chapter beat.",
+      "status": "captured",
+      "note": "",
+      "sha256": "b0993ee1efb59ae99d6ee487697c94edca556436eeb30b0b8c57cade93e4282c",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "0\n?\n게임 1\n오늘 0 ♛\n1\n1\n4\n2\n1\n3\n1\n3\n2\n2\n8\n4\n2\n7\n1\n5\n3\n8\n4\n2\n4\n1\n4\n2\n2\n9\n5\n1\n3\n7\n1\n2\n7\n1\n2\n4\n7\n2\n1\n1\n2\n3\n1\n2\n1\n4\n1\n5\n1\n6\n4\n2\n1\n2\n1\n2\n6\n2\n1\n2\n2\n2\n3\n8\n1\n3\n4\n1\n6\n2\n3\n4\n2\n2\n4\n2\n2\n\n77개 남음\n\n💡\n3"
+    },
+    "after": {
+      "revision": "59c83d1105974471477055854d4a858f1e632151",
+      "commitDate": "2026-08-26T08:12:25+00:00",
+      "commitMessage": "feat: endless becomes a survival mode\n\nTiles now keep arriving in endless. The board is a fixed frame dealt about\nhalf full, a batch lands every few seconds, and cleared squares stay open as\nthe room those batches land in — so the board neither grows nor collapses rows\nthe way a story stage does. The run ends when a batch has nowhere to go.\n\nBatches are whole sum-to-ten groups, never loose tiles. Dropping singles would\nbring back the problem that makes a random board unclearable: each clear\nremoves exactly ten, so the total's last digit never moves.\n\nThe gap between batches shortens as the run goes on, and that floor is the\nwhole mode. It has to sit just below how fast a person can actually play.\nSimulated against a bot that clears every N milliseconds:\n\n  floor 850ms   quick player 900s+ (never died)   slow player 107s\n  floor 650ms   quick player  587s                slow player 101s\n  floor 400ms   quick player   99s                slow player  62s\n\nToo high and a quick player outruns the spawner forever; too low and the floor\nkills everyone at the same rate, so playing well stops mattering. 650ms keeps a\ncasual run near two minutes while still paying for speed. pacing.test.ts\nsimulates the clock and guards both ends of that.\n\nTwo fixes this surfaced:\n\nThe board view held its own reference to the board, so tiles that arrived on a\ntimer rendered only after the player's next move. It now re-points at the\ncurrent board every render, keeping any half-built selection intact rather than\ncancelling it when a batch lands.\n\nA square nothing has ever stood on carries value 0 and renders blank. It was\nshowing a ghost 1 — the placeholder it was created with.\n\nDocs updated: the endless section in RULES.md, the spawn dials and their\nmeasurements in BALANCE.md, and the floor trade-off in DECISIONS.md.",
+      "status": "captured",
+      "note": "",
+      "sha256": "826d809b51424ea5fb925750336f68d857481ebe510077d666da72fe2efabbe7",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "0\n?\n게임 1\n오늘 0 ♛\n6\n4\n6\n3\n8\n2\n3\n3\n3\n5\n2\n5\n7\n1\n5\n1\n5\n2\n1\n1\n7\n1\n3\n2\n1\n1\n5\n7\n2\n2\n3\n2\n8\n2\n3\n8\n\n빈 칸 41개\n\n💡\n3"
+    }
+  }
+}

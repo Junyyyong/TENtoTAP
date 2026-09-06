@@ -1,0 +1,43 @@
+{
+  "title": "두 모드 중심과 영어 UI",
+  "problem": "당시 제품을 타임어택·엔드리스 중심으로 정리하는 방향으로 바뀌었다.",
+  "change": "스토리 진입을 메뉴에서 제외하고 UI 문구를 영어로 통일했으며 종료 축하 표현을 도입했다.",
+  "outcome": "메뉴의 모드 수와 언어가 바뀌었다. 스토리 코드는 제거하지 않았다.",
+  "scenario": "entry",
+  "capturedAt": "2026-09-06T12:13:34.611Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "152.0.7977.76",
+  "method": "Historical git archive in isolated temp directory; current Vite runtime; fresh storage; seeded Math.random and controlled clock; finite animations finished. No historical source changes. Not a historical phone photograph or participant experiment.",
+  "sides": {
+    "before": {
+      "revision": "35f096d948e9e1b9dd4de4747937d27476d268c9",
+      "commitDate": "2026-08-30T16:16:27+09:00",
+      "commitMessage": "Add files via upload",
+      "status": "captured",
+      "note": "",
+      "sha256": "9e07d070e754ffcbc84fec217e9d430a59694eb9e181a8dd7121801567a58ca2",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "스토리\n스테이지 1 · 1장\n타임어택\n60초 도전\n무제한\n끝까지 지우기\n튜토리얼\n갤러리\n설정\n규칙 보기"
+    },
+    "after": {
+      "revision": "794a5f048f923b85632a3f172fc0a664e50d4133",
+      "commitDate": "2026-08-30T18:31:10+09:00",
+      "commitMessage": "Two modes, English throughout, a new cover, and a word at the end of a run (#16)\n\nStory leaves the title screen; time attack and endless are the game now. The\nchapters, stages and pictures stay in the code untouched, so bringing it back\nis putting one button back. The gallery has no way to fill any more, but the\ntwo mode records it also holds are still worth seeing, so it keeps its screen\nunder the name RECORDS.\n\nEvery string the player reads is English — buttons, notices, rules, the\ntutorial, the story lines, and the browser suites' output with them. Plain\nwords throughout: \"Clear every block to win the picture\", \"Make ten to score\".\n\nThe cover becomes cover-3 and now fills the width on every phone rather than\nfitting inside it. `contain` left the picture small on a tall screen; the\nartwork carries white margins above and below precisely so the width can be\nfilled and the overflow cropped from margin rather than art. It is positioned\nand translated rather than centred by an auto margin, because an auto margin\ngives up and snaps to the top the moment the image is taller than the box —\nwhich is the case that matters, and which cropped a short phone entirely from\nthe bottom.\n\nA run now ends on a word before it ends on numbers: GOOD TRY, NICE, GREAT or\nAMAZING by score, held 1.4 seconds. The last move and a panel of numbers\narriving together read as being marked rather than as having finished\nsomething. The artwork behind the word is optional and off by default, so the\ngame never waits on an asset to look right — see docs/CONTENT.md.\n\nThe layout, drag and feedback suites walked through story to reach a board;\nthey now use time attack, which deals the same full nine-by-nine deck. Endless\nwas tried first and its sparse opening board made two checks meaningless.\n\n104 unit tests, layout, drag and feedback all green.",
+      "status": "captured",
+      "note": "",
+      "sha256": "54321ccfae0bde92059ea54cfce4ac96aa606f6f9d79783e7139ee503b202c69",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "TIME ATTACK\n60 seconds\nENDLESS\nPlay until the board fills\nHow to play\nRecords\nSettings\nRules"
+    }
+  }
+}

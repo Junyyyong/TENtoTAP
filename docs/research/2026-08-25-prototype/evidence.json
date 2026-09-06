@@ -1,0 +1,35 @@
+{
+  "title": "최초 숫자 퍼즐",
+  "problem": "숫자를 선택해 지우는 게임의 첫 실행 가능한 버전이 필요했다.",
+  "change": "같은 숫자 두 개 또는 합계 10의 연결 조합, 탭·드래그, 힌트와 숫자 추가를 구현했다.",
+  "outcome": "도구 구성만 있던 상태에서 실제 플레이 가능한 MAKEZERO로 바뀌었다.",
+  "scenario": "game",
+  "capturedAt": "2026-09-06T12:13:12.199Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "152.0.7977.76",
+  "method": "Historical git archive in isolated temp directory; current Vite runtime; fresh storage; seeded Math.random and controlled clock; finite animations finished. No historical source changes. Not a historical phone photograph or participant experiment.",
+  "sides": {
+    "before": {
+      "revision": "1bded92854f817624cd229444a43b2e7a8f3ff5a",
+      "commitDate": "2026-08-25T04:20:40+00:00",
+      "commitMessage": "chore: add build tooling scaffold (Vite + TypeScript)\n\nNo game code yet — build config only, pending game design decisions.\nStack confirmed with user: HTML5/TypeScript, wrapped with Capacitor for\nthe Play Store build.",
+      "status": "unavailable",
+      "reason": "이 커밋은 빌드 도구만 있으며 index.html과 실행 가능한 게임 화면이 없다."
+    },
+    "after": {
+      "revision": "9af818de8934417e0245f449f06ecf28cde22398",
+      "commitDate": "2026-08-25T04:44:34+00:00",
+      "commitMessage": "feat: MAKEZERO number-match puzzle\n\nBoard of 1-9 tiles, nine to a row. A selection clears when it is two tiles\nshowing the same number, or when two to five tiles add up to ten. Tiles link\nby 8-way grid adjacency or by reading order once cleared squares are skipped,\nand a chain only has to connect step by step.\n\nLonger chains are much harder to spot, so the reward curve is steep:\n10 / 30 / 70 / 150 points for two / three / four / five tiles.\n\nTap to build a chain step by step (it settles as soon as it is legal), or drag\nacross tiles and lift to commit. Fully cleared rows drop out. The + action\ncopies the surviving numbers onto the end of the board to break a deadlock,\nand the hint action points at one legal chain; both are limited.\n\nGame rules live in src/game as pure functions with 38 tests; src/ui holds the\nDOM renderer, pointer handling, and per-day best score.",
+      "status": "captured",
+      "note": "",
+      "sha256": "62d4faf43236d422e1af34221d73d35283bd7b9158bdb0189190e21978b33e26",
+      "errors": [],
+      "visibleScreens": [],
+      "text": "0\n?\n게임 1\n오늘 0 ♛\n1\n3\n9\n7\n4\n4\n9\n7\n8\n3\n5\n5\n5\n6\n3\n8\n5\n5\n8\n2\n7\n5\n5\n3\n1\n6\n4\n\n27개 남음\n\n+\n6\n💡\n3"
+    }
+  }
+}

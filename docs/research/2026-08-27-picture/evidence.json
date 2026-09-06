@@ -1,0 +1,43 @@
+{
+  "title": "그림 수집과 숫자 분포",
+  "problem": "스토리의 보상 목적이 흐리고 작은 숫자 편중으로 큰 숫자가 남는 문제가 있었다.",
+  "change": "보드 아래 그림과 수집 목표, 숫자 가중 분배, 블록 분할을 추가하고 행 붕괴를 막았다.",
+  "outcome": "지운 칸으로 그림이 드러나는 구조와 새 도구가 생겼다. 초기 화면만으로 전체 공개 과정의 효과를 입증하지 않는다.",
+  "scenario": "story",
+  "capturedAt": "2026-09-06T12:13:27.189Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "152.0.7977.76",
+  "method": "Historical git archive in isolated temp directory; current Vite runtime; fresh storage; seeded Math.random and controlled clock; finite animations finished. No historical source changes. Not a historical phone photograph or participant experiment.",
+  "sides": {
+    "before": {
+      "revision": "d043d2aca54bae651040d91d6ad1ae0e84d0901e",
+      "commitDate": "2026-08-27T17:57:33+09:00",
+      "commitMessage": "Merge pull request #3 from Junyyyong/claude/google-play-game-feasibility-uijpdz\n\n스토리 99 스테이지 · 목표는 판을 전부 지우기 · 한 수 물리기",
+      "status": "captured",
+      "note": "",
+      "sha256": "2c19a6168eef84873915d8ccfb29cf9f5b5b804438dcd801c31ccf1e45b2283c",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "SCORE\n0\nBEST 0\n스테이지 1\n1장 · 첫 그루터기\n2\n1\n2\n7\n2\n1\n6\n4\n1\n6\n4\n1\n4\n9\n1\n1\n2\n1\n3\n2\n2\n1\n1\n1\n3\n2\n3\n6\n2\n1\n7\n3\n2\n1\n4\n1\n\n한 칸도 남기지 않는 게 목표예요\n\nSUM\n0\n💡\n5\n5"
+    },
+    "after": {
+      "revision": "44bc2005cbdb2cfed0cf7c526d382cbbd9a12559",
+      "commitDate": "2026-08-27T11:51:43+00:00",
+      "commitMessage": "feat: a picture under every board, and a dealer that stops hoarding 1s\n\nStory is a collection now. Each stage has a picture behind its board;\nclearing a block turns that square transparent, so the picture arrives a\nsquare at a time, and emptying the board is how it is kept. Ninety-nine\nstages, ninety-nine pictures. Stars are gone — the goal is binary, and a\nsecond reward on top of it only blurs which one you are playing for.\n\nThat has a consequence in the rules: story boards no longer collapse a\nrow when it empties. A row that closed up would drag the holes out of\nline with the part of the picture they had uncovered.\n\nThe dealer was the other half. It used to pick a group size and then\nroll digits, and five tiles that add to ten average two apiece, so a\nboard came out 55% 1s and 2s with a 9 on one tile in a hundred. Long\ncombinations then ate the small numbers and left 7s, 8s and 9s with\nnothing to pair with — measured, the leftovers held no 1s or 2s at all.\nIt now picks whole groups from the thirty-odd that add to ten, choosing\neach by what the board is still short of. 1s fall from 37% to 23% on the\nfirst stage and 13% on the last; 9s rise from 1% to 8%. Scoring is per\ntile rather than per group, or a group of five wins on term count alone\nand the skew comes straight back.\n\nThat distribution also sets the group sizes, so the old dial is gone: a\nboard that wants few 1s deals mostly pairs without being told to.\n\nNew item: split a block into pieces that add to the same thing — a 5\nbecomes 3 and 2, or 1, 1, 1 and 2. Which is not the player's to choose.\nThe sum is preserved so the arithmetic cannot break, but a clear holds\nat most five blocks, and splitting inside a group of four can leave a\ngroup of six that no single clear can take. Every roll is checked\nagainst an exact emptiability search and rolled again if it would\nstrand the board, so the promise that a story board can be emptied\nsurvives the item. The pieces land in already-cleared squares, which\nmeans a full board cannot be split and a split covers part of the\npicture back up.\n\nThe opening distribution is the most sensitive number in the curve: a\nslightly more level one drops a careless line's success on stage 1 from\n30% to 8%. docs/BALANCE.md carries the measurements and says so.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01KksbCsyuxr5ve9AxVR5jhx",
+      "status": "captured",
+      "note": "",
+      "sha256": "96c9f86d63b2cae717b4560cb4b90c2f6f8f311816c267a180f33a3715b8cc46",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "SCORE\n0\nBEST 0\n스테이지 1\n1장 · 첫 그루터기\n1\n4\n1\n2\n1\n1\n3\n5\n6\n1\n1\n3\n4\n4\n2\n2\n8\n3\n6\n1\n1\n5\n5\n5\n3\n6\n1\n2\n7\n2\n1\n3\n1\n4\n2\n3\n\n한 칸도 남기지 않으면 그림을 얻어요\n\nSUM\n0\n💡\n5\n3\n5"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "세 가지 모드 분리",
+  "problem": "하나의 플레이 방식에서 목표와 제한이 다른 게임으로 확장했다.",
+  "change": "공통 규칙을 유지하고 RunConfig로 스토리·60초 타임어택·엔드리스를 나눴다.",
+  "outcome": "모드 선택 메뉴와 서로 다른 목표·자원을 갖게 됐다.",
+  "scenario": "entry",
+  "capturedAt": "2026-09-06T12:13:13.434Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "152.0.7977.76",
+  "method": "Historical git archive in isolated temp directory; current Vite runtime; fresh storage; seeded Math.random and controlled clock; finite animations finished. No historical source changes. Not a historical phone photograph or participant experiment.",
+  "sides": {
+    "before": {
+      "revision": "97be70e65c6ba7e893bc691974fa3e15e03f5a74",
+      "commitDate": "2026-08-25T04:51:07+00:00",
+      "commitMessage": "feat: package MAKEZERO as an Android app for Play\n\nWraps the web build with Capacitor 8, which already defaults to\ncompileSdk/targetSdk 36 — the level Google Play requires of new apps from\n2026-08-31.\n\n- portrait-locked activity, wood-coloured launch theme so start never flashes\n  white, and the stretched splash bitmaps dropped for the Android 12+ splash API\n- adaptive and legacy launcher icons generated from the game's own tile art,\n  replacing the default template vectors\n- release signing reads android/keystore.properties, which stays untracked\n  alongside the keystore itself\n- CI runs tests, typecheck and a debug APK build; a manual workflow produces the\n  signed .aab for anyone without a local Android SDK\n- store/ carries the 512 icon, 1024x500 feature graphic and two phone\n  screenshots captured from the running game\n- README documents the rules, the keystore steps and the Play Console checklist\n\nThe .aab could not be built in this container: its network policy blocks\ndl.google.com, so the Android SDK cannot be fetched here. The CI workflow\ncovers that build.",
+      "status": "captured",
+      "note": "",
+      "sha256": "62d4faf43236d422e1af34221d73d35283bd7b9158bdb0189190e21978b33e26",
+      "errors": [],
+      "visibleScreens": [],
+      "text": "0\n?\n게임 1\n오늘 0 ♛\n1\n3\n9\n7\n4\n4\n9\n7\n8\n3\n5\n5\n5\n6\n3\n8\n5\n5\n8\n2\n7\n5\n5\n3\n1\n6\n4\n\n27개 남음\n\n+\n6\n💡\n3"
+    },
+    "after": {
+      "revision": "1dfa09eebd2fb1ed28e4e3743fa718ecf393de30",
+      "commitDate": "2026-08-25T07:12:05+00:00",
+      "commitMessage": "feat: story, time attack and endless modes\n\nSplits what varies between modes into a RunConfig — starting rows, adds,\nhints, spawn weights, and an optional clock — so the matching rules stay\nuntouched and only the goal and resources change.\n\nStory: 20 stages in 4 chapters of 5. Clear the whole board within the stage's\nadd budget. Three dials tighten together — adds 8 to 2, rows 3 to 7, and a\nspawn table leaning on the hard-to-pair 7/8/9 — interpolated so each one hits\nits extreme at the final stage rather than plateauing partway. Clearing a\nchapter's last stage plays its story beat.\n\nTime attack: 60 seconds. A deadlock is topped up with the survivors and a\nboard cleared outright is redealt, so the run never stalls; only the clock\nends it.\n\nEndless: unchanged.\n\nChapters live in story.ts as data — image path, name and lines — and the art\nin public/story/ is placeholder work meant to be overwritten in place.\n\nsolver.test.ts plays every stage with a greedy bot across 12 fixed seeds. It\ncaught the original curve flattening after stage 14, and now guards that no\nstage is unclearable and that difficulty still climbs to the end.\n\nTile rendering and pointer gestures move to boardView.ts so the controller is\nonly screens and HUD. 61 unit tests, plus a browser pass over all three modes\nand the chapter beat.",
+      "status": "captured",
+      "note": "",
+      "sha256": "0c97c3742d33550079ec69d792227336de20c73a6cf73cadfe1a5cc1e4aa2bc4",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "MAKEZERO\n\n이어서 10 만들기\n\n스토리\n스테이지 1 · 1장 · 첫 그루터기\n타임어택\n60초 도전\n무제한\n끝까지 지우기\n규칙 보기"
+    }
+  }
+}

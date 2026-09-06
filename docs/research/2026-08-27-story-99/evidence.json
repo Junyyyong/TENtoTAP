@@ -1,0 +1,43 @@
+{
+  "title": "99단계와 전체 클리어 목표",
+  "problem": "처음부터 전부 지울 수 없는 덱과 잘못 선택했을 때 복구 수단이 없는 문제가 있었다.",
+  "change": "합계 10 그룹으로 판을 만들고 99단계 곡선과 제한된 되돌리기를 제공했다.",
+  "outcome": "전체 클리어를 목표로 하며 선택 실수를 되돌릴 수 있다. 첫 단계 화면은 도구 변화의 예시이고 99단계 전체를 검증한 캡처는 아니다.",
+  "scenario": "story",
+  "capturedAt": "2026-09-06T12:13:24.853Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "152.0.7977.76",
+  "method": "Historical git archive in isolated temp directory; current Vite runtime; fresh storage; seeded Math.random and controlled clock; finite animations finished. No historical source changes. Not a historical phone photograph or participant experiment.",
+  "sides": {
+    "before": {
+      "revision": "e91b490e482c882d194eee001238fbbb431a7aa5",
+      "commitDate": "2026-08-27T17:04:26+09:00",
+      "commitMessage": "Merge pull request #2 from Junyyyong/claude/google-play-game-feasibility-uijpdz\n\n드래그 정확도, 화면 흔들림, 모드별 여백 수정",
+      "status": "captured",
+      "note": "",
+      "sha256": "7621241e68d7131f3d11e356174c9d9177e85b1bc366a73930bddd3dfd3e40a2",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "SCORE\n0\nBEST 0\n스테이지 1\n1장 · 첫 그루터기\n9\n2\n6\n2\n3\n4\n1\n2\n1\n5\n2\n1\n3\n2\n4\n1\n6\n2\n3\n1\n1\n3\n4\n3\n1\n1\n1\n6\n1\n2\n3\n1\n4\n7\n7\n8\n2\n1\n1\n7\n2\n2\n2\n8\n2\n\n☆☆☆\n\nSUM\n0\n💡\n4"
+    },
+    "after": {
+      "revision": "457b9a4a26ff577c27a5f9dec98b06ffc8c3057d",
+      "commitDate": "2026-08-27T08:56:24+00:00",
+      "commitMessage": "feat: ninety-nine stages, and a story you are meant to finish empty\n\nStory asks for the whole board now. A stage deals its numbers as groups\nthat each add to ten, so the deal always comes apart — checked exactly,\nby search, at every checkpoint and every seed: 100%. What a player picks\nis another matter. A clear that cuts across two groups strands tiles\nnothing will ever match:\n\n  1 2 3 4 6 7 8 9   comes apart as (1,9)(2,8)(3,7)(4,6)\n  take 1+2+3+4 first and 6 7 8 9 is left with no ten in it\n\nMeasured over forty seeds a run: a line that takes any legal move\nempties the board 35% of the time on stage 1 and 0% by stage 99; always\ntaking the longest combination, or always taking pairs, is near zero\nthroughout; a line that only makes moves keeping the board emptiable\ngets there every time, on every stage. Being stuck is a mistake, and\nnever a fixed strategy's fault.\n\nSo a move can be taken back, and that is a resource rather than a\nconvenience — it is what makes \"empty the board\" a fair goal. It works\non a dead board too, which is the moment it matters, and the last stage\nstill carries one: at zero there is no way back from a mistake.\n\nStars follow: three for an empty board played unaided, two for an empty\nboard, one as consolation for coming close so a run never hard-locks.\n\nThe curve runs 1 to 99 over eleven chapters. Four rows to eleven, loose\ngroups to rigid pairs, five hints to none, five take-backs to one. The\ndial is not size — it is how much a wrong move costs.\n\nAlso: five blocks that do not add to ten are refused where they stand.\nThere is no sixth to come, so the selection was already dead while it\nsat there looking alive. The board sways and the five flash red before\nthey let go — a selection that merely vanished left the player unsure\nthe tap had registered.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01KksbCsyuxr5ve9AxVR5jhx",
+      "status": "captured",
+      "note": "",
+      "sha256": "8531ceb9957feb493599e0445ee4e8ebc5472b0e618153484d4a54574acfb038",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "SCORE\n0\nBEST 0\n스테이지 1\n1장 · 첫 그루터기\n2\n1\n2\n7\n2\n1\n6\n4\n1\n6\n4\n1\n4\n9\n1\n1\n2\n1\n3\n2\n2\n1\n1\n1\n3\n2\n3\n6\n2\n1\n7\n3\n2\n1\n4\n1\n\n한 칸도 남기지 않는 게 목표예요\n\nSUM\n0\n💡\n5\n5"
+    }
+  }
+}

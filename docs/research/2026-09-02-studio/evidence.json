@@ -1,0 +1,43 @@
+{
+  "title": "스튜디오 오프닝과 화면 배경",
+  "problem": "브랜드 오프닝 도입 후 Safari 상하단에 주황색이 남는 문제가 있었다.",
+  "change": "스튜디오 카드만 주황색으로 칠하고 루트·테마색을 종이색으로 고정했다.",
+  "outcome": "페이지 배경 처리가 바뀌었다. Chromium의 페이지 캡처에는 실제 Safari 주소창이 없으므로 그 개선을 이미지로 직접 검증할 수 없다.",
+  "scenario": "entry",
+  "capturedAt": "2026-09-06T12:13:38.750Z",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "152.0.7977.76",
+  "method": "Historical git archive in isolated temp directory; current Vite runtime; fresh storage; seeded Math.random and controlled clock; finite animations finished. No historical source changes. Not a historical phone photograph or participant experiment.",
+  "sides": {
+    "before": {
+      "revision": "86ee58d098d8a47e84503916849df0f4de5c4dec",
+      "commitDate": "2026-09-02T15:31:49+09:00",
+      "commitMessage": "Match Android's launch window to the card the app opens on (#48)\n\nNothing after the studio card was orange and nothing needed putting back: the\ncover and the menu were never touched. Checked on painted pixels rather than on\nclass names — eight points around the edge of the screen, where a background is\nwhat shows — and they are orange 8/8 on the studio card and 0/8 on the cover and\nthe menu.\n\nThere was a real colour to fix, though, one phone-side. The window Android\npaints behind the WebView was still #7A4F24, the brown of the dark-wood skin\nthis game had before it went to paper, so every launch flashed brown before the\norange arrived. It now matches the card the app opens on.\n\nThe launcher icon's own background is left alone — that is the icon on the home\nscreen, not the launch.\n\n\nClaude-Session: https://claude.ai/code/session_01KksbCsyuxr5ve9AxVR5jhx\n\nCo-authored-by: Claude Opus 5 <noreply@anthropic.com>",
+      "status": "captured",
+      "note": "",
+      "sha256": "8112f722d6fe367c7e1a0a7f2b4db490c03375d61ef933b2a2d5f4be9c08fde0",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "TIME ATTACK\n60 seconds\nENDLESS\nPlay until the board fills\nTIMELESS\nClear the whole board. No clock\nHow to play\nSettings\nRules"
+    },
+    "after": {
+      "revision": "4870f0a5a8f964cd4577365f975f614ea669b2fb",
+      "commitDate": "2026-09-02T16:08:32+09:00",
+      "commitMessage": "Keep the page paper so Safari's bars never take the studio's orange (#49)\n\nThe orange was not in the page at all — it was iOS Safari's status bar and\naddress bar. Safari reads the page's colour once, at load, and neither a later\n`theme-color` nor a later screen reaches the bars, so opening on the studio's\ncard left orange furniture around the game for the rest of the session.\n\nSo the page is paper from the first frame and stays paper. `theme-color` is\nfixed in the markup and no longer touched by script — driving it was the wrong\ninstinct, and by this mechanism it would have made the orange permanent rather\nthan temporary. The root owns the page colour now instead of the body: on a\nphone the app is shorter than the window, and the strips the browser paints\naround it come from the root, which should not be resting on CSS's propagation\nrule. The orange is painted on the studio card's own box, where Safari never\nreads it.\n\nReproduced the condition rather than the device — the app held to 700px inside\nan 852px window — and sampled the pixels outside it: paper on all three cards.\n\nAlso: the browser suites need CHROME_PATH in this environment and die without\nit, which I had not noticed while writing \"layout · drag · feedback all pass\"\non recent pull requests. They were not run. Run properly, one was genuinely\nbroken, and by my own change: centring a lone tool with `display: none`\ncollapsed the whole action row in time attack, which carries no tools, and the\nboard there sat 32px off every other mode. Reserving the row's height fixed\nthat and cost the board its tiles in landscape. A hidden tool now gives up its\nwidth — a negative margin cancels the flex gap it would still be given — and\nkeeps its height, so the lone tool still centres and the row is the same height\nin every mode at every size, with no per-breakpoint numbers to keep in step.\n\nUnits 123 · layout 14 · drag 9 · feedback 9, all actually run.\n\n\nClaude-Session: https://claude.ai/code/session_01KksbCsyuxr5ve9AxVR5jhx\n\nCo-authored-by: Claude Opus 5 <noreply@anthropic.com>",
+      "status": "captured",
+      "note": "",
+      "sha256": "8112f722d6fe367c7e1a0a7f2b4db490c03375d61ef933b2a2d5f4be9c08fde0",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "TIME ATTACK\n60 seconds\nENDLESS\nPlay until the board fills\nTIMELESS\nClear the whole board. No clock\nHow to play\nSettings\nRules"
+    }
+  }
+}

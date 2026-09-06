@@ -1,0 +1,472 @@
+[
+  {
+    "date": "2026-08-25",
+    "id": "prototype",
+    "title": "최초 숫자 퍼즐",
+    "path": "docs/research/2026-08-25-prototype",
+    "before": {
+      "revision": "1bded92854f817624cd229444a43b2e7a8f3ff5a",
+      "commitDate": "2026-08-25T04:20:40+00:00",
+      "commitMessage": "chore: add build tooling scaffold (Vite + TypeScript)\n\nNo game code yet — build config only, pending game design decisions.\nStack confirmed with user: HTML5/TypeScript, wrapped with Capacitor for\nthe Play Store build.",
+      "status": "unavailable",
+      "reason": "이 커밋은 빌드 도구만 있으며 index.html과 실행 가능한 게임 화면이 없다."
+    },
+    "after": {
+      "revision": "9af818de8934417e0245f449f06ecf28cde22398",
+      "commitDate": "2026-08-25T04:44:34+00:00",
+      "commitMessage": "feat: MAKEZERO number-match puzzle\n\nBoard of 1-9 tiles, nine to a row. A selection clears when it is two tiles\nshowing the same number, or when two to five tiles add up to ten. Tiles link\nby 8-way grid adjacency or by reading order once cleared squares are skipped,\nand a chain only has to connect step by step.\n\nLonger chains are much harder to spot, so the reward curve is steep:\n10 / 30 / 70 / 150 points for two / three / four / five tiles.\n\nTap to build a chain step by step (it settles as soon as it is legal), or drag\nacross tiles and lift to commit. Fully cleared rows drop out. The + action\ncopies the surviving numbers onto the end of the board to break a deadlock,\nand the hint action points at one legal chain; both are limited.\n\nGame rules live in src/game as pure functions with 38 tests; src/ui holds the\nDOM renderer, pointer handling, and per-day best score.",
+      "status": "captured",
+      "note": "",
+      "sha256": "62d4faf43236d422e1af34221d73d35283bd7b9158bdb0189190e21978b33e26",
+      "errors": [],
+      "visibleScreens": [],
+      "text": "0\n?\n게임 1\n오늘 0 ♛\n1\n3\n9\n7\n4\n4\n9\n7\n8\n3\n5\n5\n5\n6\n3\n8\n5\n5\n8\n2\n7\n5\n5\n3\n1\n6\n4\n\n27개 남음\n\n+\n6\n💡\n3"
+    }
+  },
+  {
+    "date": "2026-08-25",
+    "id": "modes",
+    "title": "세 가지 모드 분리",
+    "path": "docs/research/2026-08-25-modes",
+    "before": {
+      "revision": "97be70e65c6ba7e893bc691974fa3e15e03f5a74",
+      "commitDate": "2026-08-25T04:51:07+00:00",
+      "commitMessage": "feat: package MAKEZERO as an Android app for Play\n\nWraps the web build with Capacitor 8, which already defaults to\ncompileSdk/targetSdk 36 — the level Google Play requires of new apps from\n2026-08-31.\n\n- portrait-locked activity, wood-coloured launch theme so start never flashes\n  white, and the stretched splash bitmaps dropped for the Android 12+ splash API\n- adaptive and legacy launcher icons generated from the game's own tile art,\n  replacing the default template vectors\n- release signing reads android/keystore.properties, which stays untracked\n  alongside the keystore itself\n- CI runs tests, typecheck and a debug APK build; a manual workflow produces the\n  signed .aab for anyone without a local Android SDK\n- store/ carries the 512 icon, 1024x500 feature graphic and two phone\n  screenshots captured from the running game\n- README documents the rules, the keystore steps and the Play Console checklist\n\nThe .aab could not be built in this container: its network policy blocks\ndl.google.com, so the Android SDK cannot be fetched here. The CI workflow\ncovers that build.",
+      "status": "captured",
+      "note": "",
+      "sha256": "62d4faf43236d422e1af34221d73d35283bd7b9158bdb0189190e21978b33e26",
+      "errors": [],
+      "visibleScreens": [],
+      "text": "0\n?\n게임 1\n오늘 0 ♛\n1\n3\n9\n7\n4\n4\n9\n7\n8\n3\n5\n5\n5\n6\n3\n8\n5\n5\n8\n2\n7\n5\n5\n3\n1\n6\n4\n\n27개 남음\n\n+\n6\n💡\n3"
+    },
+    "after": {
+      "revision": "1dfa09eebd2fb1ed28e4e3743fa718ecf393de30",
+      "commitDate": "2026-08-25T07:12:05+00:00",
+      "commitMessage": "feat: story, time attack and endless modes\n\nSplits what varies between modes into a RunConfig — starting rows, adds,\nhints, spawn weights, and an optional clock — so the matching rules stay\nuntouched and only the goal and resources change.\n\nStory: 20 stages in 4 chapters of 5. Clear the whole board within the stage's\nadd budget. Three dials tighten together — adds 8 to 2, rows 3 to 7, and a\nspawn table leaning on the hard-to-pair 7/8/9 — interpolated so each one hits\nits extreme at the final stage rather than plateauing partway. Clearing a\nchapter's last stage plays its story beat.\n\nTime attack: 60 seconds. A deadlock is topped up with the survivors and a\nboard cleared outright is redealt, so the run never stalls; only the clock\nends it.\n\nEndless: unchanged.\n\nChapters live in story.ts as data — image path, name and lines — and the art\nin public/story/ is placeholder work meant to be overwritten in place.\n\nsolver.test.ts plays every stage with a greedy bot across 12 fixed seeds. It\ncaught the original curve flattening after stage 14, and now guards that no\nstage is unclearable and that difficulty still climbs to the end.\n\nTile rendering and pointer gestures move to boardView.ts so the controller is\nonly screens and HUD. 61 unit tests, plus a browser pass over all three modes\nand the chapter beat.",
+      "status": "captured",
+      "note": "",
+      "sha256": "0c97c3742d33550079ec69d792227336de20c73a6cf73cadfe1a5cc1e4aa2bc4",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "MAKEZERO\n\n이어서 10 만들기\n\n스토리\n스테이지 1 · 1장 · 첫 그루터기\n타임어택\n60초 도전\n무제한\n끝까지 지우기\n규칙 보기"
+    }
+  },
+  {
+    "date": "2026-08-26",
+    "id": "sum-rule",
+    "title": "합계 10 규칙 단순화",
+    "path": "docs/research/2026-08-26-sum-rule",
+    "before": {
+      "revision": "2f371c88f8100f461906af92b4fc8f4017571a21",
+      "commitDate": "2026-08-26T07:19:18+00:00",
+      "commitMessage": "feat: sum-to-ten only, line of sight, fixed board\n\nRemoves same-number matching. A selection now clears only when two to five\ntiles add up to exactly ten; repeated values inside a chain (1+1+8) are still\nfine. Connection becomes a single rule — a straight line, horizontal, vertical\nor diagonal, with no surviving tile in the way — replacing grid adjacency plus\nthe reading-order wrap that read as arbitrary on screen.\n\nThree things had to change with it, each because simulation said so:\n\nBoards are dealt as groups that already sum to ten rather than loose random\nnumbers. Every clear removes exactly ten, so the total's last digit never\nchanges; a random board is unclearable nine times in ten, and simulated runs\nfailed all 120 games with the board growing past 490 tiles.\n\nThe + action becomes a shuffle. Copying the survivors duplicated whatever the\nplayer was stuck on — without same-number matching nothing broke the loop, and\nleftovers climbed from 8 to 355 as more copies were spent. Shuffling keeps the\nnumbers and only moves them, so the board never grows.\n\nStage goals become star grades. A perfect clear turned out to depend on the\ndeal, not the player: on two of three sampled boards, 120 randomised\nplaythroughs never got below three tiles. Stars are scored on tiles left, with\ntargets set as a share of the board that tightens each stage.\n\nThe deal's group sizes work backwards from the obvious reading, so the comments\nsay so: many large groups make a board easier, since five values totalling ten\naverage two apiece and small numbers combine freely. Plain pairs spread the\nvalues out and strand the rigid 8s and 9s.\n\nThe board is dealt at a fixed size and never grows, so it is laid out to fit\nthe screen — 5x8 at stage 1 up to 10x15 at stage 20, tiles sized to the space\navailable. Nothing scrolls, which leaves one-finger drag free for selection.\n\nGreedy play now grades 2.42 stars at stage 1 falling to 0.92 at stage 20, every\nstage passable. 70 unit tests, plus browser passes over the rules, the layout at\nboth board extremes, and all three modes.",
+      "status": "captured",
+      "note": "",
+      "sha256": "d04e1571bec1612ea44313594a2017bebecf6d08d1a087889617b5cbe07d11c7",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "MAKEZERO\n\n이어서 10 만들기\n\n스토리\n스테이지 1 · 1장 · 첫 그루터기\n타임어택\n60초 도전\n무제한\n끝까지 지우기\n규칙 보기\n규칙\n\n숫자를 이어서 합이 정확히 10이 되면 지워집니다.\n2개부터 5개까지 이을 수 있고, 길수록 점수가 큽니다.\n\n2개 10점 · 3개 30점\n4개 70점 · 5개 150점\n\n가로·세로·대각선으로 직선을 그어 사이에 남은 숫자가 없으면 이어집니다. 지워진 칸은 몇 칸이든 통과합니다.\n막히면 섞기로 남은 숫자의 자리를 바꾸세요.\n\n닫기\n모드 선택"
+    },
+    "after": {
+      "revision": "5b6a5a6ed1dcc76c5859a81ba356191c0faa4df6",
+      "commitDate": "2026-08-26T07:54:44+00:00",
+      "commitMessage": "refactor: drop the position rule, reorganise into core/content/ui\n\nTiles may now be combined wherever they sit. A selection clears when two to\nfive surviving tiles add up to exactly ten, and nothing else is checked — no\nadjacency, no straight line, no line of sight. That answers both reports:\n1+1+1+7 totals ten and was only ever refused because the four tiles did not\nshare a line, and \"nothing left to connect\" fired while combinations were\nstill on the board.\n\nThe shuffle goes with it. Rearranging tiles cannot change a verdict that never\nlooks at position, so it had nothing left to do. A run now ends exactly when no\nvalues on the board can make ten, which core/solver.ts answers from the nine\nvalue counts rather than by walking the grid.\n\nTwo selection fixes this exposed: a tile that would push the running total past\nten now starts a fresh selection instead of piling onto an unclearable heap,\nand tapping the board outside any tile abandons the selection.\n\nStructure, since this will keep being edited:\n\n  src/core/     rules engine — no DOM, fully tested\n  src/content/  stage curve, star targets, chapters and lines\n  src/ui/       screens, split into title / hud / overlay / story\n  docs/         why it is built this way\n\nDependencies run one way, ui -> content -> core, so a skin change never reaches\nthe rules. The stylesheet is split to match, with the palette in tokens.css.\n\ndocs/DECISIONS.md records the findings that are counter-intuitive enough to be\nundone by accident: random boards are mathematically unclearable because each\nclear removes exactly ten and never changes the total's last digit; dealing\nmany large groups makes a board easier rather than harder; a perfect clear\ndepends on the deal, so three stars is a small number rather than an empty\nboard. Each entry carries the measurement behind it.\n\n57 unit tests, plus browser passes over the rules, the layout at both board\nextremes, all three modes and the chapter beat.",
+      "status": "captured",
+      "note": "",
+      "sha256": "1d91d923efee8182c6aba55747eccd03e4bbb25d6e7805664ba8647a8d35994a",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "MAKEZERO\n\n이어서 10 만들기\n\n스토리\n스테이지 1 · 1장 · 첫 그루터기\n타임어택\n60초 도전\n무제한\n끝까지 지우기\n규칙 보기\n규칙\n\n숫자를 골라 합이 정확히 10이 되면 지워집니다.\n2개부터 5개까지 고를 수 있고, 많이 고를수록 점수가 큽니다.\n\n2개 10점 · 3개 30점\n4개 70점 · 5개 150점\n\n어느 칸이든 상관없습니다. 멀리 떨어져 있어도, 사이에 무엇이 있어도 함께 고를 수 있습니다.\n같은 숫자끼리 지우는 규칙은 없습니다. 3+3은 6이라 지워지지 않아요.\n\n닫기\n모드 선택"
+    }
+  },
+  {
+    "date": "2026-08-26",
+    "id": "survival",
+    "title": "생존형 엔드리스",
+    "path": "docs/research/2026-08-26-survival",
+    "before": {
+      "revision": "5b6a5a6ed1dcc76c5859a81ba356191c0faa4df6",
+      "commitDate": "2026-08-26T07:54:44+00:00",
+      "commitMessage": "refactor: drop the position rule, reorganise into core/content/ui\n\nTiles may now be combined wherever they sit. A selection clears when two to\nfive surviving tiles add up to exactly ten, and nothing else is checked — no\nadjacency, no straight line, no line of sight. That answers both reports:\n1+1+1+7 totals ten and was only ever refused because the four tiles did not\nshare a line, and \"nothing left to connect\" fired while combinations were\nstill on the board.\n\nThe shuffle goes with it. Rearranging tiles cannot change a verdict that never\nlooks at position, so it had nothing left to do. A run now ends exactly when no\nvalues on the board can make ten, which core/solver.ts answers from the nine\nvalue counts rather than by walking the grid.\n\nTwo selection fixes this exposed: a tile that would push the running total past\nten now starts a fresh selection instead of piling onto an unclearable heap,\nand tapping the board outside any tile abandons the selection.\n\nStructure, since this will keep being edited:\n\n  src/core/     rules engine — no DOM, fully tested\n  src/content/  stage curve, star targets, chapters and lines\n  src/ui/       screens, split into title / hud / overlay / story\n  docs/         why it is built this way\n\nDependencies run one way, ui -> content -> core, so a skin change never reaches\nthe rules. The stylesheet is split to match, with the palette in tokens.css.\n\ndocs/DECISIONS.md records the findings that are counter-intuitive enough to be\nundone by accident: random boards are mathematically unclearable because each\nclear removes exactly ten and never changes the total's last digit; dealing\nmany large groups makes a board easier rather than harder; a perfect clear\ndepends on the deal, so three stars is a small number rather than an empty\nboard. Each entry carries the measurement behind it.\n\n57 unit tests, plus browser passes over the rules, the layout at both board\nextremes, all three modes and the chapter beat.",
+      "status": "captured",
+      "note": "",
+      "sha256": "b0993ee1efb59ae99d6ee487697c94edca556436eeb30b0b8c57cade93e4282c",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "0\n?\n게임 1\n오늘 0 ♛\n1\n1\n4\n2\n1\n3\n1\n3\n2\n2\n8\n4\n2\n7\n1\n5\n3\n8\n4\n2\n4\n1\n4\n2\n2\n9\n5\n1\n3\n7\n1\n2\n7\n1\n2\n4\n7\n2\n1\n1\n2\n3\n1\n2\n1\n4\n1\n5\n1\n6\n4\n2\n1\n2\n1\n2\n6\n2\n1\n2\n2\n2\n3\n8\n1\n3\n4\n1\n6\n2\n3\n4\n2\n2\n4\n2\n2\n\n77개 남음\n\n💡\n3"
+    },
+    "after": {
+      "revision": "59c83d1105974471477055854d4a858f1e632151",
+      "commitDate": "2026-08-26T08:12:25+00:00",
+      "commitMessage": "feat: endless becomes a survival mode\n\nTiles now keep arriving in endless. The board is a fixed frame dealt about\nhalf full, a batch lands every few seconds, and cleared squares stay open as\nthe room those batches land in — so the board neither grows nor collapses rows\nthe way a story stage does. The run ends when a batch has nowhere to go.\n\nBatches are whole sum-to-ten groups, never loose tiles. Dropping singles would\nbring back the problem that makes a random board unclearable: each clear\nremoves exactly ten, so the total's last digit never moves.\n\nThe gap between batches shortens as the run goes on, and that floor is the\nwhole mode. It has to sit just below how fast a person can actually play.\nSimulated against a bot that clears every N milliseconds:\n\n  floor 850ms   quick player 900s+ (never died)   slow player 107s\n  floor 650ms   quick player  587s                slow player 101s\n  floor 400ms   quick player   99s                slow player  62s\n\nToo high and a quick player outruns the spawner forever; too low and the floor\nkills everyone at the same rate, so playing well stops mattering. 650ms keeps a\ncasual run near two minutes while still paying for speed. pacing.test.ts\nsimulates the clock and guards both ends of that.\n\nTwo fixes this surfaced:\n\nThe board view held its own reference to the board, so tiles that arrived on a\ntimer rendered only after the player's next move. It now re-points at the\ncurrent board every render, keeping any half-built selection intact rather than\ncancelling it when a batch lands.\n\nA square nothing has ever stood on carries value 0 and renders blank. It was\nshowing a ghost 1 — the placeholder it was created with.\n\nDocs updated: the endless section in RULES.md, the spawn dials and their\nmeasurements in BALANCE.md, and the floor trade-off in DECISIONS.md.",
+      "status": "captured",
+      "note": "",
+      "sha256": "826d809b51424ea5fb925750336f68d857481ebe510077d666da72fe2efabbe7",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "0\n?\n게임 1\n오늘 0 ♛\n6\n4\n6\n3\n8\n2\n3\n3\n3\n5\n2\n5\n7\n1\n5\n1\n5\n2\n1\n1\n7\n1\n3\n2\n1\n1\n5\n7\n2\n2\n3\n2\n8\n2\n3\n8\n\n빈 칸 41개\n\n💡\n3"
+    }
+  },
+  {
+    "date": "2026-08-26",
+    "id": "tutorial",
+    "title": "체험형 튜토리얼",
+    "path": "docs/research/2026-08-26-tutorial",
+    "before": {
+      "revision": "59c83d1105974471477055854d4a858f1e632151",
+      "commitDate": "2026-08-26T08:12:25+00:00",
+      "commitMessage": "feat: endless becomes a survival mode\n\nTiles now keep arriving in endless. The board is a fixed frame dealt about\nhalf full, a batch lands every few seconds, and cleared squares stay open as\nthe room those batches land in — so the board neither grows nor collapses rows\nthe way a story stage does. The run ends when a batch has nowhere to go.\n\nBatches are whole sum-to-ten groups, never loose tiles. Dropping singles would\nbring back the problem that makes a random board unclearable: each clear\nremoves exactly ten, so the total's last digit never moves.\n\nThe gap between batches shortens as the run goes on, and that floor is the\nwhole mode. It has to sit just below how fast a person can actually play.\nSimulated against a bot that clears every N milliseconds:\n\n  floor 850ms   quick player 900s+ (never died)   slow player 107s\n  floor 650ms   quick player  587s                slow player 101s\n  floor 400ms   quick player   99s                slow player  62s\n\nToo high and a quick player outruns the spawner forever; too low and the floor\nkills everyone at the same rate, so playing well stops mattering. 650ms keeps a\ncasual run near two minutes while still paying for speed. pacing.test.ts\nsimulates the clock and guards both ends of that.\n\nTwo fixes this surfaced:\n\nThe board view held its own reference to the board, so tiles that arrived on a\ntimer rendered only after the player's next move. It now re-points at the\ncurrent board every render, keeping any half-built selection intact rather than\ncancelling it when a batch lands.\n\nA square nothing has ever stood on carries value 0 and renders blank. It was\nshowing a ghost 1 — the placeholder it was created with.\n\nDocs updated: the endless section in RULES.md, the spawn dials and their\nmeasurements in BALANCE.md, and the floor trade-off in DECISIONS.md.",
+      "status": "captured",
+      "note": "튜토리얼 도입 전: 해당 화면이 없어 실제 메뉴를 비교 맥락으로 캡처함.",
+      "sha256": "b78ba323f9a3c04963363ee9ecf81dd7c772cc93999faf34022ad4dcdb14971e",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "MAKEZERO\n\n이어서 10 만들기\n\n스토리\n스테이지 1 · 1장 · 첫 그루터기\n타임어택\n60초 도전\n무제한\n끝까지 지우기\n규칙 보기"
+    },
+    "after": {
+      "revision": "880f309ea4731be03782ba1ea8c7fad17b2f6d3d",
+      "commitDate": "2026-08-26T12:05:17+00:00",
+      "commitMessage": "feat: hands-on tutorial and a personal records screen\n\nThe tutorial teaches by making the player do it: five boards, each for one\nidea — a pair making ten, three tiles, the two 3s that look pairable but are\nonly six, a 9 and a 1 at opposite ends of the board, and a five-tile chain for\nthe 150. It opens on a first launch, can be skipped at any point, and is\nreplayable from the title.\n\nEvery tutorial board is built so exactly one combination adds up to ten, which\nlets the game's own rules judge the answer. There is no second 'is this the\nmove I meant?' check to drift out of step with them, and tutorial.test.ts\nenumerates every board to prove a second answer has not crept in. Boards may\nstill carry other tiles — those are the lesson, not noise.\n\nThe records screen collects what a player has to show for their time: best\ntime-attack and endless scores, the star earned on each of the twenty stages,\nand the running total. Stage grades are stored per stage, keeping the best a\nstage has ever earned.\n\nTwo smaller pieces this needed. BoardView takes an optional maximum tile size,\nsince a nine-tile teaching board would otherwise blow up to fill a phone\nscreen. Progress storage gained per-stage stars and a tutorial-seen flag, both\ndefaulted so an existing save loads unchanged.\n\n78 unit tests, plus browser passes over the tutorial (wrong move refused, all\nfive steps, skip, replay, does not nag on the second launch) and the records\nscreen.",
+      "status": "captured",
+      "note": "",
+      "sha256": "fcbe1c760ead0523dc6d8c1790e1c681ce8081bb976b0926929fee8149c32ca1",
+      "errors": [],
+      "visibleScreens": [
+        "screen-tutorial"
+      ],
+      "text": "건너뛰기\n\n숫자를 눌러 합이 10을 만들면 지워집니다.\n4와 6을 눌러보세요.\n\n4\n6\n3\n2"
+    }
+  },
+  {
+    "date": "2026-08-27",
+    "id": "identity",
+    "title": "TAP to TEN과 극장 디자인",
+    "path": "docs/research/2026-08-27-identity",
+    "before": {
+      "revision": "38f51c0f28f216dd674a3ba7677cd21e974a3686",
+      "commitDate": "2026-08-26T14:58:41+00:00",
+      "commitMessage": "fix: the board no longer clips or floats in a margin\n\nTwo layout bugs that only showed on a real phone.\n\nThe board was clipped. It sizes its tiles by measuring the room it has, and\nthat measurement ran before the HUD did — so it sized against a box that still\nhad the previous run's timer bar showing and a one-line notice, then the chrome\nsettled and the board no longer fitted. The HUD now renders first.\n\nThe board floated in a wide margin. The dark frame was on .board-wrap, which\nstretches the full width, while the tiles are sized to fit both directions and\nso end up narrower. The frame moves to .board, which is exactly the size of the\ntiles it holds.\n\nRefitting is now driven by a ResizeObserver rather than window.resize. The\nwindow stays the same size while that box changes constantly — browser bars\nsliding away, a notice wrapping to two lines, the keyboard, a foldable opening.\nIt is safe from feedback because .board-wrap takes its height from flex and\nnever from the board inside it.\n\nOn short screens the chrome gives up its room before the tiles do: header,\nchips, timer and buttons shrink at 660px, and the notice goes at 520px. The\n16px tile floor is a last resort, not the first move.\n\ntests/browser/responsive.mjs is kept in the repo because unit tests cannot\nreach any of this — a board sized by measurement needs a real browser at a real\nsize to verify. It checks ten devices plus rotation both ways for clipping,\npage overflow and unusably small tiles. Playwright stays out of package.json;\nthe script says how to install it.",
+      "status": "captured",
+      "note": "",
+      "sha256": "322013221f84d8371e96b0723614ad5519edf4684d2bff2c8c3d846c2c1ad07f",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "0\n?\n타임어택\n1:00\n8\n1\n3\n2\n1\n3\n2\n3\n1\n3\n7\n4\n3\n7\n4\n1\n1\n9\n6\n2\n2\n1\n4\n2\n1\n5\n5\n1\n1\n8\n1\n1\n7\n1\n3\n3\n2\n3\n2\n1\n2\n2\n1\n4\n1\n5\n2\n2\n1\n6\n2\n2\n1\n2\n1\n1\n7\n2\n1\n4\n2\n4\n3\n8\n2\n7\n1\n1\n1\n2\n3\n2\n4\n6\n2\n6\n2\n\n77개 남음"
+    },
+    "after": {
+      "revision": "f018fc0d040aedcb999309b08c60650f8d976916",
+      "commitDate": "2026-08-27T00:36:30+00:00",
+      "commitMessage": "feat: TAP to TEN — an 81-tile deck and a Broadway skin\n\nEvery stage now deals the same deck: nine of each digit, 81 tiles on a 9x9\nboard. The counts are the puzzle rather than a random draw, which makes the\ngame the same for everyone and finally testable end to end.\n\nThe deck has a property worth knowing before touching it. 81 is odd and 5 only\npairs with itself, so pairing everything away leaves exactly one tile, and it\nis always a 5: the total is 405, every clear removes exactly ten, and that last\ndigit never moves. Three stars therefore means one tile left, not none.\n\nScoring becomes 10/20/40/80 — each extra tile doubles the reward. Chosen by\nsimulating the deck against several curves: clearing with pairs empties the\nboard to its last tile for 400, while chasing long chains tops out near 550 but\nstrands about 27 tiles. Stars reward the first and score the second, so a run\nhas to pick one. Spending 1s on a five-chain is what strands the 9s.\n\nThe look moves to a Broadway house — velvet, brass and marquee bulbs — with the\npalette entirely in tokens.css. The board is anchored to the top and the room\nbelow it is a stage floor for the dancer; art drops into #stage-floor and the\nCSS stands it on the floor, centred. On a short screen that space yields first\nand the board keeps its size.\n\nFixes a measurement bug the new frame exposed: getBoundingClientRect returns\nthe border box, so the frame's own border has to be subtracted along with its\npadding, or a nine-wide board overshoots by two pixels.\n\nDifficulty is now the hints and the star targets, since the deck is fixed. That\nalso means every stage is mathematically the same puzzle — noted in\nDECISIONS.md, along with what to change if stages should differ.\n\n80 unit tests, layout checked across ten screens plus rotation, and the four\nbrowser suites pass.",
+      "status": "captured",
+      "note": "",
+      "sha256": "7f2249d8097ea47fb425227a57984f61185b42d0f17324f38d3dafe54d7ff288",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "0\n?\n타임어택\n1:00\n3\n9\n5\n6\n9\n8\n6\n9\n7\n3\n6\n9\n3\n9\n4\n7\n5\n6\n4\n6\n6\n3\n2\n5\n5\n3\n7\n2\n9\n2\n1\n1\n7\n8\n6\n9\n9\n8\n8\n1\n7\n3\n8\n4\n4\n1\n2\n2\n6\n2\n5\n1\n1\n1\n8\n4\n1\n2\n7\n4\n5\n2\n7\n8\n4\n7\n3\n5\n4\n5\n5\n2\n8\n7\n9\n3\n4\n6\n8\n3\n1\n\n81개 남음"
+    }
+  },
+  {
+    "date": "2026-08-27",
+    "id": "story-99",
+    "title": "99단계와 전체 클리어 목표",
+    "path": "docs/research/2026-08-27-story-99",
+    "before": {
+      "revision": "e91b490e482c882d194eee001238fbbb431a7aa5",
+      "commitDate": "2026-08-27T17:04:26+09:00",
+      "commitMessage": "Merge pull request #2 from Junyyyong/claude/google-play-game-feasibility-uijpdz\n\n드래그 정확도, 화면 흔들림, 모드별 여백 수정",
+      "status": "captured",
+      "note": "",
+      "sha256": "7621241e68d7131f3d11e356174c9d9177e85b1bc366a73930bddd3dfd3e40a2",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "SCORE\n0\nBEST 0\n스테이지 1\n1장 · 첫 그루터기\n9\n2\n6\n2\n3\n4\n1\n2\n1\n5\n2\n1\n3\n2\n4\n1\n6\n2\n3\n1\n1\n3\n4\n3\n1\n1\n1\n6\n1\n2\n3\n1\n4\n7\n7\n8\n2\n1\n1\n7\n2\n2\n2\n8\n2\n\n☆☆☆\n\nSUM\n0\n💡\n4"
+    },
+    "after": {
+      "revision": "457b9a4a26ff577c27a5f9dec98b06ffc8c3057d",
+      "commitDate": "2026-08-27T08:56:24+00:00",
+      "commitMessage": "feat: ninety-nine stages, and a story you are meant to finish empty\n\nStory asks for the whole board now. A stage deals its numbers as groups\nthat each add to ten, so the deal always comes apart — checked exactly,\nby search, at every checkpoint and every seed: 100%. What a player picks\nis another matter. A clear that cuts across two groups strands tiles\nnothing will ever match:\n\n  1 2 3 4 6 7 8 9   comes apart as (1,9)(2,8)(3,7)(4,6)\n  take 1+2+3+4 first and 6 7 8 9 is left with no ten in it\n\nMeasured over forty seeds a run: a line that takes any legal move\nempties the board 35% of the time on stage 1 and 0% by stage 99; always\ntaking the longest combination, or always taking pairs, is near zero\nthroughout; a line that only makes moves keeping the board emptiable\ngets there every time, on every stage. Being stuck is a mistake, and\nnever a fixed strategy's fault.\n\nSo a move can be taken back, and that is a resource rather than a\nconvenience — it is what makes \"empty the board\" a fair goal. It works\non a dead board too, which is the moment it matters, and the last stage\nstill carries one: at zero there is no way back from a mistake.\n\nStars follow: three for an empty board played unaided, two for an empty\nboard, one as consolation for coming close so a run never hard-locks.\n\nThe curve runs 1 to 99 over eleven chapters. Four rows to eleven, loose\ngroups to rigid pairs, five hints to none, five take-backs to one. The\ndial is not size — it is how much a wrong move costs.\n\nAlso: five blocks that do not add to ten are refused where they stand.\nThere is no sixth to come, so the selection was already dead while it\nsat there looking alive. The board sways and the five flash red before\nthey let go — a selection that merely vanished left the player unsure\nthe tap had registered.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01KksbCsyuxr5ve9AxVR5jhx",
+      "status": "captured",
+      "note": "",
+      "sha256": "8531ceb9957feb493599e0445ee4e8ebc5472b0e618153484d4a54574acfb038",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "SCORE\n0\nBEST 0\n스테이지 1\n1장 · 첫 그루터기\n2\n1\n2\n7\n2\n1\n6\n4\n1\n6\n4\n1\n4\n9\n1\n1\n2\n1\n3\n2\n2\n1\n1\n1\n3\n2\n3\n6\n2\n1\n7\n3\n2\n1\n4\n1\n\n한 칸도 남기지 않는 게 목표예요\n\nSUM\n0\n💡\n5\n5"
+    }
+  },
+  {
+    "date": "2026-08-27",
+    "id": "picture",
+    "title": "그림 수집과 숫자 분포",
+    "path": "docs/research/2026-08-27-picture",
+    "before": {
+      "revision": "d043d2aca54bae651040d91d6ad1ae0e84d0901e",
+      "commitDate": "2026-08-27T17:57:33+09:00",
+      "commitMessage": "Merge pull request #3 from Junyyyong/claude/google-play-game-feasibility-uijpdz\n\n스토리 99 스테이지 · 목표는 판을 전부 지우기 · 한 수 물리기",
+      "status": "captured",
+      "note": "",
+      "sha256": "2c19a6168eef84873915d8ccfb29cf9f5b5b804438dcd801c31ccf1e45b2283c",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "SCORE\n0\nBEST 0\n스테이지 1\n1장 · 첫 그루터기\n2\n1\n2\n7\n2\n1\n6\n4\n1\n6\n4\n1\n4\n9\n1\n1\n2\n1\n3\n2\n2\n1\n1\n1\n3\n2\n3\n6\n2\n1\n7\n3\n2\n1\n4\n1\n\n한 칸도 남기지 않는 게 목표예요\n\nSUM\n0\n💡\n5\n5"
+    },
+    "after": {
+      "revision": "44bc2005cbdb2cfed0cf7c526d382cbbd9a12559",
+      "commitDate": "2026-08-27T11:51:43+00:00",
+      "commitMessage": "feat: a picture under every board, and a dealer that stops hoarding 1s\n\nStory is a collection now. Each stage has a picture behind its board;\nclearing a block turns that square transparent, so the picture arrives a\nsquare at a time, and emptying the board is how it is kept. Ninety-nine\nstages, ninety-nine pictures. Stars are gone — the goal is binary, and a\nsecond reward on top of it only blurs which one you are playing for.\n\nThat has a consequence in the rules: story boards no longer collapse a\nrow when it empties. A row that closed up would drag the holes out of\nline with the part of the picture they had uncovered.\n\nThe dealer was the other half. It used to pick a group size and then\nroll digits, and five tiles that add to ten average two apiece, so a\nboard came out 55% 1s and 2s with a 9 on one tile in a hundred. Long\ncombinations then ate the small numbers and left 7s, 8s and 9s with\nnothing to pair with — measured, the leftovers held no 1s or 2s at all.\nIt now picks whole groups from the thirty-odd that add to ten, choosing\neach by what the board is still short of. 1s fall from 37% to 23% on the\nfirst stage and 13% on the last; 9s rise from 1% to 8%. Scoring is per\ntile rather than per group, or a group of five wins on term count alone\nand the skew comes straight back.\n\nThat distribution also sets the group sizes, so the old dial is gone: a\nboard that wants few 1s deals mostly pairs without being told to.\n\nNew item: split a block into pieces that add to the same thing — a 5\nbecomes 3 and 2, or 1, 1, 1 and 2. Which is not the player's to choose.\nThe sum is preserved so the arithmetic cannot break, but a clear holds\nat most five blocks, and splitting inside a group of four can leave a\ngroup of six that no single clear can take. Every roll is checked\nagainst an exact emptiability search and rolled again if it would\nstrand the board, so the promise that a story board can be emptied\nsurvives the item. The pieces land in already-cleared squares, which\nmeans a full board cannot be split and a split covers part of the\npicture back up.\n\nThe opening distribution is the most sensitive number in the curve: a\nslightly more level one drops a careless line's success on stage 1 from\n30% to 8%. docs/BALANCE.md carries the measurements and says so.\n\nCo-Authored-By: Claude Opus 5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01KksbCsyuxr5ve9AxVR5jhx",
+      "status": "captured",
+      "note": "",
+      "sha256": "96c9f86d63b2cae717b4560cb4b90c2f6f8f311816c267a180f33a3715b8cc46",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "SCORE\n0\nBEST 0\n스테이지 1\n1장 · 첫 그루터기\n1\n4\n1\n2\n1\n1\n3\n5\n6\n1\n1\n3\n4\n4\n2\n2\n8\n3\n6\n1\n1\n5\n5\n5\n3\n6\n1\n2\n7\n2\n1\n3\n1\n4\n2\n3\n\n한 칸도 남기지 않으면 그림을 얻어요\n\nSUM\n0\n💡\n5\n3\n5"
+    }
+  },
+  {
+    "date": "2026-08-28",
+    "id": "selection",
+    "title": "모드 시작 안내와 보드 공간",
+    "path": "docs/research/2026-08-28-selection",
+    "before": {
+      "revision": "4b6f23f3d502b7589ba12938c5ba1d982b0a7be7",
+      "commitDate": "2026-08-28T19:27:40+09:00",
+      "commitMessage": "Merge pull request #8 from Junyyyong/claude/google-play-game-feasibility-uijpdz\n\n목업 개편 1차 — 색 블록 · REVEAL/TIME/COMBO HUD · SUM 식 · 시간 기록",
+      "status": "captured",
+      "note": "",
+      "sha256": "ce91bb770421f1ff0c0a0daa817e426682b25b5f1b067cf967f424099c0eda11",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "TIME ATTACK\nTIME\n01:00\nSCORE\n0\nCOMBO\n0\n3\n9\n5\n6\n9\n8\n6\n9\n7\n3\n6\n9\n3\n9\n4\n7\n5\n6\n4\n6\n6\n3\n2\n5\n5\n3\n7\n2\n9\n2\n1\n1\n7\n8\n6\n9\n9\n8\n8\n1\n7\n3\n8\n4\n4\n1\n2\n2\n6\n2\n5\n1\n1\n1\n8\n4\n1\n2\n7\n4\n5\n2\n7\n8\n4\n7\n3\n5\n4\n5\n5\n2\n8\n7\n9\n3\n4\n6\n8\n3\n1\n\n10을 만들어 점수를 올리세요\n\nSUM\n=\n?"
+    },
+    "after": {
+      "revision": "dd86aaf5ba4b89215346661c7fadd6d72a32c41c",
+      "commitDate": "2026-08-28T22:13:13+09:00",
+      "commitMessage": "Give the board its room back, and put a choosing step in front of every mode (#9)\n\nThree things, from the mockup pass and the screenshot that came with it.\n\nThe board had quietly shrunk to 68% of the screen. `.board-wrap` carried an\n`aspect-ratio` while sitting on `flex: 0 1 auto`, so when the HUD grew the box\ngave up height — and the ratio dragged its width down with it. The frame now\ntakes whatever room the chrome leaves and nothing more; how many tiles fit is\nmeasured, not declared, so `--board-ratio` and the empty `#stage-floor` are\ngone. Back to 92% on every screen in the layout suite.\n\n\"갤러리 보기\" on the results panel threw instead of navigating: `result ->\ngallery` was not an allowed transition, so the player was left staring at the\nfinished board. Opened, with a regression test.\n\nAnd modes no longer start the instant they are tapped. Story runs ninety-nine\nstages with a different picture behind each, which is worth seeing before\ncommitting to one, so it goes through a chapter list, a 3x3 stage grid and a\ncard showing the picture (or `?`) and the time to beat. Time attack and endless\neach get one start screen built around the number that defines them; endless\nnow also keeps how long a run survived. The back arrow in a run leaves the way\nit came in — story to the grid, the timed modes to the title — while the\nresults panel replays in place rather than walking back out through the picker.\n\nThe two browser suites walk the new flow. 99 unit tests, layout and drag green.",
+      "status": "captured",
+      "note": "",
+      "sha256": "d8c8e9203d757ad1122a3bf42922cef010502df6b1c668221a2d0bc08f4f3120",
+      "errors": [],
+      "visibleScreens": [
+        "screen-intro"
+      ],
+      "text": "TIME ATTACK\n60\n\n60초 안에 최대한 많이 지우세요\n\nBEST SCORE\n0\nSTART"
+    }
+  },
+  {
+    "date": "2026-08-30",
+    "id": "paper",
+    "title": "밝은 종이색 디자인과 보상",
+    "path": "docs/research/2026-08-30-paper",
+    "before": {
+      "revision": "89bc587880bac2a8fcb92cb6b249cc798fec0553",
+      "commitDate": "2026-08-30T13:46:45+09:00",
+      "commitMessage": "Add files via upload",
+      "status": "captured",
+      "note": "",
+      "sha256": "98a1204e97a8697d013bfd654f34e6706b6a716fc0c4f3beff1405dd1b9c4e5c",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "TIME ATTACK\nTIME\n01:00\nSCORE\n0\nCOMBO\n0\n3\n9\n5\n6\n9\n8\n6\n9\n7\n3\n6\n9\n3\n9\n4\n7\n5\n6\n4\n6\n6\n3\n2\n5\n5\n3\n7\n2\n9\n2\n1\n1\n7\n8\n6\n9\n9\n8\n8\n1\n7\n3\n8\n4\n4\n1\n2\n2\n6\n2\n5\n1\n1\n1\n8\n4\n1\n2\n7\n4\n5\n2\n7\n8\n4\n7\n3\n5\n4\n5\n5\n2\n8\n7\n9\n3\n4\n6\n8\n3\n1\n\n10을 만들어 점수를 올리세요\n\nSUM\n=\n?"
+    },
+    "after": {
+      "revision": "07b08a6f2e21ba5bef7bbdfd103826334ac1cc33",
+      "commitDate": "2026-08-30T14:00:43+09:00",
+      "commitMessage": "Move to a paper skin, and pay time attack back for a good run (#14)\n\nThree things.\n\nThe cover becomes cover2 — 4837x9540 in, a 1080x2130 WebP out at 253KB. Its\n0.507 aspect is closer to a phone's than the old 0.447, so the `contain`\nmargins shrink with it. The old source is deleted.\n\nThe skin goes light, and the cover only confirmed the decision rather than\ndriving it. Clearing a block uncovers the picture hidden beneath, and those\npictures are toy renders on white — on a night-blue board every cleared square\nopened as a glaring white hole, all the way to the end of the stage, which\nundercuts the whole point of the mode. On paper the reveal is continuous.\nCream ground, maroon ink, the wordmark's orange and yellow for anything active.\n\nThe nine block colours are spaced around the wheel rather than chosen to\ntaste: the board is read in groups, so two confusable digits at 35px means the\neye beats the rules. 8 started as cyan, which put three blues on one board\nnext to 1 and 2, and is now chocolate — the one warm dark the paper carries.\nThe 81 hardcoded rgba values scattered through the screen files collapse into\n--panel, --slab, --recess, --sheen and --scrim, so the next skin change is one\nfile rather than nine.\n\nTime attack now pays for a good run, where before it only ran you out of tiles\nfaster. Every hundred points adds nine low tiles — nine is exactly one row on\na nine-wide board, and 1s, 2s and 3s are what long combinations are always\nstarved of, so it is fuel and not clutter. Five hundred buys thirty seconds\nand a fresh board, once: a second extension would turn a good run endless,\nwhich is the other mode. Both thresholds are read off the score rather than\nremembered, which works because the mode has no take-backs, so nothing new is\nstored. The HUD says what landed — a row appearing at the bottom of the board\nis not something a player racing a clock notices on their own.\n\n104 unit tests, layout, drag and feedback all green.",
+      "status": "captured",
+      "note": "",
+      "sha256": "78650a18a5736a1ed00775e1540fbf8e59520f5fd898837531f4e755cbd51257",
+      "errors": [],
+      "visibleScreens": [
+        "screen-game"
+      ],
+      "text": "TIME ATTACK\nTIME\n01:00\nSCORE\n0\nCOMBO\n0\n3\n9\n5\n6\n9\n8\n6\n9\n7\n3\n6\n9\n3\n9\n4\n7\n5\n6\n4\n6\n6\n3\n2\n5\n5\n3\n7\n2\n9\n2\n1\n1\n7\n8\n6\n9\n9\n8\n8\n1\n7\n3\n8\n4\n4\n1\n2\n2\n6\n2\n5\n1\n1\n1\n8\n4\n1\n2\n7\n4\n5\n2\n7\n8\n4\n7\n3\n5\n4\n5\n5\n2\n8\n7\n9\n3\n4\n6\n8\n3\n1\n\n10을 만들어 점수를 올리세요\n\nSUM\n=\n?"
+    }
+  },
+  {
+    "date": "2026-08-30",
+    "id": "english",
+    "title": "두 모드 중심과 영어 UI",
+    "path": "docs/research/2026-08-30-english",
+    "before": {
+      "revision": "35f096d948e9e1b9dd4de4747937d27476d268c9",
+      "commitDate": "2026-08-30T16:16:27+09:00",
+      "commitMessage": "Add files via upload",
+      "status": "captured",
+      "note": "",
+      "sha256": "9e07d070e754ffcbc84fec217e9d430a59694eb9e181a8dd7121801567a58ca2",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "스토리\n스테이지 1 · 1장\n타임어택\n60초 도전\n무제한\n끝까지 지우기\n튜토리얼\n갤러리\n설정\n규칙 보기"
+    },
+    "after": {
+      "revision": "794a5f048f923b85632a3f172fc0a664e50d4133",
+      "commitDate": "2026-08-30T18:31:10+09:00",
+      "commitMessage": "Two modes, English throughout, a new cover, and a word at the end of a run (#16)\n\nStory leaves the title screen; time attack and endless are the game now. The\nchapters, stages and pictures stay in the code untouched, so bringing it back\nis putting one button back. The gallery has no way to fill any more, but the\ntwo mode records it also holds are still worth seeing, so it keeps its screen\nunder the name RECORDS.\n\nEvery string the player reads is English — buttons, notices, rules, the\ntutorial, the story lines, and the browser suites' output with them. Plain\nwords throughout: \"Clear every block to win the picture\", \"Make ten to score\".\n\nThe cover becomes cover-3 and now fills the width on every phone rather than\nfitting inside it. `contain` left the picture small on a tall screen; the\nartwork carries white margins above and below precisely so the width can be\nfilled and the overflow cropped from margin rather than art. It is positioned\nand translated rather than centred by an auto margin, because an auto margin\ngives up and snaps to the top the moment the image is taller than the box —\nwhich is the case that matters, and which cropped a short phone entirely from\nthe bottom.\n\nA run now ends on a word before it ends on numbers: GOOD TRY, NICE, GREAT or\nAMAZING by score, held 1.4 seconds. The last move and a panel of numbers\narriving together read as being marked rather than as having finished\nsomething. The artwork behind the word is optional and off by default, so the\ngame never waits on an asset to look right — see docs/CONTENT.md.\n\nThe layout, drag and feedback suites walked through story to reach a board;\nthey now use time attack, which deals the same full nine-by-nine deck. Endless\nwas tried first and its sparse opening board made two checks meaningless.\n\n104 unit tests, layout, drag and feedback all green.",
+      "status": "captured",
+      "note": "",
+      "sha256": "54321ccfae0bde92059ea54cfce4ac96aa606f6f9d79783e7139ee503b202c69",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "TIME ATTACK\n60 seconds\nENDLESS\nPlay until the board fills\nHow to play\nRecords\nSettings\nRules"
+    }
+  },
+  {
+    "date": "2026-09-01",
+    "id": "timeless",
+    "title": "TIMELESS 모드",
+    "path": "docs/research/2026-09-01-timeless",
+    "before": {
+      "revision": "0883e7adf4fd7b3654bc3e7215b42d87067bd55b",
+      "commitDate": "2026-09-01T00:18:53+09:00",
+      "commitMessage": "Redraw the bands at 300/600/1000/1400, and add the fifth dance (#32)\n\nFive bands now, each with its own word and its own clip: GOOD TRY!/1,\nGREAT!/3, AMAZING!/4, UNBELIEVABLE!!/2, and OH MY GOD~!/5 above 1400.\n\nThe word table and the clip table become one table again. They were split\nwhile their edges differed; these five change at exactly the same scores, and\nwhile that is true one table is the only arrangement that cannot drift. A test\nholds them to it: at every edge both the word and the clip have to change.\n\n`5.mp4` is real HEVC-with-alpha like the rest. It is 1456x1424 where the\nothers are 960x944 — the same on screen, since the clip is drawn to a width,\nbut 3.3MB of WebM and 9.1MB of HEVC against roughly half that for the others.\n\n\nClaude-Session: https://claude.ai/code/session_01KksbCsyuxr5ve9AxVR5jhx\n\nCo-authored-by: Claude Opus 5 <noreply@anthropic.com>",
+      "status": "captured",
+      "note": "",
+      "sha256": "7bc0c81629b3bd5fec19d9c704c58c849cb46acc43bedd88b16145f329cffaa2",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "TIME ATTACK\n60 seconds\nENDLESS\nPlay until the board fills\nHow to play\nSettings\nRules"
+    },
+    "after": {
+      "revision": "323486a249da6abaec9516ec0fc2f859ff9bbbc5",
+      "commitDate": "2026-09-01T16:03:47+09:00",
+      "commitMessage": "Call it TIMELESS, draw the take-back as a loop, and let sums climb (#34)\n\nThree changes to the new mode.\n\n**The name.** TIMELESS, in the code as well as on screen — `clearAll` becomes\n`timeless` throughout, config and saved record included. The `MAKE 10 · 20 · 30`\nline above the SUM box stays: that was never the name, it is the rule.\n\n**The rule.** Landing exactly on ten clears there and then; stepping over it to\neleven means the selection is heading for twenty, and past twenty it heads for\nthirty. Past thirty still busts. That makes the mode's own input rule\ndisappear: a selection was being held past ten only while the finger stayed\ndown, so a tap and a drag behaved differently. They behave the same now — what\nyou pick decides, not how you hold it — and the drag special case is gone.\nSingle-target modes were never affected either way.\n\n**The icon.** The take-back arrow was rendering as a dark blob: the drawn\nglyphs are outlines and nothing was saying so, so the browser filled the paths\nin black. They are stroked in the button's own colour now, and the arrow is a\nloop turning back on itself. The split icon was wrong the same way and is\nfixed with it.\n\n\nClaude-Session: https://claude.ai/code/session_01KksbCsyuxr5ve9AxVR5jhx\n\nCo-authored-by: Claude Opus 5 <noreply@anthropic.com>",
+      "status": "captured",
+      "note": "",
+      "sha256": "2f45d08038f18ffa18cad743454cac48490e635189c5654711c361848ded9987",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "TIME ATTACK\n60 seconds\nENDLESS\nPlay until the board fills\nTIMELESS\nClear the whole board. No clock\nHow to play\nSettings\nRules"
+    }
+  },
+  {
+    "date": "2026-09-02",
+    "id": "studio",
+    "title": "스튜디오 오프닝과 화면 배경",
+    "path": "docs/research/2026-09-02-studio",
+    "before": {
+      "revision": "86ee58d098d8a47e84503916849df0f4de5c4dec",
+      "commitDate": "2026-09-02T15:31:49+09:00",
+      "commitMessage": "Match Android's launch window to the card the app opens on (#48)\n\nNothing after the studio card was orange and nothing needed putting back: the\ncover and the menu were never touched. Checked on painted pixels rather than on\nclass names — eight points around the edge of the screen, where a background is\nwhat shows — and they are orange 8/8 on the studio card and 0/8 on the cover and\nthe menu.\n\nThere was a real colour to fix, though, one phone-side. The window Android\npaints behind the WebView was still #7A4F24, the brown of the dark-wood skin\nthis game had before it went to paper, so every launch flashed brown before the\norange arrived. It now matches the card the app opens on.\n\nThe launcher icon's own background is left alone — that is the icon on the home\nscreen, not the launch.\n\n\nClaude-Session: https://claude.ai/code/session_01KksbCsyuxr5ve9AxVR5jhx\n\nCo-authored-by: Claude Opus 5 <noreply@anthropic.com>",
+      "status": "captured",
+      "note": "",
+      "sha256": "8112f722d6fe367c7e1a0a7f2b4db490c03375d61ef933b2a2d5f4be9c08fde0",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "TIME ATTACK\n60 seconds\nENDLESS\nPlay until the board fills\nTIMELESS\nClear the whole board. No clock\nHow to play\nSettings\nRules"
+    },
+    "after": {
+      "revision": "4870f0a5a8f964cd4577365f975f614ea669b2fb",
+      "commitDate": "2026-09-02T16:08:32+09:00",
+      "commitMessage": "Keep the page paper so Safari's bars never take the studio's orange (#49)\n\nThe orange was not in the page at all — it was iOS Safari's status bar and\naddress bar. Safari reads the page's colour once, at load, and neither a later\n`theme-color` nor a later screen reaches the bars, so opening on the studio's\ncard left orange furniture around the game for the rest of the session.\n\nSo the page is paper from the first frame and stays paper. `theme-color` is\nfixed in the markup and no longer touched by script — driving it was the wrong\ninstinct, and by this mechanism it would have made the orange permanent rather\nthan temporary. The root owns the page colour now instead of the body: on a\nphone the app is shorter than the window, and the strips the browser paints\naround it come from the root, which should not be resting on CSS's propagation\nrule. The orange is painted on the studio card's own box, where Safari never\nreads it.\n\nReproduced the condition rather than the device — the app held to 700px inside\nan 852px window — and sampled the pixels outside it: paper on all three cards.\n\nAlso: the browser suites need CHROME_PATH in this environment and die without\nit, which I had not noticed while writing \"layout · drag · feedback all pass\"\non recent pull requests. They were not run. Run properly, one was genuinely\nbroken, and by my own change: centring a lone tool with `display: none`\ncollapsed the whole action row in time attack, which carries no tools, and the\nboard there sat 32px off every other mode. Reserving the row's height fixed\nthat and cost the board its tiles in landscape. A hidden tool now gives up its\nwidth — a negative margin cancels the flex gap it would still be given — and\nkeeps its height, so the lone tool still centres and the row is the same height\nin every mode at every size, with no per-breakpoint numbers to keep in step.\n\nUnits 123 · layout 14 · drag 9 · feedback 9, all actually run.\n\n\nClaude-Session: https://claude.ai/code/session_01KksbCsyuxr5ve9AxVR5jhx\n\nCo-authored-by: Claude Opus 5 <noreply@anthropic.com>",
+      "status": "captured",
+      "note": "",
+      "sha256": "8112f722d6fe367c7e1a0a7f2b4db490c03375d61ef933b2a2d5f4be9c08fde0",
+      "errors": [],
+      "visibleScreens": [
+        "screen-title"
+      ],
+      "text": "TIME ATTACK\n60 seconds\nENDLESS\nPlay until the board fills\nTIMELESS\nClear the whole board. No clock\nHow to play\nSettings\nRules"
+    }
+  },
+  {
+    "date": "2026-09-06",
+    "id": "guidance",
+    "title": "튜토리얼 금빛 안내",
+    "path": "docs/research/2026-09-06-guidance",
+    "before": {
+      "revision": "162c40670141915333212d45a8c6381f361791c9",
+      "commitDate": "2026-09-06T11:13:47+09:00",
+      "commitMessage": "Preload game mode artwork",
+      "status": "captured",
+      "note": "",
+      "sha256": "95245d662aed95a74e906d40e929c105d77ca4ee217324a51d9cbd786e9fa0f4",
+      "errors": [],
+      "visibleScreens": [
+        "screen-tutorial"
+      ],
+      "text": "Skip\n\nTap numbers that add up to 10 and they clear.\nTry 4 and 6.\n\n4\n6\n3\n2"
+    },
+    "after": {
+      "revision": "0d3ee75cd402f03b3b0b85685e9946881918b396",
+      "commitDate": "2026-09-06T20:15:50+09:00",
+      "commitMessage": "Highlight tutorial interaction targets",
+      "status": "captured",
+      "note": "",
+      "sha256": "d7243dc71a7e9c8a665050d98327c7662eb937b35503a2f2146cd5b5f36b77a7",
+      "errors": [],
+      "visibleScreens": [
+        "screen-tutorial"
+      ],
+      "text": "Skip\n\nTap numbers that add up to 10 and they clear.\nTry 4 and 6.\n\n4\n6\n3\n2"
+    }
+  },
+  {
+    "date": "2026-09-06",
+    "id": "levels",
+    "title": "타임어택 네 레벨",
+    "path": "docs/research/2026-09-06-levels",
+    "before": {
+      "revision": "0d3ee75cd402f03b3b0b85685e9946881918b396",
+      "commitDate": "2026-09-06T20:15:50+09:00",
+      "commitMessage": "Highlight tutorial interaction targets",
+      "status": "captured",
+      "note": "",
+      "sha256": "7d5dc018692c4fa02e523fe806ec41c80d2836be2d2dea212c0d8bc1a19c1e04",
+      "errors": [],
+      "visibleScreens": [
+        "screen-intro"
+      ],
+      "text": "TIME ATTACK\n\nClear as much as you can in 60 seconds\n\nBEST SCORE\n0\nSTART"
+    },
+    "after": {
+      "revision": "6542a95f1f7a831fcdcc59f57d421e1432fdf4bc",
+      "commitDate": "2026-09-06T20:49:37+09:00",
+      "commitMessage": "Match mode icon sizes and lighten level labels",
+      "status": "captured",
+      "note": "",
+      "sha256": "99063ecddc41699ee7447492263ca66e85e34504f27d44c743dc79340b0db3c0",
+      "errors": [],
+      "visibleScreens": [
+        "screen-intro"
+      ],
+      "text": "TIME ATTACK\n\nClear as much as you can in 60 seconds\n\nLEVEL 1\nBEST —\nLEVEL 2\nBEST —\nLEVEL 3\nBEST —\nLEVEL 4\nBEST —"
+    }
+  }
+]
