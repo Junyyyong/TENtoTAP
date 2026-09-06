@@ -8,6 +8,11 @@
     />
     <meta name="theme-color" content="#fff6e9" />
     <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <!-- Mode artwork is swapped dynamically, so fetch every tiny SVG before
+         the picker opens instead of making the first tap wait on a request. -->
+    <link rel="preload" href="./stopwatch-60.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./stopwatch-forever.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./infinity.svg" as="image" type="image/svg+xml" />
     <title>TAP to TEN</title>
   </head>
   <body>
