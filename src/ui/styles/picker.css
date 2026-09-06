@@ -362,7 +362,7 @@
   font-family: "TAP Sans KR", sans-serif;
   cursor: pointer;
 }
-.time-level strong { font-size: 20px; font-weight: 800; line-height: 1.1; }
+.time-level strong { font-size: 18px; font-weight: 600; line-height: 1.1; }
 .time-level span { font-size: 12px; font-weight: 400; line-height: 1.2; }
 .time-level-1 { --level-color: #21863b; }
 .time-level-2 { --level-color: #b52d62; }
@@ -379,7 +379,6 @@
 }
 @media (max-height: 700px) {
   .has-levels .intro-body { gap: 10px; }
-  .has-levels .intro-mark { width: 96px; height: 96px; --mark-h: 64px; }
   .time-level { min-height: 56px; padding: 8px; }
 }
 
