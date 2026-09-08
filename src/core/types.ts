@@ -40,6 +40,7 @@ export interface SpawnConfig {
  * rules themselves never change — only the board, the goal and the resources.
  */
 export interface RunConfig {
+  learningStage?: number;
   timeAttackLevel?: number;
   maxBoardSize?: number;
   mode: GameMode;

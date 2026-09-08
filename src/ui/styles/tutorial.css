@@ -78,7 +78,8 @@
 }
 
 /* Match TAPtoTALK's gentle gold pulse on the next interaction targets. */
-.tutorial-screen .tutorial-target {
+.tutorial-screen .tutorial-target,
+.learning-run .tutorial-target:not(.bust) {
   position: relative;
   z-index: 1;
   outline: 2px solid var(--warm);
@@ -99,7 +100,18 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tutorial-screen .tutorial-target {
+  .tutorial-screen .tutorial-target,
+  .learning-run .tutorial-target {
     animation: none;
   }
 }
+
+.learning-run .notice.is-rejected { color: var(--ring-bad); }
+.learning-run .tile.bust {
+  background: var(--ring-bad);
+  outline: 3px solid #a01818;
+  outline-offset: -3px;
+  color: white;
+  animation: none;
+}
+.learning-run .tile { border-radius: clamp(6px, 2vw, 14px); }

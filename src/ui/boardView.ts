@@ -24,7 +24,7 @@ export interface BoardViewOptions {
   /** Fired when a block is chosen to be broken up, while splitting is armed. */
   onSplit?(index: number): void;
   /** Fired when a selection is refused — the combo it was building is over. */
-  onReject?(): void;
+  onReject?(values: readonly number[]): void;
   /** Keeps the bottom sum indicator in sync with taps and drags. */
   onSelectionChange?(values: readonly number[]): void;
   /**
@@ -32,6 +32,8 @@ export interface BoardViewOptions {
    * small teaching board would blow up to enormous tiles without a cap.
    */
   maxTilePx?: number;
+  /** A square with the same footprint as a nine-column board. */
+  fixedSquare?(): boolean;
   /** Persistent practice targets; selected tiles stop glowing. */
   guidance?(): readonly number[];
 }
@@ -230,7 +232,7 @@ export class BoardView {
     void this.options.grid.offsetWidth; // restart the animation
     this.options.grid.classList.add("shake");
 
-    this.options.onReject?.();
+    this.options.onReject?.(blamed.map(i => valueAt(this.board, i)));
     if (blamed.length === 0) return;
     this.busted = [...blamed];
     window.clearTimeout(this.bustTimer);
@@ -475,7 +477,7 @@ export class BoardView {
     const byWidth = (box.width - padX - gap * (width - 1)) / width;
 
     const byHeight = (this.options.wrap.clientHeight - padY - gap * (rows - 1)) / rows;
-    const cap = this.options.maxTilePx ?? 74;
+    const cap = this.options.fixedSquare?.() ? Infinity : this.options.maxTilePx ?? 74;
     const tile = Math.max(MIN_TILE_PX, Math.floor(Math.min(byWidth, byHeight, cap)));
 
     // Re-measuring on every observer callback is cheap; re-writing the styles

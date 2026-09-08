@@ -61,10 +61,18 @@ export class Hud {
   /** An override for the line under the board, or null to let it speak again. */
   setNotice(text: string | null): void {
     this.override = text;
+    if (text === null) this.rejectedUntil = 0;
     if (text !== null) this.noticeEl.textContent = text;
   }
 
   private override: string | null = null;
+  private rejectedUntil = 0;
+  private rejectedText = '';
+
+  showRejected(values: readonly number[]): void {
+    this.rejectedText = `${values.join(' + ')} = ${values.reduce((a,b) => a+b, 0)} · TRY AGAIN`;
+    this.rejectedUntil = performance.now() + 1100;
+  }
 
   render(state: GameState): void {
     const { config, status, remainingMs, elapsedMs } = state;
@@ -102,7 +110,7 @@ export class Hud {
       this.stat(1, "TIME", formatClock(elapsedMs));
       this.stat(2, "COMBO", String(this.combo));
     } else if (config.mode === "timeAttack") {
-      this.runTitle.textContent = config.timeAttackLevel
+      this.runTitle.textContent = config.learningStage ? 'MAKE 10' : config.timeAttackLevel
         ? `LEVEL ${config.timeAttackLevel} · ${config.width}×${config.rows}` : "TIME ATTACK";
       this.stat(0, "TIME", formatClock(remainingMs));
       this.stat(1, "SCORE", state.score.toLocaleString());
@@ -122,6 +130,7 @@ export class Hud {
     }
 
     // In endless the timer bar shows how close the board is to overflowing,
+    if (config.learningStage) this.stat(2, 'STAGE', String(config.learningStage));
     // which is the only thing that ends the run.
     if (config.spawn) {
       const room = emptyIndices(state.board).length / state.board.cells.length;
@@ -130,7 +139,9 @@ export class Hud {
       this.timerBar.classList.toggle("urgent", room <= 0.15);
     }
 
-    this.noticeEl.textContent = this.override ?? this.notice(state);
+    const rejected = !!config.learningStage && performance.now() < this.rejectedUntil;
+    this.noticeEl.classList.toggle('is-rejected', rejected);
+    this.noticeEl.textContent = rejected ? this.rejectedText : this.override ?? this.notice(state);
   }
 
   /** How much of the picture is uncovered, as a whole percent. */
@@ -152,6 +163,7 @@ export class Hud {
    * player cannot see goes here.
    */
   private notice(state: GameState): string {
+    if (state.config.learningStage) return state.transitionMs ? 'NEXT BOARD' : '';
     if (state.config.spawn) {
       if (state.status === "lost") return "The board is full.";
       return emptyIndices(state.board).length <= 6 ? "Almost full!" : "";

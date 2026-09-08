@@ -1,0 +1,65 @@
+{
+  "date": "2026-09-08T07:31:16.982Z",
+  "before": "490e323",
+  "after": "working tree based on 490e323",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "152.0.7977.76",
+  "method": "Historical before extracted to isolated temp folder; after current source. Fresh profile, controlled clock and seeded random. Finite animations finished; force touch bypasses stability wait. Not participant data.",
+  "checks": [
+    "No How to Play entry",
+    "Large 2×2 tiles",
+    "MAKE 10 header",
+    "7+4 rejected with two red tiles and 11 feedback",
+    "Three pair boards progress to stage 4 / 3×3",
+    "Reload continues stage 4 with a fresh minute",
+    "375×667 and 844×390 board fits without overlapping SUM",
+    "Stage 76 fixture renders 9×9"
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "before-menu.png",
+      "sha256": "2f45d08038f18ffa18cad743454cac48490e635189c5654711c361848ded9987"
+    },
+    {
+      "file": "before-intro.png",
+      "sha256": "07518a8727fd13c2b0aa41462ec6a58c9235ce0e494741acb35e8d34a977a448"
+    },
+    {
+      "file": "before-stage1.png",
+      "sha256": "faabdbc359be8e5e1a5cfba81c5d7b6231697ee0ede10e5863e543e28ce5237b"
+    },
+    {
+      "file": "after-menu.png",
+      "sha256": "53116b8cf95b1b87bb5b42889e8be0b157049d51562c25023d81b53882e640c8"
+    },
+    {
+      "file": "after-intro.png",
+      "sha256": "35e8dab4945f90c851fdbb6f6682640fd73bec69e98ecf4493a783da34359d10"
+    },
+    {
+      "file": "after-stage1.png",
+      "sha256": "db5fec67f271cf4e12b915f0bfc3589b0c3510b8f64ba4efa54caa4928d58668"
+    },
+    {
+      "file": "after-over-ten.png",
+      "sha256": "b66c87981cb467c4d9201052661a03c309fb37d3185197f9aa8202c5635d1847"
+    },
+    {
+      "file": "after-stage4.png",
+      "sha256": "da1c3051844ecb720354050f3855c6bb3c75ec65208aa9f5a9376d4feaf91732"
+    },
+    {
+      "file": "after-continue-intro.png",
+      "sha256": "2a12c7fdcb142fbc0b2b39424bf5df436440a82c4b2563616223fe3a2ddbb81d"
+    },
+    {
+      "file": "after-stage76-fixture.png",
+      "sha256": "057d063988ca1dfce352c82fd99fffa725953e2ab3ab0df2cd2bab1ee9693495"
+    }
+  ]
+}

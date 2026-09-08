@@ -17,6 +17,7 @@ import { mulberry32, randomSeed } from "./rng";
 import { DEFAULT_TARGETS, evaluateSelection } from "./rules";
 import { MIN_SELECTION } from "./rules";
 import type { Board, MatchResult, RunConfig } from "./types";
+import { learningConfig, lessonValues } from './learningStages';
 
 export type GameStatus = "playing" | "won" | "lost" | "timeUp";
 
@@ -96,6 +97,8 @@ const SPLIT_ATTEMPTS = 24;
 
 function deal(config: RunConfig, rngSeed: number): Board {
   const rng = mulberry32(rngSeed);
+  const lesson = config.learningStage && lessonValues(config.learningStage);
+  if (lesson) return { width: config.width, cells: lesson.map(value => ({ value, cleared: false })) };
   if (config.deck) return createDeck(rng, config.width, config.deck);
   if (config.digitWeights && !config.spawn) {
     return createWeightedBoard(rng, config.width, config.rows, config.digitWeights);
@@ -133,6 +136,13 @@ function settleStatus(state: GameState): GameState {
   if (state.config.mode === "timeAttack") {
     if (state.remainingMs <= 0) return { ...state, status: "timeUp" };
     if (aliveCount(state.board) === 0 || !hasAnyMove(state.board, targetsOf(state.config))) {
+      if (state.config.learningStage) {
+        const cleared = aliveCount(state.board) === 0;
+        const config = learningConfig(state.config, state.config.learningStage + (cleared ? 1 : 0));
+        const dealt = dealBoard(config, state.nextSeed);
+        return { ...state, config, ...dealt, startingCells: dealt.board.cells.length,
+          boardsCleared: (state.boardsCleared ?? 0) + (cleared ? 1 : 0), transitionMs: 500 };
+      }
       if (state.config.timeAttackLevel) {
         const cleared = aliveCount(state.board) === 0;
         const size = Math.min(state.config.width + (cleared ? 1 : 0), state.config.maxBoardSize!);
@@ -233,7 +243,7 @@ function spawnBatch(state: GameState): GameState {
 
 export function commitSelection(state: GameState, indices: readonly number[]): CommitOutcome {
   const result = evaluateSelection(state.board, indices, targetsOf(state.config));
-  if (!result.ok || state.status !== "playing") {
+  if (!result.ok || state.status !== "playing" || (state.config.learningStage && state.transitionMs)) {
     return { state, result, rowsRemoved: 0 };
   }
   const cells = state.board.cells.map((cell) => ({ ...cell }));
@@ -319,6 +329,7 @@ export type Payout = "none" | "tiles" | "extension";
  * would drift the moment the thresholds moved.
  */
 export function payoutFor(state: GameState, before: number): Payout {
+  if (state.config.learningStage) return "none";
   if (state.config.timeAttackLevel) return "none";
   if (state.config.mode !== "timeAttack") return "none";
   if (before < EXTENSION_AT && state.score >= EXTENSION_AT) return "extension";

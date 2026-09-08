@@ -16,7 +16,9 @@ import type { GameMode, RunConfig } from "../core/types";
 import { TOTAL_STAGES, chapterFor, isChapterFinale } from "../content/chapters";
 import { artFor, plateFor } from "../content/gallery";
 import type { Chapter } from "../content/chapters";
-import { TIMELESS_CONFIG, ENDLESS_CONFIG, TIME_ATTACK_CONFIG, stageConfig, timeAttackConfig } from "../content/stages";
+import { TIMELESS_CONFIG, ENDLESS_CONFIG, TIME_ATTACK_CONFIG, stageConfig } from "../content/stages";
+import { learningConfig } from '../core/learningStages';
+import { findHint } from '../core/solver';
 import { BoardView } from "./boardView";
 import { AppStateMachine } from "./appStateMachine";
 import { feedback } from "./feedback";
@@ -30,7 +32,6 @@ import { IntroScreen } from "./screens/introScreen";
 import { PickerScreen } from "./screens/pickerScreen";
 import { SettingsScreen } from "./screens/settingsScreen";
 import { TitleScreen } from "./screens/titleScreen";
-import { TutorialScreen } from "./screens/tutorialScreen";
 import {
   loadDaily,
   loadProgress,
@@ -95,7 +96,6 @@ export class App {
   private readonly cheer = new Cheer();
   private readonly story = new StoryScreen();
   private readonly title: TitleScreen;
-  private readonly tutorial = new TutorialScreen();
   private readonly gallery: GalleryScreen;
   private readonly picker: PickerScreen;
   private readonly intro: IntroScreen;
@@ -135,12 +135,16 @@ export class App {
       isValid: (selection) =>
         isSelectionValid(this.state.board, selection, targetsOf(this.state.config)),
       targets: () => targetsOf(this.state.config),
+      fixedSquare: () => !!this.state.config.learningStage,
+      guidance: () => this.state.config.learningStage && this.state.config.learningStage <= 2
+        ? findHint(this.state.board) ?? [] : [],
       onCommit: (selection) => this.commit(selection),
       onSplit: (index) => this.onSplit(index),
-      onReject: () => {
+      onReject: (values) => {
         this.hud.combo = 0;
         this.held = 0;
         feedback.reject();
+        if (this.state.config.learningStage) this.hud.showRejected(values);
       },
       onSelectionChange: (values) => {
         // A block joining the selection is the one event the board does not
@@ -164,7 +168,7 @@ export class App {
       () => this.showChapters(),
     );
     this.intro = new IntroScreen(
-      (mode, level) => this.startMode(mode, level),
+      (mode) => this.startMode(mode),
       () => this.showTitle(),
     );
     this.settingsScreen = new SettingsScreen(
@@ -173,9 +177,7 @@ export class App {
     );
     el<HTMLButtonElement>("btn-back").addEventListener("click", () => this.leaveRun());
     el<HTMLButtonElement>("btn-pause").addEventListener("click", () => this.pause());
-    el<HTMLButtonElement>("btn-title-tutorial").addEventListener("click", () => this.showTutorial());
     el<HTMLButtonElement>("btn-settings-rules").addEventListener("click", () => this.showRules());
-    el<HTMLButtonElement>("btn-settings-tutorial").addEventListener("click", () => this.showTutorial());
 
     /*
      * The first touch anywhere wakes the audio hardware.
@@ -267,20 +269,6 @@ export class App {
     this.show("title");
   }
 
-  private showTutorial(): void {
-    this.stopClock();
-    this.view.setInteractive(false);
-    this.flow.enter("tutorial");
-    this.show("tutorial");
-    this.tutorial.start(() => {
-      if (!this.progress.tutorialDone) {
-        this.progress = { ...this.progress, tutorialDone: true };
-        saveProgress(this.progress);
-      }
-      this.showTitle();
-    });
-  }
-
   private showGallery(): void {
     this.progress = loadProgress();
     this.gallery.render(this.progress);
@@ -344,7 +332,7 @@ export class App {
     this.showTitle();
   }
 
-  private startMode(mode: GameMode, level = 1): void {
+  private startMode(mode: GameMode): void {
     if (mode === "story") {
       this.startStage(Math.min(this.progress.stage, TOTAL_STAGES));
       return;
@@ -353,7 +341,7 @@ export class App {
       this.daily = { ...this.daily, games: this.daily.games + 1 };
       saveDaily(this.daily);
     }
-    this.beginRun(mode === "timeAttack" ? timeAttackConfig(level) : CONFIGS[mode] ?? ENDLESS_CONFIG);
+    this.beginRun(mode === "timeAttack" ? learningConfig(TIME_ATTACK_CONFIG, this.progress.learningStage) : CONFIGS[mode] ?? ENDLESS_CONFIG);
   }
 
   private startStage(stage: number): void {
@@ -362,6 +350,8 @@ export class App {
 
   private beginRun(config: RunConfig): void {
     this.state = newGame(config);
+    el('screen-game').classList.toggle('learning-run', !!config.learningStage);
+    this.hud.setNotice(null);
     this.hud.combo = 0;
     this.held = 0;
     feedback.resetCombo();
@@ -552,6 +542,10 @@ export class App {
         this.progress = { ...this.progress, bestEndless: this.state.score };
         saveProgress(this.progress);
       }
+    } else if (mode === "timeAttack" && this.state.config.learningStage) {
+      this.progress = { ...this.progress, learningStage: this.state.config.learningStage,
+        bestLearningScore: Math.max(this.progress.bestLearningScore, this.state.score) };
+      saveProgress(this.progress);
     } else if (mode === "timeAttack" && this.state.config.timeAttackLevel) {
       const index = this.state.config.timeAttackLevel - 1;
       const bestTimeAttackLevels = [...this.progress.bestTimeAttackLevels];
@@ -584,7 +578,7 @@ export class App {
       this.state.config.mode === "story"
         ? this.progress.bestStory
         : this.state.config.mode === "timeAttack"
-          ? this.progress.bestTimeAttackLevels[(this.state.config.timeAttackLevel ?? 1) - 1] ?? 0
+          ? this.state.config.learningStage ? this.progress.bestLearningScore : this.progress.bestTimeAttackLevels[(this.state.config.timeAttackLevel ?? 1) - 1] ?? 0
           : this.state.config.mode === "timeless"
             ? this.progress.bestTimeless
             : this.progress.bestEndless;
@@ -592,7 +586,7 @@ export class App {
     // The board is a new object whenever anything changes it, tiles arriving
     // on their own timer included, so the view is re-pointed every render.
     this.view.sync(this.state.board);
-    if (this.state.config.timeAttackLevel) {
+    if (this.state.config.timeAttackLevel || this.state.config.learningStage) {
       this.view.setInteractive(this.state.status === "playing" && !this.state.transitionMs);
     }
     el("screen-game").classList.toggle("board-arriving", !!this.state.transitionMs);
@@ -629,9 +623,9 @@ export class App {
       this.cheer.play("TIME OUT", score, () =>
         this.overlay.open({
           title: "Time up",
-          body: `LEVEL ${config.timeAttackLevel}\nScore ${score}\nBoards cleared ${this.state.boardsCleared ?? 0}\nBest ${this.progress.bestTimeAttackLevels[(config.timeAttackLevel ?? 1) - 1] ?? 0}`,
-          primary: { label: "Play again", action: () => this.startMode("timeAttack", config.timeAttackLevel) },
-          secondary: { label: "Level select", action: () => this.showIntro("timeAttack") },
+          body: `STAGE ${config.learningStage}\nScore ${score}\nBoards cleared ${this.state.boardsCleared ?? 0}\nBest ${this.progress.bestLearningScore}`,
+          primary: { label: "Continue", action: () => this.startMode("timeAttack") },
+          secondary: { label: "Menu", action: () => this.showTitle() },
         }),
       );
       return;
