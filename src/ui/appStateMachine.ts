@@ -5,6 +5,7 @@ export type AppState =
   | "tutorial"
   | "inGame"
   | "paused"
+  | "bonusBreak"
   | "result"
   | "story"
   | "gallery"
@@ -23,7 +24,8 @@ const ALLOWED: Readonly<Record<AppState, readonly AppState[]>> = {
   stages: ["chapters", "mainMenu", "inGame"],
   intro: ["mainMenu", "inGame"],
   tutorial: ["mainMenu"],
-  inGame: ["paused", "result", "mainMenu", "stages"],
+  inGame: ["paused", "bonusBreak", "result", "mainMenu", "stages"],
+  bonusBreak: ["inGame", "mainMenu"],
   paused: ["inGame", "mainMenu"],
   // The results panel offers the gallery, because the picture it just
   // handed over is in there.

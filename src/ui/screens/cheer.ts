@@ -263,7 +263,7 @@ export class Cheer {
    * puzzle against the clock, and its scores are not on the same scale as a
    * timed run's.
    */
-  play(headline: string, score: number, then: () => void, band?: number): void {
+  play(headline: string, score: number, then: () => void, band?: number, skippable = false): void {
     const tier = bandAt(band ?? bandForScore(score));
     this.word.textContent = tier.word;
     this.headline.textContent = headline;
@@ -272,6 +272,7 @@ export class Cheer {
     this.run += 1;
 
     this.root.classList.remove("hidden", "cheer-hold", "cheer-run");
+    this.root.classList.toggle("cheer-skippable", skippable);
     this.card.classList.remove("hidden");
     // Once it is on screen and can be measured, and before it is ever shown:
     // the card holds for four seconds with the word hidden behind it.

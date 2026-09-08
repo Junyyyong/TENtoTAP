@@ -1,0 +1,69 @@
+{
+  "date": "2026-09-08T07:57:16.450Z",
+  "before": "cff9c60",
+  "after": "working tree based on cff9c60",
+  "browser": "152.0.7977.76",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "conditions": "Fresh profile; fixed clock 2026-09-08T00:00:01Z and seeded random; finite animations finished. Stage 5 saved-progress fixture. Historical source extracted using git archive to a separate temporary directory. Video uses real media playback, not deterministic frames.",
+  "checks": [
+    "Stage 1 starts with 15 seconds",
+    "Stage 5 clear opens BONUS BREAK",
+    "Stage 6 clock frozen during bonus",
+    "Tap resumes stage 6 countdown"
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "before-menu.png",
+      "sha256": "53116b8cf95b1b87bb5b42889e8be0b157049d51562c25023d81b53882e640c8"
+    },
+    {
+      "file": "before-intro.png",
+      "sha256": "35e8dab4945f90c851fdbb6f6682640fd73bec69e98ecf4493a783da34359d10"
+    },
+    {
+      "file": "before-stage1.png",
+      "sha256": "a220fc01e41b0167c453bb2f84643ff9977f1408ad12fb5a45a0911ff8ef71cc"
+    },
+    {
+      "file": "before-stage5-fixture.png",
+      "sha256": "5faff17f003b1b1e247fbbb6d87920fc0558e34d5a2f9b9f73c7995e28110562"
+    },
+    {
+      "file": "before-stage5-cleared.png",
+      "sha256": "3c984ac142f14d1832a38c4a40a9035c165ef02a65f63718b7ca999b1f94dd8e"
+    },
+    {
+      "file": "after-menu.png",
+      "sha256": "2f514b7d54386aa296cf790739fe9138fab82cbcd6a8da3c49c700609b387ee8"
+    },
+    {
+      "file": "after-intro.png",
+      "sha256": "d132d98a336e8f61a255fecb9f2ca1f7a3f57d7d8a8e39c6b33d3fe8dd49feee"
+    },
+    {
+      "file": "after-stage1.png",
+      "sha256": "2f932dcf8967a6a952a98345dba3eb3716ad07b6bbe16e3d978321ef4fb9ad61"
+    },
+    {
+      "file": "after-stage5-fixture.png",
+      "sha256": "b6582f07d23fe745e5747e19ce26c51c680568a8ee6f7cdd26164ebda781c971"
+    },
+    {
+      "file": "after-stage5-cleared.png",
+      "sha256": "8fd4f0269bb76cb069d8c16cd81233b4c861378e5bdd347c67fa57e67440b082"
+    },
+    {
+      "file": "after-bonus-video.png",
+      "sha256": "e30750146d4b91d1e7e60a4f409fd4d26efb1b9314abb1fa28eaafde59ec9361"
+    },
+    {
+      "file": "after-stage6-resumed.png",
+      "sha256": "7c7c932088e045bb1f9518bd8b940412547d33cea1c8dd66b8bf1987aeb716ad"
+    }
+  ]
+}

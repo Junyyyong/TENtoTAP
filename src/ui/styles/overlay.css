@@ -124,6 +124,7 @@
  * lets them through, so a stray finger during the dance cannot skip it before
  * the player has seen anything.
  */
+.cheer-skippable,
 .cheer-hold {
   pointer-events: auto;
   cursor: pointer;
@@ -215,6 +216,7 @@
   animation: cheer-blink 1.6s ease-in-out infinite;
 }
 
+.cheer-skippable .cheer-tap,
 .cheer-hold .cheer-tap {
   visibility: visible;
 }

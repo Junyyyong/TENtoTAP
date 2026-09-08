@@ -426,6 +426,19 @@ export class App {
     this.announceReward(before, state);
     if (state.transitionMs) this.view.setBoard(state.board);
     this.render();
+    const completed = before.config.learningStage;
+    if (completed && completed % 5 === 0 && state.config.learningStage === completed + 1) {
+      this.stopClock();
+      this.flow.enter("bonusBreak");
+      this.view.setInteractive(false);
+      this.cheer.play("BONUS BREAK", state.score, () => {
+        if (this.flow.current !== "bonusBreak") return;
+        this.state = { ...this.state, transitionMs: 0 };
+        this.flow.enter("inGame");
+        this.render();
+        this.startClock();
+      }, 3, true);
+    }
   }
 
   /**
@@ -587,7 +600,7 @@ export class App {
     // on their own timer included, so the view is re-pointed every render.
     this.view.sync(this.state.board);
     if (this.state.config.timeAttackLevel || this.state.config.learningStage) {
-      this.view.setInteractive(this.state.status === "playing" && !this.state.transitionMs);
+      this.view.setInteractive(this.flow.current === "inGame" && this.state.status === "playing" && !this.state.transitionMs);
     }
     el("screen-game").classList.toggle("board-arriving", !!this.state.transitionMs);
     if (this.state.status !== "playing" && this.flow.current === "inGame") this.finishRun();
@@ -624,7 +637,7 @@ export class App {
         this.overlay.open({
           title: "Time up",
           body: `STAGE ${config.learningStage}\nScore ${score}\nBoards cleared ${this.state.boardsCleared ?? 0}\nBest ${this.progress.bestLearningScore}`,
-          primary: { label: "Continue", action: () => this.startMode("timeAttack") },
+          primary: { label: "Retry", action: () => this.startMode("timeAttack") },
           secondary: { label: "Menu", action: () => this.showTitle() },
         }),
       );

@@ -18,7 +18,7 @@ describe('integrated learning stages', () => {
         expect(answer).toHaveLength(2);
         game = commitSelection(game, answer).state;
       }
-      expect(game.remainingMs).toBe(60_000);
+      expect(game.remainingMs).toBe(stage < 3 ? 15_000 : 60_000);
       expect(game.transitionMs).toBe(500);
       game = tick(game, 500);
     }
@@ -37,14 +37,26 @@ describe('integrated learning stages', () => {
     expect(learningConfig(TIME_ATTACK_CONFIG,76).width).toBe(9);
     expect(learningConfig(TIME_ATTACK_CONFIG,1000).width).toBe(9);
   });
-  it('rejects 7+4, freezes transition input and keeps a fixed minute', () => {
+  it('rejects 7+4, freezes transition input and uses stage-specific clocks', () => {
     const game=newGame(learningConfig(TIME_ATTACK_CONFIG,1));
     expect(commitSelection(game,[0,2]).state).toBe(game);
     expect(commitSelection({...game,transitionMs:500},[0,1]).state.board).toEqual(game.board);
-    expect(tick(game,60_000).status).toBe('timeUp');
+    expect(game.remainingMs).toBe(15_000);
+    expect(tick(game,15_000).status).toBe('timeUp');
     expect(payoutFor({...game,score:600},490)).toBe('none');
     const continued=newGame(learningConfig(TIME_ATTACK_CONFIG,17));
     expect(continued.config.learningStage).toBe(17);
     expect(continued.remainingMs).toBe(60_000);
+  });
+  it('resets the clock on clear, but not on a same-stage redeal', () => {
+    let game = tick(newGame(learningConfig(TIME_ATTACK_CONFIG, 4)), 10_000);
+    for (let i = 0; i < 3; i++) game = commitSelection(game, findHint(game.board)!).state;
+    expect(game.config.learningStage).toBe(5);
+    expect(game.remainingMs).toBe(60_000);
+    const stuck = { ...game, transitionMs: 0, remainingMs: 12_000,
+      board: { ...game.board, cells: game.board.cells.map(c => ({ ...c, value: 9 })) } };
+    const redealt = tick(stuck, 100);
+    expect(redealt.config.learningStage).toBe(5);
+    expect(redealt.remainingMs).toBe(11_900);
   });
 });

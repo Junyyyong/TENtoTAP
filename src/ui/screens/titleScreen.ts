@@ -19,9 +19,7 @@ export class TitleScreen {
   }
 
   render(progress: Progress): void {
-    el("desc-timeAttack").textContent = progress.bestTimeAttack
-      ? `60 seconds · best ${progress.bestTimeAttack}`
-      : "60 seconds";
+    el("desc-timeAttack").textContent = `Stage ${progress.learningStage} · Make 10`;
     el("desc-endless").textContent = progress.bestEndless
       ? `Best ${progress.bestEndless}`
       : "Play until the board fills";

@@ -11,13 +11,13 @@ import type { GameMode } from "../../core/types";
  * beat.
  */
 const TITLES: Partial<Record<GameMode, string>> = {
-  timeAttack: "TIME ATTACK",
+  timeAttack: "LIMITLESS",
   endless: "ENDLESS",
   timeless: "TIMELESS",
 };
 
 const NOTES: Partial<Record<GameMode, string>> = {
-  timeAttack: "Clear as much as you can in 60 seconds",
+  timeAttack: "Make 10, stage by stage",
   endless: "It ends when the board fills",
   timeless: "Empty the board with 10, 20, 30",
 };
@@ -57,6 +57,11 @@ export class IntroScreen {
     this.art.src = ART[mode] ?? ART.endless!;
     this.mark.classList.toggle("endless", mode === "endless");
     this.note.textContent = NOTES[mode] ?? "";
+    if (mode === "timeAttack") {
+      const seconds = progress.learningStage <= 3 ? 15 : 60;
+      this.art.src = `./stopwatch-${seconds}.svg`;
+      this.note.textContent = `${seconds} seconds per stage`;
+    }
 
     const rows: [string, string][] =
       mode === "timeAttack"

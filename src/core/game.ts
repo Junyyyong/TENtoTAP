@@ -141,6 +141,7 @@ function settleStatus(state: GameState): GameState {
         const config = learningConfig(state.config, state.config.learningStage + (cleared ? 1 : 0));
         const dealt = dealBoard(config, state.nextSeed);
         return { ...state, config, ...dealt, startingCells: dealt.board.cells.length,
+          remainingMs: cleared ? config.timeLimitMs! : state.remainingMs,
           boardsCleared: (state.boardsCleared ?? 0) + (cleared ? 1 : 0), transitionMs: 500 };
       }
       if (state.config.timeAttackLevel) {
