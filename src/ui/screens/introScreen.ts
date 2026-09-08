@@ -11,7 +11,7 @@ import type { GameMode } from "../../core/types";
  * beat.
  */
 const TITLES: Partial<Record<GameMode, string>> = {
-  timeAttack: "MAKE10",
+  timeAttack: "LIMITLESS",
   endless: "ENDLESS",
   timeless: "TIMELESS",
 };

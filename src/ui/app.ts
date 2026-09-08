@@ -95,7 +95,6 @@ export class App {
   private readonly overlay = new Overlay(() => this.showTitle());
   private readonly cheer = new Cheer();
   private readonly story = new StoryScreen();
-  private readonly title: TitleScreen;
   private readonly gallery: GalleryScreen;
   private readonly picker: PickerScreen;
   private readonly intro: IntroScreen;
@@ -154,7 +153,7 @@ export class App {
         this.hud.setSelection(values);
       },
     });
-    this.title = new TitleScreen(
+    new TitleScreen(
       (mode) => this.chooseMode(mode),
       () => this.showRules(),
       () => this.showSettings(),
@@ -264,7 +263,6 @@ export class App {
     this.view.setInteractive(false);
     this.daily = loadDaily();
     this.progress = loadProgress();
-    this.title.render(this.progress);
     this.flow.enter("mainMenu");
     this.show("title");
   }

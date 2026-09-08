@@ -1,6 +1,5 @@
 import type { GameMode } from "../../core/types";
 import { el } from "../dom";
-import type { Progress } from "../storage";
 
 /**
  * Mode picker, with whatever progress the player has made so far.
@@ -18,18 +17,4 @@ export class TitleScreen {
     el<HTMLButtonElement>("btn-title-settings").addEventListener("click", onSettings);
   }
 
-  render(progress: Progress): void {
-    el("desc-timeAttack").textContent = `Stage ${progress.learningStage} · Make 10`;
-    el("desc-endless").textContent = progress.bestEndless
-      ? `Best ${progress.bestEndless}`
-      : "Play until the board fills";
-    // Fewest blocks left is the record that matters here, not the score: the
-    // mode is asking for an empty board, and zero is the answer.
-    el("desc-timeless").textContent =
-      progress.fewestLeft < 0
-        ? "Clear the whole board. No clock"
-        : progress.fewestLeft === 0
-          ? "Cleared! Do it again"
-          : `Best: ${progress.fewestLeft} left`;
-  }
 }
