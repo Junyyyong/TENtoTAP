@@ -249,6 +249,11 @@ export function commitSelection(state: GameState, indices: readonly number[]): C
   }
   const cells = state.board.cells.map((cell) => ({ ...cell }));
   for (const i of indices) cells[i]!.cleared = true;
+  // A lesson ends after its one answer; distractors are not another task.
+  // Only the selected answer contributes to result.score.
+  if (state.config.learningStage && lessonValues(state.config.learningStage)) {
+    for (const cell of cells) cell.cleared = true;
+  }
   // A board that tiles keep landing on is a fixed frame: cleared squares stay
   // put as landing room instead of closing up.
   const { board, removed } =

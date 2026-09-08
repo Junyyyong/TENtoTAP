@@ -111,7 +111,7 @@ export class Hud {
       this.stat(2, "COMBO", String(this.combo));
     } else if (config.mode === "timeAttack") {
       this.runTitle.textContent = config.learningStage ? 'MAKE 10' : config.timeAttackLevel
-        ? `LEVEL ${config.timeAttackLevel} · ${config.width}×${config.rows}` : "LIMITLESS";
+        ? `LEVEL ${config.timeAttackLevel} · ${config.width}×${config.rows}` : "MAKE10";
       this.stat(0, "TIME", formatClock(remainingMs));
       this.stat(1, "SCORE", state.score.toLocaleString());
       this.stat(2, "COMBO", String(this.combo));

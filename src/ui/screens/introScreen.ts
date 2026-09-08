@@ -11,7 +11,7 @@ import type { GameMode } from "../../core/types";
  * beat.
  */
 const TITLES: Partial<Record<GameMode, string>> = {
-  timeAttack: "LIMITLESS",
+  timeAttack: "MAKE10",
   endless: "ENDLESS",
   timeless: "TIMELESS",
 };
@@ -58,7 +58,7 @@ export class IntroScreen {
     this.mark.classList.toggle("endless", mode === "endless");
     this.note.textContent = NOTES[mode] ?? "";
     if (mode === "timeAttack") {
-      const seconds = progress.learningStage <= 3 ? 15 : 60;
+      const seconds = progress.learningStage <= 5 ? 15 : 60;
       this.art.src = `./stopwatch-${seconds}.svg`;
       this.note.textContent = `${seconds} seconds per stage`;
     }
