@@ -454,7 +454,7 @@ export class App {
         this.flow.enter("inGame");
         this.render();
         this.startWithLessonIntro();
-      }, 3, true);
+      }, 3, true, 2000);
     } else if (completed && state.config.learningStage === completed + 1 && lessonIntro(state.config.learningStage)) {
       this.startWithLessonIntro();
     }

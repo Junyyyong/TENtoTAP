@@ -263,7 +263,7 @@ export class Cheer {
    * puzzle against the clock, and its scores are not on the same scale as a
    * timed run's.
    */
-  play(headline: string, score: number, then: () => void, band?: number, skippable = false): void {
+  play(headline: string, score: number, then: () => void, band?: number, skippable = false, cardMs = CARD_MS): void {
     const tier = bandAt(band ?? bandForScore(score));
     this.word.textContent = tier.word;
     this.headline.textContent = headline;
@@ -275,17 +275,17 @@ export class Cheer {
     this.root.classList.toggle("cheer-skippable", skippable);
     this.card.classList.remove("hidden");
     // Once it is on screen and can be measured, and before it is ever shown:
-    // the card holds for four seconds with the word hidden behind it.
+    // the card holds with the word hidden behind it.
     this.fitWord();
 
     /*
-     * Choose the clip now, four seconds before it plays, and put its file on
+     * Choose the clip now, before it plays, and put its file on
      * the wire while the card holds the screen.
      *
      * The HEVC copy is 3.9MB against the WebM's 1.2MB, and asking for it at
      * the moment it is meant to start meant the picture came up late while
-     * the soundtrack — a tenth the size — was already running. Four seconds
-     * of card is four seconds of head start, which is more than enough.
+     * the soundtrack — a tenth the size — was already running. The card
+     * gives loading a head start (two seconds for bonus breaks).
      */
     const pool = tier.clips;
     this.pick = pool.length ? pool[Math.floor(Math.random() * pool.length)]! : null;
@@ -297,7 +297,7 @@ export class Cheer {
     }
 
     window.clearTimeout(this.timer);
-    this.timer = window.setTimeout(() => this.dance(), CARD_MS);
+    this.timer = window.setTimeout(() => this.dance(), cardMs);
   }
 
   /** Second beat: the word and the dance. */
