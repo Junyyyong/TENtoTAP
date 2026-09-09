@@ -1,0 +1,123 @@
+{
+  "date": "2026-09-09T07:17:04.941Z",
+  "before": "bfc4abe",
+  "after": "working tree based on bfc4abe",
+  "browser": "152.0.7977.83",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "conditions": "Fresh profile; fixed clock 2026-09-09T00:00:01Z and seeded random; finite animations finished. Before 6/14/23/30 use saved-progress fixtures; after progresses from stage 1 through real answers. Color randomness uses crypto and is intentionally not seeded. Historical source extracted using git archive to a separate temporary directory. Video uses real media playback, not deterministic frames.",
+  "checks": [
+    "All 30 tutorial stages played with real taps",
+    "Exact guidance on first two stages of each count",
+    "No scale transform during stage transitions",
+    "Stage 30 requires multiple clears",
+    "Bonuses only after 5/13/22/30 and timers paused",
+    "Stage 31 reached"
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "before-menu.png",
+      "sha256": "6e426ae89c8f7c77c151ee80f2f126eeb043985aa1ac8b3ff39af27259287506"
+    },
+    {
+      "file": "before-intro.png",
+      "sha256": "78703dff21892e376cdcc4586ab029be3ab0caf1e14da670108604c2c5bc4073"
+    },
+    {
+      "file": "before-stage1.png",
+      "sha256": "c920af1bd8da327c64c966e92fe44167abefae7abf7ba3ee558f966d65d448bb"
+    },
+    {
+      "file": "before-stage6.png",
+      "sha256": "0661c3834d7b95f724a7ded9eb83b8f8e0d9c2573035663eeb20549c845d418f"
+    },
+    {
+      "file": "before-stage14.png",
+      "sha256": "f330111acbe7de96a8ab875bd891e827b33fd8f3647d8416bef5e988dc010df1"
+    },
+    {
+      "file": "before-stage23.png",
+      "sha256": "a2a96d495d98324e8536c9134f0c605002b286f2c6e62133da9553943e6fe4a3"
+    },
+    {
+      "file": "before-stage30.png",
+      "sha256": "2c1621f90a6c95d93c6a99cef5f0aa261821d3dc153c793d717ac54342d3ed77"
+    },
+    {
+      "file": "after-menu.png",
+      "sha256": "6e426ae89c8f7c77c151ee80f2f126eeb043985aa1ac8b3ff39af27259287506"
+    },
+    {
+      "file": "after-intro.png",
+      "sha256": "78703dff21892e376cdcc4586ab029be3ab0caf1e14da670108604c2c5bc4073"
+    },
+    {
+      "file": "after-stage1.png",
+      "sha256": "5f8193c57a88836bda0917ebfaed4b17ef2d401e1191e8ae985d4656c0f9f106"
+    },
+    {
+      "file": "after-bonus5.png",
+      "sha256": "4f953229ea4c12fa2708055a87689671663580791cadbf97fb2aeb235090371a"
+    },
+    {
+      "file": "after-stage6.png",
+      "sha256": "cdb07541de8c7ba32f0af6fbea740bed7c2a7f06b7eb7c5124d8744713a781cf"
+    },
+    {
+      "file": "after-stage7.png",
+      "sha256": "ae52345ded8472fc849b511bad9ed8dae920e5a72c3e94d8654cc1ad6e91e9a4"
+    },
+    {
+      "file": "after-stage8.png",
+      "sha256": "e84bffbcc18e02cf8886cbbba34a757f7045b4bf01355280d31f25853cca45ee"
+    },
+    {
+      "file": "after-bonus13.png",
+      "sha256": "a253dfd92f86f2fd09e4d271ba76494a052de8e19e52a8da5dbf0803ecef8784"
+    },
+    {
+      "file": "after-stage14.png",
+      "sha256": "68f9c6d28788f62bfd0ec22ed6d912d473a0c881e73b494d92c237dc2570f1f6"
+    },
+    {
+      "file": "after-stage15.png",
+      "sha256": "d2f518328c0f326930979c91cef209c93f4a5668c64e860a680a169ff7256c17"
+    },
+    {
+      "file": "after-stage16.png",
+      "sha256": "c417e3ec9f11e9f88a4acd2066a2b68b2919ebb962aaffe554ff47e31780961a"
+    },
+    {
+      "file": "after-bonus22.png",
+      "sha256": "746f613ffb66e997d04cadf5dedd3efd08d2d8885105c41f9f88c9f291dbea45"
+    },
+    {
+      "file": "after-stage23.png",
+      "sha256": "6d669b145a6f51cc95969cc06eed5f75ce61b6586af006eb77035a4e8b2a3807"
+    },
+    {
+      "file": "after-stage24.png",
+      "sha256": "77c288efba86e6c372d9b8717d8e66f85badefe7e96978fb57ff995fcf00e56b"
+    },
+    {
+      "file": "after-stage25.png",
+      "sha256": "0bce7fc60f64d3e8a03a98f1b694063a6aea9daed3c0a74d6fa523057ee5ba4f"
+    },
+    {
+      "file": "after-stage30.png",
+      "sha256": "b07e8416f482838d0424cf02776b8afd3a8ef1ec0deaba3aaa6ea16510d54fa8"
+    },
+    {
+      "file": "after-bonus30.png",
+      "sha256": "d6e8122973905d706272724a02fcfe5762760d5839e2aa41988aa94dbeb6f61a"
+    },
+    {
+      "file": "after-stage31.png",
+      "sha256": "6bd680d3f184034d181d9f050cf7412663a635cc16c069db1eab01d142558f3d"
+    }
+  ]
+}

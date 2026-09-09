@@ -33,14 +33,35 @@ export function learningConfig(base: RunConfig, requested: number): RunConfig {
     digitWeights: undefined, timeAttackLevel: undefined, keepBoard: true,
     groupWeights: [2, 3, 2, 1] };
 }
-export function lessonValues(stage: number): readonly number[] | undefined {
+/** Counts index-distinct answers, stopping as soon as uniqueness is disproved. */
+function answerCount(values: readonly number[], count: number): number {
+  let found = 0;
+  const visit = (start: number, left: number, sum: number): void => {
+    if (found > 1 || sum > 10) return;
+    if (!left) { if (sum === 10) found++; return; }
+    for (let i = start; i <= values.length - left; i++) visit(i + 1, left - 1, sum + values[i]!);
+  };
+  visit(0, count, 0);
+  return found;
+}
+export function lessonValues(stage: number, random: () => number = () => 0): readonly number[] | undefined {
   if (stage >= 1 && stage <= 5) return [
     [1,9,5,3], [2,8,3,4], [3,7,4,5], [4,6,2,7], [5,5,7,9],
   ][stage - 1];
   const answer = COMBINATIONS[stage - 6];
-  // A 9 plus at least two positive digits exceeds 10: no competing answer
-  // of the requested size, even when shorter sums of 10 exist.
-  if (answer) return [...answer, ...Array<number>(9 - answer.length).fill(9)];
+  if (answer) {
+    const values = [...answer];
+    while (values.length < 9) {
+      const safe = [1,2,3,4,5,6,7,8,9].filter(n => answerCount([...values, n], answer.length) === 1);
+      // Prefer variety among safe distractors. 9 is always a safe fallback:
+      // with at least two positive numbers it cannot form a requested answer.
+      const uses = (n: number) => values.filter(v => v === n).length;
+      const least = Math.min(...safe.map(uses));
+      const choices = safe.filter(n => uses(n) === least);
+      values.push(choices[Math.floor(random() * choices.length)]!);
+    }
+    return values;
+  }
   if (stage === 30) return [1,1,8,2,2,6,3,3,4];
   return undefined;
 }

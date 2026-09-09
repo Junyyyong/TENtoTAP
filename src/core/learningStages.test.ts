@@ -4,6 +4,7 @@ import { TIME_ATTACK_CONFIG } from '../content/stages';
 import { newGame, commitSelection, tick } from './game';
 import { findHint, canEmpty } from './solver';
 import { valueCounts } from './board';
+import { mulberry32 } from './rng';
 
 describe('LIMITLESS learning stages', () => {
   it('covers all combinations and the requested guidance and bonus schedule', () => {
@@ -13,6 +14,9 @@ describe('LIMITLESS learning stages', () => {
   });
   it('rejects a shorter ten and clears the whole board at stage 30', () => {
     const game = newGame(learningConfig(TIME_ATTACK_CONFIG,6));
+    // Deliberately insert a shorter ten to verify the count restriction.
+    game.board.cells[0] = { value: 1, cleared: false };
+    game.board.cells[1] = { value: 9, cleared: false };
     const one=game.board.cells.findIndex(c=>c.value===1), nine=game.board.cells.findIndex(c=>c.value===9);
     expect(commitSelection(game,[one,nine]).result.ok).toBe(false);
     let full = newGame(learningConfig(TIME_ATTACK_CONFIG,30));
@@ -28,7 +32,7 @@ describe('LIMITLESS learning stages', () => {
       for(let seed=0;seed<30;seed++) {
         const game=newGame(learningConfig(TIME_ATTACK_CONFIG,stage),seed);
         const values=game.board.cells.map(c=>c.value);
-        expect([...values].sort()).toEqual([...lessonValues(stage)!].sort());
+        expect([...values].sort()).toEqual([...lessonValues(stage, mulberry32(seed))!].sort());
         expect(lessonHint(game.board, stage)).toHaveLength(lessonCount(stage)!);
         layouts.add(values.join(','));
       }
@@ -37,7 +41,8 @@ describe('LIMITLESS learning stages', () => {
   });
   it('has exactly one index-based answer of the intended size in every lesson', () => {
     for (let stage=1;stage<=29;stage++) {
-      const values=lessonValues(stage)!;
+      for (let seed=0;seed<50;seed++) {
+      const values=lessonValues(stage, mulberry32(seed))!;
       const answers:number[][]=[];
       for(let mask=1;mask<2**values.length;mask++) {
         const indices=values.flatMap((_,i)=>mask & (1<<i) ? [i] : []);
@@ -45,6 +50,8 @@ describe('LIMITLESS learning stages', () => {
       }
       expect(answers, 'stage '+stage).toHaveLength(1);
       expect(answers[0]).toHaveLength(lessonCount(stage)!);
+      if (stage >= 6) expect(new Set(values.slice(lessonCount(stage)!)).size).toBeGreaterThan(1);
+      }
     }
   });
   it('advances each lesson with one answer and scores only that answer', () => {

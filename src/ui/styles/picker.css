@@ -372,11 +372,7 @@
 .time-level:focus-visible { outline: 3px solid var(--warm); outline-offset: 3px; }
 .has-levels .intro-body { overflow-y: auto; justify-content: safe center; padding-bottom: 20px; }
 .has-levels .intro-body > * { flex-shrink: 0; }
-.board-arriving .board { animation: level-arrive 350ms ease-out; pointer-events: none; }
-@keyframes level-arrive {
-  from { opacity: .35; transform: scale(.96); }
-  to { opacity: 1; transform: scale(1); }
-}
+.board-arriving .board { pointer-events: none; }
 @media (max-height: 700px) {
   .has-levels .intro-body { gap: 10px; }
   .time-level { min-height: 56px; padding: 8px; }

@@ -97,7 +97,7 @@ const SPLIT_ATTEMPTS = 24;
 
 function deal(config: RunConfig, rngSeed: number): Board {
   const rng = mulberry32(rngSeed);
-  const lesson = config.learningStage && lessonValues(config.learningStage);
+  const lesson = config.learningStage && lessonValues(config.learningStage, rng);
   if (lesson) {
     const values = [...lesson];
     for (let i = values.length - 1; i > 0; i--) {
