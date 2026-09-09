@@ -38,13 +38,13 @@ export class Hud {
   private targets: readonly number[] = [10];
 
   /** Shows the equation as it is built: 2 + 3 + 2 = ?, then = 10. */
-  setSelection(values: readonly number[]): void {
+  setSelection(values: readonly number[], colors: readonly number[] = []): void {
     const sum = values.reduce((total, value) => total + value, 0);
     this.sumTerms.replaceChildren(
       ...values.flatMap((value, i) => {
         const term = document.createElement("b");
         term.className = "sum-term";
-        term.dataset.v = String(value);
+        term.dataset.color = String(colors[i] ?? 1);
         term.textContent = String(value);
         if (i === 0) return [term];
         const plus = document.createElement("span");

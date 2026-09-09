@@ -1,6 +1,7 @@
 import { isAlive, valueAt } from "../core/board";
 import { DEFAULT_TARGETS, MAX_SELECTION } from "../core/rules";
 import type { Board } from "../core/types";
+import { BlockColors } from './blockColors';
 
 const HINT_MS = 2700;
 /** How long a refused selection stays lit before it lets go. */
@@ -26,7 +27,7 @@ export interface BoardViewOptions {
   /** Fired when a selection is refused — the combo it was building is over. */
   onReject?(values: readonly number[]): void;
   /** Keeps the bottom sum indicator in sync with taps and drags. */
-  onSelectionChange?(values: readonly number[]): void;
+  onSelectionChange?(values: readonly number[], colors: readonly number[]): void;
   /**
    * Largest a tile may be drawn. A game board wants to fill the screen, but a
    * small teaching board would blow up to enormous tiles without a cap.
@@ -48,6 +49,7 @@ export interface BoardViewOptions {
  */
 export class BoardView {
   private board: Board = { width: 9, cells: [] };
+  private readonly colors = new BlockColors();
   private tiles: HTMLButtonElement[] = [];
   private selection: number[] = [];
   private hinted: number[] = [];
@@ -150,6 +152,7 @@ export class BoardView {
 
   /** Starts on a new board: nothing selected, measured from scratch. */
   setBoard(board: Board): void {
+    this.colors.reset(board);
     this.board = board;
     this.selection = [];
     this.emitSelection();
@@ -165,6 +168,7 @@ export class BoardView {
    * must not cancel a selection the player is halfway through building.
    */
   sync(board: Board): void {
+    this.colors.sync(this.board, board);
     const reshaped =
       board.width !== this.board.width || board.cells.length !== this.board.cells.length;
     this.board = board;
@@ -409,7 +413,7 @@ export class BoardView {
   }
 
   private emitSelection(): void {
-    this.options.onSelectionChange?.(this.selection.map((i) => valueAt(this.board, i)));
+    this.options.onSelectionChange?.(this.selection.map((i) => valueAt(this.board, i)), this.selection.map(i => this.colors.at(i)));
   }
 
   // ---- rendering ---------------------------------------------------------
@@ -511,9 +515,9 @@ export class BoardView {
     this.board.cells.forEach((cell, i) => {
       const tile = this.tiles[i]!;
       tile.textContent = cell.value > 0 ? String(cell.value) : "";
-      // Each digit has its own colour, so a board can be read by shape as
-      // well as by number — see the palette in game.css.
+      // Colour belongs to this block, not its digit, and survives redraws.
       tile.dataset.v = String(cell.value);
+      tile.dataset.color = String(this.colors.at(i));
       tile.className = [
         "tile",
         cell.cleared ? "cleared" : "",

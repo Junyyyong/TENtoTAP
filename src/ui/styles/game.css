@@ -576,16 +576,16 @@
   animation: drift-up-settle 620ms ease 260ms both;
 }
 
-/* ── one colour per digit ──────────────────────────────────────────── */
-.tile[data-v="1"] { --face: var(--v1); }
-.tile[data-v="2"] { --face: var(--v2); }
-.tile[data-v="3"] { --face: var(--v3); }
-.tile[data-v="4"] { --face: var(--v4); }
-.tile[data-v="5"] { --face: var(--v5); }
-.tile[data-v="6"] { --face: var(--v6); }
-.tile[data-v="7"] { --face: var(--v7); }
-.tile[data-v="8"] { --face: var(--v8); }
-.tile[data-v="9"] { --face: var(--v9); }
+/* ── random colour per block ──────────────────────────────────────────── */
+.tile[data-color="1"] { --face: var(--v1); }
+.tile[data-color="2"] { --face: var(--v2); }
+.tile[data-color="3"] { --face: var(--v3); }
+.tile[data-color="4"] { --face: var(--v4); }
+.tile[data-color="5"] { --face: var(--v5); }
+.tile[data-color="6"] { --face: var(--v6); }
+.tile[data-color="7"] { --face: var(--v7); }
+.tile[data-color="8"] { --face: var(--v8); }
+.tile[data-color="9"] { --face: var(--v9); }
 
 /* The lit top edge is the face again, lightened — one rule instead of
    nine more colours to keep in step. */
@@ -646,7 +646,7 @@
 
 /* ── the equation ─────────────────────────────────────────────────────
    The selection written out — 2 + 3 + 2 = ? — with each term in its own
-   digit colour, so the row and the board say the same thing. */
+   block colour, so the row and the board say the same thing. */
 .sum-label {
   font-size: 13px;
   font-weight: 800;
@@ -672,15 +672,15 @@
   border-radius: 5px;
 }
 
-.sum-term[data-v="1"] { --face: var(--v1); }
-.sum-term[data-v="2"] { --face: var(--v2); }
-.sum-term[data-v="3"] { --face: var(--v3); }
-.sum-term[data-v="4"] { --face: var(--v4); }
-.sum-term[data-v="5"] { --face: var(--v5); }
-.sum-term[data-v="6"] { --face: var(--v6); }
-.sum-term[data-v="7"] { --face: var(--v7); }
-.sum-term[data-v="8"] { --face: var(--v8); }
-.sum-term[data-v="9"] { --face: var(--v9); }
+.sum-term[data-color="1"] { --face: var(--v1); }
+.sum-term[data-color="2"] { --face: var(--v2); }
+.sum-term[data-color="3"] { --face: var(--v3); }
+.sum-term[data-color="4"] { --face: var(--v4); }
+.sum-term[data-color="5"] { --face: var(--v5); }
+.sum-term[data-color="6"] { --face: var(--v6); }
+.sum-term[data-color="7"] { --face: var(--v7); }
+.sum-term[data-color="8"] { --face: var(--v8); }
+.sum-term[data-color="9"] { --face: var(--v9); }
 
 .sum-plus,
 .sum-eq {

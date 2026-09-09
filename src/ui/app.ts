@@ -145,12 +145,12 @@ export class App {
         feedback.reject();
         if (this.state.config.learningStage) this.hud.showRejected(values);
       },
-      onSelectionChange: (values) => {
+      onSelectionChange: (values, colors) => {
         // A block joining the selection is the one event the board does not
         // announce on its own, so it is read off the count.
         if (values.length > this.held) feedback.pick(values.length);
         this.held = values.length;
-        this.hud.setSelection(values);
+        this.hud.setSelection(values, colors);
       },
     });
     new TitleScreen(
