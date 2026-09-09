@@ -98,7 +98,14 @@ const SPLIT_ATTEMPTS = 24;
 function deal(config: RunConfig, rngSeed: number): Board {
   const rng = mulberry32(rngSeed);
   const lesson = config.learningStage && lessonValues(config.learningStage);
-  if (lesson) return { width: config.width, cells: lesson.map(value => ({ value, cleared: false })) };
+  if (lesson) {
+    const values = [...lesson];
+    for (let i = values.length - 1; i > 0; i--) {
+      const j = Math.floor(rng() * (i + 1));
+      [values[i], values[j]] = [values[j]!, values[i]!];
+    }
+    return { width: config.width, cells: values.map(value => ({ value, cleared: false })) };
+  }
   if (config.deck) return createDeck(rng, config.width, config.deck);
   if (config.digitWeights && !config.spawn) {
     return createWeightedBoard(rng, config.width, config.rows, config.digitWeights);

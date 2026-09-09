@@ -9,11 +9,10 @@ import { el } from "../dom";
  * same space, so the room it took went to the wordmark instead.
  */
 export class TitleScreen {
-  constructor(onPick: (mode: GameMode) => void, onRules: () => void, onSettings: () => void) {
+  constructor(onPick: (mode: GameMode) => void, onSettings: () => void) {
     for (const mode of ["timeAttack", "endless", "timeless"] as const) {
       el<HTMLButtonElement>(`mode-${mode}`).addEventListener("click", () => onPick(mode));
     }
-    el<HTMLButtonElement>("btn-title-rules").addEventListener("click", onRules);
     el<HTMLButtonElement>("btn-title-settings").addEventListener("click", onSettings);
   }
 

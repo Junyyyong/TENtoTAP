@@ -47,12 +47,6 @@ import {
 } from "./storage";
 import type { DailyStats, Progress, Settings } from "./storage";
 
-const RULES_TEXT = `Pick numbers that add up to <b>exactly 10</b> and they clear.
-Pick 2 to 5 blocks. The more you pick, the more you score.
-<span class="rule-num">2 blocks 10 · 3 blocks 20<br />4 blocks 40 · 5 blocks 80</span>
-<b>Any squares will do.</b> They can be far apart, with anything in between.
-Matching numbers do not clear. 3 + 3 is 6, so nothing happens.`;
-
 type Screen =
   | "studio"
   | "splash"
@@ -155,7 +149,6 @@ export class App {
     });
     new TitleScreen(
       (mode) => this.chooseMode(mode),
-      () => this.showRules(),
       () => this.showSettings(),
     );
 
@@ -176,7 +169,6 @@ export class App {
     );
     el<HTMLButtonElement>("btn-back").addEventListener("click", () => this.leaveRun());
     el<HTMLButtonElement>("btn-pause").addEventListener("click", () => this.pause());
-    el<HTMLButtonElement>("btn-settings-rules").addEventListener("click", () => this.showRules());
 
     /*
      * The first touch anywhere wakes the audio hardware.
@@ -845,24 +837,4 @@ export class App {
     feedback.setHaptics(this.settings.hapticsOn);
   }
 
-  private showRules(): void {
-    // A finished run keeps its result panel; the rules just sat on top of it.
-    // Anywhere else — the title, the settings screen — there is nothing
-    // underneath to put back, and asking for it would be an illegal move.
-    const overResult = this.flow.current === "result";
-    this.overlay.open({
-      title: "Rules",
-      body: RULES_TEXT,
-      html: true,
-      // One button. The rules sit on top of whatever the player was doing, so
-      // closing them puts that back — there is nowhere else to offer.
-      primary: {
-        label: "Close",
-        action: () => {
-          if (overResult) this.finishRun();
-        },
-      },
-      secondary: null,
-    });
-  }
 }

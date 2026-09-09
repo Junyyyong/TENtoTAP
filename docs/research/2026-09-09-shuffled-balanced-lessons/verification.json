@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-09T01:13:12.923Z",
+  "before": "757f1e2",
+  "after": "working tree based on 757f1e2",
+  "browser": "152.0.7977.83",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "conditions": "Fresh profile; fixed clock 2026-09-09T00:00:01Z and seeded random; finite animations finished. Stage 6 saved-progress fixture. Color randomness uses crypto and is intentionally not seeded. Historical source extracted using git archive to a separate temporary directory. Video uses real media playback, not deterministic frames.",
+  "checks": [
+    "All nine tiles use distinct colors",
+    "Timer redraw retains all colors",
+    "Selecting retains assigned colors",
+    "Equation chip follows selected block color"
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "before-menu.png",
+      "sha256": "161f99069f0282cfcb0abdabc6d860ef381ee4063b2ac1e847cc56a95aa41305"
+    },
+    {
+      "file": "before-intro.png",
+      "sha256": "d132d98a336e8f61a255fecb9f2ca1f7a3f57d7d8a8e39c6b33d3fe8dd49feee"
+    },
+    {
+      "file": "before-stage1.png",
+      "sha256": "e315448a908b6c43b40b50b0724e837bdafd9ca3774deb90b26d54b4868f3c78"
+    },
+    {
+      "file": "before-stage6.png",
+      "sha256": "0819f94cce34c03b762fe2e472416a44c50b86ae4c86da15cc790f125abf8db1"
+    },
+    {
+      "file": "after-menu.png",
+      "sha256": "161f99069f0282cfcb0abdabc6d860ef381ee4063b2ac1e847cc56a95aa41305"
+    },
+    {
+      "file": "after-intro.png",
+      "sha256": "78703dff21892e376cdcc4586ab029be3ab0caf1e14da670108604c2c5bc4073"
+    },
+    {
+      "file": "after-stage1.png",
+      "sha256": "8fa268f2dfb3f07f3b79939ba3427cb263ba6dd0e63bce0d3900175affbab272"
+    },
+    {
+      "file": "after-stage6.png",
+      "sha256": "bac396822f85a662fa11ed3acb7aeeba44e470a3149bf0912e381be8f172dac0"
+    },
+    {
+      "file": "after-selected.png",
+      "sha256": "b9f38de4a2191b428ae7211bc1e0bad9cee237f83ea66a78a121c0d89d7d6b03"
+    }
+  ]
+}

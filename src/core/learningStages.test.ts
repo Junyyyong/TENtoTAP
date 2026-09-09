@@ -6,6 +6,19 @@ import { findHint, canEmpty } from './solver';
 import { valueCounts } from './board';
 
 describe('MAKE10 learning stages', () => {
+  it('shuffles every lesson without changing its numbers or answer', () => {
+    for(let stage=1;stage<=8;stage++) {
+      const layouts=new Set<string>();
+      for(let seed=0;seed<30;seed++) {
+        const game=newGame(learningConfig(TIME_ATTACK_CONFIG,stage),seed);
+        const values=game.board.cells.map(c=>c.value);
+        expect([...values].sort()).toEqual([...lessonValues(stage)!].sort());
+        expect(findHint(game.board)).toHaveLength(stage<=5?2:stage-3);
+        layouts.add(values.join(','));
+      }
+      expect(layouts.size).toBeGreaterThan(1);
+    }
+  });
   it('has exactly one index-based answer of the intended size in every lesson', () => {
     for (let stage=1;stage<=8;stage++) {
       const values=lessonValues(stage)!;

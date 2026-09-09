@@ -59,7 +59,7 @@ export class IntroScreen {
     this.note.textContent = NOTES[mode] ?? "";
     if (mode === "timeAttack") {
       const seconds = progress.learningStage <= 5 ? 15 : 60;
-      this.art.src = `./stopwatch-${seconds}.svg`;
+      // Keep the original mode icon; the note conveys the stage's actual time.
       this.note.textContent = `${seconds} seconds per stage`;
     }
 
