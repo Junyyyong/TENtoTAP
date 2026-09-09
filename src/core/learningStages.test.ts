@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { learningConfig, lessonValues, lessonCount, lessonHint, bonusAfter, lessonGuided, tenCombinations } from './learningStages';
+import { learningConfig, lessonValues, lessonCount, lessonHint, bonusAfter, lessonGuided, tenCombinations, lessonIntro } from './learningStages';
 import { TIME_ATTACK_CONFIG } from '../content/stages';
 import { newGame, commitSelection, tick } from './game';
 import { findHint, canEmpty } from './solver';
@@ -7,6 +7,11 @@ import { valueCounts } from './board';
 import { mulberry32 } from './rng';
 
 describe('LIMITLESS learning stages', () => {
+  it('only introduces the five requested milestone stages', () => {
+    expect(Array.from({length:60},(_,i)=>i+1).filter(s=>lessonIntro(s))).toEqual([1,6,14,23,30]);
+    expect(lessonIntro(1)).toBe('MAKE 10');
+    expect(lessonIntro(30)).toBe('CLEAR ALL\nBLOCKS');
+  });
   it('covers all combinations and the requested guidance and bonus schedule', () => {
     expect([3,4,5].map(n=>tenCombinations(n).length)).toEqual([8,9,7]);
     expect(Array.from({length:60},(_,i)=>i+1).filter(bonusAfter)).toEqual([5,13,22,30,40,50,60]);

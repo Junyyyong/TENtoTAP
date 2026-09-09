@@ -2,6 +2,15 @@ import { describe, expect, it } from "vitest";
 import { AppStateMachine } from "./appStateMachine";
 
 describe("AppStateMachine", () => {
+  it('allows an introduction after a video and resumes gameplay', () => {
+    const flow = new AppStateMachine('inGame');
+    flow.enter('bonusBreak');
+    flow.enter('inGame');
+    flow.enter('lessonIntro');
+    expect(flow.canEnter('paused')).toBe(false);
+    flow.enter('inGame');
+    expect(flow.current).toBe('inGame');
+  });
   it("returns from a bonus break to the game without a result screen", () => {
     const machine = new AppStateMachine("inGame");
     machine.enter("bonusBreak");

@@ -21,9 +21,10 @@ export function lessonGuided(stage = 0): boolean {
 export function bonusAfter(stage: number): boolean {
   return [5,13,22,30].includes(stage) || (stage > 30 && stage % 10 === 0);
 }
-export function lessonNotice(stage: number): string {
-  const count = lessonCount(stage);
-  return stage === 30 ? 'Clear all blocks.' : count ? `Use ${count} blocks to make 10.` : '';
+export function lessonIntro(stage = 0): string | undefined {
+  return ({ 1: 'MAKE 10', 6: 'USE 3 BLOCKS\nTO MAKE 10',
+    14: 'USE 4 BLOCKS\nTO MAKE 10', 23: 'USE 5 BLOCKS\nTO MAKE 10',
+    30: 'CLEAR ALL\nBLOCKS' } as Record<number, string>)[stage];
 }
 export function learningConfig(base: RunConfig, requested: number): RunConfig {
   const learningStage = Number.isSafeInteger(requested) && requested > 0 ? requested : 1;

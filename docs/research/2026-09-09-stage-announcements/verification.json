@@ -1,0 +1,145 @@
+{
+  "date": "2026-09-09T08:27:17.379Z",
+  "before": "bd3d5e2",
+  "after": "working tree based on bd3d5e2",
+  "browser": "152.0.7977.83",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "conditions": "Fresh profile; fixed clock 2026-09-09T00:00:01Z and seeded random; finite animations finished. Before 6/14/23/30 use saved-progress fixtures; after progresses from stage 1 through real answers. Color randomness uses crypto and is intentionally not seeded. Historical source extracted using git archive to a separate temporary directory. Video uses real media playback, not deterministic frames.",
+  "checks": [
+    "Five full-screen announcements pause timer and hide guidance until tapped",
+    "No click-through selection when starting",
+    "All 30 tutorial stages played with real taps",
+    "Exact guidance on first two stages of each count",
+    "No scale transform during stage transitions",
+    "Stage 30 requires multiple clears",
+    "Bonuses only after 5/13/22/30 and timers paused",
+    "Stage 31 reached"
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "before-menu.png",
+      "sha256": "6e426ae89c8f7c77c151ee80f2f126eeb043985aa1ac8b3ff39af27259287506"
+    },
+    {
+      "file": "before-intro.png",
+      "sha256": "78703dff21892e376cdcc4586ab029be3ab0caf1e14da670108604c2c5bc4073"
+    },
+    {
+      "file": "before-stage1.png",
+      "sha256": "15de1d852ab5dccc17c5503b75a8959b053deaa19df3d53264cfbbcabd83a160"
+    },
+    {
+      "file": "before-stage6.png",
+      "sha256": "1dc468ccddf6cf5fba607355554c436352349767a771c7e806f1d4b58ffa499d"
+    },
+    {
+      "file": "before-stage14.png",
+      "sha256": "8f83655f1e6f735b114a41fc5c64e17339818f5d7e513581da1f76956bda7b62"
+    },
+    {
+      "file": "before-stage23.png",
+      "sha256": "0201a636e9bb6ba7eb2f970a7a2f90feaf77c0cb06132bad5b6b805810c0e79e"
+    },
+    {
+      "file": "before-stage30.png",
+      "sha256": "8bfe1f51881ebbed6661994d7398f94580c6496555d6326a2a37223d85b50ac2"
+    },
+    {
+      "file": "after-menu.png",
+      "sha256": "6e426ae89c8f7c77c151ee80f2f126eeb043985aa1ac8b3ff39af27259287506"
+    },
+    {
+      "file": "after-intro.png",
+      "sha256": "78703dff21892e376cdcc4586ab029be3ab0caf1e14da670108604c2c5bc4073"
+    },
+    {
+      "file": "after-stage1.png",
+      "sha256": "ddc87646681f0ab7c8bd6763664fb4a95648bbc8ef34160441b993c0ccabbd5d"
+    },
+    {
+      "file": "after-announcement1.png",
+      "sha256": "ddc87646681f0ab7c8bd6763664fb4a95648bbc8ef34160441b993c0ccabbd5d"
+    },
+    {
+      "file": "after-bonus5.png",
+      "sha256": "42c6875106798c8962dfc34884ab976484a0192275727c60a073479d2ec923c4"
+    },
+    {
+      "file": "after-announcement6.png",
+      "sha256": "144c5bab73f8cc4caba1c560c9f52e54ca3d9c087904cddfacaa767b4ed165fb"
+    },
+    {
+      "file": "after-stage6.png",
+      "sha256": "79a18528690eb472daab0c3e8171b99c7017f6fa32ed661fe6e1918638a6c3f4"
+    },
+    {
+      "file": "after-stage7.png",
+      "sha256": "dd8fa004faae2fcd4d5f471a5554308bb9ed42db11fa121aaaeb8ca1803c55bc"
+    },
+    {
+      "file": "after-stage8.png",
+      "sha256": "5df30dd4d73be93b47058a3cb5da2ad13add281ce5131c6117e113105bd41e0e"
+    },
+    {
+      "file": "after-bonus13.png",
+      "sha256": "3b6eba0d215314a58290dbf132eba6b776083c5ca886fe6e5bd30530d61aa036"
+    },
+    {
+      "file": "after-announcement14.png",
+      "sha256": "7b28760fa28d6cdebfc4f8b7949562f1abf34ccf8acbfe91e1c4e43528bad9cd"
+    },
+    {
+      "file": "after-stage14.png",
+      "sha256": "a8ef24ca8a927bcc9ce25f595c621899e6f461fcc64dc66721a2da54bf931403"
+    },
+    {
+      "file": "after-stage15.png",
+      "sha256": "780fa6c9b86153555fbedbaaa48f1565167dc9a2737eda4f769c3de8221aa7ce"
+    },
+    {
+      "file": "after-stage16.png",
+      "sha256": "b1ecf062ea9c772254964d6efc98e4e3ef4e3c42fa5b8a8ed78f0eb89a47a08d"
+    },
+    {
+      "file": "after-bonus22.png",
+      "sha256": "7f45ab70c2393305ef3aa07ec2d7cb270b0fd2b05aed4222064e57e5a49c7c9f"
+    },
+    {
+      "file": "after-announcement23.png",
+      "sha256": "7724a1af1810af9f8a957ab2672e3c92e7f37ad5f754fdf174c2a8210518ef00"
+    },
+    {
+      "file": "after-stage23.png",
+      "sha256": "7f6d4993c41194aa84a391ef7969349ed59e74faaa772adf00962eec029d1de6"
+    },
+    {
+      "file": "after-stage24.png",
+      "sha256": "5e902d49e6425c7e298bc64014f9e3abb28c70cc791ac733dae63b5114157aa1"
+    },
+    {
+      "file": "after-stage25.png",
+      "sha256": "deaaefc0e0326bf1abb881d65b8b4c466af371776e60084964ebf569f4714d41"
+    },
+    {
+      "file": "after-announcement30.png",
+      "sha256": "89f823d790b85af1d662e3fa6b84e6c91c46b9ffe4092de1df64a06db7c95e96"
+    },
+    {
+      "file": "after-stage30.png",
+      "sha256": "43a3a570582d182b8a337851e072ff4bbd32462cb38d1bae0b72a81433bb7cdf"
+    },
+    {
+      "file": "after-bonus30.png",
+      "sha256": "4258c23e353bddf1250fa4e03df4d879159e1d1512ae0353b210ebb9983f63ef"
+    },
+    {
+      "file": "after-stage31.png",
+      "sha256": "dd44e86b461f3333999cad8f47ba8eb53fdab86c91247e92ccb849c333d34ed5"
+    }
+  ]
+}

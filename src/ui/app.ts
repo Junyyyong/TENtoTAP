@@ -17,7 +17,7 @@ import { TOTAL_STAGES, chapterFor, isChapterFinale } from "../content/chapters";
 import { artFor, plateFor } from "../content/gallery";
 import type { Chapter } from "../content/chapters";
 import { TIMELESS_CONFIG, ENDLESS_CONFIG, TIME_ATTACK_CONFIG, stageConfig } from "../content/stages";
-import { learningConfig, lessonCount, lessonGuided, lessonHint, bonusAfter } from '../core/learningStages';
+import { learningConfig, lessonCount, lessonGuided, lessonHint, bonusAfter, lessonIntro } from '../core/learningStages';
 import { BoardView } from "./boardView";
 import { AppStateMachine } from "./appStateMachine";
 import { feedback } from "./feedback";
@@ -87,6 +87,7 @@ export class App {
   private readonly hud = new Hud();
   private readonly overlay = new Overlay(() => this.showTitle());
   private readonly cheer = new Cheer();
+  private lessonIntroArmed = false;
   private readonly story = new StoryScreen();
   private readonly gallery: GalleryScreen;
   private readonly picker: PickerScreen;
@@ -130,7 +131,7 @@ export class App {
       requiredCount: () => lessonCount(this.state.config.learningStage),
       targets: () => targetsOf(this.state.config),
       fixedSquare: () => !!this.state.config.learningStage,
-      guidance: () => lessonGuided(this.state.config.learningStage)
+      guidance: () => this.flow.current === "inGame" && lessonGuided(this.state.config.learningStage)
         ? lessonHint(this.state.board, this.state.config.learningStage!) ?? [] : [],
       onCommit: (selection) => this.commit(selection),
       onSplit: (index) => this.onSplit(index),
@@ -147,6 +148,17 @@ export class App {
         this.held = values.length;
         this.hud.setSelection(values, colors);
       },
+    });
+    el('lesson-intro').addEventListener('pointerdown', () => { this.lessonIntroArmed = true; });
+    el<HTMLButtonElement>('lesson-intro').addEventListener('click', (event) => {
+      if (this.flow.current !== 'lessonIntro') return;
+      if (event.detail !== 0 && !this.lessonIntroArmed) return;
+      this.lessonIntroArmed = false;
+      el('lesson-intro').classList.add('hidden');
+      this.state = { ...this.state, transitionMs: 0 };
+      this.flow.enter('inGame');
+      this.render();
+      this.startClock();
     });
     new TitleScreen(
       (mode) => this.chooseMode(mode),
@@ -252,6 +264,7 @@ export class App {
   }
 
   private showTitle(): void {
+    el('lesson-intro').classList.add('hidden');
     this.stopClock();
     this.view.setInteractive(false);
     this.daily = loadDaily();
@@ -355,10 +368,23 @@ export class App {
     this.render();
     // Every mode runs a clock now: story is timed too, so a stage can keep a
     // best time.
-    this.startClock();
+    this.startWithLessonIntro();
   }
 
   // ---- clock -------------------------------------------------------------
+
+  private startWithLessonIntro(): void {
+    const message = lessonIntro(this.state.config.learningStage);
+    if (!message) { this.startClock(); return; }
+    this.stopClock();
+    this.flow.enter('lessonIntro');
+    this.lessonIntroArmed = false;
+    this.view.setInteractive(false);
+    el('lesson-intro-title').textContent = message;
+    el('lesson-intro').classList.remove('hidden');
+    this.render();
+    el<HTMLButtonElement>('lesson-intro').focus({ preventScroll: true });
+  }
 
   private startClock(): void {
     this.stopClock();
@@ -427,8 +453,10 @@ export class App {
         this.state = { ...this.state, transitionMs: 0 };
         this.flow.enter("inGame");
         this.render();
-        this.startClock();
+        this.startWithLessonIntro();
       }, 3, true);
+    } else if (completed && state.config.learningStage === completed + 1 && lessonIntro(state.config.learningStage)) {
+      this.startWithLessonIntro();
     }
   }
 
