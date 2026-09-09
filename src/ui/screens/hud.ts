@@ -2,6 +2,7 @@ import { aliveCount, emptyIndices } from "../../core/board";
 import { canSplit, targetsOf } from "../../core/game";
 import type { GameState } from "../../core/game";
 import { el, formatClock } from "../dom";
+import { lessonNotice } from '../../core/learningStages';
 
 /**
  * Everything around the board: what the run is called, the three numbers it is
@@ -69,8 +70,10 @@ export class Hud {
   private rejectedUntil = 0;
   private rejectedText = '';
 
-  showRejected(values: readonly number[]): void {
-    this.rejectedText = `${values.join(' + ')} = ${values.reduce((a,b) => a+b, 0)} · TRY AGAIN`;
+  showRejected(values: readonly number[], requiredCount?: number): void {
+    this.rejectedText = requiredCount && values.length !== requiredCount
+      ? `Use ${requiredCount} blocks to make 10.`
+      : `${values.join(' + ')} = ${values.reduce((a,b) => a+b, 0)} · TRY AGAIN`;
     this.rejectedUntil = performance.now() + 1100;
   }
 
@@ -163,7 +166,7 @@ export class Hud {
    * player cannot see goes here.
    */
   private notice(state: GameState): string {
-    if (state.config.learningStage) return state.transitionMs ? 'NEXT BOARD' : '';
+    if (state.config.learningStage) return state.transitionMs ? 'NEXT BOARD' : lessonNotice(state.config.learningStage);
     if (state.config.spawn) {
       if (state.status === "lost") return "The board is full.";
       return emptyIndices(state.board).length <= 6 ? "Almost full!" : "";

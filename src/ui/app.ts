@@ -17,8 +17,7 @@ import { TOTAL_STAGES, chapterFor, isChapterFinale } from "../content/chapters";
 import { artFor, plateFor } from "../content/gallery";
 import type { Chapter } from "../content/chapters";
 import { TIMELESS_CONFIG, ENDLESS_CONFIG, TIME_ATTACK_CONFIG, stageConfig } from "../content/stages";
-import { learningConfig } from '../core/learningStages';
-import { findHint } from '../core/solver';
+import { learningConfig, lessonCount, lessonGuided, lessonHint, bonusAfter } from '../core/learningStages';
 import { BoardView } from "./boardView";
 import { AppStateMachine } from "./appStateMachine";
 import { feedback } from "./feedback";
@@ -126,18 +125,20 @@ export class App {
       wrap: el("board-wrap"),
       grid: el("board"),
       isValid: (selection) =>
+        (!lessonCount(this.state.config.learningStage) || selection.length === lessonCount(this.state.config.learningStage)) &&
         isSelectionValid(this.state.board, selection, targetsOf(this.state.config)),
+      requiredCount: () => lessonCount(this.state.config.learningStage),
       targets: () => targetsOf(this.state.config),
       fixedSquare: () => !!this.state.config.learningStage,
-      guidance: () => this.state.config.learningStage && this.state.config.learningStage <= 2
-        ? findHint(this.state.board) ?? [] : [],
+      guidance: () => lessonGuided(this.state.config.learningStage)
+        ? lessonHint(this.state.board, this.state.config.learningStage!) ?? [] : [],
       onCommit: (selection) => this.commit(selection),
       onSplit: (index) => this.onSplit(index),
       onReject: (values) => {
         this.hud.combo = 0;
         this.held = 0;
         feedback.reject();
-        if (this.state.config.learningStage) this.hud.showRejected(values);
+        if (this.state.config.learningStage) this.hud.showRejected(values, lessonCount(this.state.config.learningStage));
       },
       onSelectionChange: (values, colors) => {
         // A block joining the selection is the one event the board does not
@@ -417,7 +418,7 @@ export class App {
     if (state.transitionMs) this.view.setBoard(state.board);
     this.render();
     const completed = before.config.learningStage;
-    if (completed && completed % 5 === 0 && state.config.learningStage === completed + 1) {
+    if (completed && bonusAfter(completed) && state.config.learningStage === completed + 1) {
       this.stopClock();
       this.flow.enter("bonusBreak");
       this.view.setInteractive(false);

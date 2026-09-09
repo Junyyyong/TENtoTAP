@@ -17,7 +17,7 @@ import { mulberry32, randomSeed } from "./rng";
 import { DEFAULT_TARGETS, evaluateSelection } from "./rules";
 import { MIN_SELECTION } from "./rules";
 import type { Board, MatchResult, RunConfig } from "./types";
-import { learningConfig, lessonValues } from './learningStages';
+import { learningConfig, lessonValues, lessonCount } from './learningStages';
 
 export type GameStatus = "playing" | "won" | "lost" | "timeUp";
 
@@ -250,6 +250,10 @@ function spawnBatch(state: GameState): GameState {
 }
 
 export function commitSelection(state: GameState, indices: readonly number[]): CommitOutcome {
+  const count = lessonCount(state.config.learningStage);
+  if (count && indices.length !== count) {
+    return { state, result: { ok: false, score: 0, failure: indices.length < count ? 'too-few' : 'too-many' }, rowsRemoved: 0 };
+  }
   const result = evaluateSelection(state.board, indices, targetsOf(state.config));
   if (!result.ok || state.status !== "playing" || (state.config.learningStage && state.transitionMs)) {
     return { state, result, rowsRemoved: 0 };
@@ -258,7 +262,7 @@ export function commitSelection(state: GameState, indices: readonly number[]): C
   for (const i of indices) cells[i]!.cleared = true;
   // A lesson ends after its one answer; distractors are not another task.
   // Only the selected answer contributes to result.score.
-  if (state.config.learningStage && lessonValues(state.config.learningStage)) {
+  if (count) {
     for (const cell of cells) cell.cleared = true;
   }
   // A board that tiles keep landing on is a fixed frame: cleared squares stay

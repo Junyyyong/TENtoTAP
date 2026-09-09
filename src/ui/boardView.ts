@@ -20,6 +20,7 @@ export interface BoardViewOptions {
   isValid(selection: readonly number[]): boolean;
   /** The sums this run clears on. Ten unless the mode says otherwise. */
   targets?(): readonly number[];
+  requiredCount?(): number | undefined;
   /** Fired when a selection should actually be played. */
   onCommit(selection: readonly number[]): void;
   /** Fired when a block is chosen to be broken up, while splitting is armed. */
@@ -366,11 +367,13 @@ export class BoardView {
     // Past the biggest sum on offer is dead. Short of it is not: eleven is a
     // selection on its way to twenty, and twenty-one one on its way to thirty.
     // Five blocks with no sixth to come can never add up to anything else.
-    const full = this.selection.length >= MAX_SELECTION;
+    const required = this.options.requiredCount?.();
+    const full = this.selection.length >= (required ?? MAX_SELECTION);
     if (
       sum > Math.max(...targets) ||
       this.selection.length > MAX_SELECTION ||
-      (full && !targets.includes(sum))
+      (full && !targets.includes(sum)) ||
+      (!!required && targets.includes(sum) && this.selection.length !== required)
     ) {
       this.reject(this.selection);
       this.selection = [];
