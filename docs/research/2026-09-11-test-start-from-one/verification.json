@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-10T16:03:29.030Z",
+  "before": "cd459a2",
+  "after": "working tree based on cd459a2",
+  "browser": "152.0.7977.83",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "conditions": "Fresh profile; fixed clock 2026-09-11T00:00:01Z and seeded random; finite animations finished. Both sides start with saved stage 14 and best score 120 fixtures. Color randomness uses crypto and is intentionally not seeded. Historical source extracted using git archive to a separate temporary directory. Video uses real media playback, not deterministic frames.",
+  "checks": [
+    "Saved stage 14 ignored on START",
+    "Stage 2 reached without persisting its stage",
+    "Retry stays on stage 2",
+    "Reload starts stage 1 again"
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "before-intro.png",
+      "sha256": "5bab5deb77e173b4bed9c2a78f8569e04573684c86f7e7606bc633a3a9971a3d"
+    },
+    {
+      "file": "before-announcement.png",
+      "sha256": "4d237b1af4adb26569c1eeaec842bd4cf7c4d6f7838ddaa257e458296282f578"
+    },
+    {
+      "file": "before-game.png",
+      "sha256": "2df6102a7d029a251815370fc50a934dc07a7b65751cadcf20c751f6acbceaa3"
+    },
+    {
+      "file": "after-intro.png",
+      "sha256": "b92b38ec4ee744bb0c0243b3e544a2565b0b5af8802fb8e8f163adc14cd6cc50"
+    },
+    {
+      "file": "after-announcement.png",
+      "sha256": "06a9963d4d740ad6fd1ed003c9e34b244e05395b22325176f26b2360bd97c631"
+    },
+    {
+      "file": "after-game.png",
+      "sha256": "71c8718483e2137305e4b6fd733cc480d99c9bdf79c2352cc095e617178ff2c9"
+    },
+    {
+      "file": "after-retry-stage2.png",
+      "sha256": "69221e17cdbdce867aa66f1e5f448910b303e017c81de932567a160a140a3238"
+    }
+  ]
+}

@@ -18,6 +18,7 @@ import { artFor, plateFor } from "../content/gallery";
 import type { Chapter } from "../content/chapters";
 import { TIMELESS_CONFIG, ENDLESS_CONFIG, TIME_ATTACK_CONFIG, stageConfig } from "../content/stages";
 import { learningConfig, lessonCount, lessonGuided, lessonHint, bonusAfter, lessonIntro } from '../core/learningStages';
+import { initialLearningStage, RESUME_LEARNING_PROGRESS } from '../content/testSettings';
 import { BoardView } from "./boardView";
 import { AppStateMachine } from "./appStateMachine";
 import { feedback } from "./feedback";
@@ -345,7 +346,7 @@ export class App {
       this.daily = { ...this.daily, games: this.daily.games + 1 };
       saveDaily(this.daily);
     }
-    this.beginRun(mode === "timeAttack" ? learningConfig(TIME_ATTACK_CONFIG, this.progress.learningStage) : CONFIGS[mode] ?? ENDLESS_CONFIG);
+    this.beginRun(mode === "timeAttack" ? learningConfig(TIME_ATTACK_CONFIG, initialLearningStage(this.progress.learningStage)) : CONFIGS[mode] ?? ENDLESS_CONFIG);
   }
 
   private startStage(stage: number): void {
@@ -575,7 +576,7 @@ export class App {
         saveProgress(this.progress);
       }
     } else if (mode === "timeAttack" && this.state.config.learningStage) {
-      this.progress = { ...this.progress, learningStage: this.state.config.learningStage,
+      this.progress = { ...this.progress, learningStage: RESUME_LEARNING_PROGRESS ? this.state.config.learningStage : this.progress.learningStage,
         bestLearningScore: Math.max(this.progress.bestLearningScore, this.state.score) };
       saveProgress(this.progress);
     } else if (mode === "timeAttack" && this.state.config.timeAttackLevel) {
@@ -656,7 +657,7 @@ export class App {
         this.overlay.open({
           title: "Time up",
           body: `STAGE ${config.learningStage}\nScore ${score}\nBoards cleared ${this.state.boardsCleared ?? 0}\nBest ${this.progress.bestLearningScore}`,
-          primary: { label: "Retry", action: () => this.startMode("timeAttack") },
+          primary: { label: "Retry", action: () => this.beginRun(learningConfig(TIME_ATTACK_CONFIG, config.learningStage ?? 1)) },
           secondary: { label: "Menu", action: () => this.showTitle() },
         }),
       );

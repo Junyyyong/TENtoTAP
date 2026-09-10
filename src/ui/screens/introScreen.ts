@@ -1,6 +1,7 @@
 import { el, formatClock } from "../dom";
 import type { Progress } from "../storage";
 import type { GameMode } from "../../core/types";
+import { initialLearningStage } from '../../content/testSettings';
 
 /**
  * What a mode is, before it starts.
@@ -58,14 +59,14 @@ export class IntroScreen {
     this.mark.classList.toggle("endless", mode === "endless");
     this.note.textContent = NOTES[mode] ?? "";
     if (mode === "timeAttack") {
-      const seconds = progress.learningStage <= 5 ? 15 : 60;
+      const seconds = initialLearningStage(progress.learningStage) <= 5 ? 15 : 60;
       // Keep the original mode icon; the note conveys the stage's actual time.
       this.note.textContent = `${seconds} seconds per stage`;
     }
 
     const rows: [string, string][] =
       mode === "timeAttack"
-        ? [["STAGE", String(progress.learningStage)], ["BEST SCORE", progress.bestLearningScore.toLocaleString()]]
+        ? [["STAGE", String(initialLearningStage(progress.learningStage))], ["BEST SCORE", progress.bestLearningScore.toLocaleString()]]
         : mode === "timeless"
           ? [
               ["BEST SCORE", progress.bestTimeless.toLocaleString()],
