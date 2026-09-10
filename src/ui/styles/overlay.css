@@ -358,11 +358,11 @@
   animation: lesson-tap-pulse 2.4s ease-in-out infinite;
 }
 @keyframes lesson-tap-pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: .5; }
+  0%, 100% { opacity: .5; }
+  50% { opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .lesson-intro-tap { animation: none; opacity: 1; }
+  .lesson-intro-tap { animation: none; opacity: .5; }
 }
 .lesson-intro.hidden { display: none; }
 .lesson-intro:focus-visible { outline: 3px solid var(--warm); outline-offset: -6px; }
