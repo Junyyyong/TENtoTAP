@@ -133,6 +133,7 @@ export class Hud {
 
     // In endless the timer bar shows how close the board is to overflowing,
     if (config.learningStage) this.stat(2, 'STAGE', String(config.learningStage));
+    if (config.scoreAttack) this.stat(2, 'BEST', this.bestForMode.toLocaleString());
     // which is the only thing that ends the run.
     if (config.spawn) {
       const room = emptyIndices(state.board).length / state.board.cells.length;

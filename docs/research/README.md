@@ -2,6 +2,8 @@
 
 ## 초기 개발부터 주요 시점의 전후 기록
 
+- [2026-09-11 — 튜토리얼 이후 60초 본게임](2026-09-11-limitless-minute-round/README.md): 30단계까지 GREAT 학습 구간, 이후 단계 없는 9×9 점수 모드와 독립 최고기록.
+- [2026-09-11 — 0점 NOT BAD 등급](2026-09-11-not-bad-grade/README.md): 사용자 업로드 영상 연결, 기존 등급 경계 보존.
 - [2026-09-11 — 모드 순서와 시작 안내](2026-09-11-mode-start-instructions/README.md): TIMELESS를 ENDLESS 위로 이동, 세 모드에 맞는 시작 문구.
 - [2026-09-11 — 테스트 시작은 1단계](2026-09-11-test-start-from-one/README.md): 저장 진도 이어하기·진도 갱신을 잠시 끄고 새 게임은 처음부터 시작.
 - [2026-09-09 — 단계 시작 전 큰 안내](2026-09-09-stage-announcements/README.md): 반투명 검은 화면, 탭 후 시계·게임 시작.

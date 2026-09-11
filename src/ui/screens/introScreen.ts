@@ -66,7 +66,7 @@ export class IntroScreen {
 
     const rows: [string, string][] =
       mode === "timeAttack"
-        ? [["STAGE", String(initialLearningStage(progress.learningStage))], ["BEST SCORE", progress.bestLearningScore.toLocaleString()]]
+        ? [["STAGE", String(initialLearningStage(progress.learningStage))], ["BEST SCORE", progress.bestLimitlessScore.toLocaleString()]]
         : mode === "timeless"
           ? [
               ["BEST SCORE", progress.bestTimeless.toLocaleString()],

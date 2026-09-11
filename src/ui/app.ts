@@ -17,7 +17,7 @@ import { TOTAL_STAGES, chapterFor, isChapterFinale } from "../content/chapters";
 import { artFor, plateFor } from "../content/gallery";
 import type { Chapter } from "../content/chapters";
 import { TIMELESS_CONFIG, ENDLESS_CONFIG, TIME_ATTACK_CONFIG, stageConfig } from "../content/stages";
-import { learningConfig, lessonCount, lessonGuided, lessonHint, bonusAfter, lessonIntro } from '../core/learningStages';
+import { learningConfig, lessonCount, lessonGuided, lessonHint, bonusAfter, lessonIntro, scoreAttackConfig } from '../core/learningStages';
 import { initialLearningStage, RESUME_LEARNING_PROGRESS } from '../content/testSettings';
 import { BoardView } from "./boardView";
 import { AppStateMachine } from "./appStateMachine";
@@ -380,7 +380,7 @@ export class App {
       timeless: 'USE 2–5 BLOCKS.\nMAKE 10, 20 OR 30.\nCLEAR THE BOARD.',
       endless: 'USE 2–5 BLOCKS.\nMAKE 10.\nDON’T LET IT FILL!',
     } as Partial<Record<GameMode, string>>)[this.state.config.mode] : undefined;
-    const message = modeMessage || lessonIntro(this.state.config.learningStage);
+    const message = this.state.config.scoreAttack ? 'MAKE 10\nIN 60 SECONDS' : modeMessage || lessonIntro(this.state.config.learningStage);
     if (!message) { this.startClock(); return; }
     this.stopClock();
     this.flow.enter('lessonIntro');
@@ -448,14 +448,14 @@ export class App {
     this.state = state;
     this.recordScore();
     this.announceReward(before, state);
-    if (state.transitionMs) this.view.setBoard(state.board);
+    if (state.transitionMs || (state.config.scoreAttack && before.config.learningStage)) this.view.setBoard(state.board);
     this.render();
     const completed = before.config.learningStage;
-    if (completed && bonusAfter(completed) && state.config.learningStage === completed + 1) {
+    if (completed && bonusAfter(completed) && (state.config.learningStage === completed + 1 || (completed === 30 && state.config.scoreAttack))) {
       this.stopClock();
       this.flow.enter("bonusBreak");
       this.view.setInteractive(false);
-      this.cheer.play("BONUS BREAK", state.score, () => {
+      this.cheer.play("STAGE CLEARED", before.score + result.score, () => {
         if (this.flow.current !== "bonusBreak") return;
         this.state = { ...this.state, transitionMs: 0 };
         this.flow.enter("inGame");
@@ -585,6 +585,9 @@ export class App {
       this.progress = { ...this.progress, learningStage: RESUME_LEARNING_PROGRESS ? this.state.config.learningStage : this.progress.learningStage,
         bestLearningScore: Math.max(this.progress.bestLearningScore, this.state.score) };
       saveProgress(this.progress);
+    } else if (mode === "timeAttack" && this.state.config.scoreAttack) {
+      this.progress = { ...this.progress, bestLimitlessScore: Math.max(this.progress.bestLimitlessScore, this.state.score) };
+      saveProgress(this.progress);
     } else if (mode === "timeAttack" && this.state.config.timeAttackLevel) {
       const index = this.state.config.timeAttackLevel - 1;
       const bestTimeAttackLevels = [...this.progress.bestTimeAttackLevels];
@@ -617,7 +620,7 @@ export class App {
       this.state.config.mode === "story"
         ? this.progress.bestStory
         : this.state.config.mode === "timeAttack"
-          ? this.state.config.learningStage ? this.progress.bestLearningScore : this.progress.bestTimeAttackLevels[(this.state.config.timeAttackLevel ?? 1) - 1] ?? 0
+          ? this.state.config.scoreAttack ? this.progress.bestLimitlessScore : this.state.config.learningStage ? this.progress.bestLearningScore : this.progress.bestTimeAttackLevels[(this.state.config.timeAttackLevel ?? 1) - 1] ?? 0
           : this.state.config.mode === "timeless"
             ? this.progress.bestTimeless
             : this.progress.bestEndless;
@@ -662,8 +665,10 @@ export class App {
       this.cheer.play("TIME OUT", score, () =>
         this.overlay.open({
           title: "Time up",
-          body: `STAGE ${config.learningStage}\nScore ${score}\nBoards cleared ${this.state.boardsCleared ?? 0}\nBest ${this.progress.bestLearningScore}`,
-          primary: { label: "Retry", action: () => this.beginRun(learningConfig(TIME_ATTACK_CONFIG, config.learningStage ?? 1)) },
+          body: config.scoreAttack
+            ? `Score ${score}\nBoards cleared ${this.state.boardsCleared ?? 0}\nBest ${this.progress.bestLimitlessScore}`
+            : `STAGE ${config.learningStage}\nScore ${score}\nBoards cleared ${this.state.boardsCleared ?? 0}\nBest ${this.progress.bestLearningScore}`,
+          primary: { label: "Retry", action: () => this.beginRun(config.scoreAttack ? scoreAttackConfig(TIME_ATTACK_CONFIG) : learningConfig(TIME_ATTACK_CONFIG, config.learningStage ?? 1)) },
           secondary: { label: "Menu", action: () => this.showTitle() },
         }),
       );
@@ -722,7 +727,7 @@ export class App {
         primary: { label: "Play again", action: () => this.startMode("timeless") },
       });
     // The clock decides the word and the dance here, not the score.
-    this.cheer.play(won ? "CLEARED" : "FAIL", score, open, timelessBand(won, this.state.elapsedMs));
+    this.cheer.play(won ? "CLEARED" : "FAIL", score, open, timelessBand(won, this.state.elapsedMs, score));
   }
 
   /** Settles a stuck board the player has decided not to take back. */

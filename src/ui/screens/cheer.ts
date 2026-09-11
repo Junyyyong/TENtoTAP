@@ -61,7 +61,8 @@ const TIERS: readonly {
   { at: 1000, word: "UNBELIEVABLE!!", clips: [clip(2)] },
   { at: 600, word: "AMAZING!", clips: [clip(4)] },
   { at: 300, word: "GREAT!", clips: [clip(3)] },
-  { at: 0, word: "GOOD TRY!", clips: [clip(1)] },
+  { at: 1, word: "GOOD TRY!", clips: [clip(1)] },
+  { at: 0, word: "NOT BAD!", clips: [clip(6)] },
 ];
 
 /**
@@ -88,8 +89,8 @@ export const TIMELESS_PACE_MS: readonly number[] = [3 * 60_000, 5 * 60_000, 8 * 
  * A board left standing is the bottom rung whatever the score and whatever the
  * clock said — the mode asked for an empty board and did not get one.
  */
-export function timelessBand(cleared: boolean, elapsedMs: number): number {
-  if (!cleared) return TIERS.length - 1;
+export function timelessBand(cleared: boolean, elapsedMs: number, score = 1): number {
+  if (!cleared) return score <= 0 ? TIERS.length - 1 : TIERS.length - 2;
   const rung = TIMELESS_PACE_MS.findIndex((limit) => elapsedMs < limit);
   return rung === -1 ? TIMELESS_PACE_MS.length : rung;
 }

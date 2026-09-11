@@ -146,6 +146,7 @@ function settleStatus(state: GameState): GameState {
       if (state.config.learningStage) {
         const cleared = aliveCount(state.board) === 0;
         const config = learningConfig(state.config, state.config.learningStage + (cleared ? 1 : 0));
+        if (config.scoreAttack) return newGame(config, state.nextSeed);
         const dealt = dealBoard(config, state.nextSeed);
         return { ...state, config, ...dealt, startingCells: dealt.board.cells.length,
           remainingMs: cleared ? config.timeLimitMs! : state.remainingMs,
@@ -160,7 +161,8 @@ function settleStatus(state: GameState): GameState {
           boardsCleared: (state.boardsCleared ?? 0) + (cleared ? 1 : 0), transitionMs: 350 };
       }
       const dealt = dealBoard(state.config, state.nextSeed);
-      return { ...state, board: dealt.board, nextSeed: dealt.nextSeed, status: "playing" };
+      return { ...state, board: dealt.board, nextSeed: dealt.nextSeed, status: "playing",
+        boardsCleared: (state.boardsCleared ?? 0) + (aliveCount(state.board) === 0 ? 1 : 0) };
     }
     return { ...state, status: "playing" };
   }
@@ -346,6 +348,7 @@ export type Payout = "none" | "tiles" | "extension";
  * would drift the moment the thresholds moved.
  */
 export function payoutFor(state: GameState, before: number): Payout {
+  if (state.config.scoreAttack) return "none";
   if (state.config.learningStage) return "none";
   if (state.config.timeAttackLevel) return "none";
   if (state.config.mode !== "timeAttack") return "none";

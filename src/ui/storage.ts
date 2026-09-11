@@ -18,6 +18,7 @@ export interface Progress {
   bestTimeAttackLevels: number[];
   learningStage: number;
   bestLearningScore: number;
+  bestLimitlessScore: number;
   bestEndless: number;
   /** Longest an endless run has survived, in milliseconds. */
   bestEndlessMs: number;
@@ -107,6 +108,7 @@ function blankProgress(): Progress {
     bestTimeAttackLevels: [0, 0, 0, 0],
     learningStage: 1,
     bestLearningScore: 0,
+    bestLimitlessScore: 0,
     bestEndless: 0,
     bestEndlessMs: 0,
     bestTimeless: 0,
@@ -128,6 +130,7 @@ export function loadProgress(): Progress {
       bestTimeAttack: Number(parsed.bestTimeAttack) || 0,
       learningStage: Number.isSafeInteger(parsed.learningStage) && parsed.learningStage! > 0 ? parsed.learningStage! : 1,
       bestLearningScore: Number.isFinite(parsed.bestLearningScore) ? Math.max(0, parsed.bestLearningScore!) : 0,
+      bestLimitlessScore: Number.isFinite(parsed.bestLimitlessScore) ? Math.max(0, parsed.bestLimitlessScore!) : 0,
       bestTimeAttackLevels: Array.from({ length: 4 }, (_, i) => {
         const score = Number(parsed.bestTimeAttackLevels?.[i]);
         return Number.isFinite(score) && score > 0 ? score : 0;

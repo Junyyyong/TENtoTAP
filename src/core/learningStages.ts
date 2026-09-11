@@ -19,7 +19,7 @@ export function lessonGuided(stage = 0): boolean {
   return [1,2,6,7,14,15,23,24].includes(stage);
 }
 export function bonusAfter(stage: number): boolean {
-  return [5,13,22,30].includes(stage) || (stage > 30 && stage % 10 === 0);
+  return [5,13,22,30].includes(stage);
 }
 export function lessonIntro(stage = 0): string | undefined {
   return ({ 1: 'USE 2 BLOCKS\nTO MAKE 10', 6: 'USE 3 BLOCKS\nTO MAKE 10',
@@ -27,12 +27,20 @@ export function lessonIntro(stage = 0): string | undefined {
     30: 'CLEAR ALL\nBLOCKS' } as Record<number, string>)[stage];
 }
 export function learningConfig(base: RunConfig, requested: number): RunConfig {
+  if (requested > 30) return scoreAttackConfig(base);
   const learningStage = Number.isSafeInteger(requested) && requested > 0 ? requested : 1;
   const width = learningStage <= 5 ? 2 : Math.min(9, 3 + Math.floor((Math.max(31, learningStage) - 31) / 12));
   return { ...base, learningStage, width, rows: width, deck: undefined,
     timeLimitMs: learningStage <= 5 ? 15_000 : 60_000,
     digitWeights: undefined, timeAttackLevel: undefined, keepBoard: true,
     groupWeights: [2, 3, 2, 1] };
+}
+export function scoreAttackConfig(base: RunConfig): RunConfig {
+  return { ...base, mode: 'timeAttack', scoreAttack: true, learningStage: undefined,
+    timeAttackLevel: undefined, maxBoardSize: undefined, width: 9, rows: 9,
+    deck: undefined, digitWeights: undefined, spawn: undefined, keepBoard: true,
+    timeLimitMs: 60_000, hints: 0, undos: 0, splits: 0, targets: [10],
+    groupWeights: [2,3,2,1] };
 }
 /** Counts index-distinct answers, stopping as soon as uniqueness is disproved. */
 function answerCount(values: readonly number[], count: number): number {

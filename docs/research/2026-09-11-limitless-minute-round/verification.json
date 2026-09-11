@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-11T02:04:16.074Z",
+  "before": "989471e",
+  "after": "working tree based on 989471e",
+  "browser": "152.0.7977.83",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "conditions": "Fresh profile; fixed clock 2026-09-11T00:00:01Z and seeded random; finite animations finished. Fresh profile; each mode launched from the menu. No saved-stage fixture. Color randomness uses crypto and is intentionally not seeded. Historical source extracted using git archive to a separate temporary directory. Video uses real media playback, not deterministic frames.",
+  "checks": [
+    "All 30 tutorial stages played",
+    "GREAT at 5/13/22/30",
+    "Fresh zero score and 60 seconds after tutorial",
+    "Main has BEST instead of STAGE and 9×9 board",
+    "Main timeout graded from its own score",
+    "Separate main best saved",
+    "Retry starts main round directly"
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "before-tutorial30.png",
+      "sha256": "8d63adda22fc78296caf4436dda68c3fb04253dddf4d80daf9721b40651da717"
+    },
+    {
+      "file": "before-clear30.png",
+      "sha256": "54ac0dc89f9b527ce112e98962447918d01fc96d095204b9453fe7de8ef3e83e"
+    },
+    {
+      "file": "before-stage31.png",
+      "sha256": "1fe1d476d89b88f2fcaa0b95e3083c63e10fc49a6c86ea296629e13c41071481"
+    },
+    {
+      "file": "after-tutorial30.png",
+      "sha256": "a6cbfc3486e7a5948131bddcfaf013ad1275ef6147430e44cea853381124f58d"
+    },
+    {
+      "file": "after-clear30.png",
+      "sha256": "c3971293de699863ac0597b56287065510fa13407e9f06335aa00d016b022d89"
+    },
+    {
+      "file": "after-main-intro.png",
+      "sha256": "e04fdb95d0eec3d2a3e903d756bc4fa422bad956257dacd0c25af398dd0cf56d"
+    },
+    {
+      "file": "after-main-playing.png",
+      "sha256": "ed2b86552fda8637b5ed862561340281d25a40612c2e3e7a2947bc3e9d9cffa5"
+    },
+    {
+      "file": "after-main-result-video.png",
+      "sha256": "21b53d0c339be9281d045639c0eabd7f7cf449afd581b8d1a1e305f1611cd4d2"
+    }
+  ]
+}

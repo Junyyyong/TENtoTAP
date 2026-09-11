@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { learningConfig, lessonValues, lessonCount, lessonHint, bonusAfter, lessonGuided, tenCombinations, lessonIntro } from './learningStages';
 import { TIME_ATTACK_CONFIG } from '../content/stages';
-import { newGame, commitSelection, tick } from './game';
+import { newGame, commitSelection, tick, payoutFor } from './game';
 import { findHint, canEmpty } from './solver';
 import { valueCounts } from './board';
 import { mulberry32 } from './rng';
@@ -14,7 +14,7 @@ describe('LIMITLESS learning stages', () => {
   });
   it('covers all combinations and the requested guidance and bonus schedule', () => {
     expect([3,4,5].map(n=>tenCombinations(n).length)).toEqual([8,9,7]);
-    expect(Array.from({length:60},(_,i)=>i+1).filter(bonusAfter)).toEqual([5,13,22,30,40,50,60]);
+    expect(Array.from({length:60},(_,i)=>i+1).filter(bonusAfter)).toEqual([5,13,22,30]);
     expect(Array.from({length:31},(_,i)=>i+1).filter(lessonGuided)).toEqual([1,2,6,7,14,15,23,24]);
   });
   it('rejects a shorter ten and clears the whole board at stage 30', () => {
@@ -27,9 +27,12 @@ describe('LIMITLESS learning stages', () => {
     let full = newGame(learningConfig(TIME_ATTACK_CONFIG,30));
     for(let i=0;i<3;i++) {
       full=commitSelection(full,findHint(full.board)!).state;
-      expect(full.config.learningStage).toBe(i===2?31:30);
+      expect(full.config.learningStage).toBe(i===2?undefined:30);
     }
-    expect(full.boardsCleared).toBe(1);
+    expect(full.config.scoreAttack).toBe(true);
+    expect(full.score).toBe(0);
+    expect(full.elapsedMs).toBe(0);
+    expect(full.remainingMs).toBe(60_000);
   });
   it('shuffles every lesson without changing its numbers or answer', () => {
     for(let stage=1;stage<=29;stage++) {
@@ -99,7 +102,21 @@ describe('LIMITLESS learning stages', () => {
     const game=newGame(learningConfig(TIME_ATTACK_CONFIG,31));
     const stuck={...game,remainingMs:12_000,board:{...game.board,cells:game.board.cells.map(c=>({...c,value:9}))}};
     const redealt=tick(stuck,100);
-    expect(redealt.config.learningStage).toBe(31);
+    expect(redealt.config.learningStage).toBeUndefined();
+    expect(redealt.config.scoreAttack).toBe(true);
     expect(redealt.remainingMs).toBe(11_900);
+  });
+  it('keeps the main round clock running across cleared boards and score milestones', () => {
+    const config=learningConfig(TIME_ATTACK_CONFIG,31);
+    let game=tick(newGame(config,5),10_000);
+    game={...game,score:490,board:{width:2,cells:[5,5].map(value=>({value,cleared:false}))}};
+    game=commitSelection(game,[0,1]).state;
+    expect(game.score).toBe(500);
+    expect(game.remainingMs).toBe(50_000);
+    expect(game.elapsedMs).toBe(10_000);
+    expect(game.boardsCleared).toBe(1);
+    expect(game.transitionMs ?? 0).toBe(0);
+    expect(payoutFor(game,490)).toBe('none');
+    expect(tick(game,50_000).status).toBe('timeUp');
   });
 });

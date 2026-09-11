@@ -10,7 +10,8 @@ function clipNumber(score: number): string {
 
 describe("the end-of-run flourish", () => {
   it("hands out a different dance the further a run gets", () => {
-    for (const score of [0, 1, 299]) expect(clipNumber(score)).toBe("1");
+    expect(clipNumber(0)).toBe("6");
+    for (const score of [1, 299]) expect(clipNumber(score)).toBe("1");
     for (const score of [300, 400, 599]) expect(clipNumber(score)).toBe("3");
     for (const score of [600, 800, 999]) expect(clipNumber(score)).toBe("4");
     for (const score of [1000, 1200, 1399]) expect(clipNumber(score)).toBe("2");
@@ -18,7 +19,7 @@ describe("the end-of-run flourish", () => {
   });
 
   it("says something different for each band", () => {
-    expect(cheerFor(0)).toBe("GOOD TRY!");
+    expect(cheerFor(0)).toBe("NOT BAD!");
     expect(cheerFor(299)).toBe("GOOD TRY!");
     expect(cheerFor(300)).toBe("GREAT!");
     expect(cheerFor(599)).toBe("GREAT!");
@@ -31,7 +32,7 @@ describe("the end-of-run flourish", () => {
   });
 
   it("changes the word and the dance at the very same score", () => {
-    for (const edge of [300, 600, 1000, 1400]) {
+    for (const edge of [1, 300, 600, 1000, 1400]) {
       expect(cheerFor(edge)).not.toBe(cheerFor(edge - 1));
       expect(clipNumber(edge)).not.toBe(clipNumber(edge - 1));
     }
@@ -44,7 +45,7 @@ describe("the end-of-run flourish", () => {
   });
 
   it("gives every clip a soundtrack and a copy for Apple's engine", () => {
-    for (const score of [0, 300, 600, 1000, 1400]) {
+    for (const score of [0, 1, 300, 600, 1000, 1400]) {
       for (const clip of poolFor(score)) {
         expect(clip.video).toMatch(/^\.\/movie\/\d+\.webm$/);
         expect(clip.hevc).toMatch(/^\.\/movie\/\d+-hevc\.mp4$/);
@@ -81,7 +82,7 @@ describe("the end-of-run flourish", () => {
 
     it("puts every unfinished board at the bottom, however long or short", () => {
       for (const minutes of [0.1, 3, 10, 60]) {
-        expect(timelessBand(false, m(minutes))).toBe(CHEER_BANDS - 1);
+        expect(timelessBand(false, m(minutes))).toBe(CHEER_BANDS - 2);
         expect(bandAt(timelessBand(false, m(minutes))).word).toBe("GOOD TRY!");
       }
       // Even the slowest clear beats it, which is the whole point.
@@ -89,8 +90,13 @@ describe("the end-of-run flourish", () => {
     });
 
     it("leaves a rung spare for the unfinished board", () => {
-      expect(TIMELESS_PACE_MS.length).toBe(CHEER_BANDS - 2);
+      expect(TIMELESS_PACE_MS.length).toBe(CHEER_BANDS - 3);
       expect([...TIMELESS_PACE_MS]).toEqual([...TIMELESS_PACE_MS].sort((a, b) => a - b));
     });
   });
+});
+
+it('gives zero-score TIMELESS failures NOT BAD without changing nonzero failures', () => {
+ expect(bandAt(timelessBand(false, 1000, 0)).word).toBe('NOT BAD!');
+ expect(bandAt(timelessBand(false, 1000, 10)).word).toBe('GOOD TRY!');
 });
