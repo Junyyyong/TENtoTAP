@@ -357,6 +357,10 @@
   transform: translateY(12px);
   animation: lesson-tap-pulse 2.4s ease-in-out infinite;
 }
+.mode-announcement .lesson-intro-title {
+  font-size: clamp(22px, 6vw, 34px);
+  line-height: 1.35;
+}
 @keyframes lesson-tap-pulse {
   0%, 100% { opacity: .5; }
   50% { opacity: 0; }

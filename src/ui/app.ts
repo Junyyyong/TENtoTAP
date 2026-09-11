@@ -158,6 +158,7 @@ export class App {
       el('lesson-intro').classList.add('hidden');
       this.state = { ...this.state, transitionMs: 0 };
       this.flow.enter('inGame');
+      this.view.setInteractive(true);
       this.render();
       this.startClock();
     });
@@ -369,19 +370,24 @@ export class App {
     this.render();
     // Every mode runs a clock now: story is timed too, so a stage can keep a
     // best time.
-    this.startWithLessonIntro();
+    this.startWithLessonIntro(true);
   }
 
   // ---- clock -------------------------------------------------------------
 
-  private startWithLessonIntro(): void {
-    const message = lessonIntro(this.state.config.learningStage);
+  private startWithLessonIntro(newRun = false): void {
+    const modeMessage = newRun ? ({
+      timeless: 'USE 2–5 BLOCKS.\nMAKE 10, 20 OR 30.\nCLEAR THE BOARD.',
+      endless: 'USE 2–5 BLOCKS.\nMAKE 10.\nDON’T LET IT FILL!',
+    } as Partial<Record<GameMode, string>>)[this.state.config.mode] : undefined;
+    const message = modeMessage || lessonIntro(this.state.config.learningStage);
     if (!message) { this.startClock(); return; }
     this.stopClock();
     this.flow.enter('lessonIntro');
     this.lessonIntroArmed = false;
     this.view.setInteractive(false);
     el('lesson-intro-title').textContent = message;
+    el('lesson-intro').classList.toggle('mode-announcement', !!modeMessage);
     el('lesson-intro').classList.remove('hidden');
     this.render();
     el<HTMLButtonElement>('lesson-intro').focus({ preventScroll: true });

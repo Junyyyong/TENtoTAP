@@ -1,0 +1,64 @@
+{
+  "date": "2026-09-11T00:12:08.445Z",
+  "before": "27b74fd",
+  "after": "working tree based on 27b74fd",
+  "browser": "152.0.7977.83",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "conditions": "Fresh profile; fixed clock 2026-09-11T00:00:01Z and seeded random; finite animations finished. Fresh profile; each mode launched from the menu. No saved-stage fixture. Color randomness uses crypto and is intentionally not seeded. Historical source extracted using git archive to a separate temporary directory. Video uses real media playback, not deterministic frames.",
+  "checks": [
+    "timeAttack: overlay, clock/board paused until tap, playable after tap",
+    "timeless: overlay, clock/board paused until tap, playable after tap",
+    "endless: overlay, clock/board paused until tap, playable after tap"
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "before-menu.png",
+      "sha256": "6e426ae89c8f7c77c151ee80f2f126eeb043985aa1ac8b3ff39af27259287506"
+    },
+    {
+      "file": "before-timeAttack-start.png",
+      "sha256": "53846a4a188803930530d9adc4f03f60de93d373f6fb38932d6d8a7064220e7b"
+    },
+    {
+      "file": "before-timeless-start.png",
+      "sha256": "2291bceca5a6be9830932b7300251f5605e907bebbb590a877eb32db8d2345ce"
+    },
+    {
+      "file": "before-endless-start.png",
+      "sha256": "e9734d3f836994d1290031839d8872359fab52c7ad5153e7a6a540f03e13e6a1"
+    },
+    {
+      "file": "after-menu.png",
+      "sha256": "db1114a29d6b289b1025f69eea668411e3599429299891a14c52b5bd7779c284"
+    },
+    {
+      "file": "after-timeAttack-start.png",
+      "sha256": "246d240022824a24c79a710563c192ce6ca91dd5d7f8191bf00485d9eb9b26db"
+    },
+    {
+      "file": "after-timeAttack-playing.png",
+      "sha256": "219c855ac941c7088a53b59b18dbea99a4c5f65d2d2475d898b86fb7556aa0dd"
+    },
+    {
+      "file": "after-timeless-start.png",
+      "sha256": "6f30126c28adeeee84d4eeb0df562d50507f4345d184bbc5ebc5d036d2efdec6"
+    },
+    {
+      "file": "after-timeless-playing.png",
+      "sha256": "35282fdd0fe1cd374427240cc877e1cc499a401af4ff21e55bc33270dac43242"
+    },
+    {
+      "file": "after-endless-start.png",
+      "sha256": "34df26736c3efcc39451b411e339709ff87d17ccdfb3a0142544d85108b3c2b4"
+    },
+    {
+      "file": "after-endless-playing.png",
+      "sha256": "37759b9e5b7c30a748a7be285923640f790c037673c1c9bd6d6a55ba99272c15"
+    }
+  ]
+}

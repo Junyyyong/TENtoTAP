@@ -9,7 +9,7 @@ import { mulberry32 } from './rng';
 describe('LIMITLESS learning stages', () => {
   it('only introduces the five requested milestone stages', () => {
     expect(Array.from({length:60},(_,i)=>i+1).filter(s=>lessonIntro(s))).toEqual([1,6,14,23,30]);
-    expect(lessonIntro(1)).toBe('MAKE 10');
+    expect(lessonIntro(1)).toBe('USE 2 BLOCKS\nTO MAKE 10');
     expect(lessonIntro(30)).toBe('CLEAR ALL\nBLOCKS');
   });
   it('covers all combinations and the requested guidance and bonus schedule', () => {

@@ -1,5 +1,13 @@
 # 작업 기록 (WORKLOG)
 
+## 2026-09-11 · 모드 안내 문구 축약 · Codex
+
+사용자가 선택한 짧은 문구로 TIMELESS는 USE 2–5 BLOCKS. / MAKE 10, 20 OR 30. / CLEAR THE BOARD., ENDLESS는 USE 2–5 BLOCKS. / MAKE 10. / DON’T LET IT FILL!의 세 줄로 변경했다. 기존 시작 안내 작업에 묶이는 문구 조정이며 게임 규칙·시작 탭 동작은 그대로다. 앞서 촬영한 연구자료는 긴 문구 시점의 원본으로 유지한다.
+
+## 2026-09-11 · 홈 순서 및 모드 시작 안내 · Codex
+
+홈을 LIMITLESS→TIMELESS→ENDLESS 순서로 변경했다. LIMITLESS 첫 안내는 Use 2 blocks to make 10, TIMELESS/ENDLESS에도 실제 규칙에 맞는 큰 시작 안내를 추가했다. 사용자 확인에 따라 ENDLESS는 10만 인정하는 규칙을 유지한다. 안내 중 시계·블록 추가를 멈추고 탭 후 입력을 복구한다. 테스트 143개·빌드·세 모드 모바일 검증 및 [전후 연구자료](research/2026-09-11-mode-start-instructions/README.md) 추가.
+
 ## 2026-09-11 · 테스트용 1단계 시작 · Codex
 
 사용자 요청으로 LIMITLESS 새 게임은 저장 단계와 무관하게 1단계에서 시작하고 테스트 중 단계 저장 갱신도 중단했다. 기존 저장 데이터·최고점수는 유지하며 Retry는 현재 단계에서 한다. 출시 때 되돌릴 수 있도록 testSettings.ts에 정책을 분리했다. 테스트 143개·빌드 및 [전후 연구기록](research/2026-09-11-test-start-from-one/README.md) 추가.
