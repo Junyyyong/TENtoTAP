@@ -10,12 +10,14 @@ import type { Settings } from "../storage";
  * room to link to.
  */
 export class SettingsScreen {
+  private readonly music = el<HTMLButtonElement>('switch-music');
   private readonly sound = el<HTMLButtonElement>("switch-sound");
   private readonly haptics = el<HTMLButtonElement>("switch-haptics");
   private readonly note = el<HTMLParagraphElement>("settings-note");
 
   constructor(onChange: (settings: Partial<Settings>) => void, onBack: () => void) {
     el<HTMLButtonElement>("btn-settings-back").addEventListener("click", onBack);
+    this.music.addEventListener('click', () => onChange({ musicOn: this.music.getAttribute('aria-checked') !== 'true' }));
     this.sound.addEventListener("click", () => {
       onChange({ soundOn: this.sound.getAttribute("aria-checked") !== "true" });
     });
@@ -25,6 +27,7 @@ export class SettingsScreen {
   }
 
   render(settings: Settings): void {
+    this.music.setAttribute('aria-checked', String(settings.musicOn));
     this.sound.setAttribute("aria-checked", String(settings.soundOn));
     this.haptics.setAttribute("aria-checked", String(settings.hapticsOn));
 

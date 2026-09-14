@@ -43,7 +43,7 @@ const ALLOWED: Readonly<Record<AppState, readonly AppState[]>> = {
  * jump between unrelated states and leave clocks or input running behind it.
  */
 export class AppStateMachine {
-  constructor(private active: AppState = "splash") {}
+  constructor(private active: AppState = "splash", private readonly onChange?: (state: AppState) => void) {}
 
   get current(): AppState {
     return this.active;
@@ -57,6 +57,7 @@ export class AppStateMachine {
     const from = this.active;
     if (!this.canEnter(next)) throw new Error(`Invalid app transition: ${from} -> ${next}`);
     this.active = next;
+    this.onChange?.(next);
     return { from, to: next };
   }
 }

@@ -22,6 +22,8 @@ import { initialLearningStage, RESUME_LEARNING_PROGRESS } from '../content/testS
 import { BoardView } from "./boardView";
 import { AppStateMachine } from "./appStateMachine";
 import { feedback } from "./feedback";
+import { SceneMusic } from "./sceneMusic";
+import { musicSceneFor } from "./musicSceneFor";
 import { el, formatClock } from "./dom";
 import { Hud } from "./screens/hud";
 import { Cheer, timelessBand } from "./screens/cheer";
@@ -82,7 +84,13 @@ export class App {
   /** Whether the split item is waiting for a block to be picked. */
   private splitArmed = false;
   private settings: Settings;
-  private readonly flow = new AppStateMachine();
+  private readonly music = new SceneMusic({
+    menu: new URL('../../public/assets/audio/ten-lobby.mp3', import.meta.url).href,
+    game: new URL('../../public/assets/audio/ten-game.mp3', import.meta.url).href,
+  }, undefined, (scene, state) => {
+    el('btn-title-music').classList.toggle('hidden', !(scene === 'menu' && state === 'blocked' && this.settings?.musicOn));
+  });
+  private readonly flow = new AppStateMachine('splash', state => this.music.setScene(musicSceneFor(state)));
 
   private readonly view: BoardView;
   private readonly hud = new Hud();
@@ -205,9 +213,14 @@ export class App {
         // it starts from a timer rather than a touch, so it has to be woken
         // here too. See Cheer.unlock.
         this.cheer.unlock();
+        this.music.unlock();
       },
       { capture: true },
     );
+    for (const event of ['pointerup', 'click', 'keydown']) {
+      document.addEventListener(event, () => this.music.unlock(), { capture: true });
+    }
+    el('btn-title-music').addEventListener('click', () => this.music.unlock());
     // Anything the player deliberately pressed clicks back — except the
     // buttons that already say something more specific than "pressed".
     document.addEventListener("click", (event) => {
@@ -875,6 +888,7 @@ export class App {
     document.documentElement.dataset.sound = this.settings.soundOn ? "on" : "off";
     feedback.setSound(this.settings.soundOn);
     this.cheer.setSound(this.settings.soundOn);
+    this.music.setEnabled(this.settings.musicOn);
     feedback.setHaptics(this.settings.hapticsOn);
   }
 

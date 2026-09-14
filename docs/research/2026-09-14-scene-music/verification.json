@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-14T01:31:32.859Z",
+  "before": "e42b3bc",
+  "after": "working tree based on e42b3bc",
+  "browser": "152.0.7977.83",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "conditions": "Fresh profile, fixed clock and seeded number randomness. Color crypto randomness and actual media timing differ. Real Web Audio decoding, instrumented source start/stop; not a listening-quality assertion. Historical git archive uses current installed Vite.",
+  "checks": [
+    "Real decoded menu/game loops with exclusive playback",
+    "Menu selection retains lobby music",
+    "Instructions and play use 124 BPM game loop",
+    "Pause/resume stops and resumes",
+    "Actual stage 5 GREAT and timeout results stop BGM",
+    "Return to menu restores lobby",
+    "Independent Music toggle persists across reload"
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "before-menu.png",
+      "sha256": "db1114a29d6b289b1025f69eea668411e3599429299891a14c52b5bd7779c284"
+    },
+    {
+      "file": "before-settings.png",
+      "sha256": "a4a7e2dbc577664a3590ae978596edf5e151078bfde9669ada25277189ab3dd3"
+    },
+    {
+      "file": "before-game-intro.png",
+      "sha256": "9a41063b2ad0b85f77e8ec60f9df31c9c8145ce6d90f126c5ee2b1ded26229c3"
+    },
+    {
+      "file": "after-menu.png",
+      "sha256": "db1114a29d6b289b1025f69eea668411e3599429299891a14c52b5bd7779c284"
+    },
+    {
+      "file": "after-settings.png",
+      "sha256": "c4ab30f1ba8665e6851e8ab62fe104c56bcbde21e07c46989ce065de6d817286"
+    },
+    {
+      "file": "after-game-intro.png",
+      "sha256": "a7407dd63a9a9eece3c7f4907933809da495c1ca7c8b8a4e47e7a9f8862f24ad"
+    },
+    {
+      "file": "after-great-video.png",
+      "sha256": "d811ffc8677d6232a44ec072178c173e7c461e73c3869cef88ca816df52517ec"
+    },
+    {
+      "file": "after-result-video.png",
+      "sha256": "816cbf104c2536347a9db3940a578f5d237721c7bf7418cb58b473d7aa2fde5d"
+    }
+  ]
+}

@@ -58,6 +58,7 @@
         </nav>
 
         <div class="title-links">
+          <button class="text-btn hidden" id="btn-title-music">Tap for music</button>
           <button class="text-btn" id="btn-title-settings">Settings</button>
         </div>
       </section>
@@ -238,6 +239,12 @@
         </header>
         <div class="picker-body">
           <ul class="switch-list">
+            <li class="switch-row">
+              <span class="switch-text"><b>Music</b><small>Background music for menu and play</small></span>
+              <button class="switch" id="switch-music" role="switch" aria-label="Music" aria-checked="true">
+                <span class="switch-knob"></span>
+              </button>
+            </li>
             <li class="switch-row">
               <span class="switch-text">
                 <b>Sound</b>

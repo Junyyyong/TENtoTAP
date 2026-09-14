@@ -38,6 +38,7 @@ export interface Progress {
 }
 
 export interface Settings {
+  musicOn: boolean;
   soundOn: boolean;
   /** Whether the phone buzzes on a pick, a clear and a refusal. */
   hapticsOn: boolean;
@@ -90,9 +91,9 @@ export function saveDaily(stats: DailyStats): void {
 export function loadSettings(): Settings {
   // Both default to on: a game that is silent and still until it is switched
   // on is a game most players never hear.
-  return read(SETTINGS_KEY, { soundOn: true, hapticsOn: true }, (raw) => {
+  return read(SETTINGS_KEY, { musicOn: true, soundOn: true, hapticsOn: true }, (raw) => {
     const parsed = raw as Partial<Settings>;
-    return { soundOn: parsed.soundOn !== false, hapticsOn: parsed.hapticsOn !== false };
+    return { musicOn: parsed.musicOn !== false, soundOn: parsed.soundOn !== false, hapticsOn: parsed.hapticsOn !== false };
   });
 }
 
