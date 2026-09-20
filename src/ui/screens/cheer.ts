@@ -1,4 +1,5 @@
 import { el } from "../dom";
+import { DancePlayback } from './dancePlayback';
 
 /**
  * The beat between the last move and the results panel.
@@ -64,6 +65,20 @@ const TIERS: readonly {
   { at: 1, word: "GOOD TRY!", clips: [clip(1)] },
   { at: 0, word: "NOT BAD!", clips: [clip(6)] },
 ];
+
+/** Shuffle bag: all five positive clips before any repeat; never NOT BAD. */
+export class TutorialCheers {
+  private bag: number[] = [];
+  private last = -1;
+  next(): number {
+    if (!this.bag.length) {
+      this.bag = [0,1,2,3,4];
+      for (let i=4;i>0;i--) { const j=Math.floor(Math.random()*(i+1)); [this.bag[i],this.bag[j]]=[this.bag[j]!,this.bag[i]!]; }
+      if (this.bag[4] === this.last) [this.bag[0],this.bag[4]]=[this.bag[4]!,this.bag[0]!];
+    }
+    return this.last = this.bag.pop()!;
+  }
+}
 
 /**
  * How fast a TIMELESS board has to be emptied for each rung of the ladder.
@@ -175,7 +190,6 @@ const WORD_ONLY_MS = 1400;
  * would otherwise leave the player looking at a dimmed board with nothing to
  * tap. The clip normally reaches its own end well before this.
  */
-const CLIP_CAP_MS = 15000;
 
 /**
  * Plays a file from its first frame, whether or not it is the one already
@@ -187,10 +201,6 @@ const CLIP_CAP_MS = 15000;
  * throws on a seek into a file it has not read the header of yet, which took
  * the whole flourish down with it.
  */
-function start(media: HTMLMediaElement, src: string): Promise<void> {
-  load(media, src);
-  return media.play();
-}
 
 /** Points an element at a file, rewinding it if it is already the one loaded. */
 function load(media: HTMLMediaElement, src: string): void {
@@ -212,6 +222,7 @@ export class Cheer {
   private readonly headline = el<HTMLParagraphElement>("cheer-headline");
   private readonly scoreEl = el<HTMLParagraphElement>("cheer-score");
   private readonly sound = el<HTMLAudioElement>("cheer-sound");
+  private readonly playback = new DancePlayback(this.clip, this.sound);
   private timer: number | undefined;
   private soundOn = true;
   /** Whether the sound element has been played inside a touch yet. */
@@ -225,8 +236,6 @@ export class Cheer {
 
   constructor() {
     // The clip stops on its own last frame; the player decides when to leave it.
-    this.clip.addEventListener("ended", () => this.hold());
-    this.clip.addEventListener("error", () => this.finish());
     this.root.addEventListener("pointerdown", () => this.finish());
   }
 
@@ -243,12 +252,12 @@ export class Cheer {
    * not the web layer's.
    */
   unlock(): void {
-    if (this.primed) return;
+    if (this.primed || this.done) return;
     this.primed = true;
     this.sound.src = SILENCE;
     const started = this.sound.play() as Promise<void> | undefined;
     void started
-      ?.then(() => this.sound.pause())
+      ?.then(() => { if (!this.done) this.sound.pause(); })
       .catch(() => {
         this.primed = false;
       });
@@ -265,6 +274,7 @@ export class Cheer {
    * timed run's.
    */
   play(headline: string, score: number, then: () => void, band?: number, skippable = false, cardMs = CARD_MS): void {
+    this.playback.stop();
     const tier = bandAt(band ?? bandForScore(score));
     this.word.textContent = tier.word;
     this.headline.textContent = headline;
@@ -320,42 +330,9 @@ export class Cheer {
       return;
     }
 
-    this.clip.classList.remove("hidden");
-
-    /*
-     * The soundtrack starts when the picture does, not when the picture is
-     * asked to.
-     *
-     * Starting both in the same breath only looks synchronised if both begin
-     * at once, and a 3.9MB video does not begin as promptly as an 84KB song.
-     * `playing` fires on the video's first painted frame, whether that is
-     * immediately or after a wait, so hanging the sound off it keeps the two
-     * in step however slow the file is. Sound is a courtesy either way: if it
-     * will not play, the picture carries on regardless.
-     */
-    const run = this.run;
-    const song = pick.sound;
-    if (song && this.soundOn) {
-      this.clip.addEventListener(
-        "playing",
-        () => {
-          if (this.run !== run || !this.soundOn) return;
-          load(this.sound, song);
-          // Dropped in where the picture already is, not started from the top.
-          // Handling the event costs a tenth of a second, which is enough to
-          // hear as the song trailing the dance.
-          this.sound.currentTime = this.clip.currentTime;
-          void this.sound.play().catch(() => undefined);
-        },
-        { once: true },
-      );
-    }
-
-    // Muted and inline, so this is allowed without a gesture; a refusal still
-    // lands on `finish` rather than stalling the run.
-    void start(this.clip, sourceFor(pick)).catch(() => this.finish());
-
-    this.timer = window.setTimeout(() => this.hold(), CLIP_CAP_MS);
+    const first = sourceFor(pick);
+    const alternate = first === pick.video ? pick.hevc : pick.video;
+    this.playback.play(alternate ? [first, alternate] : [first], pick.sound, () => this.soundOn, () => this.hold());
   }
 
   /**
@@ -408,6 +385,7 @@ export class Cheer {
   }
 
   private hush(): void {
+    this.playback.stop();
     this.clip.pause();
     this.sound.pause();
   }

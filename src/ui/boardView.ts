@@ -26,7 +26,7 @@ export interface BoardViewOptions {
   /** Fired when a block is chosen to be broken up, while splitting is armed. */
   onSplit?(index: number): void;
   /** Fired when a selection is refused — the combo it was building is over. */
-  onReject?(values: readonly number[]): void;
+  onReject?(values: readonly number[], colors: readonly number[]): void;
   /** Keeps the bottom sum indicator in sync with taps and drags. */
   onSelectionChange?(values: readonly number[], colors: readonly number[]): void;
   /**
@@ -237,7 +237,7 @@ export class BoardView {
     void this.options.grid.offsetWidth; // restart the animation
     this.options.grid.classList.add("shake");
 
-    this.options.onReject?.(blamed.map(i => valueAt(this.board, i)));
+    this.options.onReject?.(blamed.map(i => valueAt(this.board, i)), blamed.map(i => this.colors.at(i)));
     if (blamed.length === 0) return;
     this.busted = [...blamed];
     window.clearTimeout(this.bustTimer);

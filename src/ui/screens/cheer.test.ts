@@ -100,3 +100,10 @@ it('gives zero-score TIMELESS failures NOT BAD without changing nonzero failures
  expect(bandAt(timelessBand(false, 1000, 0)).word).toBe('NOT BAD!');
  expect(bandAt(timelessBand(false, 1000, 10)).word).toBe('GOOD TRY!');
 });
+import { TutorialCheers } from './cheer';
+
+it('balances tutorial videos in groups of five without NOT BAD or adjacent repeats', () => {
+ const bag = new TutorialCheers(); const bands = Array.from({length:100},()=>bag.next());
+ for(let i=0;i<100;i+=5) expect([...bands.slice(i,i+5)].sort()).toEqual([0,1,2,3,4]);
+ for(let i=1;i<100;i++) expect(bands[i]).not.toBe(bands[i-1]);
+});

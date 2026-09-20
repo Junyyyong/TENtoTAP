@@ -36,9 +36,27 @@ export class Hud {
   bestForMode = 0;
   /** The sums that clear, so the equation knows when it is finished. */
   private targets: readonly number[] = [10];
+  private reviewing = false;
+
+  showEquation(values: readonly number[], correct: boolean, colors: readonly number[] = []): void {
+    this.reviewing = false;
+    this.setSelection(values, colors);
+    this.reviewing = true;
+    this.sumBox.classList.toggle('ready', correct);
+    this.sumBox.classList.toggle('incorrect', !correct);
+    this.sumBox.setAttribute('aria-label', `${values.join(' + ')} = ${values.reduce((a,b)=>a+b,0)}. ${correct ? 'Correct' : 'Try again'}`);
+  }
+
+  clearEquation(): void {
+    this.reviewing = false;
+    this.sumBox.classList.remove('incorrect');
+    this.sumBox.removeAttribute('aria-label');
+    this.setSelection([]);
+  }
 
   /** Shows the equation as it is built: 2 + 3 + 2 = ?, then = 10. */
   setSelection(values: readonly number[], colors: readonly number[] = []): void {
+    if (this.reviewing) return;
     const sum = values.reduce((total, value) => total + value, 0);
     this.sumTerms.replaceChildren(
       ...values.flatMap((value, i) => {

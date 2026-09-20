@@ -1,0 +1,67 @@
+{
+  "date": "2026-09-20T05:34:32.678Z",
+  "before": "13edebf",
+  "after": "working tree based on 13edebf",
+  "browser": "153.0.8010.48",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "conditions": "Fresh profile; fixed clock 2026-09-20T00:00:01Z and seeded random; finite animations finished. Fresh profile; each mode launched from the menu. No saved-stage fixture. Color randomness uses crypto and is intentionally not seeded. Historical source extracted using git archive to a separate temporary directory. Video uses real media playback, not deterministic frames.",
+  "checks": [
+    "All 30 lessons complete after automatic equation review",
+    "Actual sums retained for incorrect answers",
+    "2/3/4/5 block correct equations retain 10 for >1 second",
+    "Time and stage frozen during review",
+    "Four distinct non-NOT-BAD clips at 5/13/22/30 decoded and progressed in Chrome",
+    "Main-round intro still reached"
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "before-incorrect.png",
+      "sha256": "1fff1c4c21a0dcc25bc7544e9f81a0699c9fda3d56e575fd2550c653ce0e1f69"
+    },
+    {
+      "file": "before-correct.png",
+      "sha256": "245e03b8bb4a9d6be63ea41cf17b4ce081a2d9c74bff8d9eee26287ad6150c9e"
+    },
+    {
+      "file": "after-incorrect.png",
+      "sha256": "0c1a544b09017b5d5e9398bb6193d058e46b92a1b0b48f95bb153663cdfadd13"
+    },
+    {
+      "file": "after-correct-2-blocks.png",
+      "sha256": "c32f857afb8ff4094d76300e0aed943ebb1cedd4cc1a4d61f81c132a91acb36c"
+    },
+    {
+      "file": "after-video-5.png",
+      "sha256": "5fd34607ca3ba172f18182cb4e2f08bb45c356d1d07cfbf30b10f22d8fab56be"
+    },
+    {
+      "file": "after-correct-3-blocks.png",
+      "sha256": "b718980d059f93d36f7453a027cf46948ac561e954d71a475e438f4641e8d0fb"
+    },
+    {
+      "file": "after-video-13.png",
+      "sha256": "487af1b1fa2cf8a849da8a2e49d0b674e1660d8bddd97cdfd055e3ab5ed0c760"
+    },
+    {
+      "file": "after-correct-4-blocks.png",
+      "sha256": "c8171b626699a03c946e66a99b02833fc1b89b7d7e529351cdd297b4de622db6"
+    },
+    {
+      "file": "after-video-22.png",
+      "sha256": "b5f286447c4292a070a0e119bc1e4b69abaca426f441ab0e3429f24ebed179b3"
+    },
+    {
+      "file": "after-correct-5-blocks.png",
+      "sha256": "152e5a9ad7cfe83f93a7beeee22a4c9504cebe07c5873a14f2505f47b16b30dc"
+    },
+    {
+      "file": "after-video-30.png",
+      "sha256": "f34e0886502031bcdabbd4f454f45711c95665fe2c6c2213894bae5a4d006a06"
+    }
+  ]
+}

@@ -4,6 +4,7 @@ export type AppState =
   | "mainMenu"
   | "tutorial"
   | "inGame"
+  | "equationReview"
   | "paused"
   | "bonusBreak"
   | "lessonIntro"
@@ -25,7 +26,8 @@ const ALLOWED: Readonly<Record<AppState, readonly AppState[]>> = {
   stages: ["chapters", "mainMenu", "inGame"],
   intro: ["mainMenu", "inGame"],
   tutorial: ["mainMenu"],
-  inGame: ["paused", "bonusBreak", "lessonIntro", "result", "mainMenu", "stages"],
+  inGame: ["equationReview", "paused", "bonusBreak", "lessonIntro", "result", "mainMenu", "stages"],
+  equationReview: ["inGame", "mainMenu", "stages"],
   lessonIntro: ["inGame", "mainMenu"],
   bonusBreak: ["inGame", "mainMenu"],
   paused: ["inGame", "mainMenu"],

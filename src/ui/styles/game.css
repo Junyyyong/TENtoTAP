@@ -701,3 +701,5 @@
 .selection-sum.ready .sum-total {
   color: var(--warm);
 }
+.selection-sum.incorrect { border-color: #ba3024; }
+.selection-sum.incorrect .sum-total { color: #ba3024; }

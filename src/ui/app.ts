@@ -1,4 +1,4 @@
-import { aliveCount } from "../core/board";
+import { aliveCount, valueAt } from "../core/board";
 import {
   canSplit,
   commitSelection,
@@ -26,7 +26,7 @@ import { SceneMusic } from "./sceneMusic";
 import { musicSceneFor } from "./musicSceneFor";
 import { el, formatClock } from "./dom";
 import { Hud } from "./screens/hud";
-import { Cheer, timelessBand } from "./screens/cheer";
+import { Cheer, timelessBand, TutorialCheers } from "./screens/cheer";
 import { Overlay } from "./screens/overlay";
 import { StoryScreen } from "./screens/storyScreen";
 import { GalleryScreen } from "./screens/galleryScreen";
@@ -97,6 +97,8 @@ export class App {
   private readonly overlay = new Overlay(() => this.showTitle());
   private readonly cheer = new Cheer();
   private lessonIntroArmed = false;
+  private equationTimer: number | undefined;
+  private readonly tutorialCheers = new TutorialCheers();
   private readonly story = new StoryScreen();
   private readonly gallery: GalleryScreen;
   private readonly picker: PickerScreen;
@@ -142,15 +144,16 @@ export class App {
       fixedSquare: () => !!this.state.config.learningStage,
       guidance: () => this.flow.current === "inGame" && lessonGuided(this.state.config.learningStage)
         ? lessonHint(this.state.board, this.state.config.learningStage!) ?? [] : [],
-      onCommit: (selection) => this.commit(selection),
+      onCommit: (selection) => this.reviewEquation(selection.map(i => valueAt(this.state.board, i)), true, () => this.commit(selection), selection.map(i => Number(el('board').querySelector<HTMLElement>(`[data-i="${i}"]`)?.dataset.color ?? 1))),
       onSplit: (index) => this.onSplit(index),
-      onReject: (values) => {
+      onReject: (values, colors) => {
         this.hud.combo = 0;
         this.held = 0;
         feedback.reject();
-        if (this.state.config.learningStage) this.hud.showRejected(values, lessonCount(this.state.config.learningStage));
+        if (values.length) this.reviewEquation(values, false, () => {}, colors);
       },
       onSelectionChange: (values, colors) => {
+        if (this.flow.current === 'equationReview') return;
         // A block joining the selection is the one event the board does not
         // announce on its own, so it is read off the count.
         if (values.length > this.held) feedback.pick(values.length);
@@ -259,6 +262,8 @@ export class App {
   // ---- screens -----------------------------------------------------------
 
   private show(screen: Screen): void {
+    window.clearTimeout(this.equationTimer);
+    this.hud.clearEquation();
     this.cheer.stop();
     const next = this.screens[screen];
     const previous = this.screens[this.activeScreen];
@@ -449,6 +454,35 @@ export class App {
 
   // ---- moves -------------------------------------------------------------
 
+  private reviewEquation(values: readonly number[], correct: boolean, then: () => void, colors: readonly number[] = []): void {
+    if (this.flow.current !== 'inGame') return;
+    this.stopClock();
+    this.flow.enter('equationReview');
+    this.hud.showEquation(values, correct, colors);
+    this.view.setInteractive(false);
+    const count = lessonCount(this.state.config.learningStage);
+    this.hud.setNotice(correct ? 'CORRECT' : count && values.length !== count ? `USE ${count} BLOCKS · TRY AGAIN` : 'TRY AGAIN');
+    for (const button of [this.hud.hintBtn,this.hud.undoBtn,this.hud.splitBtn]) button.disabled = true;
+    const proceed = () => {
+      if (this.flow.current !== 'equationReview') return;
+      // Do not advance an unseen result in a background tab.
+      if (document.hidden) { this.equationTimer = window.setTimeout(proceed, 250); return; }
+      this.hud.clearEquation();
+      this.hud.setNotice(null);
+      this.flow.enter('inGame');
+      then();
+      this.resumeAfterEquation();
+    };
+    this.equationTimer = window.setTimeout(proceed, 1500);
+  }
+
+  private resumeAfterEquation(): void {
+    if (this.flow.current !== 'inGame') return;
+    this.view.setInteractive(true);
+    this.render();
+    if (this.flow.current === 'inGame') this.startClock();
+  }
+
   private commit(selection: readonly number[]): void {
     const anchor = selection[selection.length - 1]!;
     const before = this.state;
@@ -474,7 +508,7 @@ export class App {
         this.flow.enter("inGame");
         this.render();
         this.startWithLessonIntro();
-      }, 3, true, 2000);
+      }, this.tutorialCheers.next(), true, 2000);
     } else if (completed && state.config.learningStage === completed + 1 && lessonIntro(state.config.learningStage)) {
       this.startWithLessonIntro();
     }
@@ -522,6 +556,7 @@ export class App {
    * up a moment ago.
    */
   private onUndo(): void {
+    if (this.flow.current === 'equationReview') return;
     const back = undo(this.state);
     if (back === this.state) return;
     feedback.item();
@@ -542,6 +577,7 @@ export class App {
    * the item buys one break, never a mode the player can forget they are in.
    */
   private armSplit(): void {
+    if (this.flow.current === 'equationReview') return;
     if (!canSplit(this.state)) return;
     this.splitArmed = !this.splitArmed;
     this.view.setSplitting(this.splitArmed);
@@ -572,6 +608,7 @@ export class App {
   }
 
   private onHint(): void {
+    if (this.flow.current === 'equationReview') return;
     if (this.state.hintsLeft === 0 || this.state.status !== "playing") return;
     const { state, indices } = useHint(this.state);
     feedback.item();

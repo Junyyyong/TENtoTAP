@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-20T05:38:44.126Z",
+  "before": "16d7856",
+  "after": "working tree based on 16d7856",
+  "browser": "153.0.8010.48",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "conditions": "Fresh profile; fixed clock 2026-09-20T00:00:01Z and seeded random; finite animations finished. Fresh profile; each mode launched from the menu. No saved-stage fixture. Color randomness uses crypto and is intentionally not seeded. Historical source extracted using git archive to a separate temporary directory. Video uses real media playback, not deterministic frames.",
+  "checks": [
+    "Actual zero-score timeout plays NOT BAD video",
+    "Video decodes in Chrome",
+    "Tap proceeds to result"
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "before-zero-score-video.png",
+      "sha256": "87c5a34b0ee303f603a7e5c3f2e14f6a319ec30add426f4a9109b315536b8409"
+    },
+    {
+      "file": "after-zero-score-video.png",
+      "sha256": "01b7472593754426834da94011a6ebb3d5d5134a3bc0fd32cd9eebc94207bfe4"
+    }
+  ]
+}

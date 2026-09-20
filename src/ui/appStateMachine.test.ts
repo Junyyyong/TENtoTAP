@@ -2,6 +2,14 @@ import { describe, expect, it } from "vitest";
 import { AppStateMachine } from "./appStateMachine";
 
 describe("AppStateMachine", () => {
+  it('reviews equations without allowing gameplay or pause transitions until automatic resume', () => {
+    const flow = new AppStateMachine('inGame');
+    flow.enter('equationReview');
+    expect(flow.canEnter('paused')).toBe(false);
+    expect(flow.canEnter('mainMenu')).toBe(true);
+    flow.enter('inGame');
+    expect(flow.current).toBe('inGame');
+  });
   it('allows an introduction after a video and resumes gameplay', () => {
     const flow = new AppStateMachine('inGame');
     flow.enter('bonusBreak');
