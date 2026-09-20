@@ -56,7 +56,12 @@ export class Hud {
 
   /** Shows the equation as it is built: 2 + 3 + 2 = ?, then = 10. */
   setSelection(values: readonly number[], colors: readonly number[] = []): void {
-    if (this.reviewing) return;
+    // Automatic selection clearing/board changes must not erase the result.
+    // The first new digit replaces it immediately, without locking gameplay.
+    if (this.reviewing && values.length === 0) return;
+    this.reviewing = false;
+    this.sumBox.classList.remove('incorrect');
+    this.sumBox.removeAttribute('aria-label');
     const sum = values.reduce((total, value) => total + value, 0);
     this.sumTerms.replaceChildren(
       ...values.flatMap((value, i) => {

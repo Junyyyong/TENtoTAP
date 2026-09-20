@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-20T06:35:47.439Z",
+  "before": "9c59eb1",
+  "after": "working tree",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "browser": "153.0.8010.48",
+  "conditions": "Same fixed clock and number seed, fresh muted profiles; historical git archive, current Vite; crypto block colors differ.",
+  "checks": [
+    "Incorrect result persists while clock advances",
+    "Next input replaces incorrect equation immediately",
+    "Correct answer advances immediately, result survives board replacement and 2 seconds",
+    "Next digit replaces correct result"
+  ],
+  "captures": [
+    {
+      "file": "before-wrong-1s.png",
+      "sha256": "574e97713a7271254fe965d86cb70b16da3789dd16b06247e3807d7f34d74e8c"
+    },
+    {
+      "file": "before-correct-600ms.png",
+      "sha256": "bde939b41cc0c4dfae6c85b25b50ec57e0c1b641ca93d0a78a04c3ff07bfca58"
+    },
+    {
+      "file": "after-wrong-1s.png",
+      "sha256": "c552ac28b8111891e31f817a2c27d0ed76a25520c80aa463140f250c1181587c"
+    },
+    {
+      "file": "after-correct-600ms.png",
+      "sha256": "3344b89e05b2474f7b745f101b66557917896200a626529d696c3cd7e15e8733"
+    }
+  ]
+}
