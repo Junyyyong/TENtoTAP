@@ -14,7 +14,7 @@ describe('LIMITLESS learning stages', () => {
   });
   it('covers all combinations and the requested guidance and bonus schedule', () => {
     expect([3,4,5].map(n=>tenCombinations(n).length)).toEqual([8,9,7]);
-    expect(Array.from({length:60},(_,i)=>i+1).filter(bonusAfter)).toEqual([5,13,22,30]);
+    expect(Array.from({length:60},(_,i)=>i+1).filter(bonusAfter)).toEqual([5,13,22,29,30]);
     expect(Array.from({length:31},(_,i)=>i+1).filter(lessonGuided)).toEqual([1,2,6,7,14,15,23,24]);
   });
   it('rejects a shorter ten and clears the whole board at stage 30', () => {

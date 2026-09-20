@@ -19,7 +19,7 @@ export function lessonGuided(stage = 0): boolean {
   return [1,2,6,7,14,15,23,24].includes(stage);
 }
 export function bonusAfter(stage: number): boolean {
-  return [5,13,22,30].includes(stage);
+  return [5,13,22,29,30].includes(stage);
 }
 export function lessonIntro(stage = 0): string | undefined {
   return ({ 1: 'USE 2 BLOCKS\nTO MAKE 10', 6: 'USE 3 BLOCKS\nTO MAKE 10',

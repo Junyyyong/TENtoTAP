@@ -66,20 +66,10 @@ const TIERS: readonly {
   { at: 0, word: "NOT BAD!", clips: [clip(6)] },
 ];
 
-/** Shuffle bag: all five positive clips before any repeat; never NOT BAD. */
-export class TutorialCheers {
-  private bag: number[] = [];
-  private last = -1;
-  next(): number {
-    if (!this.bag.length) {
-      this.bag = [0,1,2,3,4];
-      for (let i=4;i>0;i--) { const j=Math.floor(Math.random()*(i+1)); [this.bag[i],this.bag[j]]=[this.bag[j]!,this.bag[i]!]; }
-      if (this.bag[4] === this.last) [this.bag[0],this.bag[4]]=[this.bag[4]!,this.bag[0]!];
-    }
-    return this.last = this.bag.pop()!;
-  }
+/** Tutorial completion is a fixed progression, independent of points. */
+export function tutorialBand(stage: number): number | undefined {
+  return ({5:4,13:3,22:2,29:1,30:0} as Record<number, number>)[stage];
 }
-
 /**
  * How fast a TIMELESS board has to be emptied for each rung of the ladder.
  *
@@ -91,12 +81,10 @@ export class TutorialCheers {
  * sums got the top word. Emptying the board is the point; how long it took is
  * the achievement.
  *
- * Three minutes, five and eight: a guess at what fast, decent and unhurried
- * look like on eighty-one blocks, meant to be moved once real runs say
- * otherwise. There is one fewer of them than there are bands, so the slowest
- * clear still lands above a board left standing.
+ * User-selected clear-time thresholds: 80s, 2m, 3m, 5m inclusive.
+ * Beyond five minutes is GOOD TRY, without imposing a gameplay time limit.
  */
-export const TIMELESS_PACE_MS: readonly number[] = [3 * 60_000, 5 * 60_000, 8 * 60_000];
+export const TIMELESS_PACE_MS: readonly number[] = [80_000, 120_000, 180_000, 300_000];
 
 /**
  * Which rung a TIMELESS run earned, 0 being the best.
@@ -106,7 +94,7 @@ export const TIMELESS_PACE_MS: readonly number[] = [3 * 60_000, 5 * 60_000, 8 * 
  */
 export function timelessBand(cleared: boolean, elapsedMs: number, score = 1): number {
   if (!cleared) return score <= 0 ? TIERS.length - 1 : TIERS.length - 2;
-  const rung = TIMELESS_PACE_MS.findIndex((limit) => elapsedMs < limit);
+  const rung = TIMELESS_PACE_MS.findIndex((limit) => elapsedMs <= limit);
   return rung === -1 ? TIMELESS_PACE_MS.length : rung;
 }
 

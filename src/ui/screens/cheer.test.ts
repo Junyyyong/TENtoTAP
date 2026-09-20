@@ -68,16 +68,16 @@ describe("the end-of-run flourish", () => {
       const bands = [0.5, 2.9, 3.1, 4.9, 5.1, 7.9, 8.1, 30].map((t) => timelessBand(true, m(t)));
       // Never improves as the clock runs on.
       for (let i = 1; i < bands.length; i++) expect(bands[i]).toBeGreaterThanOrEqual(bands[i - 1]!);
-      expect(timelessBand(true, m(2.9))).toBeLessThan(timelessBand(true, m(3.1)));
-      expect(timelessBand(true, m(4.9))).toBeLessThan(timelessBand(true, m(5.1)));
-      expect(timelessBand(true, m(7.9))).toBeLessThan(timelessBand(true, m(8.1)));
+      for(const edge of TIMELESS_PACE_MS) expect(timelessBand(true,edge)).toBeLessThan(timelessBand(true,edge+1));
     });
 
     it("hands the very best word to a fast clear", () => {
       expect(bandAt(timelessBand(true, m(1))).word).toBe("OH MY GOD~!");
-      expect(bandAt(timelessBand(true, m(4))).word).toBe("UNBELIEVABLE!!");
-      expect(bandAt(timelessBand(true, m(6))).word).toBe("AMAZING!");
-      expect(bandAt(timelessBand(true, m(20))).word).toBe("GREAT!");
+      expect(bandAt(timelessBand(true, 80_000)).word).toBe("OH MY GOD~!");
+      expect(bandAt(timelessBand(true, m(2))).word).toBe("UNBELIEVABLE!!");
+      expect(bandAt(timelessBand(true, m(3))).word).toBe("AMAZING!");
+      expect(bandAt(timelessBand(true, m(5))).word).toBe("GREAT!");
+      expect(bandAt(timelessBand(true, 300_001)).word).toBe("GOOD TRY!");
     });
 
     it("puts every unfinished board at the bottom, however long or short", () => {
@@ -85,12 +85,11 @@ describe("the end-of-run flourish", () => {
         expect(timelessBand(false, m(minutes))).toBe(CHEER_BANDS - 2);
         expect(bandAt(timelessBand(false, m(minutes))).word).toBe("GOOD TRY!");
       }
-      // Even the slowest clear beats it, which is the whole point.
-      expect(timelessBand(true, m(60))).toBeLessThan(timelessBand(false, m(0.1)));
+      expect(timelessBand(true, m(60))).toBe(timelessBand(false, m(0.1)));
     });
 
     it("leaves a rung spare for the unfinished board", () => {
-      expect(TIMELESS_PACE_MS.length).toBe(CHEER_BANDS - 3);
+      expect(TIMELESS_PACE_MS.length).toBe(CHEER_BANDS - 2);
       expect([...TIMELESS_PACE_MS]).toEqual([...TIMELESS_PACE_MS].sort((a, b) => a - b));
     });
   });
@@ -100,10 +99,9 @@ it('gives zero-score TIMELESS failures NOT BAD without changing nonzero failures
  expect(bandAt(timelessBand(false, 1000, 0)).word).toBe('NOT BAD!');
  expect(bandAt(timelessBand(false, 1000, 10)).word).toBe('GOOD TRY!');
 });
-import { TutorialCheers } from './cheer';
+import { tutorialBand } from './cheer';
 
-it('balances tutorial videos in groups of five without NOT BAD or adjacent repeats', () => {
- const bag = new TutorialCheers(); const bands = Array.from({length:100},()=>bag.next());
- for(let i=0;i<100;i+=5) expect([...bands.slice(i,i+5)].sort()).toEqual([0,1,2,3,4]);
- for(let i=1;i<100;i++) expect(bands[i]).not.toBe(bands[i-1]);
+it('uses a fixed ascending tutorial grade at each of five checkpoints', () => {
+ expect([5,13,22,29,30].map(s=>bandAt(tutorialBand(s)!).word)).toEqual(['GOOD TRY!','GREAT!','AMAZING!','UNBELIEVABLE!!','OH MY GOD~!']);
+ expect(tutorialBand(28)).toBeUndefined();
 });

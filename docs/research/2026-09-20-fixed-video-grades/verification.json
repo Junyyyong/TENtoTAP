@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-20T10:36:10.774Z",
+  "before": "ffa7ca9",
+  "after": "working tree based on ffa7ca9",
+  "browser": "153.0.8010.48",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "conditions": "Fresh profile; fixed clock 2026-09-20T00:00:01Z and seeded random; finite animations finished. Fresh profile; each mode launched from the menu. No saved-stage fixture. Color randomness uses crypto and is intentionally not seeded. Historical source extracted using git archive to a separate temporary directory. Video uses real media playback, not deterministic frames.",
+  "checks": [
+    "Actual 30 tutorial stages played",
+    "Fixed GOOD TRY/GREAT/AMAZING/UNBELIEVABLE/OH MY GOD at 5/13/22/29/30",
+    "All five videos decoded",
+    "Stage 29 video leads to CLEAR ALL BLOCKS at 30",
+    "Stage 30 leads to 60-second main round"
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "before-clear5.png",
+      "sha256": "85373b646a905c7712827385d6735a2b283d569a7074e8b4833930e307edf0bb"
+    },
+    {
+      "file": "before-clear13.png",
+      "sha256": "861665c445ef9e15880f9d385773eb67e1521a6c315a72a064b4d89277afc3c1"
+    },
+    {
+      "file": "before-clear22.png",
+      "sha256": "2979f3aa6c1058a9fb1e06542732beb27ba63e70763bda1b091278b06de96ef7"
+    },
+    {
+      "file": "before-tutorial30.png",
+      "sha256": "fa6c9ad74995cfe250b68f03f707769f8f2a1f3fc1e7bacb0c90cf07088f1e51"
+    },
+    {
+      "file": "before-clear30.png",
+      "sha256": "380b50cd9e507ed71b85e703446a22a3e54ee5deb3687d76e54ecca2b8f29e09"
+    },
+    {
+      "file": "after-clear5.png",
+      "sha256": "b7c0fe8898f4586c6da62ac2e2552a7f2e13cc0a5743edf735912068cea0f665"
+    },
+    {
+      "file": "after-clear13.png",
+      "sha256": "9f4a094ca5164e8ff0547ea2273b7837cb5c5448a440c117ba37747ea97c7799"
+    },
+    {
+      "file": "after-clear22.png",
+      "sha256": "92c24a13e98d7497a1a6863a787667f0f7dc2b7aa4322afbf849b612bec5db95"
+    },
+    {
+      "file": "after-clear29.png",
+      "sha256": "8ab92e223af3bd28b704ea7d7bee3b830de2e5736e9bcccbca52fca13d3fb1c8"
+    },
+    {
+      "file": "after-tutorial30.png",
+      "sha256": "9b8349bbe831750945b9c3423f27f201a5a145f02002aac186aa0d67d6b071e2"
+    },
+    {
+      "file": "after-clear30.png",
+      "sha256": "8fc8e26227517f24e7552c5cee15ebecd471a2bcbadf1ac635e9e642ac666001"
+    }
+  ]
+}

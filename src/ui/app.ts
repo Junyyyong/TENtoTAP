@@ -26,7 +26,7 @@ import { SceneMusic } from "./sceneMusic";
 import { musicSceneFor } from "./musicSceneFor";
 import { el, formatClock } from "./dom";
 import { Hud } from "./screens/hud";
-import { Cheer, timelessBand, TutorialCheers } from "./screens/cheer";
+import { Cheer, timelessBand, tutorialBand } from "./screens/cheer";
 import { Overlay } from "./screens/overlay";
 import { StoryScreen } from "./screens/storyScreen";
 import { GalleryScreen } from "./screens/galleryScreen";
@@ -97,7 +97,6 @@ export class App {
   private readonly overlay = new Overlay(() => this.showTitle());
   private readonly cheer = new Cheer();
   private lessonIntroArmed = false;
-  private readonly tutorialCheers = new TutorialCheers();
   private readonly story = new StoryScreen();
   private readonly gallery: GalleryScreen;
   private readonly picker: PickerScreen;
@@ -481,7 +480,7 @@ export class App {
         this.flow.enter("inGame");
         this.render();
         this.startWithLessonIntro();
-      }, this.tutorialCheers.next(), true, 2000);
+      }, tutorialBand(completed), true, 2000);
     } else if (completed && state.config.learningStage === completed + 1 && lessonIntro(state.config.learningStage)) {
       this.startWithLessonIntro();
     }
