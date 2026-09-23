@@ -1,5 +1,5 @@
-/** Enable for release when saved-stage continuation is wanted again. */
-export const RESUME_LEARNING_PROGRESS = false;
+/** Release behavior: resume tutorial progress; 31 means tutorial completed. */
+export const RESUME_LEARNING_PROGRESS = true;
 export function initialLearningStage(saved: number): number {
-  return RESUME_LEARNING_PROGRESS ? saved : 1;
+  return RESUME_LEARNING_PROGRESS && Number.isSafeInteger(saved) && saved > 0 ? Math.min(saved, 31) : 1;
 }

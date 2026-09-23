@@ -605,7 +605,8 @@ export class App {
         bestLearningScore: Math.max(this.progress.bestLearningScore, this.state.score) };
       saveProgress(this.progress);
     } else if (mode === "timeAttack" && this.state.config.scoreAttack) {
-      this.progress = { ...this.progress, bestLimitlessScore: Math.max(this.progress.bestLimitlessScore, this.state.score) };
+      this.progress = { ...this.progress, learningStage: RESUME_LEARNING_PROGRESS ? 31 : this.progress.learningStage,
+        bestLimitlessScore: Math.max(this.progress.bestLimitlessScore, this.state.score) };
       saveProgress(this.progress);
     } else if (mode === "timeAttack" && this.state.config.timeAttackLevel) {
       const index = this.state.config.timeAttackLevel - 1;

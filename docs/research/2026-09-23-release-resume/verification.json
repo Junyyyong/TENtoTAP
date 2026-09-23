@@ -1,0 +1,93 @@
+{
+  "date": "2026-09-23T04:47:28.639Z",
+  "before": "6eec0dc",
+  "after": "working tree based on 6eec0dc",
+  "browser": "153.0.8010.53",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "conditions": "Fresh profile; fixed clock 2026-09-23T00:00:01Z and seeded random; finite animations finished. Fresh profile; each mode launched from the menu. No saved-stage fixture. Color randomness uses crypto and is intentionally not seeded. Historical source extracted using git archive to a separate temporary directory. Video uses real media playback, not deterministic frames.",
+  "checks": [
+    "Actual progress at stage 10 survives reload",
+    "Launch still shows normal menu and mode selection",
+    "Tutorial completion persists as 31; next session starts a fresh main round",
+    "Actual 30 tutorial stages played",
+    "Fixed GOOD TRY/GREAT/AMAZING/UNBELIEVABLE/OH MY GOD at 5/13/22/29/30",
+    "All five videos decoded",
+    "Stage 29 video leads to CLEAR ALL BLOCKS at 30",
+    "Stage 30 leads to 60-second main round"
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "before-clear5.png",
+      "sha256": "10c0d589512d275ae9918934c3c4cc9a59fef824dae61d8ef22792e78c065076"
+    },
+    {
+      "file": "before-stage10-before-close.png",
+      "sha256": "394c862c3022582dd6532f9a7f62147877e13cfb097cf882623ca6a69837abbc"
+    },
+    {
+      "file": "before-menu-after-reload.png",
+      "sha256": "db1114a29d6b289b1025f69eea668411e3599429299891a14c52b5bd7779c284"
+    },
+    {
+      "file": "before-resume-selection.png",
+      "sha256": "78703dff21892e376cdcc4586ab029be3ab0caf1e14da670108604c2c5bc4073"
+    },
+    {
+      "file": "before-resumed-game.png",
+      "sha256": "30570dbccdcdfc286a7c6fea606a7312061f6b4974a22cb21c9ab3af09cf4600"
+    },
+    {
+      "file": "after-clear5.png",
+      "sha256": "333034f226566a620c7f4955f42c62675c14a85717e16bef83086a0bfebb4c35"
+    },
+    {
+      "file": "after-stage10-before-close.png",
+      "sha256": "1d456b346c208974e40b62dad868f0f498f90d246eb1a3a27ddcfac6ec760d8e"
+    },
+    {
+      "file": "after-menu-after-reload.png",
+      "sha256": "db1114a29d6b289b1025f69eea668411e3599429299891a14c52b5bd7779c284"
+    },
+    {
+      "file": "after-resume-selection.png",
+      "sha256": "b3a2075c308341096a6231b2eeb5a6c432a485828db183d1e87fe54705f7f402"
+    },
+    {
+      "file": "after-resumed-game.png",
+      "sha256": "92e28beba607c98a28432c98e4806083badadda8b0abf21729f498f658cec22a"
+    },
+    {
+      "file": "after-clear13.png",
+      "sha256": "56456642bb460bfa43627891cf813279a5a737ae825c4bdb733ce5efb04ebd56"
+    },
+    {
+      "file": "after-clear22.png",
+      "sha256": "b955cd166991795f97836237e02d208c65bf1ff8061de6784e5e6bfe950d28c6"
+    },
+    {
+      "file": "after-clear29.png",
+      "sha256": "bd4772a12f61eba3d44ac6e0a02370d550ad033ec5f5efc245d7ff2d93b89c69"
+    },
+    {
+      "file": "after-tutorial30.png",
+      "sha256": "564c59e311c4659e15cc033cb927ba724ebfd9098789c78fb5a2ad235295a9b4"
+    },
+    {
+      "file": "after-clear30.png",
+      "sha256": "3fa16288fbca6621ebad17a7183bedc6cea07aedb0e376e86628bc3984e7de43"
+    },
+    {
+      "file": "after-completed-selection.png",
+      "sha256": "2cb5f66991aa713aa3f512abd9719d326fced1d699860a9ca962472addd80168"
+    },
+    {
+      "file": "after-completed-resume.png",
+      "sha256": "4256b683a42dfbbebd188ea56e0577c3351996e355b235d2c5659acc14701490"
+    }
+  ]
+}

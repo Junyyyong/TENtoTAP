@@ -61,12 +61,12 @@ export class IntroScreen {
     if (mode === "timeAttack") {
       const seconds = initialLearningStage(progress.learningStage) <= 5 ? 15 : 60;
       // Keep the original mode icon; the note conveys the stage's actual time.
-      this.note.textContent = `${seconds} seconds per stage`;
+      this.note.textContent = initialLearningStage(progress.learningStage) > 30 ? 'Score in 60 seconds' : `${seconds} seconds per stage`;
     }
 
     const rows: [string, string][] =
       mode === "timeAttack"
-        ? [["STAGE", String(initialLearningStage(progress.learningStage))], ["BEST SCORE", progress.bestLimitlessScore.toLocaleString()]]
+        ? [initialLearningStage(progress.learningStage) > 30 ? ["ROUND", "60 SECONDS"] : ["STAGE", String(initialLearningStage(progress.learningStage))], ["BEST SCORE", progress.bestLimitlessScore.toLocaleString()]]
         : mode === "timeless"
           ? [
               ["BEST SCORE", progress.bestTimeless.toLocaleString()],
