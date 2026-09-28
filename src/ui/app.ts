@@ -4,6 +4,7 @@ import {
   commitSelection,
   newGame,
   payoutFor,
+  penalizeMistake,
   splitTile,
   targetsOf,
   tick,
@@ -145,10 +146,17 @@ export class App {
       onCommit: (selection) => this.reviewEquation(selection.map(i => valueAt(this.state.board, i)), true, () => this.commit(selection), selection.map(i => Number(el('board').querySelector<HTMLElement>(`[data-i="${i}"]`)?.dataset.color ?? 1))),
       onSplit: (index) => this.onSplit(index),
       onReject: (values, colors) => {
+        if (this.flow.current !== 'inGame' || this.state.status !== 'playing') return;
         this.hud.combo = 0;
         this.held = 0;
         feedback.reject();
-        if (values.length) this.reviewEquation(values, false, () => {}, colors);
+        if (values.length) this.reviewEquation(values, false, () => {
+          const next = penalizeMistake(this.state);
+          if (next === this.state) return;
+          this.state = next;
+          this.hud.showTimePenalty();
+          this.render(); // Including the normal time-up flow if the penalty reaches zero.
+        }, colors);
       },
       onSelectionChange: (values, colors) => {
         // A block joining the selection is the one event the board does not
@@ -280,6 +288,7 @@ export class App {
   }
 
   private showTitle(): void {
+    this.hud.clearTimePenalty();
     el('lesson-intro').classList.add('hidden');
     this.stopClock();
     this.view.setInteractive(false);
@@ -369,6 +378,7 @@ export class App {
   }
 
   private beginRun(config: RunConfig): void {
+    this.hud.clearTimePenalty();
     this.state = newGame(config);
     el('screen-game').classList.toggle('learning-run', !!config.learningStage);
     this.hud.setNotice(null);

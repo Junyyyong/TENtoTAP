@@ -23,6 +23,8 @@ export class Hud {
   private readonly sumTotal = el<HTMLElement>("sum-total");
   private readonly timerBar = el<HTMLDivElement>("timer-bar");
   private readonly timerFill = el<HTMLSpanElement>("timer-fill");
+  private readonly timePenalty = el<HTMLSpanElement>('time-penalty');
+  private penaltyTimer: number | undefined;
   private readonly noticeEl = el<HTMLParagraphElement>("notice");
   readonly hintBtn = el<HTMLButtonElement>("btn-hint");
   private readonly hintBadge = el<HTMLSpanElement>("badge-hint");
@@ -37,6 +39,19 @@ export class Hud {
   /** The sums that clear, so the equation knows when it is finished. */
   private targets: readonly number[] = [10];
   private reviewing = false;
+
+  showTimePenalty(): void {
+    this.clearTimePenalty();
+    void this.timePenalty.offsetWidth; // Restart for each mistake, including rapid taps.
+    this.timePenalty.classList.add('is-visible');
+    this.penaltyTimer = window.setTimeout(() => this.clearTimePenalty(), 500);
+  }
+
+  clearTimePenalty(): void {
+    window.clearTimeout(this.penaltyTimer);
+    this.penaltyTimer = undefined;
+    this.timePenalty.classList.remove('is-visible');
+  }
 
   showEquation(values: readonly number[], correct: boolean, colors: readonly number[] = []): void {
     this.reviewing = false;

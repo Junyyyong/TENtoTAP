@@ -103,6 +103,18 @@ SDK를 설치하고 싶지 않다면 GitHub Actions 의 **Release AAB** 워크�
 
 `android/app/build.gradle` 의 `versionCode`(업로드마다 반드시 증가) 와 `versionName` 을 수정합니다.
 
+### 업데이트와 사용자 기록
+
+Android 앱의 진도·최고기록·설정은 `@capacitor/preferences`에 저장합니다. 기존 앱 WebView의 localStorage 기록은 최초 실행 시 네이티브 기록이 없을 때만 이전하며 원본을 지우지 않습니다. 웹판은 같은 출처의 localStorage를 계속 사용합니다.
+
+- 앱 업데이트 때 `applicationId`, Preferences 기본 그룹, `makezero.*.v1` 저장 키를 변경하지 마세요. 데이터 형식 변경은 기존 필드를 유지하며 호환 처리해야 합니다.
+- 읽기 실패 시 시작을 멈추고 Retry를 표시합니다. 저장 실패 안내가 뜨면 앱을 닫기 전에 재시도하세요. 직전 정상값 백업은 데이터 손상 대비용이며 클라우드 백업이 아닙니다.
+- LIMITLESS는 튜토리얼 단계 단위 이어하기입니다. ENDLESS/TIMELESS는 최고기록을 보존하며 진행 중 판 복원은 하지 않습니다. 오늘 기록은 날짜가 바뀌면 초기화됩니다.
+- 출시 전에 구버전 설치 → 기록 생성 → 같은 앱을 삭제하지 않고 새 버전 설치 → 진도·세 모드 기록·설정 유지 순서로 실기기 검증이 필요합니다. 현재 자동 검증은 모의 네이티브 브리지까지이며 실제 Android 설치 업데이트는 미검증입니다.
+- 앱 삭제·데이터 삭제·휴대전화 교체 복구 및 웹→새 앱 자동 이전은 제공하지 않습니다.
+
+[저장 안정화 검증·연구기록](docs/research/2026-09-28-update-safe-storage/README.md)
+
 ## Play Console 체크리스트
 
 - [ ] 개발자 계정 등록 ($25, 1회) 및 신분 확인

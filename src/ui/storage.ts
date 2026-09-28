@@ -1,8 +1,24 @@
 import { TOTAL_STAGES } from "../content/chapters";
+import { Capacitor } from '@capacitor/core';
+import { Preferences } from '@capacitor/preferences';
+import { PersistentStore, savedObject } from './persistentStore';
 
+// These names identify user data, not the app release. Never rename them for
+// a version bump; missing fields are added by the readers below.
 const DAILY_KEY = "makezero.daily.v1";
 const PROGRESS_KEY = "makezero.progress.v1";
 const SETTINGS_KEY = "makezero.settings.v1";
+const store = new PersistentStore(
+  () => localStorage,
+  Capacitor.isNativePlatform() ? Preferences : undefined,
+);
+
+export const initializeStorage = (): Promise<void> =>
+  store.initialize([DAILY_KEY, PROGRESS_KEY, SETTINGS_KEY]);
+export const flushStorage = (): Promise<void> => store.flush();
+export function onStorageSaveFailure(handler: (failed: boolean) => void): void {
+  store.onSaveFailure = handler;
+}
 
 export interface DailyStats {
   date: string;
@@ -49,23 +65,20 @@ export function todayKey(now: Date = new Date()): string {
   return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
 }
 
-/** Storage can throw outright in private windows, so every access is guarded. */
+/** App startup awaits initializeStorage before constructing any game screens. */
 function read<T>(key: string, fallback: T, revive: (raw: unknown) => T): T {
-  try {
-    const raw = localStorage.getItem(key);
-    if (!raw) return fallback;
-    return revive(JSON.parse(raw));
-  } catch {
-    return fallback;
-  }
+  const raw = store.read(key);
+  return raw === null ? fallback : revive(savedObject(raw));
 }
 
 function write(key: string, value: unknown): void {
-  try {
-    localStorage.setItem(key, JSON.stringify(value));
-  } catch {
-    // Nothing to do — the run just will not be remembered.
-  }
+  const previous = store.read(key);
+  // Preserve additive fields introduced by another release instead of dropping
+  // them when saving an older/partial representation of a record.
+  store.write(key, JSON.stringify({
+    ...(previous === null ? {} : savedObject(previous)),
+    ...(value as Record<string, unknown>),
+  }));
 }
 
 function blankDaily(): DailyStats {

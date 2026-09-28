@@ -227,6 +227,16 @@ export function tick(state: GameState, deltaMs: number): GameState {
   return next;
 }
 
+/** Called only for a confirmed wrong answer, not a partial/cancelled selection. */
+export function penalizeMistake(state: GameState): GameState {
+  if (state.status !== 'playing' || state.config.mode !== 'timeAttack' ||
+      !state.config.scoreAttack || state.config.learningStage || state.transitionMs) return state;
+  const remainingMs = Math.max(0, state.remainingMs - 1000);
+  // A penalty is not elapsed playing time and must not advance spawn clocks,
+  // change the board/score, or introduce a pause in the game loop.
+  return { ...state, remainingMs, status: remainingMs === 0 ? 'timeUp' : 'playing' };
+}
+
 /**
  * Drops the next batch of tiles. The run ends here, and only here: once the
  * board is packed tightly enough that a batch has nowhere to land.

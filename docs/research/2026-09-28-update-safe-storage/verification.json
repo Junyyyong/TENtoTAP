@@ -1,0 +1,72 @@
+{
+  "date": "2026-09-28T05:57:11.984Z",
+  "before": "abc869d0cb157fd203676a0f787106f79592395f",
+  "after": "working tree based on abc869d0cb157fd203676a0f787106f79592395f",
+  "sourceHashes": {
+    "src/main.ts": "0abb700ffe505e90a5bc9bd5a4bd67eb8326399f0f03879a4d415e5c5a84f870",
+    "src/ui/storage.ts": "5c9f4835344ce39137d35a3060881479bd5d5afc908fd468df0ba93cf9850b49",
+    "src/ui/persistentStore.ts": "d6b2297b56709a304d0b432821c02be29d5abe4f40ba165f400d848ec7c3b7bc",
+    "src/ui/storageNotice.ts": "c694c6971147772ce48416f7a9f20fe1ef48732d19082706e2679284c6f3f1c1",
+    "src/ui/styles/storage.css": "6d4606c8b961dd7e2c1bb87bbc1de5be78c34be6f30656b15c5bc4f17d11e47e",
+    "package-lock.json": "9a9283736ace533c3ef03db64551cdc4675af6c0674455f52eede4b06674293c"
+  },
+  "browser": "153.0.8010.53",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "conditions": "Fresh contexts; fixed 2026-09-28 clock; seeded Math.random; crypto color randomness not seeded. Same injected stage/score/settings fixture, not a claimed historical user save. Historical source from git archive; current dependencies. After native route uses the actual Capacitor JS plugin with a test Preferences bridge backed by a Node Map. This is NOT an Android device or installed-app update test.",
+  "checks": [
+    "Historical version already retains stage 10 on same-origin reload; no update-reset bug was reproduced.",
+    "Existing WebView fixture migrated to Preferences proxy without deletion.",
+    "Actual correct 3-block selection advances stage 10 to 11; simulated save failure stays pending and Retry saves it.",
+    "All three mode records and sound settings retained, including unknown additive fields.",
+    "New JS runtime with empty WebView storage resumes stage 11 from the same simulated native store.",
+    "Read failure blocks game startup without changing stored data; Retry loads stage 11.",
+    "Current non-native browser build still reads existing stage 10 after reload."
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "before-timeAttack-records.png",
+      "sha256": "543a4b79cfb10f94e25a7b7655896525ad079365989fa9d9f610c33e2ae8f900"
+    },
+    {
+      "file": "before-timeless-records.png",
+      "sha256": "97d140a4d9b34e4334e97be878aa9754b7830ceec672db25143c9e8a8aab5666"
+    },
+    {
+      "file": "before-endless-records.png",
+      "sha256": "8a2d7010d7ed98f4f531b079501f03f035e71c1e774863bd2a9d6e6488ea5896"
+    },
+    {
+      "file": "after-timeAttack-records.png",
+      "sha256": "543a4b79cfb10f94e25a7b7655896525ad079365989fa9d9f610c33e2ae8f900"
+    },
+    {
+      "file": "after-timeless-records.png",
+      "sha256": "97d140a4d9b34e4334e97be878aa9754b7830ceec672db25143c9e8a8aab5666"
+    },
+    {
+      "file": "after-endless-records.png",
+      "sha256": "8a2d7010d7ed98f4f531b079501f03f035e71c1e774863bd2a9d6e6488ea5896"
+    },
+    {
+      "file": "after-save-error.png",
+      "sha256": "43042288a2b356fb5bed4033a42a9258055d3e8825b1d92b1e0ab3b1907603ba"
+    },
+    {
+      "file": "after-stage11-saved.png",
+      "sha256": "c65c3570972e3c6fc5557a093a6a5817ca3c808284fcbbfcdffcc042ebffe5bc"
+    },
+    {
+      "file": "after-new-runtime-stage11.png",
+      "sha256": "a7ff558033c0330240f17efea08fc88c3393d6d4fe852e6f55b2e7c1b21780c9"
+    },
+    {
+      "file": "after-load-error.png",
+      "sha256": "4129ec00167dc90f4fd20881e4555c788d0e00ebc111718c2b7f31a250e726ef"
+    }
+  ]
+}

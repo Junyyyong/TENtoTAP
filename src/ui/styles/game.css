@@ -644,6 +644,34 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* The badge overlays spare room beside the clock, without shifting the HUD. */
+.run-stat-number {
+  display: inline-flex;
+  position: relative;
+}
+.time-penalty {
+  position: absolute;
+  left: calc(100% + 3px);
+  top: 50%;
+  margin-top: -0.6em;
+  color: #dc2626;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  pointer-events: none;
+  transition-property: none;
+  opacity: 0;
+}
+.time-penalty.is-visible { animation: time-penalty 500ms ease-out both; }
+@keyframes time-penalty {
+  0%, 55% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-4px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .time-penalty.is-visible { animation: none; opacity: 1; }
+}
+
 /* ── the equation ─────────────────────────────────────────────────────
    The selection written out — 2 + 3 + 2 = ? — with each term in its own
    block colour, so the row and the board say the same thing. */

@@ -1,0 +1,51 @@
+{
+  "date": "2026-09-28T06:11:10.603Z",
+  "before": "abc869d0cb157fd203676a0f787106f79592395f",
+  "after": "working tree based on abc869d0cb157fd203676a0f787106f79592395f, including separately documented native-storage changes",
+  "sourceHashes": {
+    "src/core/game.ts": "f9c5981c5e2b8ae64725af5b93fbf04d6bddff1d9cfdf4a26b150db4998a2f4c",
+    "src/ui/app.ts": "61a26a561cd010d3328df87aed9357fae8d6c1cb236a0cc862bc3be96657b9bb",
+    "src/ui/screens/hud.ts": "4a49359fc4ffaee44700279052de5864f735a8284cb226b06c1ef4e2665ded80",
+    "src/ui/styles/game.css": "5b73bab2a912ace7fd504f30d1c3b2e560faa8f24aaccdfa7c87f6e66c63a801",
+    "index.html": "581d44867b5bfef3b3b7f7e7f190e4f306207d54fd7c146e54fc45355298d3e5"
+  },
+  "browser": "153.0.8010.53",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "conditions": "Historical git archive and current working tree; current installed dependencies. Fresh profiles, muted audio, fixed clock and Math.random seed. Stage 31 completion fixture starts the main round, not a claimed user save. Block colors use unfixed crypto randomness. Screenshots finish non-loop animations except penalty animation sampled at 100ms. Additional non-captured tests resize viewport and emulate reduced motion.",
+  "checks": [
+    "One-second deduction and unchanged points on an actual wrong pair.",
+    "Partial, deselected and cancelled input has no penalty.",
+    "Correct input scores immediately while the badge is still visible.",
+    "Repeated mistakes each deduct one second and restart the 500ms badge.",
+    "Wrong 3-, 4- and 5-block selections also deduct exactly one second.",
+    "One continuous drag charges once even when it travels farther after the rejection.",
+    "An error with less than one second remaining triggers the normal TIME OUT flow at zero.",
+    "All five tutorial sections, TIMELESS and ENDLESS are exempt.",
+    "Reduced-motion mode shows a static badge, then hides it after 500ms.",
+    "Badge does not overlap the clock or score at 320/375/390/430px; leaving clears it.",
+    "390px board bounds match the historical version exactly."
+  ],
+  "errors": [],
+  "captures": [
+    {
+      "file": "before-wrong-answer.png",
+      "sha256": "c9d463e97186d339c52a72dc549d4d52a576d31454160e088a02de11f0dd05e3"
+    },
+    {
+      "file": "before-immediate-correct.png",
+      "sha256": "8e39b601bb80bac2c50bf495870977bf0022f8022950a3b5f7632597dfcd252e"
+    },
+    {
+      "file": "after-wrong-answer.png",
+      "sha256": "f823bf19c02a7832c4a3298e99d5a2d0041fce508f9dee796152a9df220bbe04"
+    },
+    {
+      "file": "after-immediate-correct.png",
+      "sha256": "8628b0c7db40e1e00ac7843b1822a05c001bdeacf718d5a3a2368b9905968304"
+    }
+  ]
+}
