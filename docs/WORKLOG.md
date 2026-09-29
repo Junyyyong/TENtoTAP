@@ -1,5 +1,9 @@
 # 작업 기록 (WORKLOG)
 
+## 2026-09-29 · 문의 이메일 정정·AAB code3 · Codex
+
+사용자가 실제 문의 주소를 **wnsdydtml@gmail.com**으로 정정하고 수정·푸시·새 AAB를 요청했다. 영어/한국어 개인정보처리방침의 연락처 네 곳과 현행 출시 안내를 정정했다. Android는 `1.0.2 / code3`으로 올렸고 앱 ID·서명 키·저장 키는 유지했다. 단위 테스트 219개, 웹/Android release 빌드, bundletool·jarsigner strict 및 배포 자산 45개 해시 검증을 통과했다. code2와 비교해 배포 자산은 `privacy.html`만 달라지고 manifest는 버전 두 값만 달라짐을 확인했다. 과거 연구기록·스크린샷·code1/code2 AAB는 덮어쓰지 않았다. 작은 연락처 정정이므로 새 게임 디자인 연구 항목이나 전후 화면은 만들지 않았다. [code3 릴리스 및 콘솔 교체 안내](releases/2026-09-29-contact-aab/README.md). Play 업로드·심사 제출과 실기기 업데이트 시험은 수행하지 않았다.
+
 ## 2026-09-29 · Play용 개인정보·라이선스 화면 · Codex
 
 사용자가 제공한 영어 개발자명 TapeeTepee openstudio와 문의 메일 wsndydtml@gmail.com, 어린이 포함 대상 방침을 반영했다. Settings 아래 작은 Privacy policy / Licenses 링크를 통해 로컬 문서를 읽고 닫도록 구현했다. 개인정보 본문은 현재 기능에 맞춰 영어/한국어로 작성했으며 타사의 광고·계정 약관은 복사하지 않았다. 실제 의존성의 라이선스/고지를 포함하고 선언 세 가지 중 앱 준비와 콘솔/소유자 확인 사항을 분리한 [확인표](PLAY_POLICY_CHECKLIST.md)를 작성했다. 빠른 문서 전환 시 이전 close 이벤트가 새 내용을 지우는 문제를 검사 중 발견·수정했다. 단위 217개, 웹 빌드, 모바일 화면·저장 보존 검증 통과. [전후 연구 기록](research/2026-09-29-play-policy/README.md)과 780×1688 PNG를 보존했다. 같은 키/앱 ID로 1.0.1 / code 2 AAB(54,000,506 bytes) 생성 및 서명·구조·45개 파일 해시 검증 통과. [릴리스 기록](releases/2026-09-29-policy-aab/README.md). 이전 AAB/연구 원본은 유지했고, 다른 게임·Git push·웹 배포·Play 업로드는 건드리지 않았다. 공개 URL과 실기기 시험, 콘텐츠 권리/법적 선언은 여전히 확인 필요.

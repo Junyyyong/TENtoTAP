@@ -21,20 +21,20 @@ AAB는 휴대전화에서 직접 눌러 설치하는 파일이 아니다. Play C
 | 앱 이름 | TAP to TEN |
 | 앱 고유 ID | `io.github.junyyyong.makezero` — 예전 내부 이름이지만 사용자에게 보이는 게임 이름과는 별개 |
 | 첫 Android 버전 설정 | `versionName 1.0`, `versionCode 1` |
-| 최신 Android 버전 | 2026-09-29: `versionName 1.0.1`, `versionCode 2` — 개인정보·라이선스 화면 포함 |
+| 최신 Android 버전 | 2026-09-29: `versionName 1.0.2`, `versionCode 3` — 개인정보·문의 이메일 정정 |
 | Android 프로젝트 | 준비됨. Capacitor로 웹 게임을 Android 앱 안에 포함 |
-| 제출용 AAB | 최신: `releases/TAPtoTEN-1.0.1-code2.aab`, 약 54 MB. 기존 code1도 보존. 서명·구조 검증 완료, 실제 기기 테스트는 필요 |
+| 제출용 AAB | 최신: `releases/TAPtoTEN-1.0.2-code3.aab`, 약 54 MB. 기존 code1·code2 보존. 서명·구조 검증 완료, 실제 기기 테스트는 필요 |
 | 대상 Android API | 36으로 설정됨 |
-| 게임 자동 테스트 | 2026-09-28 기준 217개 통과 |
+| 게임 자동 테스트 | 2026-09-29 기준 219개 통과(정정 연락처 검사 포함) |
 | 진도·기록 저장 | Android Preferences 사용. LIMITLESS 튜토리얼 단계 및 세 모드 최고기록·설정 보존 |
 | 실제 Android 업데이트 검증 | 아직 필요: 이전 버전 설치 → 기록 만들기 → 삭제 없이 업데이트 → 기록 확인 |
-| 개인정보처리방침 | Settings → Privacy policy에 추가. 영어/한국어 문서 준비. **공개 웹 배포·URL 확인은 아직 필요** |
+| 개인정보처리방침 | Settings → Privacy policy. 공개 주소는 `https://taptoten.vercel.app/privacy.html` 유지. 정정 이메일은 새 웹 배포와 code3 AAB에 반영 |
 | 스토어 이미지 | `store/`에 기존 파일은 있지만 현재 게임과 일치하는지 검토·갱신 필요 |
 | 개발자 정보·대상 연령·국가·가격 | 소유자가 실제 운영 방침에 맞게 결정·입력해야 함 |
 
 첫 AAB의 [빌드·검증 기록](releases/2026-09-28-aab/README.md). 서명 검증, 최신 게임 파일 일치, APK 변환·서명 검증을 통과했다. **Play 업로드·정식 공개·실제 휴대폰 실행은 아직 하지 않았다.** 개인정보처리방침 등 스토어 준비물도 별도로 마무리해야 한다.
 
-2026-09-29 추가: 앱 내 정책·라이선스를 포함한 [새 AAB 검증 기록](releases/2026-09-29-policy-aab/README.md), [개발자 선언·어린이 정책 확인표](PLAY_POLICY_CHECKLIST.md). 운영자 표기는 **TapeeTepee openstudio**, 문의 메일은 **wsndydtml@gmail.com**이다. 공개 개인정보 URL은 웹 배포를 완료한 뒤 등록한다.
+2026-09-29 추가: 앱 내 정책·라이선스를 포함한 [code2 AAB 검증 기록](releases/2026-09-29-policy-aab/README.md), [개발자 선언·어린이 정책 확인표](PLAY_POLICY_CHECKLIST.md). 운영자 표기는 **TapeeTepee openstudio**, 현재 문의 메일은 사용자가 정정한 **wnsdydtml@gmail.com**이다. [최신 code3 AAB·교체 안내](releases/2026-09-29-contact-aab/README.md)를 따른다. 과거 릴리스·연구 원본은 당시 상태를 유지한다.
 
 고유 ID는 첫 업로드 전에 최종 확인한다. `makezero`라는 글자가 있어도 화면의 TAP to TEN 이름에는 영향이 없다. **같은 앱의 업데이트를 계속하려면 이 ID를 유지해야 한다.** 첫 등록 후 다른 ID를 사용하면 별도 앱이 된다. [패키지 이름 안내](https://support.google.com/googleplay/android-developer/answer/9859152?hl=ko)
 
