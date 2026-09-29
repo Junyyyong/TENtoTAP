@@ -11,7 +11,7 @@
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "cap:sync": "npm run build && cap sync android",
-    "android:bundle": "npm run cap:sync && cd android && ./gradlew bundleRelease",
+    "android:bundle": "bash scripts/android-bundle.sh",
     "build:single": "npm run build && node scripts/build-single-file.mjs",
     "cover": "node scripts/png-to-webp.mjs",
     "test:layout": "node tests/browser/responsive.mjs",

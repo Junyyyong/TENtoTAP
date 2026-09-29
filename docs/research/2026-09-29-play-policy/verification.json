@@ -1,0 +1,52 @@
+{
+  "capturedAt": "2026-09-29T13:17:20.616Z",
+  "before": "2515854260cbc2e9a6d2950499238649644d28f0",
+  "after": "Uncommitted working tree based on 2515854260cbc2e9a6d2950499238649644d28f0",
+  "sourceHashes": {
+    "index.html": "22af6fdef2ea87e05ef0a93add2babb4b844ff5dd8a4483059ce253601732844",
+    "src/ui/screens/settingsScreen.ts": "6b237ab88c6a544960bd9768dd60742616a8046653fa21464c96ebfe2efd97da",
+    "src/ui/screens/legalDocuments.ts": "52e18a1e8708ce559cfd27a271b98380ee5a9b0160f82a30cd07200e211753ac",
+    "src/ui/styles/picker.css": "72d94df0c976c9d7317c39ac6d5bf79c008792c089a1961fe7712c83620ed891",
+    "public/privacy.html": "ff128bf4a37725d6f06debb9dbbae670c6a615634945b923d0cddb5f381f9af3",
+    "public/licenses.html": "4ad42827748cdd36215c987b056cc22c527f265946f9469acee9f27953e25668",
+    "public/legal/legal.css": "dd0bc5f1db2cf776294697350d94e11b735c7bc57db56cc805ce613972d17c93",
+    "public/legal/dependencies.json": "3c94e1febae2594c92ebb3222374e29ba1ab26f9edc0633a74853f704042d88e"
+  },
+  "browser": "154.0.8037.58",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "deviceScaleFactor": 2,
+  "conditions": "Before uses git archive in a temporary directory; both use the same installed dependencies, headless Chrome, fresh profiles, en-US/Asia-Seoul, fixed 2026-09-29 clock, seeded Math.random, muted audio and stage-10 test save. Screenshots at 390×844 DPR2 only; extra layout tests use other sizes. All third-party HTTP blocked and logged. Android WebView/offline/update tests are not claimed.",
+  "checks": [
+    "Settings switches retain their exact previous bounds.",
+    "Privacy and licenses open and close inside the app, with opener focus restored.",
+    "Korean anchor and Escape within the iframe work.",
+    "Copyright/license full text is expandable.",
+    "Opening, reading and closing documents changes no localStorage entries.",
+    "320×568, 390×844 and 768×1024: no document horizontal overflow; Close remains visible after scrolling.",
+    "Returning to LIMITLESS preserves stage 10 and starts a nine-block lesson.",
+    "Both standalone documents serve as unauthenticated HTML pages; no third-party HTTP requests were made."
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "captures": [
+    {
+      "file": "before-settings.png",
+      "sha256": "d4308bc59207c81201450b42857f3945772dc15e9e4c732bf5e5effa22064379"
+    },
+    {
+      "file": "after-settings.png",
+      "sha256": "22014c026e67157472f45b6ae75948eb97f3dbc512133175165f3d90e7eb2a70"
+    },
+    {
+      "file": "after-privacy.png",
+      "sha256": "e7a8797ac790d041dc879bfbfb09de627f3876211a117c2e635f43718a9fc6f8"
+    },
+    {
+      "file": "after-licenses.png",
+      "sha256": "2ff70f4e8f0429fd69ce256aa4133d40f577b6916cd77433895c06cfceb6ceae"
+    }
+  ]
+}

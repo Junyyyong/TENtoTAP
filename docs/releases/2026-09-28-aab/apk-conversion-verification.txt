@@ -1,0 +1,18 @@
+Local AAB to universal APK conversion only; NOT installed on a device.
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=TAPtoTEN Upload
+Signer #1 certificate SHA-256 digest: 2fe1b234c9573342ba92797ce0a3752c197cabda8967814ac26e02a892b4ad80
+Signer #1 certificate SHA-1 digest: fc9e0e306324fed676a86434768d5cfcc5a2f129
+Signer #1 certificate MD5 digest: a4aae42358d80e784cc8c311e529e6e8
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 3072
+Signer #1 public key SHA-256 digest: 5fcab31358b42c5c50ce13e68c1e0a2e61a4a2b0a0250ba66b53e4c216cbc152
+Signer #1 public key SHA-1 digest: a6f4bcb861c226b8931d1db2b6edc7de54b73ac6
+Signer #1 public key MD5 digest: 888a23ebe986d345fbfc33ffa44a021a

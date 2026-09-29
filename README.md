@@ -42,6 +42,8 @@
 | [DECISIONS.md](./docs/DECISIONS.md) | **왜 이렇게 되어 있는지.** 규칙 바꾸기 전 필독 |
 | [BALANCE.md](./docs/BALANCE.md) | 난이도 조정 방법 |
 | [CONTENT.md](./docs/CONTENT.md) | 캐릭터·대사·튜토리얼 편집 방법 |
+| [PLAY_STORE_GUIDE.md](./docs/PLAY_STORE_GUIDE.md) | 처음 출시하는 사람을 위한 AAB·Play Console·테스트·업데이트 안내 |
+| [PLAY_POLICY_CHECKLIST.md](./docs/PLAY_POLICY_CHECKLIST.md) | 앱 내 개인정보/라이선스, 어린이 대상 정책 및 콘솔 선언에 남은 확인 사항 |
 
 `DECISIONS.md` 에는 직관과 반대라서 모르고 되돌리면 게임이 조용히 망가지는 것들이 정리되어 있습니다. 예를 들어 **보드를 랜덤 숫자로 뿌리면 수학적으로 클리어가 불가능**하고, **큰 조각을 많이 딜하면 오히려 쉬워집니다.**
 
@@ -63,7 +65,7 @@ npm run test:layout    # 기기 10종에서 화면 배치 검사 (preview 실행
 
 ### 1. 업로드 키 만들기 (최초 1회)
 
-이 키를 잃어버리면 **같은 앱을 다시 업데이트할 수 없습니다.** 안전한 곳에 백업하세요.
+업로드 키와 비밀번호를 안전한 곳에 백업하세요. Play App Signing을 사용하는 앱은 업로드 키 분실 시 재설정 신청이 가능합니다. Google이 관리하는 배포용 앱 서명 키와 우리가 보관하는 업로드 키는 역할이 다릅니다. [공식 서명 안내](https://developer.android.com/studio/publish/app-signing)
 
 ```bash
 keytool -genkeypair -v -keystore android/upload-keystore.jks \
@@ -81,18 +83,20 @@ keyPassword=<위에서 입력한 비밀번호>
 
 ### 2. AAB 만들기
 
-로컬에 Android SDK(Android Studio 또는 command line tools)가 있으면:
+Java 21과 Android SDK Platform 36(Android Studio 또는 command line tools)을 준비한 다음:
 
 ```bash
 npm run android:bundle
 # → android/app/build/outputs/bundle/release/app-release.aab
 ```
 
+빌드 스크립트는 서명 설정이 없으면 중단합니다. `.android-tools/`에 프로젝트 전용 도구를 준비한 경우 자동으로 사용하며, 기존 JAVA_HOME/ANDROID_HOME 설정을 우선합니다. 생성한 파일은 실제 Android 기기 및 Play 내부 테스트에서 확인한 뒤 공개하세요.
+
 SDK를 설치하고 싶지 않다면 GitHub Actions 의 **Release AAB** 워크플로를 수동 실행하면 됩니다. 아래 4개 시크릿을 저장소에 등록해두세요.
 
 | 시크릿 | 값 |
 | --- | --- |
-| `ANDROID_KEYSTORE_BASE64` | `base64 -w0 android/upload-keystore.jks` 결과 |
+| `ANDROID_KEYSTORE_BASE64` | 키 파일의 Base64 값. macOS 예: `base64 -i android/upload-keystore.jks` (출력을 공개하지 말 것) |
 | `ANDROID_KEYSTORE_PASSWORD` | 키스토어 비밀번호 |
 | `ANDROID_KEY_ALIAS` | `upload` |
 | `ANDROID_KEY_PASSWORD` | 키 비밀번호 |
@@ -118,12 +122,13 @@ Android 앱의 진도·최고기록·설정은 `@capacitor/preferences`에 저�
 ## Play Console 체크리스트
 
 - [ ] 개발자 계정 등록 ($25, 1회) 및 신분 확인
-- [ ] **폐쇄 테스트: 테스터 12명이 연속 14일** — 2023-11-13 이후 만든 **개인 계정**에만 적용되며, 사업자 등록된 organization 계정은 면제. 게임이 완성돼도 여기서 최소 2주가 걸리므로 테스터를 미리 확보해 두세요.
+- [ ] **비공개 테스트: 최소 12명이 연속 14일 참여 상태 유지** — 2023-11-13 이후 만든 **개인 계정**에 적용. 충족 후 프로덕션 액세스를 신청하며 자동 승인되는 것은 아닙니다. 다른 계정 유형은 콘솔 요구사항을 확인하세요.
 - [ ] 앱 아이콘 512×512 → `store/play-icon-512.png`
 - [ ] 그래픽 이미지 1024×500 → `store/play-feature-1024x500.png`
-- [ ] 스크린샷 최소 2장 (휴대전화용, 세로)
-- [ ] 개인정보처리방침 URL
-- [ ] 데이터 보안(Data Safety) 양식 — 이 앱은 수집·전송하는 데이터가 없습니다
+- [ ] 현재 게임 스크린샷 최소 2장. 권장: 세로 1080×1920 3장 이상. 연구용 780×1688은 스토어 비율 규격과 다릅니다
+- [x] 앱 내 개인정보처리방침·문의 주소 및 라이선스 (Settings)
+- [ ] 개인정보처리방침 웹 배포·공개 URL 확인·콘솔 등록
+- [ ] 데이터 보안(Data Safety) 양식 — 실제 배포 앱과 의존성의 수집·공유 동작을 확인한 후 작성
 - [ ] 콘텐츠 등급 설문
 - [ ] 앱 카테고리: 게임 > 퍼즐
 
@@ -131,5 +136,7 @@ Android 앱의 진도·최고기록·설정은 `@capacitor/preferences`에 저�
 
 - **Target API** — 2026-08-31부터 신규 앱은 Android 16(API 36) 이상이어야 합니다. 이 프로젝트는 `android/variables.gradle` 에서 이미 36으로 설정되어 있습니다.
 - **applicationId** — `io.github.junyyyong.makezero`. 스토어에 한 번 올리면 **영구히 변경 불가**하므로, 다른 값을 쓰려면 첫 업로드 전에 `capacitor.config.ts`, `android/app/build.gradle`, `android/app/src/main/AndroidManifest.xml`, `MainActivity.java` 의 패키지 경로를 함께 바꾸세요.
-- **INTERNET 권한** — 게임은 완전히 오프라인이지만 Capacitor 템플릿의 기본 권한이 남아 있습니다. 실기기에서 정상 동작을 확인한 뒤 `AndroidManifest.xml` 에서 제거하면 Data Safety 양식이 더 단순해집니다.
+- **INTERNET 권한** — Capacitor 템플릿의 기본 권한이 남아 있습니다. Data Safety는 권한 유무가 아니라 실제 데이터 수집·공유 동작을 기준으로 작성합니다. 오프라인 동작도 실기기 검증이 필요합니다.
 - **광고 없음** — AdMob SDK를 넣지 않았습니다. 나중에 붙이면 개인정보처리방침과 Data Safety 양식을 함께 갱신해야 합니다.
+
+본인인증부터 정식 공개까지의 순서와 준비물은 [쉬운 출시 안내서](docs/PLAY_STORE_GUIDE.md)를 확인하세요. Git/Vercel 배포만으로 설치된 Android 앱은 업데이트되지 않습니다.

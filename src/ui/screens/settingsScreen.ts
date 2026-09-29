@@ -1,5 +1,6 @@
 import { el } from "../dom";
 import type { Settings } from "../storage";
+import { LegalDocuments } from "./legalDocuments";
 
 /**
  * Sound and vibration, on their own screen.
@@ -16,6 +17,7 @@ export class SettingsScreen {
   private readonly note = el<HTMLParagraphElement>("settings-note");
 
   constructor(onChange: (settings: Partial<Settings>) => void, onBack: () => void) {
+    new LegalDocuments();
     el<HTMLButtonElement>("btn-settings-back").addEventListener("click", onBack);
     this.music.addEventListener('click', () => onChange({ musicOn: this.music.getAttribute('aria-checked') !== 'true' }));
     this.sound.addEventListener("click", () => {
