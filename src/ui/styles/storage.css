@@ -7,7 +7,7 @@
   border-radius: 16px;
   background: var(--paper);
   color: var(--ink);
-  box-shadow: 0 4px 24px #0003;
+  box-shadow: none;
   text-align: center;
 }
 .storage-notice[hidden] { display: none; }

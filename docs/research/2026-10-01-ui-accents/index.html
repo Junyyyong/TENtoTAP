@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TAPtoTEN — 중립 UI와 기존 강조색 복원</title>
+<style>
+body{max-width:1050px;margin:32px auto;padding:0 18px;font:16px/1.6 system-ui;color:#363c46;background:#fff}
+h1{font-size:24px}h2{font-size:19px;margin:40px 0 12px}a{color:#1f5bb0}.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}figure{margin:0}figcaption{margin-bottom:8px;color:#626b78}img{width:100%;height:auto;border:1px solid #cdd2da;border-radius:8px}.note{background:#f5f6f8;padding:14px;border-radius:8px}
+@media print{section{break-inside:avoid}body{margin:0}img{border-radius:0}}
+</style>
+<h1>TAPtoTEN — 흰색·회색 기본 UI와 기존 강조색</h1>
+<p><a href="README.md">연구기록</a> · <a href="final-viewport-verified/verification.json">최종 검증·원본 해시</a></p>
+<p class="note">왼쪽: 이번 수정 직전 중립 UI의 임시 폴더 재현. 오른쪽: 원래 강조색 복원 후.<br>2026-10-01, 같은 Chrome·프로필·시계·시드. 원본은 모두 780×1688 PNG이며 링크로 열면 원본을 볼 수 있습니다. fixture는 자동 검사 화면으로, 실제 플레이 성과나 휴대폰 검증을 뜻하지 않습니다.</p>
+<main id="screens"></main>
+<script>
+const states=[['home','메인'],['settings-off','Settings — 꺼짐'],['settings-on','Settings — 켜짐'],['limitless-start','LIMITLESS START'],['limitless','LIMITLESS 플레이'],['pause','일시정지'],['urgent-penalty-fixture','긴급 게이지·−1 — fixture'],['timeless-start','TIMELESS START'],['timeless','TIMELESS 플레이'],['endless-start','ENDLESS START'],['endless','ENDLESS 플레이'],['equation-correct-fixture','정답 산식 — fixture'],['equation-incorrect-fixture','오답 산식 — fixture'],['result-fixture','결과 — fixture'],['cheer-score-fixture','평가 점수 — fixture'],['cheer-word-fixture','평가 문구 — fixture']];
+for(const [name,label] of states){const section=document.createElement('section');section.innerHTML=`<h2>${label}</h2><div class="pair">${['before','after'].map(side=>`<figure><figcaption>${side==='before'?'변경 전 재현':'변경 후'}</figcaption><a href="final-viewport-verified/${side}-${name}.png"><img loading="lazy" src="final-viewport-verified/${side}-${name}.png" width="780" height="1688" alt="${label} ${side}"></a></figure>`).join('')}</div>`;document.querySelector('#screens').append(section);}
+</script>
+</html>

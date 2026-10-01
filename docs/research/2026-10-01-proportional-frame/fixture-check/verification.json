@@ -1,0 +1,224 @@
+{
+  "capturedAt": "2026-10-01T02:49:36.324Z",
+  "revision": "cae2e49b5af230a95b2f1890daf01b47b321b621",
+  "beforeOverlaySha256": "b368f0e4fb33875d9889bfd8f74d4152d5e27084b2734eaa18c4d7ac210277cf",
+  "conditions": {
+    "viewport": [
+      390,
+      844
+    ],
+    "dpr": 2,
+    "png": [
+      780,
+      1688
+    ],
+    "clock": "2026-10-01T00:00:00Z",
+    "seed": 20261001,
+    "locale": "en-US",
+    "timezone": "Asia/Seoul",
+    "nativeSimulation": "Invoke trackNativeFrame(true) in served main.ts; keep real web Preferences. CSS insets simulate Java reports.",
+    "animation": "Finite animations finished; repeating animations paused at 0; muted music/sound."
+  },
+  "captures": [],
+  "metrics": {
+    "before": {},
+    "after": {}
+  },
+  "webChecks": [],
+  "densityChecks": [],
+  "insetChecks": [],
+  "touchChecks": [
+    {
+      "size": {
+        "width": 320,
+        "height": 568
+      },
+      "type": "controlled fixture: single-event drag + score pop + finished art + blocking storage retry",
+      "positions": {
+        "popCenter": 68.31005477905273,
+        "tileCenter": 68.31005668640137,
+        "popTop": 160.54324340820312,
+        "tileTop": 160.54705810546875,
+        "board": {
+          "x": 53.91195297241211,
+          "y": 157.40284729003906,
+          "width": 212.15164184570312,
+          "height": 212.1516571044922
+        },
+        "done": {
+          "x": 53.91195297241211,
+          "y": 157.40284729003906,
+          "width": 212.14248657226562,
+          "height": 212.1516571044922
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "type": "controlled fixture: single-event drag + score pop + finished art + blocking storage retry",
+      "positions": {
+        "popCenter": 52.2979850769043,
+        "tileCenter": 52.2979850769043,
+        "popTop": 236.52294921875,
+        "tileTop": 236.52796936035156,
+        "board": {
+          "x": 29.888032913208008,
+          "y": 231.63507080078125,
+          "width": 330.20379638671875,
+          "height": 330.20379638671875
+        },
+        "done": {
+          "x": 29.873741149902344,
+          "y": 231.63507080078125,
+          "width": 330.2037658691406,
+          "height": 330.20379638671875
+        }
+      },
+      "pass": true
+    },
+    {
+      "size": {
+        "width": 540,
+        "height": 1170
+      },
+      "type": "controlled fixture: single-event drag + score pop + finished art + blocking storage retry",
+      "positions": {
+        "popCenter": 67.02914047241211,
+        "tileCenter": 67.04946899414062,
+        "popTop": 326.2671203613281,
+        "tileTop": 326.27545166015625,
+        "board": {
+          "x": 35.176246643066406,
+          "y": 319.315185546875,
+          "width": 469.6422119140625,
+          "height": 469.6422119140625
+        },
+        "done": {
+          "x": 35.176246643066406,
+          "y": 319.315185546875,
+          "width": 469.6422119140625,
+          "height": 469.6422119140625
+        }
+      },
+      "pass": true
+    }
+  ],
+  "gradeChecks": [],
+  "boundsChecks": [],
+  "errors": [],
+  "sourceHashes": {
+    "before": {
+      "src/main.ts": "0abb700ffe505e90a5bc9bd5a4bd67eb8326399f0f03879a4d415e5c5a84f870",
+      "src/ui/nativeFrame.ts": null,
+      "src/ui/styles/nativeFrame.css": null,
+      "src/ui/styles/title.css": "397eb79717ca30a5eb410a6d900314a65b664e0a0fe357f7d384a30545f599cf",
+      "src/ui/styles/game.css": "6010c9aba3387bd0d8c95c734ff8f4b8f539e3aff550b1320820b04def6f0326",
+      "src/ui/styles/picker.css": "c0b28f92e68881745276a7242622c5b63ccfc2c681128b880e70e9ef01cf6fed",
+      "src/ui/styles/overlay.css": "cd2da3dc1592f57dd362c643d7fe15cbc3fc571a57edcdb1d14b647a154623ae",
+      "src/ui/styles/safeArea.css": "bd1bfbc482bc3c509723ed79d0ef12fea5208bc9a5d3a0d34466a3172887aeef",
+      "src/ui/boardView.ts": "66c63539ef1c2ba1b43c90fbd3b0d1ad31e8cdb32a9c7a6148633b60d623e3cd",
+      "src/ui/screens/cheer.ts": "2f2b45cbd20d6aafd77c21a71a272d352b188840ab42c154026964ab75dce9fe",
+      "src/ui/app.ts": "61a26a561cd010d3328df87aed9357fae8d6c1cb236a0cc862bc3be96657b9bb",
+      "src/ui/storageNotice.ts": "c694c6971147772ce48416f7a9f20fe1ef48732d19082706e2679284c6f3f1c1"
+    },
+    "after": {
+      "src/main.ts": "b939653741bb05a685cda85e553a9f647451db5c8845c072aeefdb91f015d71e",
+      "src/ui/nativeFrame.ts": "144c145e4623d7a9bcaef82e5c979a278e6816ff1e4d8d40eb9e83b406e1ec66",
+      "src/ui/styles/nativeFrame.css": "1d6abba62acc37d5f6754028a367c73a2b04f3db80ec4ff363a2eaa70994b77b",
+      "src/ui/styles/title.css": "e13ec686d51cc5deb0cc648b931244f6f1f10a53d816439ca4772d83594f208a",
+      "src/ui/styles/game.css": "2836d92d4bc75cc81f0abfd853f281397622ef3eb1f3af2b7752b478e57cfd5d",
+      "src/ui/styles/picker.css": "0dcd95301b2c42f603ef9dd39ed69431053455b9a77a036dee8b1e23f49b54ef",
+      "src/ui/styles/overlay.css": "004a705e5a96e728e9613bd86e32fbd7e64b8825276c633fa357d03b8511a4c6",
+      "src/ui/styles/safeArea.css": "eb3a305032a9374673bdd9a0f304618d1ae8042656afc66d44aa9a711c5d6aed",
+      "src/ui/boardView.ts": "e172bb304eced8f2f0d46efddd4aabd7f31c2133104c202d53ef8a8ab7d1921d",
+      "src/ui/screens/cheer.ts": "0c55dace8638a317ec6b32a12fdc510a2a0de4208fea20897085f65392c5ce02",
+      "src/ui/app.ts": "2817242793bbdda1d7fb25547ca788304b7b059efe0731dd31b6d1657b9b737e",
+      "src/ui/storageNotice.ts": "da616c1a29ae93cb8547f94210be39fc9dfdbd0a249ed6a58ffdd939a6f684f0"
+    }
+  },
+  "preservedHashes": {
+    "src/core/board.ts": "8beacbc77792fb33dedcf4a1f3622f7e664cd4c3b26333669a0fdba878f9a7ce",
+    "src/core/game.test.ts": "b0542e5fe7f39c84b3813a529759595251aa2d2415ac2ae452d64d062f37b672",
+    "src/core/game.ts": "f9c5981c5e2b8ae64725af5b93fbf04d6bddff1d9cfdf4a26b150db4998a2f4c",
+    "src/core/learningStages.test.ts": "d1547aa6f3a509f5bd0c078fb4b38cec203359851f15cc86e46acec01c59a1de",
+    "src/core/learningStages.ts": "d614a98f40613944f697fa25e51e3384878015a226a8e94e4b758ae1f4be20cf",
+    "src/core/mistakePenalty.test.ts": "e6738d1c2fc5d16fe498ad518de2748e3e1de504aeb6b1e62ad6a82d82a617b6",
+    "src/core/rng.ts": "1797945ebccfb110b672b5c4dfca123ee95f201ae230fd98588bd0910d04a314",
+    "src/core/rules.test.ts": "cdc471c658bff0e958d0d83f787d7595222304fd2b6700e09f3ff17566465c90",
+    "src/core/rules.ts": "6735538f918de0ed91bf3110f0434e4b85ff3c63cdc1769bc5ea937dd731ef98",
+    "src/core/solver.ts": "48eeb04af2dd96d80776a5e836bdaf3c99effefbe3044af71325754972c5f3fa",
+    "src/core/timeAttackLevels.test.ts": "abd98bfc9039252b8401cb1a3bbb85f22762a5cd1c3f86bf661214ad73b93745",
+    "src/core/tutorialRun.ts": "0a222c93c7f0bf13b659b33c7f4730754ac84afddade54be24b6d0fb3285e1af",
+    "src/core/types.ts": "bf34affeed39c40be1e5b5e23d66777fa8eee1db274e385c25deb162b1e17977",
+    "src/content/balance.test.ts": "8ed74299c2e923fe512793ba044f9c3a2d26fc24eeaa669afcc170a59a1582cb",
+    "src/content/chapters.ts": "b6bdd0da11c9c9c60a7fb53a34780868ecd14de385e07f0da41d163a576bbc0c",
+    "src/content/clearable.test.ts": "b56d6138f8f71885c3513d4e2534dd27023af5f8321bddcffa0eab3b209c6cbd",
+    "src/content/content.test.ts": "0a660f145abd988366300acf3d9dde4caee7254ed09c7a22a1f4e9615fe23b3c",
+    "src/content/gallery.ts": "71074a028fc11c209ef04db66dfc7918e0db61b0f197662789e414b0ea9a2e89",
+    "src/content/pacing.test.ts": "f9869991d4fc682df4759ffdd90388e87622a646c076a7e9ebbf8209259b1b99",
+    "src/content/stages.ts": "54474b97f37527542acf88b7dec2f3ee08537ac90fca3480dc0dfb57ac923bf2",
+    "src/content/testSettings.test.ts": "2ac2a22147470feb06abd3940c5fb034725295ffecaf4a2fb32bd3cacd73f563",
+    "src/content/testSettings.ts": "40dc7abf9935afadfab15daf9a92f7bd31770ed653073fa0dbd13f15afd26880",
+    "src/content/timeless.test.ts": "6fa3e3341e5a3e0f4d9b57655353ee3647b8d072be0fc0148e1023b3cc3b27b5",
+    "src/content/tutorial.test.ts": "db54e70fdd51ba57e380beb976ec14e6ba3810ff059ebe96263d8d331bd2e10e",
+    "src/content/tutorial.ts": "04523993d91fbcbd5f58b22c8141c8698863e38118ae0c9f9ea4b5f9d3a6f4d4",
+    "public/assets/audio/ten-game.mp3": "7df24c30cc64204287839a775a0cbee66e0aa37ccefafa6c242f2d6bef18e7f1",
+    "public/assets/audio/ten-lobby.mp3": "fd932c139e54b83e3ba3c71eca82b5522c303f72888c1ee93894670dd5092111",
+    "public/assets/fonts/NotoSansKR-Variable.woff2": "e01974f5a88c7fa0e8a24b84bccc79e4de3f56ab1b2649f887f32c7a72204c93",
+    "public/cover-logo.svg": "85b3cc91fe2d5521ffb9fb9d7fab58d7b9c4318b434a90e7e8f46c739e572b63",
+    "public/cover.webp": "aefa441be1d5977bfe6d9f88c6fd24f651ffe8591b09f193ec1462ce8271be20",
+    "public/icon.svg": "ee089c4b85718a0256fb4c9f74d97b019793f28e5973cd14c1d8fcc34ad1c06e",
+    "public/infinity.svg": "9b7ccd6098a1d3fd2b5cce5135a12e436dd0e5891eb65080a1cd0657a94384a3",
+    "public/legal/Apache-2.0.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "public/legal/Cordova-LICENSE.txt": "401f08372facabc78d6d408a32de4f617fd9552c95e01797838c9d60a938b4da",
+    "public/legal/Cordova-NOTICE.txt": "e94707080ab2781d5ba4ceac999f31db2539d2477783287969c52580b9fa84b0",
+    "public/legal/NotoSansKR-OFL.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+    "public/legal/dependencies.json": "3c94e1febae2594c92ebb3222374e29ba1ab26f9edc0633a74853f704042d88e",
+    "public/legal/legal.css": "dd0bc5f1db2cf776294697350d94e11b735c7bc57db56cc805ce613972d17c93",
+    "public/licenses.html": "4ad42827748cdd36215c987b056cc22c527f265946f9469acee9f27953e25668",
+    "public/movie/1-hevc.mp4": "5923b13040176adfe8a8a3c8d28164a45963189c6aac5ad3960c8a6d7116790f",
+    "public/movie/1.mp3": "7030426ad20f27dac0e86ef305715e4b691530e3e620d093f29f9c54b76a617b",
+    "public/movie/1.webm": "9a485ed37d02dd825e8d2c932dd3edd9864cfe0ae8647e348e115ca9929b6136",
+    "public/movie/2-hevc.mp4": "921b0a7be3c222bda923d820d28c908deddee02902a6423b783145a3e8fc7878",
+    "public/movie/2.mp3": "ed69ae177f274f9638ae1d3fd0b9ba460af63c1a11d34b2adf92a40d0b7b226a",
+    "public/movie/2.webm": "c4c77642b9bd89ff469ace87773cb62e6ae134d7fd6ba16c2bc649a91e9dd58c",
+    "public/movie/3-hevc.mp4": "6356490b5ed54ce0e694052a6db7051c494d57810cf4174ce8853b2364e0f8dd",
+    "public/movie/3.mp3": "b16eda85a8839d6f182a62a18e44be491e58aa66804c97ec8488a7495df7958b",
+    "public/movie/3.webm": "63ead3e6c9d87a21a77bb3ce5faedb43bf191fc5353c54c279eda5af24c12001",
+    "public/movie/4-hevc.mp4": "f7c7543b80c2b379d01d52427ef9e8b2cccb2d57d8989b58077750f6d6d958c0",
+    "public/movie/4.mp3": "1560ac5192767052d94ab592dea4e5cf7983cbb02105f1a8edd90d9010d68da0",
+    "public/movie/4.webm": "aa19ec712f247ba866b5c8766dc8d3918465161cc1ccf0d9b3125a846b0120c7",
+    "public/movie/5-hevc.mp4": "5fff8718ff212a8d0bdbcefa3e1b00ca43803e302dd7f608e46976cca56843ec",
+    "public/movie/5.mp3": "83d0fc7cbfb468285d0c562b878ace9d2bf1559596ea932612269198e3489cbb",
+    "public/movie/5.webm": "aa5a6314ea7012332870286f2f0ef44bfcfeaf1c6c7992eb75f4e1eaab848ebe",
+    "public/movie/6-hevc.mp4": "e04468f793163cd51b08df0242e558c62d836175a12206f9197a0549152b57aa",
+    "public/movie/6.mp3": "bbad27b43c2cfa3b90f35eab8adb5996ea45d41539d295f393a2c2d45a241272",
+    "public/movie/6.webm": "6502297798578783379285d018dd361337e82c0d43d43202b6ef89094a4e5c50",
+    "public/privacy.html": "0303b16182902cce4be875987f8f2b6a3dcffd6baad8f3e315a30c6a010fc3c1",
+    "public/stopwatch-15.svg": "3c5b83f198bbb8ad224a4cd04e3d1cce5f5af8f35f7ec545a3a1e0495fc530bf",
+    "public/stopwatch-60.svg": "6a8ffa2ee2a71a39c788aa8669c0e48c658bb5961b2ecd725a3206fe88762472",
+    "public/stopwatch-forever.svg": "288e7ce517222b8a50e4e6184739b0270514b03e43b4d67427b0b32f88b01e9a",
+    "public/story/canopy.svg": "eef8e2487d13cddb2212c6cb1852339b49383a9c11024b093ca9c3b9c0dda8bb",
+    "public/story/grove.svg": "2250f6f3b50e350a9e13797dabb977444ab6e598d387a593efb70508ce6acc83",
+    "public/story/hollow.svg": "02e59c4c47f185bb2f2a22fe9ce00f564a908aa91c44014aa5655f730bd5de73",
+    "public/story/sprout.svg": "023e8c857d2a22a8e5a7eebd62c7b0416e4da5df44cfa75b6dfe5a584ca39a8a",
+    "public/studio-logo.png": "d6c7f7b9f4fd90e7446059f6a1c402adf4701a54c54c97129d6b8f5e7039c158",
+    "src/ui/storage.ts": "5c9f4835344ce39137d35a3060881479bd5d5afc908fd468df0ba93cf9850b49",
+    "src/ui/persistentStore.ts": "d6b2297b56709a304d0b432821c02be29d5abe4f40ba165f400d848ec7c3b7bc",
+    "src/ui/blockColors.ts": "a6d639753efca448d93ca0a570d50e81d12e2369cb1941cb57ffd6d23632f9ce",
+    "src/ui/styles/tokens.css": "3ddbf3e724b76d2e58fb4a15bfde4912689e25545a2e77dc6743c5f3878c2059",
+    "index.html": "5cc22d299180b406ab485f2005fb2c5c285fb991dc67f7d2fc1158d7dd438a25"
+  },
+  "limitations": [
+    "macOS Chrome, not Galaxy or Android System WebView. No connected adb devices.",
+    "Before is git archive plus preserved approved/uncommitted source overlay, not a pure released commit.",
+    "Result and grade layout fixtures instantiate the real Overlay/Cheer; not earned scores, video or audio quality evidence.",
+    "Physical pixels/density/insets simulated. Java contract separately tests overlap calculations; no OS settings changed."
+  ],
+  "browser": "154.0.8037.58",
+  "pass": true
+}

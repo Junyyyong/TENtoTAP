@@ -34,7 +34,7 @@
  * the logo's width and not a box it sits inside.
  */
 .studio-logo {
-  width: min(42vw, 360px);
+  width: min(calc(42 * var(--layout-vw, 1vw)), 360px);
   height: auto;
 }
 
@@ -77,10 +77,8 @@
    */
   justify-content: space-evenly;
   gap: 10px;
-  padding: max(3vh, 16px) 22px max(2.5vh, 14px);
-  background:
-    radial-gradient(58% 28% at 50% 24%, rgba(255, 181, 0, 0.14), transparent 75%),
-    linear-gradient(180deg, transparent, var(--recess));
+  padding: max(calc(3 * var(--layout-vh, 1vh)), 16px) 22px max(calc(2.5 * var(--layout-vh, 1vh)), 14px);
+  background: var(--paper);
 }
 
 .brand-block {
@@ -100,11 +98,9 @@
 }
 
 .brand-mark {
-  width: min(68vw, 250px);
+  width: min(calc(68 * var(--layout-vw, 1vw)), 250px);
   height: auto;
-  /* A little of the night thrown back up at it, so it sits on the background
-     rather than on top of it. */
-  filter: drop-shadow(0 10px 24px var(--slab-hard));
+  filter: none;
 }
 
 .tagline {
@@ -130,22 +126,17 @@
   text-align: left;
   color: var(--ink);
   cursor: pointer;
-  /* A block, like everything else: a face over a slab, not a black pill. */
-  background: linear-gradient(180deg, var(--panel-lit), var(--panel-deep));
+  background: var(--panel-lit);
   border: 1px solid var(--paper-edge);
   border-radius: 16px;
-  box-shadow:
-    inset 0 1px 0 var(--cool-dim),
-    0 3px 0 var(--slab-hard);
+  box-shadow: none;
   transition: transform 120ms ease, background 160ms ease;
 }
 
 .mode-btn:active {
-  background: linear-gradient(180deg, var(--panel-lit), var(--panel-deep));
+  background: var(--panel-deep);
   transform: translateY(2px);
-  box-shadow:
-    inset 0 1px 0 var(--cool-dim),
-    0 1px 0 var(--slab-hard);
+  box-shadow: none;
 }
 
 .mode-name {
@@ -221,8 +212,8 @@
 .title-music-prompt:focus-visible { outline: 2px solid var(--cool); outline-offset: 1px; }
 .title-music-prompt.hidden { display: none; }
 @media (max-height: 580px) {
-  .title-music-slot { height: 40px; }
-  .title-music-prompt { min-height: 40px; }
+  :where(#app:not(.is-native-frame)) .title-music-slot { height: 40px; }
+  :where(#app:not(.is-native-frame)) .title-music-prompt { min-height: 40px; }
 }
 
 /*
@@ -230,30 +221,15 @@
  * are the screen's job, and it is the only thing here with room to spare.
  */
 @media (max-height: 700px) {
-  .brand-mark {
-    width: min(58vw, 215px);
-  }
-
-  .mode-list {
-    gap: 7px;
-  }
-
-  .mode-btn {
-    padding: 10px 18px;
-  }
-
-  .mode-name {
-    font-size: 19px;
-  }
-
-  .mode-desc {
-    font-size: 12px;
-  }
-
+  :where(#app:not(.is-native-frame)) .brand-mark { width: min(calc(58 * var(--layout-vw, 1vw)), 215px); }
+  :where(#app:not(.is-native-frame)) .mode-list { gap: 7px; }
+  :where(#app:not(.is-native-frame)) .mode-btn { padding: 10px 18px; }
+  :where(#app:not(.is-native-frame)) .mode-name { font-size: 19px; }
+  :where(#app:not(.is-native-frame)) .mode-desc { font-size: 12px; }
 }
 
 @media (max-height: 580px) {
-  .brand-mark {
-    width: min(44vw, 165px);
+  :where(#app:not(.is-native-frame)) .brand-mark {
+    width: min(calc(44 * var(--layout-vw, 1vw)), 165px);
   }
 }

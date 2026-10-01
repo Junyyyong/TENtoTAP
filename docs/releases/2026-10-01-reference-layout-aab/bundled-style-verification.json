@@ -1,0 +1,182 @@
+{
+  "verifiedAt": "2026-09-30T16:03:22.537Z",
+  "artifact": "releases/TAPtoTEN-1.0.4-code6.aab",
+  "sha256": "7892358074e48f2feb13f0117bd9a0051502d69b7afcc5be7e7a467c6fa3ff69",
+  "cases": [
+    {
+      "height": 660,
+      "logo": {
+        "size": "32px",
+        "weight": "700",
+        "width": 215,
+        "height": 252.296875
+      },
+      "button": {
+        "size": "13.3333px",
+        "weight": "400",
+        "width": 340,
+        "height": 64
+      },
+      "name": {
+        "size": "19px",
+        "weight": "800",
+        "width": 302,
+        "height": 23
+      },
+      "desc": {
+        "size": "12px",
+        "weight": "700",
+        "width": 302,
+        "height": 15
+      },
+      "faces": [
+        {
+          "family": "TAP Sans KR",
+          "status": "unloaded"
+        }
+      ]
+    },
+    {
+      "height": 700,
+      "logo": {
+        "size": "32px",
+        "weight": "700",
+        "width": 215,
+        "height": 252.296875
+      },
+      "button": {
+        "size": "13.3333px",
+        "weight": "400",
+        "width": 340,
+        "height": 64
+      },
+      "name": {
+        "size": "19px",
+        "weight": "800",
+        "width": 302,
+        "height": 23
+      },
+      "desc": {
+        "size": "12px",
+        "weight": "700",
+        "width": 302,
+        "height": 15
+      },
+      "faces": [
+        {
+          "family": "TAP Sans KR",
+          "status": "unloaded"
+        }
+      ]
+    },
+    {
+      "height": 701,
+      "logo": {
+        "size": "32px",
+        "weight": "700",
+        "width": 250,
+        "height": 293.375
+      },
+      "button": {
+        "size": "13.3333px",
+        "weight": "400",
+        "width": 340,
+        "height": 79
+      },
+      "name": {
+        "size": "21px",
+        "weight": "800",
+        "width": 298,
+        "height": 25
+      },
+      "desc": {
+        "size": "13px",
+        "weight": "700",
+        "width": 298,
+        "height": 16
+      },
+      "faces": [
+        {
+          "family": "TAP Sans KR",
+          "status": "unloaded"
+        }
+      ]
+    },
+    {
+      "height": 844,
+      "logo": {
+        "size": "32px",
+        "weight": "700",
+        "width": 250,
+        "height": 293.375
+      },
+      "button": {
+        "size": "13.3333px",
+        "weight": "400",
+        "width": 340,
+        "height": 79
+      },
+      "name": {
+        "size": "21px",
+        "weight": "800",
+        "width": 298,
+        "height": 25
+      },
+      "desc": {
+        "size": "13px",
+        "weight": "700",
+        "width": 298,
+        "height": 16
+      },
+      "faces": [
+        {
+          "family": "TAP Sans KR",
+          "status": "unloaded"
+        }
+      ]
+    },
+    {
+      "height": 932,
+      "logo": {
+        "size": "32px",
+        "weight": "700",
+        "width": 250,
+        "height": 293.375
+      },
+      "button": {
+        "size": "13.3333px",
+        "weight": "400",
+        "width": 340,
+        "height": 79
+      },
+      "name": {
+        "size": "21px",
+        "weight": "800",
+        "width": 298,
+        "height": 25
+      },
+      "desc": {
+        "size": "13px",
+        "weight": "700",
+        "width": 298,
+        "height": 16
+      },
+      "faces": [
+        {
+          "family": "TAP Sans KR",
+          "status": "unloaded"
+        }
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "familyName": "Apple SD Gothic Neo",
+      "postScriptName": "AppleSDGothicNeo-ExtraBold",
+      "isCustomFont": false,
+      "glyphCount": 9
+    }
+  ],
+  "errors": [],
+  "limitations": "Extracted AAB assets in macOS Chrome, not a physical Android device. OEM font/bold/density settings and Play update not tested."
+}

@@ -12,7 +12,12 @@ export class StorageNotice {
     this.retry.type = 'button';
     this.retry.textContent = 'Retry';
     this.panel.append(this.message, this.retry);
-    document.body.append(this.panel);
+    if (document.getElementById('app')?.classList.contains('is-native-frame')) {
+      const canvas = document.createElement('div');
+      canvas.className = 'native-frame-notice';
+      canvas.append(this.panel);
+      document.body.append(canvas);
+    } else document.body.append(this.panel);
   }
 
   show(blocking: boolean, action: () => Promise<void>): void {

@@ -47,7 +47,7 @@
 .record-value {
   font-size: 20px;
   font-weight: 800;
-  color: var(--ink);
+  color: var(--record-ink);
   font-variant-numeric: tabular-nums;
 }
 
@@ -167,7 +167,7 @@
 
 .plate-full {
   flex: 0 1 auto;
-  width: min(72vw, 420px);
+  width: min(calc(72 * var(--layout-vw, 1vw)), 420px);
   aspect-ratio: 1;
   background-position: center;
   background-size: cover;

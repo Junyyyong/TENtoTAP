@@ -1,0 +1,13 @@
+{
+  "verifiedAt": "2026-10-01T04:06:27.163Z",
+  "artifact": "releases/TAPtoTEN-1.0.5-code7.aab",
+  "sha256": "f2195eace82e692f70fafb4dae6a9368f7aa4797c3c27c655d771b334f9042eb",
+  "browser": "154.0.8037.58",
+  "frames": [],
+  "screens": [],
+  "touches": [],
+  "errors": [],
+  "pass": false,
+  "limitations": "macOS Chrome with CapacitorCustomPlatform android and web Preferences test storage; unmodified extracted AAB assets. Not native Android/WebView, OEM setting, video/audio decoding, or real app update verification.",
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'rgba(0, 0, 0, 0)'\n- 'rgb(255, 255, 255)'\n      ^\n"
+}

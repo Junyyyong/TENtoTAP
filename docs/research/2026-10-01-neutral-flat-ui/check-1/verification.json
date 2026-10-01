@@ -1,0 +1,4726 @@
+{
+  "capturedAt": "2026-10-01T01:00:03.064Z",
+  "revision": "cae2e49b5af230a95b2f1890daf01b47b321b621",
+  "beforeSource": "git archive revision plus the exact src/index/config snapshot preserved BEFORE neutral-theme edits",
+  "conditions": {
+    "viewport": [
+      390,
+      844
+    ],
+    "dpr": 2,
+    "png": [
+      780,
+      1688
+    ],
+    "clock": "2026-10-01T00:00:00Z",
+    "seed": 20261001,
+    "locale": "en-US",
+    "timezone": "Asia/Seoul",
+    "sound": false,
+    "animationPhase": "finite finished; infinite paused at 0"
+  },
+  "captures": [
+    {
+      "file": "before-home.png",
+      "sha256": "1f5e3b7d85878f1a1b91c40e187ed101f84b21755547f44af96a346081cd175b"
+    },
+    {
+      "file": "before-settings-off.png",
+      "sha256": "e4582e075a21098b738e495231bfa9e7bbd1ecad9f904e312d2864ed214e7a6d"
+    },
+    {
+      "file": "before-settings-on.png",
+      "sha256": "80704bc174e1328b2f9f4822090635c5a095c952ba1442b4e95dd511661caf76"
+    },
+    {
+      "file": "before-lesson-1-game.png",
+      "sha256": "3cb6e4a12eb382d8aa13fa09753e6908111fffe08ffd978110758f2d438d35ec"
+    },
+    {
+      "file": "before-lesson-6-game.png",
+      "sha256": "cd6f91d93748d16ed609c252acfd54a40b152f5871504ed1659c051f43ab1020"
+    },
+    {
+      "file": "before-limitless-intro.png",
+      "sha256": "69a874481df2b27ffcf613f1ad52d9681bb817fdaf203e8f96563a9bef2ceebd"
+    },
+    {
+      "file": "before-limitless-game.png",
+      "sha256": "eb1a389727b8c9d63cb16b5906aa07845cfa7206eb1b6163056232f6135de9a4"
+    },
+    {
+      "file": "before-limitless-selected.png",
+      "sha256": "42f5fd1d4bc411f815df08bd1808a34bf49bce3544cf30be5919d3e0497d965d"
+    },
+    {
+      "file": "before-limitless-wrong.png",
+      "sha256": "978af39a739e6368c1709fb3f41399dc03bba1092e9073471e97cfb8fb02e946"
+    },
+    {
+      "file": "before-pause.png",
+      "sha256": "0e5ef8d4995789c69d144ee71deacd1690f7eda95b1e2cb8789158d33f865bf0"
+    },
+    {
+      "file": "before-timeless-intro.png",
+      "sha256": "b84d4a6fe7c6cfd3d4c7b9d45914918b5d9961b19a8e83a80bc113b5a223861b"
+    },
+    {
+      "file": "before-timeless-game.png",
+      "sha256": "53a6feb9d9f6805c928d9e944ed4fb489394602c9e27cf3bbf7098d9bd398f7c"
+    },
+    {
+      "file": "before-endless-intro.png",
+      "sha256": "0d54452889acc6a250f37a8d8cf4502f1b11a486add62d9755948b4013f8fd06"
+    },
+    {
+      "file": "before-endless-game.png",
+      "sha256": "19ba2e6d75ee6871a8582355260f2edb6011b42fa4cbe9b4825774fbf990591a"
+    },
+    {
+      "file": "before-home-pressed.png",
+      "sha256": "fb6528fa8a03fc791fec5b5ec748d97d263be027d54a1ce12dc4f2dc5e2fc793"
+    },
+    {
+      "file": "after-home.png",
+      "sha256": "b0c0518fe98d8248227d1f4399143bf299907cf25d3105edc4c30e696492b4f2"
+    },
+    {
+      "file": "after-settings-off.png",
+      "sha256": "0ef65a54ba5a7880b25e54f5a6bc8c898b7e9f5fddd64ad660af283661d8302f"
+    },
+    {
+      "file": "after-settings-on.png",
+      "sha256": "7a50ca592ef3385795a343ab29a72d350f8973fa16af374515b383671229bc55"
+    },
+    {
+      "file": "after-lesson-1-game.png",
+      "sha256": "7d24ba5aa0cc7197121819438e1c73ecca27c784712123ead14a0b3d1ee374e9"
+    },
+    {
+      "file": "after-lesson-6-game.png",
+      "sha256": "389388875a0946a5f8d3119f9b84b9df8ab9897d959a48aaaf0af21b5249b85b"
+    },
+    {
+      "file": "after-limitless-intro.png",
+      "sha256": "ed7cdf1e198002328b793065bfcd3fc6b25450aeadbc92af084089efb2430bbd"
+    },
+    {
+      "file": "after-limitless-game.png",
+      "sha256": "a1d9408f908f5360874c0aa97d6a90399fe55fd746e1328cdc0a39455a35ef84"
+    },
+    {
+      "file": "after-limitless-selected.png",
+      "sha256": "301fd510ca34d0671371236aba398b900201648b9fb8b647af29037370ca1f12"
+    }
+  ],
+  "sourceHashes": {
+    "before": {
+      "index.html": "5cc22d299180b406ab485f2005fb2c5c285fb991dc67f7d2fc1158d7dd438a25",
+      "src/ui/boardView.ts": "66c63539ef1c2ba1b43c90fbd3b0d1ad31e8cdb32a9c7a6148633b60d623e3cd",
+      "src/ui/screens/cheer.ts": "2f2b45cbd20d6aafd77c21a71a272d352b188840ab42c154026964ab75dce9fe",
+      "src/ui/styles/tokens.css": "26210fde8083f2612dbb74eb078aa1312be7d8344011b892d1a47003f7e18c92",
+      "src/ui/styles/title.css": "3aa89d7a29e5be5cf40fd565887c6a3411e38e3e9dcea6a346d0da1ca4263e89",
+      "src/ui/styles/game.css": "04ec8e63ebbc8bd932116d49c6ec8f1010bbb1dc54f40b961388585dc2877786",
+      "src/ui/styles/picker.css": "72d94df0c976c9d7317c39ac6d5bf79c008792c089a1961fe7712c83620ed891",
+      "src/ui/styles/overlay.css": "60c5921e91a70d10b60d42f9b12605170cc8b4ef2ea450a097719697101afa7e",
+      "src/ui/styles/tutorial.css": "00193ddd9d2c0e8ff55d96b7385aa21da0c135291f034a3fcde15b00a491c82f",
+      "src/ui/styles/motion.css": "04f661860fc87e09b2690730cbfaa68fa380c21e6b75a6c0daf6142ad8260328",
+      "src/ui/styles/storage.css": "6d4606c8b961dd7e2c1bb87bbc1de5be78c34be6f30656b15c5bc4f17d11e47e",
+      "src/ui/styles/safeArea.css": "bd1bfbc482bc3c509723ed79d0ef12fea5208bc9a5d3a0d34466a3172887aeef"
+    },
+    "after": {
+      "index.html": "5cc22d299180b406ab485f2005fb2c5c285fb991dc67f7d2fc1158d7dd438a25",
+      "src/ui/boardView.ts": "66c63539ef1c2ba1b43c90fbd3b0d1ad31e8cdb32a9c7a6148633b60d623e3cd",
+      "src/ui/screens/cheer.ts": "2f2b45cbd20d6aafd77c21a71a272d352b188840ab42c154026964ab75dce9fe",
+      "src/ui/styles/tokens.css": "22d5483347604fe47c3636efd48e50f49d2d2da2d33d16edec7061610dd5f2e2",
+      "src/ui/styles/title.css": "397eb79717ca30a5eb410a6d900314a65b664e0a0fe357f7d384a30545f599cf",
+      "src/ui/styles/game.css": "ce4634272b743d861dece58ce561b80f3e36af9620eb0e9a0bf72bcc40aef9c9",
+      "src/ui/styles/picker.css": "c0b28f92e68881745276a7242622c5b63ccfc2c681128b880e70e9ef01cf6fed",
+      "src/ui/styles/overlay.css": "cd2da3dc1592f57dd362c643d7fe15cbc3fc571a57edcdb1d14b647a154623ae",
+      "src/ui/styles/tutorial.css": "bbfeadd79ecbbee6866febe2fe3a6126673cc09196df478b6cad2615688d43fd",
+      "src/ui/styles/motion.css": "249878b0886e790b88805d7520a8c814f75b3b9347f02ce04e9dfeb977a4772c",
+      "src/ui/styles/storage.css": "5616e1efcbb35e19c82a90b37f73bab47ad74417de4af901e77b7b82ef8da7c3",
+      "src/ui/styles/safeArea.css": "bd1bfbc482bc3c509723ed79d0ef12fea5208bc9a5d3a0d34466a3172887aeef"
+    }
+  },
+  "metrics": {
+    "before": {
+      "home": {
+        ".brand-mark": {
+          "x": 70,
+          "y": 73.859375,
+          "width": 250,
+          "height": 293.375,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "32px",
+          "weight": "700",
+          "line": "0px"
+        },
+        ".mode-btn": {
+          "x": 25,
+          "y": 425.796875,
+          "width": 340,
+          "height": 79,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13.3333px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".mode-name": {
+          "x": 46,
+          "y": 442.796875,
+          "width": 298,
+          "height": 25,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "21px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".mode-desc": {
+          "x": 46,
+          "y": 471.796875,
+          "width": 298,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "700",
+          "line": "normal"
+        },
+        "#btn-title-settings": {
+          "x": 163.671875,
+          "y": 741.34375,
+          "width": 62.65625,
+          "height": 33,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "700",
+          "line": "normal"
+        }
+      },
+      "settings-off": {
+        ".picker-title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "20px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".switch-row": {
+          "x": 16,
+          "y": 62,
+          "width": 358,
+          "height": 73,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".switch-text b": {
+          "x": 35,
+          "y": 79,
+          "width": 206.171875,
+          "height": 19,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".switch-text small": {
+          "x": 35,
+          "y": 102,
+          "width": 206.171875,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "600",
+          "line": "normal"
+        },
+        ".switch": {
+          "x": 297,
+          "y": 82.5,
+          "width": 58,
+          "height": 32,
+          "family": "Arial",
+          "size": "13.3333px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".switch-knob": {
+          "x": 301,
+          "y": 86.5,
+          "width": 24,
+          "height": 24,
+          "family": "Arial",
+          "size": "13.3333px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".settings-links": {
+          "x": 16,
+          "y": 327,
+          "width": 358,
+          "height": 44,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        }
+      },
+      "settings-on": {
+        ".picker-title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "20px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".switch-row": {
+          "x": 16,
+          "y": 62,
+          "width": 358,
+          "height": 73,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".switch-text b": {
+          "x": 35,
+          "y": 79,
+          "width": 206.171875,
+          "height": 19,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".switch-text small": {
+          "x": 35,
+          "y": 102,
+          "width": 206.171875,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "600",
+          "line": "normal"
+        },
+        ".switch": {
+          "x": 297,
+          "y": 82.5,
+          "width": 58,
+          "height": 32,
+          "family": "Arial",
+          "size": "13.3333px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".switch-knob": {
+          "x": 327,
+          "y": 86.5,
+          "width": 24,
+          "height": 24,
+          "family": "Arial",
+          "size": "13.3333px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".settings-links": {
+          "x": 16,
+          "y": 327,
+          "width": 358,
+          "height": 44,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        }
+      },
+      "lesson-1-game": {
+        "#run-title": {
+          "x": 152.75,
+          "y": 22,
+          "width": 84.484375,
+          "height": 20,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 48.625,
+          "y": 89,
+          "width": 48.75,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "20px",
+          "weight": "900",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14,
+          "y": 232.5,
+          "width": 362,
+          "height": 362,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20,
+          "y": 238.5,
+          "width": 174,
+          "height": 174,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "93.96px",
+          "weight": "900",
+          "line": "93.96px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "800",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        }
+      },
+      "lesson-6-game": {
+        "#run-title": {
+          "x": 152.75,
+          "y": 22,
+          "width": 84.484375,
+          "height": 20,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "20px",
+          "weight": "900",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 115,
+          "height": 115,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "62.1px",
+          "weight": "900",
+          "line": "62.1px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "800",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        }
+      },
+      "limitless-intro": {
+        ".intro-title": {
+          "x": 120.390625,
+          "y": 245.6875,
+          "width": 149.21875,
+          "height": 31,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".intro-mark": {
+          "x": 125,
+          "y": 292.6875,
+          "width": 140,
+          "height": 140,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "58px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".intro-mark-art": {
+          "x": 156.625,
+          "y": 319.08551025390625,
+          "width": 76.75,
+          "height": 86,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "58px",
+          "weight": "900",
+          "line": "normal"
+        },
+        "#btn-intro-start": {
+          "x": 65,
+          "y": 553.6875,
+          "width": 260,
+          "height": 50,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "800",
+          "line": "normal"
+        }
+      },
+      "limitless-game": {
+        "#run-title": {
+          "x": 144.6875,
+          "y": 22,
+          "width": 100.625,
+          "height": 20,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "20px",
+          "weight": "900",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 37,
+          "height": 37,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "19.98px",
+          "weight": "900",
+          "line": "19.98px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "800",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        }
+      },
+      "limitless-selected": {
+        "#run-title": {
+          "x": 144.6875,
+          "y": 22,
+          "width": 100.625,
+          "height": 20,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "20px",
+          "weight": "900",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 232,
+          "width": 361,
+          "height": 361,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 19.482500076293945,
+          "y": 236.9824981689453,
+          "width": 39.035003662109375,
+          "height": 39.03501892089844,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "19.98px",
+          "weight": "900",
+          "line": "19.98px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 685,
+          "width": 362,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "800",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 715,
+          "width": 358,
+          "height": 47,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 140.203125,
+          "y": 730.5,
+          "width": 29.640625,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 223.78125,
+          "y": 723,
+          "width": 26,
+          "height": 31,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".tile.sel": {
+          "x": 19.482500076293945,
+          "y": 236.9824981689453,
+          "width": 39.035003662109375,
+          "height": 39.03501892089844,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "19.98px",
+          "weight": "900",
+          "line": "19.98px"
+        },
+        ".sum-term": {
+          "x": 177.84375,
+          "y": 722,
+          "width": 22,
+          "height": 33,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        }
+      },
+      "limitless-wrong": {
+        "#run-title": {
+          "x": 144.6875,
+          "y": 22,
+          "width": 100.625,
+          "height": 20,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 46,
+          "y": 89,
+          "width": 54,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "20px",
+          "weight": "900",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 232,
+          "width": 361,
+          "height": 361,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 238,
+          "width": 37,
+          "height": 37,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "19.98px",
+          "weight": "900",
+          "line": "19.98px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 685,
+          "width": 362,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "800",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 715,
+          "width": 358,
+          "height": 47,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 117.765625,
+          "y": 730.5,
+          "width": 29.640625,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 246.234375,
+          "y": 723,
+          "width": 26,
+          "height": 31,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        }
+      },
+      "pause": {
+        "#overlay .panel": {
+          "x": 24,
+          "y": 296.25,
+          "width": 342,
+          "height": 251.5,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        "#overlay-title": {
+          "x": 49,
+          "y": 325.25,
+          "width": 292,
+          "height": 32,
+          "family": "Georgia, \"Times New Roman\", serif",
+          "size": "28px",
+          "weight": "700",
+          "line": "normal"
+        },
+        "#overlay-body": {
+          "x": 49,
+          "y": 367.25,
+          "width": 292,
+          "height": 25.5,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "15px",
+          "weight": "400",
+          "line": "25.5px"
+        },
+        "#btn-primary": {
+          "x": 49,
+          "y": 412.75,
+          "width": 292,
+          "height": 50,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "800",
+          "line": "normal"
+        },
+        "#btn-secondary": {
+          "x": 49,
+          "y": 472.75,
+          "width": 292,
+          "height": 50,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "800",
+          "line": "normal"
+        }
+      },
+      "timeless-intro": {
+        ".intro-title": {
+          "x": 125.125,
+          "y": 245.6875,
+          "width": 139.734375,
+          "height": 31,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".intro-mark": {
+          "x": 125,
+          "y": 292.6875,
+          "width": 140,
+          "height": 140,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "58px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".intro-mark-art": {
+          "x": 156.625,
+          "y": 319.08551025390625,
+          "width": 76.75,
+          "height": 86,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "58px",
+          "weight": "900",
+          "line": "normal"
+        },
+        "#btn-intro-start": {
+          "x": 65,
+          "y": 553.6875,
+          "width": 260,
+          "height": 50,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "800",
+          "line": "normal"
+        }
+      },
+      "timeless-game": {
+        "#run-title": {
+          "x": 147.953125,
+          "y": 22,
+          "width": 94.078125,
+          "height": 20,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.578125,
+          "y": 71,
+          "width": 36.84375,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 63.328125,
+          "y": 89,
+          "width": 19.34375,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "20px",
+          "weight": "900",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 216,
+          "width": 361,
+          "height": 361,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 222,
+          "width": 37,
+          "height": 37,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "19.98px",
+          "weight": "900",
+          "line": "19.98px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 665,
+          "width": 362,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "800",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        }
+      },
+      "endless-intro": {
+        ".intro-title": {
+          "x": 131.03125,
+          "y": 245.6875,
+          "width": 127.921875,
+          "height": 31,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".intro-mark": {
+          "x": 125,
+          "y": 292.6875,
+          "width": 140,
+          "height": 140,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "58px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".intro-mark-art": {
+          "x": 156.625,
+          "y": 328.3341979980469,
+          "width": 76.75,
+          "height": 76.75,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "58px",
+          "weight": "900",
+          "line": "normal"
+        },
+        "#btn-intro-start": {
+          "x": 65,
+          "y": 553.6875,
+          "width": 260,
+          "height": 50,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "800",
+          "line": "normal"
+        }
+      },
+      "endless-game": {
+        "#run-title": {
+          "x": 151.984375,
+          "y": 22,
+          "width": 86.03125,
+          "height": 20,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "20px",
+          "weight": "900",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 37,
+          "height": 37,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "19.98px",
+          "weight": "900",
+          "line": "19.98px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "800",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        }
+      },
+      "home-pressed": {
+        ".brand-mark": {
+          "x": 70,
+          "y": 73.859375,
+          "width": 250,
+          "height": 293.375,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "32px",
+          "weight": "700",
+          "line": "0px"
+        },
+        ".mode-btn": {
+          "x": 25,
+          "y": 427.796875,
+          "width": 340,
+          "height": 79,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13.3333px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".mode-name": {
+          "x": 46,
+          "y": 444.796875,
+          "width": 298,
+          "height": 25,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "21px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".mode-desc": {
+          "x": 46,
+          "y": 473.796875,
+          "width": 298,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "700",
+          "line": "normal"
+        }
+      }
+    },
+    "after": {
+      "home": {
+        ".brand-mark": {
+          "x": 70,
+          "y": 73.859375,
+          "width": 250,
+          "height": 293.375,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "32px",
+          "weight": "700",
+          "line": "0px"
+        },
+        ".mode-btn": {
+          "x": 25,
+          "y": 425.796875,
+          "width": 340,
+          "height": 79,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13.3333px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".mode-name": {
+          "x": 46,
+          "y": 442.796875,
+          "width": 298,
+          "height": 25,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "21px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".mode-desc": {
+          "x": 46,
+          "y": 471.796875,
+          "width": 298,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "700",
+          "line": "normal"
+        },
+        "#btn-title-settings": {
+          "x": 163.671875,
+          "y": 741.34375,
+          "width": 62.65625,
+          "height": 33,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "700",
+          "line": "normal"
+        }
+      },
+      "settings-off": {
+        ".picker-title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "20px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".switch-row": {
+          "x": 16,
+          "y": 62,
+          "width": 358,
+          "height": 73,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".switch-text b": {
+          "x": 35,
+          "y": 79,
+          "width": 206.171875,
+          "height": 19,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".switch-text small": {
+          "x": 35,
+          "y": 102,
+          "width": 206.171875,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "600",
+          "line": "normal"
+        },
+        ".switch": {
+          "x": 297,
+          "y": 82.5,
+          "width": 58,
+          "height": 32,
+          "family": "Arial",
+          "size": "13.3333px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".switch-knob": {
+          "x": 301,
+          "y": 86.5,
+          "width": 24,
+          "height": 24,
+          "family": "Arial",
+          "size": "13.3333px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".settings-links": {
+          "x": 16,
+          "y": 327,
+          "width": 358,
+          "height": 44,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        }
+      },
+      "settings-on": {
+        ".picker-title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "20px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".switch-row": {
+          "x": 16,
+          "y": 62,
+          "width": 358,
+          "height": 73,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".switch-text b": {
+          "x": 35,
+          "y": 79,
+          "width": 206.171875,
+          "height": 19,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".switch-text small": {
+          "x": 35,
+          "y": 102,
+          "width": 206.171875,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "600",
+          "line": "normal"
+        },
+        ".switch": {
+          "x": 297,
+          "y": 82.5,
+          "width": 58,
+          "height": 32,
+          "family": "Arial",
+          "size": "13.3333px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".switch-knob": {
+          "x": 327,
+          "y": 86.5,
+          "width": 24,
+          "height": 24,
+          "family": "Arial",
+          "size": "13.3333px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".settings-links": {
+          "x": 16,
+          "y": 327,
+          "width": 358,
+          "height": 44,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        }
+      },
+      "lesson-1-game": {
+        "#run-title": {
+          "x": 152.75,
+          "y": 22,
+          "width": 84.484375,
+          "height": 20,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 48.625,
+          "y": 89,
+          "width": 48.75,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "20px",
+          "weight": "900",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14,
+          "y": 232.5,
+          "width": 362,
+          "height": 362,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20,
+          "y": 238.5,
+          "width": 174,
+          "height": 174,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "93.96px",
+          "weight": "900",
+          "line": "93.96px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "800",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        }
+      },
+      "lesson-6-game": {
+        "#run-title": {
+          "x": 152.75,
+          "y": 22,
+          "width": 84.484375,
+          "height": 20,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "20px",
+          "weight": "900",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 115,
+          "height": 115,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "62.1px",
+          "weight": "900",
+          "line": "62.1px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "800",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        }
+      },
+      "limitless-intro": {
+        ".intro-title": {
+          "x": 120.390625,
+          "y": 245.6875,
+          "width": 149.21875,
+          "height": 31,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".intro-mark": {
+          "x": 125,
+          "y": 292.6875,
+          "width": 140,
+          "height": 140,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "58px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".intro-mark-art": {
+          "x": 156.625,
+          "y": 319.08551025390625,
+          "width": 76.75,
+          "height": 86,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "58px",
+          "weight": "900",
+          "line": "normal"
+        },
+        "#btn-intro-start": {
+          "x": 65,
+          "y": 553.6875,
+          "width": 260,
+          "height": 50,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "800",
+          "line": "normal"
+        }
+      },
+      "limitless-game": {
+        "#run-title": {
+          "x": 144.6875,
+          "y": 22,
+          "width": 100.625,
+          "height": 20,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "20px",
+          "weight": "900",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 37,
+          "height": 37,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "19.98px",
+          "weight": "900",
+          "line": "19.98px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "800",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        }
+      },
+      "limitless-selected": {
+        "#run-title": {
+          "x": 144.6875,
+          "y": 22,
+          "width": 100.625,
+          "height": 20,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "17px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "800",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "20px",
+          "weight": "900",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 232,
+          "width": 361,
+          "height": 361,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 19.482500076293945,
+          "y": 236.9824981689453,
+          "width": 39.035003662109375,
+          "height": 39.03501892089844,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "19.98px",
+          "weight": "900",
+          "line": "19.98px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 685,
+          "width": 362,
+          "height": 24,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "14px",
+          "weight": "800",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 715,
+          "width": 358,
+          "height": 47,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "16px",
+          "weight": "400",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 140.203125,
+          "y": 730.5,
+          "width": 29.640625,
+          "height": 16,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 223.78125,
+          "y": 723,
+          "width": 26,
+          "height": 31,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        },
+        ".tile.sel": {
+          "x": 19.482500076293945,
+          "y": 236.9824981689453,
+          "width": 39.035003662109375,
+          "height": 39.03501892089844,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "19.98px",
+          "weight": "900",
+          "line": "19.98px"
+        },
+        ".sum-term": {
+          "x": 177.84375,
+          "y": 722,
+          "width": 22,
+          "height": 33,
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "26px",
+          "weight": "900",
+          "line": "normal"
+        }
+      }
+    }
+  },
+  "surfaces": {
+    "home": [
+      {
+        "id": "",
+        "classes": "brand-mark",
+        "image": "none",
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(54, 60, 70)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "mode-timeAttack",
+        "classes": "mode-btn",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "mode-timeless",
+        "classes": "mode-btn",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "mode-endless",
+        "classes": "mode-btn",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "btn-title-settings",
+        "classes": "text-btn",
+        "image": "none",
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(63, 72, 86)",
+        "border": "rgb(63, 72, 86)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      }
+    ],
+    "settings-off": [
+      {
+        "id": "btn-settings-back",
+        "classes": "icon-btn",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(63, 72, 86)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "switch-music",
+        "classes": "switch",
+        "image": "none",
+        "background": "rgb(233, 237, 242)",
+        "color": "rgb(0, 0, 0)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "switch-knob",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "border": "rgb(0, 0, 0)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "switch-sound",
+        "classes": "switch",
+        "image": "none",
+        "background": "rgb(233, 237, 242)",
+        "color": "rgb(0, 0, 0)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "switch-knob",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "border": "rgb(0, 0, 0)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "switch-haptics",
+        "classes": "switch",
+        "image": "none",
+        "background": "rgb(233, 237, 242)",
+        "color": "rgb(0, 0, 0)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "switch-knob",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "border": "rgb(0, 0, 0)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "btn-privacy",
+        "classes": "settings-legal-link",
+        "image": "none",
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(98, 107, 120)",
+        "border": "rgb(98, 107, 120)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "btn-licenses",
+        "classes": "settings-legal-link",
+        "image": "none",
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(98, 107, 120)",
+        "border": "rgb(98, 107, 120)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      }
+    ],
+    "settings-on": [
+      {
+        "id": "btn-settings-back",
+        "classes": "icon-btn",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(63, 72, 86)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "switch-music",
+        "classes": "switch",
+        "image": "none",
+        "background": "rgb(149, 158, 171)",
+        "color": "rgb(0, 0, 0)",
+        "border": "rgb(149, 158, 171)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "switch-knob",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "border": "rgb(0, 0, 0)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "switch-sound",
+        "classes": "switch",
+        "image": "none",
+        "background": "rgb(233, 237, 242)",
+        "color": "rgb(0, 0, 0)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "switch-knob",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "border": "rgb(0, 0, 0)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "switch-haptics",
+        "classes": "switch",
+        "image": "none",
+        "background": "rgb(233, 237, 242)",
+        "color": "rgb(0, 0, 0)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "switch-knob",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(0, 0, 0)",
+        "border": "rgb(0, 0, 0)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "btn-privacy",
+        "classes": "settings-legal-link",
+        "image": "none",
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(98, 107, 120)",
+        "border": "rgb(98, 107, 120)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "btn-licenses",
+        "classes": "settings-legal-link",
+        "image": "none",
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(98, 107, 120)",
+        "border": "rgb(98, 107, 120)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      }
+    ],
+    "lesson-1-game": [
+      {
+        "id": "btn-back",
+        "classes": "icon-btn",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(63, 72, 86)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "btn-pause",
+        "classes": "icon-btn",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(63, 72, 86)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "stat-a",
+        "classes": "run-stat",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "stat-b",
+        "classes": "run-stat",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "stat-c",
+        "classes": "run-stat",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "board",
+        "classes": "board",
+        "image": "none",
+        "background": "rgb(233, 237, 242)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile tutorial-target",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "rgba(98, 107, 120, 0.14) 0px 0px 0px 0px",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile tutorial-target",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "rgba(98, 107, 120, 0.14) 0px 0px 0px 0px",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "selection-sum",
+        "classes": "selection-sum",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(98, 107, 120)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      }
+    ],
+    "lesson-6-game": [
+      {
+        "id": "btn-back",
+        "classes": "icon-btn",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(63, 72, 86)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "btn-pause",
+        "classes": "icon-btn",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(63, 72, 86)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "stat-a",
+        "classes": "run-stat",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "stat-b",
+        "classes": "run-stat",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "stat-c",
+        "classes": "run-stat",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "board",
+        "classes": "board",
+        "image": "none",
+        "background": "rgb(233, 237, 242)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile tutorial-target",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "rgba(98, 107, 120, 0.14) 0px 0px 0px 0px",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile tutorial-target",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "rgba(98, 107, 120, 0.14) 0px 0px 0px 0px",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile tutorial-target",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "rgba(98, 107, 120, 0.14) 0px 0px 0px 0px",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "selection-sum",
+        "classes": "selection-sum",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(98, 107, 120)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      }
+    ],
+    "limitless-intro": [
+      {
+        "id": "btn-intro-back",
+        "classes": "icon-btn",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(63, 72, 86)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "intro-mark",
+        "classes": "intro-mark",
+        "image": "none",
+        "background": "rgb(237, 240, 244)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(54, 60, 70)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "btn-intro-start",
+        "classes": "wood-btn",
+        "image": "none",
+        "background": "rgb(233, 237, 242)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      }
+    ],
+    "limitless-game": [
+      {
+        "id": "btn-back",
+        "classes": "icon-btn",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(63, 72, 86)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "btn-pause",
+        "classes": "icon-btn",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(63, 72, 86)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "stat-a",
+        "classes": "run-stat",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "stat-b",
+        "classes": "run-stat",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "stat-c",
+        "classes": "run-stat",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "board",
+        "classes": "board",
+        "image": "none",
+        "background": "rgb(233, 237, 242)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "selection-sum",
+        "classes": "selection-sum",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(98, 107, 120)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      }
+    ],
+    "limitless-selected": [
+      {
+        "id": "btn-back",
+        "classes": "icon-btn",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(63, 72, 86)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "btn-pause",
+        "classes": "icon-btn",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(63, 72, 86)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "stat-a",
+        "classes": "run-stat",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "stat-b",
+        "classes": "run-stat",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "stat-c",
+        "classes": "run-stat",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "board",
+        "classes": "board",
+        "image": "none",
+        "background": "rgb(233, 237, 242)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile sel",
+        "image": "none",
+        "background": "rgb(220, 225, 232)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(112, 123, 139)",
+        "shadow": "rgb(112, 123, 139) 0px 0px 0px 1px inset",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "tile",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "selection-sum",
+        "classes": "selection-sum active",
+        "image": "none",
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(83, 93, 108)",
+        "border": "rgb(205, 210, 218)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      },
+      {
+        "id": "",
+        "classes": "sum-term",
+        "image": "none",
+        "background": "rgb(220, 225, 232)",
+        "color": "rgb(54, 60, 70)",
+        "border": "rgb(54, 60, 70)",
+        "shadow": "none",
+        "textShadow": "none",
+        "filter": "none"
+      }
+    ]
+  },
+  "interactions": {
+    "before": [
+      {
+        "scenario": "LIMITLESS 2-block lesson",
+        "input": "mouse",
+        "action": "cancel with 3 CSS px movement",
+        "actual": {
+          "indices": [],
+          "terms": [],
+          "total": "?",
+          "incorrect": false,
+          "penalty": false,
+          "commits": [],
+          "rejects": [],
+          "moves": 3
+        }
+      },
+      {
+        "scenario": "LIMITLESS 2-block lesson",
+        "input": "touch",
+        "action": "cancel with 3 CSS px movement",
+        "actual": {
+          "indices": [],
+          "terms": [],
+          "total": "?",
+          "incorrect": false,
+          "penalty": false,
+          "commits": [],
+          "rejects": [],
+          "moves": 1
+        }
+      },
+      {
+        "scenario": "LIMITLESS 3-block lesson",
+        "input": "mouse",
+        "action": "cancel with 3 CSS px movement",
+        "actual": {
+          "indices": [],
+          "terms": [],
+          "total": "?",
+          "incorrect": false,
+          "penalty": false,
+          "commits": [],
+          "rejects": [],
+          "moves": 3
+        }
+      },
+      {
+        "scenario": "LIMITLESS 3-block lesson",
+        "input": "touch",
+        "action": "cancel with 3 CSS px movement",
+        "actual": {
+          "indices": [],
+          "terms": [],
+          "total": "?",
+          "incorrect": false,
+          "penalty": false,
+          "commits": [],
+          "rejects": [],
+          "moves": 1
+        }
+      },
+      {
+        "scenario": "LIMITLESS 4-block lesson",
+        "input": "mouse",
+        "action": "cancel with 3 CSS px movement",
+        "actual": {
+          "indices": [],
+          "terms": [],
+          "total": "?",
+          "incorrect": false,
+          "penalty": false,
+          "commits": [],
+          "rejects": [],
+          "moves": 3
+        }
+      },
+      {
+        "scenario": "LIMITLESS 4-block lesson",
+        "input": "touch",
+        "action": "cancel with 3 CSS px movement",
+        "actual": {
+          "indices": [],
+          "terms": [],
+          "total": "?",
+          "incorrect": false,
+          "penalty": false,
+          "commits": [],
+          "rejects": [],
+          "moves": 1
+        }
+      },
+      {
+        "scenario": "LIMITLESS 5-block lesson",
+        "input": "mouse",
+        "action": "cancel with 3 CSS px movement",
+        "actual": {
+          "indices": [],
+          "terms": [],
+          "total": "?",
+          "incorrect": false,
+          "penalty": false,
+          "commits": [],
+          "rejects": [],
+          "moves": 3
+        }
+      },
+      {
+        "scenario": "LIMITLESS 5-block lesson",
+        "input": "touch",
+        "action": "cancel with 3 CSS px movement",
+        "actual": {
+          "indices": [],
+          "terms": [],
+          "total": "?",
+          "incorrect": false,
+          "penalty": false,
+          "commits": [],
+          "rejects": [],
+          "moves": 1
+        }
+      },
+      {
+        "scenario": "LIMITLESS score round",
+        "input": "mouse",
+        "action": "cancel with 3 CSS px movement",
+        "actual": {
+          "indices": [],
+          "terms": [],
+          "total": "?",
+          "incorrect": false,
+          "penalty": false,
+          "commits": [],
+          "rejects": [],
+          "moves": 3
+        }
+      },
+      {
+        "scenario": "LIMITLESS score round",
+        "input": "touch",
+        "action": "cancel with 3 CSS px movement",
+        "actual": {
+          "indices": [],
+          "terms": [],
+          "total": "?",
+          "incorrect": false,
+          "penalty": false,
+          "commits": [],
+          "rejects": [],
+          "moves": 1
+        }
+      },
+      {
+        "scenario": "TIMELESS 10/20/30",
+        "input": "mouse",
+        "action": "cancel with 3 CSS px movement",
+        "actual": {
+          "indices": [],
+          "terms": [],
+          "total": "?",
+          "incorrect": false,
+          "penalty": false,
+          "commits": [],
+          "rejects": [],
+          "moves": 3
+        }
+      },
+      {
+        "scenario": "TIMELESS 10/20/30",
+        "input": "touch",
+        "action": "cancel with 3 CSS px movement",
+        "actual": {
+          "indices": [],
+          "terms": [],
+          "total": "?",
+          "incorrect": false,
+          "penalty": false,
+          "commits": [],
+          "rejects": [],
+          "moves": 1
+        }
+      },
+      {
+        "scenario": "ENDLESS 10",
+        "input": "mouse",
+        "action": "cancel with 3 CSS px movement",
+        "actual": {
+          "indices": [],
+          "terms": [],
+          "total": "?",
+          "incorrect": false,
+          "penalty": false,
+          "commits": [],
+          "rejects": [],
+          "moves": 3
+        }
+      },
+      {
+        "scenario": "ENDLESS 10",
+        "input": "touch",
+        "action": "cancel with 3 CSS px movement",
+        "actual": {
+          "indices": [],
+          "terms": [],
+          "total": "?",
+          "incorrect": false,
+          "penalty": false,
+          "commits": [],
+          "rejects": [],
+          "moves": 1
+        }
+      },
+      {
+        "scenario": "new drag after cancel",
+        "actual": {
+          "indices": [],
+          "terms": [
+            1,
+            2,
+            7
+          ],
+          "total": "10",
+          "incorrect": false,
+          "penalty": false,
+          "commits": [
+            [
+              0,
+              1,
+              2
+            ]
+          ],
+          "rejects": [],
+          "moves": 2
+        }
+      },
+      {
+        "scenario": "real wrong answer",
+        "actual": {
+          "indices": [],
+          "terms": [
+            9,
+            3
+          ],
+          "total": "12",
+          "incorrect": true,
+          "penalty": false,
+          "commits": [],
+          "rejects": [
+            [
+              9,
+              3
+            ]
+          ],
+          "moves": 0
+        }
+      }
+    ]
+  },
+  "appCancel": {
+    "before-lesson-1": {
+      "indices": [],
+      "terms": [],
+      "total": "?",
+      "incorrect": false,
+      "penalty": false
+    },
+    "before-lesson-6": {
+      "indices": [],
+      "terms": [],
+      "total": "?",
+      "incorrect": false,
+      "penalty": false
+    },
+    "before-limitless": {
+      "indices": [],
+      "terms": [],
+      "total": "?",
+      "incorrect": false,
+      "penalty": false
+    },
+    "before-timeless": {
+      "indices": [],
+      "terms": [],
+      "total": "?",
+      "incorrect": false,
+      "penalty": false
+    },
+    "before-endless": {
+      "indices": [],
+      "terms": [],
+      "total": "?",
+      "incorrect": false,
+      "penalty": false
+    },
+    "after-lesson-1": {
+      "indices": [],
+      "terms": [],
+      "total": "?",
+      "incorrect": false,
+      "penalty": false
+    },
+    "after-lesson-6": {
+      "indices": [],
+      "terms": [],
+      "total": "?",
+      "incorrect": false,
+      "penalty": false
+    }
+  },
+  "errors": [],
+  "limitations": [
+    "Chrome on macOS with real dispatched touch input, not a physical Android/WebView.",
+    "Before includes uncommitted safe-area/grade/white-background/toggle fixes; it is NOT a pure released commit.",
+    "Progress and best scores are controlled fixtures, not user-earned results.",
+    "Artwork, cover, launcher icons and studio opening retain their own colours.",
+    "Current dependencies reused; current checkout was never replaced by old sources."
+  ],
+  "browser": "154.0.8037.58",
+  "pass": false,
+  "failure": "AssertionError [ERR_ASSERTION]: limitless-selected tile sel rgb(112, 123, 139)"
+}

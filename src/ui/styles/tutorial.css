@@ -21,7 +21,7 @@
 .dot {
   width: 9px;
   height: 9px;
-  background: rgba(195, 174, 230, 0.3);
+  background: var(--recess);
   border-radius: 50%;
 }
 
@@ -41,7 +41,7 @@
   line-height: 1.6;
   text-align: center;
   white-space: pre-line;
-  text-shadow: 0 0 14px rgba(255, 215, 130, 0.3);
+  text-shadow: none;
 }
 
 .tutorial-board-wrap {
@@ -77,12 +77,12 @@
   display: none;
 }
 
-/* Match TAPtoTALK's gentle gold pulse on the next interaction targets. */
+/* Gameplay guidance retains the original gold pulse, not the UI gray. */
 .tutorial-screen .tutorial-target,
 .learning-run .tutorial-target:not(.bust) {
   position: relative;
   z-index: 1;
-  outline: 2px solid var(--warm);
+  outline: 2px solid var(--block-guidance);
   outline-offset: 2px;
   animation: tutorial-glow 1.1s ease-in-out infinite;
 }
@@ -90,12 +90,12 @@
 @keyframes tutorial-glow {
   0%, 100% {
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, .42),
-      0 2px 0 var(--slab), 0 0 0 0 rgba(253, 208, 0, .18);
+      0 2px 0 var(--block-shadow), 0 0 0 0 rgba(253, 208, 0, .18);
   }
   50% {
     transform: translateY(-2px);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, .55),
-      0 3px 0 var(--slab), 0 0 0 7px rgba(253, 208, 0, .38);
+      0 3px 0 var(--block-shadow), 0 0 0 7px rgba(253, 208, 0, .38);
   }
 }
 
@@ -106,12 +106,12 @@
   }
 }
 
-.learning-run .notice.is-rejected { color: var(--ring-bad); }
+.learning-run .notice.is-rejected { color: var(--block-ring-bad); }
 .learning-run .tile.bust {
-  background: var(--ring-bad);
+  background: var(--block-ring-bad);
   outline: 3px solid #a01818;
   outline-offset: -3px;
   color: white;
   animation: none;
 }
-.learning-run .tile { border-radius: clamp(6px, 2vw, 14px); }
+.learning-run .tile { border-radius: clamp(6px, calc(2 * var(--layout-vw, 1vw)), 14px); }

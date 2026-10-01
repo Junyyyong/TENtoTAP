@@ -2,6 +2,7 @@ import { isAlive, valueAt } from "../core/board";
 import { DEFAULT_TARGETS, MAX_SELECTION } from "../core/rules";
 import type { Board } from "../core/types";
 import { BlockColors } from './blockColors';
+import { nativeCanvasScale } from './nativeFrame';
 
 const HINT_MS = 2700;
 /** How long a refused selection stays lit before it lets go. */
@@ -65,7 +66,7 @@ export class BoardView {
   private lastPoint: { x: number; y: number } | null = null;
   /** The tile size the board was last laid out at, in CSS pixels. */
   private tilePx = MIN_TILE_PX;
-  /** Stops one gesture after it clears or overcharges; lift to start again. */
+  /** Stops one gesture after a cancel, clear or overcharge; lift to start again. */
   private gestureSettled = false;
   private interactive = true;
   /** Cleared whenever the board must be measured again. */
@@ -253,11 +254,12 @@ export class BoardView {
     if (!tile) return;
     const box = tile.getBoundingClientRect();
     const wrapBox = this.options.wrap.getBoundingClientRect();
+    const scale = nativeCanvasScale(this.options.wrap);
     const pop = document.createElement("div");
     pop.className = "pop";
     pop.textContent = `+${score}`;
-    pop.style.left = `${box.left - wrapBox.left + box.width / 2}px`;
-    pop.style.top = `${box.top - wrapBox.top}px`;
+    pop.style.left = `${(box.left - wrapBox.left + box.width / 2) / scale}px`;
+    pop.style.top = `${(box.top - wrapBox.top) / scale}px`;
     this.options.wrap.appendChild(pop);
     pop.addEventListener("animationend", () => pop.remove());
   }
@@ -290,6 +292,9 @@ export class BoardView {
     if (at >= 0) {
       // A tap toggles exactly that block, matching familiar mobile selection.
       this.selection.splice(at, 1);
+      // A finger can move inside the same tile during a tap. Do not let the
+      // drag sweep immediately reselect the block this gesture just cancelled.
+      this.gestureSettled = true;
       this.emitSelection();
       this.render();
       return;
@@ -323,7 +328,7 @@ export class BoardView {
     this.lastPoint = { x, y };
     const dx = x - from.x;
     const dy = y - from.y;
-    const step = Math.max(4, this.tilePx * 0.4);
+    const step = Math.max(4, this.tilePx * 0.4) * nativeCanvasScale(this.options.grid);
     const samples = Math.max(1, Math.ceil(Math.hypot(dx, dy) / step));
     for (let s = 1; s <= samples; s++) {
       if (this.gestureSettled) return;

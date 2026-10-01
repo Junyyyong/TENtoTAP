@@ -1,0 +1,102 @@
+{
+  "capturedAt": "2026-09-30T08:04:56.691Z",
+  "previousCommit": "cae2e49b5af230a95b2f1890daf01b47b321b621",
+  "previousCommitDate": "2026-09-29T23:22:05+09:00",
+  "currentBaseline": "cae2e49b5af230a95b2f1890daf01b47b321b621",
+  "sourceHashes": {
+    "android/app/src/main/java/io/github/junyyyong/makezero/MainActivity.java": "dd1515e2ff99ba540f11a39e22737747f82eeaa0ae8fc8b0fde9a27c614dd5de",
+    "android/app/src/main/AndroidManifest.xml": "cbea0f04c050d30e9a0ade1640668c6abd48aa5bc11d8768dd64d71eb67f4c5f",
+    "android/app/build.gradle": "f87466ac7df0d236a7ce7e3b88ad00db921be0d03558463964fad8802534526a",
+    "src/ui/styles/tokens.css": "332b708181262e88f2047fa4dbb501298dc750c03b1547e236887f23730eccd1",
+    "store/icon-source.png": "1e98bcab00a78359d0641cf78bc0c2295cc4f7c1a1b69e3ec23b2782b235961a",
+    "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png": "f5ae7a3f3815a676de749283fc61b613c00f21a08264a8c42fe16a5384d2be99",
+    "store/play-icon-512.png": "d1d3035aed57021ad6b66ef18c1e97300d7ac87e3001c361e606c113e1c80397"
+  },
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "dpr": 2,
+    "png": [
+      780,
+      1688
+    ]
+  },
+  "browser": "154.0.8037.58",
+  "locale": "en-US",
+  "timezone": "Asia/Seoul",
+  "clock": "2026-09-30T00:00:01Z",
+  "seed": 20260930,
+  "profile": "fresh isolated context per side; same stage 10 and best-score fixture",
+  "metrics": {
+    "before": {
+      "title": {
+        "font": "21px",
+        "width": 298
+      },
+      "textSizeAdjust": "auto",
+      "cheer": {
+        "text": "OH MY GOD~!",
+        "font": "42.9px",
+        "left": 54.453125,
+        "right": 335.546875,
+        "viewport": 390
+      }
+    },
+    "after": {
+      "title": {
+        "font": "21px",
+        "width": 298
+      },
+      "textSizeAdjust": "100%",
+      "cheer": {
+        "text": "OH MY GOD~!",
+        "font": "42.9px",
+        "left": 54.453125,
+        "right": 335.546875,
+        "viewport": 390
+      }
+    }
+  },
+  "captures": [
+    {
+      "file": "before-title.png",
+      "sha256": "db1114a29d6b289b1025f69eea668411e3599429299891a14c52b5bd7779c284"
+    },
+    {
+      "file": "before-stage10.png",
+      "sha256": "a21ee4ca459ab4145b436b038d7db95890b641379fb45533003ce4abdf0f5411"
+    },
+    {
+      "file": "before-cheer-fixture.png",
+      "sha256": "613ff0949a5cfed04bc869e5853be43d43a85e267256e59aa4c3c053b289391f"
+    },
+    {
+      "file": "before-icon-preview.png",
+      "sha256": "4e5f0fe461db3dbfe57296c4d226069834fd7bb0bb47e08c3ade95eb377875b3"
+    },
+    {
+      "file": "after-title.png",
+      "sha256": "db1114a29d6b289b1025f69eea668411e3599429299891a14c52b5bd7779c284"
+    },
+    {
+      "file": "after-stage10.png",
+      "sha256": "f93a89242f5e39e4724946e63b1b3cc52cb23cfbd399ba11474d64638dbf406c"
+    },
+    {
+      "file": "after-cheer-fixture.png",
+      "sha256": "e2eec27b70cda18c44495e627c57daea54a6f0799c37991c697b1fbe450bcf39"
+    },
+    {
+      "file": "after-icon-preview.png",
+      "sha256": "e25ed6d9c9e5aab6a19a28ee8d0987b7eec30d040dd28b3ba7287411571940fa"
+    }
+  ],
+  "errors": [],
+  "nativeLifecycleUnitTest": "PASS: launch, resume, config scales 1/1.3/1.8/2, posted reset, null/destroyed guards; OS config unchanged.\n\nManifest handles fontScale without recreating the game; doubles do not verify OEM WebView behavior.",
+  "notes": [
+    "Historical commit extracted with git archive, current sources never replaced. Current installed dependencies reused.",
+    "Browser screenshots use normal text scaling; they do not prove Android fontScale/Easy Mode behavior.",
+    "Cheer captures are a highest-grade (band 0) component fixture, not a real completed run. Icon previews are NOT Android launcher captures.",
+    "Real Android installation, OEM Easy Mode and update preservation test NOT RUN. OS magnification/density is not blocked."
+  ]
+}

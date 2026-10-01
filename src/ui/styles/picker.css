@@ -53,25 +53,22 @@
   justify-content: space-between;
   padding: 16px 18px;
   cursor: pointer;
-  background: linear-gradient(180deg, var(--panel-lit), var(--panel-deep));
+  background: var(--panel-lit);
   border: 1px solid var(--paper-edge);
   border-radius: 16px;
-  box-shadow:
-    inset 0 1px 0 var(--cool-dim),
-    0 3px 0 var(--slab-hard);
+  box-shadow: none;
   transition: transform 120ms ease, background 160ms ease;
 }
 
 .chapter-row:active {
   transform: translateY(2px);
-  box-shadow:
-    inset 0 1px 0 var(--cool-dim),
-    0 1px 0 var(--slab-hard);
+  background: var(--panel-deep);
+  box-shadow: none;
 }
 
 /* Finished: the same block, lit warm, so a full chapter is visible in a scan. */
 .chapter-row.done {
-  background: linear-gradient(180deg, #ffe9a8, #ffc94d);
+  background: var(--panel-deep);
   border-color: var(--warm);
 }
 
@@ -79,7 +76,7 @@
   cursor: default;
   background: var(--recess);
   border-color: var(--recess);
-  box-shadow: inset 0 2px 6px var(--recess);
+  box-shadow: none;
 }
 
 .chapter-row.shut .chapter-name {
@@ -122,26 +119,23 @@
   font-weight: 900;
   color: var(--ink);
   cursor: pointer;
-  background: linear-gradient(180deg, var(--panel-lit), var(--panel-deep));
+  background: var(--panel-lit);
   border: 1px solid var(--paper-edge);
   border-radius: 16px;
-  box-shadow:
-    inset 0 1px 0 var(--cool-dim),
-    0 4px 0 var(--slab-hard);
+  box-shadow: none;
   font-variant-numeric: tabular-nums;
   transition: transform 110ms ease, box-shadow 110ms ease;
 }
 
 .stage-cell:active:not(:disabled) {
   transform: translateY(3px);
-  box-shadow:
-    inset 0 1px 0 var(--cool-dim),
-    0 1px 0 var(--slab-hard);
+  background: var(--panel-deep);
+  box-shadow: none;
 }
 
 .stage-cell.done {
-  color: var(--night);
-  background: linear-gradient(180deg, var(--warm), var(--warm-deep));
+  color: var(--ink);
+  background: var(--panel-deep);
   border-color: var(--warm);
 }
 
@@ -150,7 +144,7 @@
   cursor: default;
   background: var(--recess);
   border-color: var(--recess);
-  box-shadow: inset 0 2px 6px var(--recess);
+  box-shadow: none;
 }
 
 /*
@@ -231,12 +225,10 @@
   align-items: center;
   padding: 24px 22px 22px;
   text-align: center;
-  background: linear-gradient(180deg, var(--house-lit), var(--velvet-deep));
+  background: var(--panel-lit);
   border: 1px solid var(--paper-edge);
   border-radius: 22px;
-  box-shadow:
-    inset 0 1px 0 var(--cool-dim),
-    0 18px 40px var(--slab-hard);
+  box-shadow: none;
   animation: card-rise 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
@@ -311,7 +303,7 @@
 
 .card-best b {
   font-size: 18px;
-  color: var(--ink);
+  color: var(--record-ink);
   font-variant-numeric: tabular-nums;
 }
 
@@ -327,7 +319,7 @@
   gap: 16px;
   align-items: center;
   justify-content: center;
-  padding: 0 32px max(6vh, 28px);
+  padding: 0 32px max(calc(6 * var(--layout-vh, 1vh)), 28px);
 }
 
 .intro-title {
@@ -354,28 +346,24 @@
   gap: 2px;
   min-height: 60px;
   padding: 10px 8px;
-  border: 1px solid rgba(255,255,255,.4);
+  border: 1px solid var(--paper-edge);
   border-radius: 16px;
-  background: var(--level-color);
-  color: white;
-  box-shadow: inset 0 2px 0 rgba(255,255,255,.3), 0 4px 0 var(--slab-hard);
+  background: var(--panel-lit);
+  color: var(--ink);
+  box-shadow: none;
   font-family: "TAP Sans KR", sans-serif;
   cursor: pointer;
 }
 .time-level strong { font-size: 18px; font-weight: 600; line-height: 1.1; }
 .time-level span { font-size: 12px; font-weight: 400; line-height: 1.2; }
-.time-level-1 { --level-color: #21863b; }
-.time-level-2 { --level-color: #b52d62; }
-.time-level-3 { --level-color: #8043bd; }
-.time-level-4 { --level-color: #c94a0b; }
-.time-level:active { transform: translateY(2px); }
+.time-level:active { transform: translateY(2px); background: var(--panel-deep); }
 .time-level:focus-visible { outline: 3px solid var(--warm); outline-offset: 3px; }
 .has-levels .intro-body { overflow-y: auto; justify-content: safe center; padding-bottom: 20px; }
 .has-levels .intro-body > * { flex-shrink: 0; }
 .board-arriving .board { pointer-events: none; }
 @media (max-height: 700px) {
-  .has-levels .intro-body { gap: 10px; }
-  .time-level { min-height: 56px; padding: 8px; }
+  :where(#app:not(.is-native-frame)) .has-levels .intro-body { gap: 10px; }
+  :where(#app:not(.is-native-frame)) .time-level { min-height: 56px; padding: 8px; }
 }
 
 .intro-mark {
@@ -390,7 +378,7 @@
   border-radius: 28px;
   box-shadow:
     inset 0 2px 0 rgba(255, 255, 255, 0.45),
-    0 8px 0 var(--slab-hard);
+    0 8px 0 var(--accent-shadow-hard);
   font-variant-numeric: tabular-nums;
 }
 
@@ -476,7 +464,7 @@
   font-size: 18px;
   font-weight: 800;
   text-align: right;
-  color: var(--ink);
+  color: var(--record-ink);
   font-variant-numeric: tabular-nums;
 }
 
@@ -487,15 +475,15 @@
 
 /* Short screens: the big number is the first thing that can afford to shrink. */
 @media (max-height: 620px) {
-  .intro-mark {
+  :where(#app:not(.is-native-frame)) .intro-mark {
     width: 100px;
     height: 100px;
     font-size: 42px;
   }
 
-  .intro-mark { --mark-h: 62px; }
+  :where(#app:not(.is-native-frame)) .intro-mark { --mark-h: 62px; }
 
-  .card-plate {
+  :where(#app:not(.is-native-frame)) .card-plate {
     width: 110px;
     height: 110px;
   }
@@ -520,10 +508,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 18px;
-  background: linear-gradient(180deg, var(--panel-lit), var(--panel-deep));
+  background: var(--panel-lit);
   border: 1px solid var(--paper-edge);
   border-radius: 16px;
-  box-shadow: inset 0 1px 0 var(--cool-dim);
+  box-shadow: none;
 }
 
 .switch-text {
@@ -544,8 +532,7 @@
   color: var(--ink-soft);
 }
 
-/* A block that slides, rather than a stock toggle: the same face-over-slab
-   the buttons and tiles are made of. */
+/* Neutral off track; the original green face distinguishes an enabled switch. */
 .switch {
   position: relative;
   flex: 0 0 auto;
@@ -571,9 +558,9 @@
   left: 3px;
   width: 24px;
   height: 24px;
-  background: linear-gradient(180deg, #fff, var(--tile-face-low));
+  background: linear-gradient(180deg, #fff, #f0dcc4);
   border-radius: 50%;
-  box-shadow: 0 2px 4px var(--slab-hard);
+  box-shadow: 0 2px 4px var(--accent-shadow-hard);
   transition: transform 180ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
@@ -631,7 +618,7 @@
   background: var(--paper-lit);
   color: var(--ink);
   overflow: hidden;
-  box-shadow: 0 12px 40px var(--slab);
+  box-shadow: none;
 }
 .legal-dialog[open] { display: flex; flex-direction: column; }
 .legal-dialog::backdrop { background: var(--scrim); }

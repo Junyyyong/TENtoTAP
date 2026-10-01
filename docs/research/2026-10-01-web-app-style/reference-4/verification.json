@@ -1,0 +1,6704 @@
+{
+  "date": "2026-09-30T15:57:47.946Z",
+  "revision": "cae2e49b5af230a95b2f1890daf01b47b321b621",
+  "browser": "154.0.8037.58",
+  "conditions": {
+    "viewport": [
+      390,
+      844
+    ],
+    "dpr": 2,
+    "png": [
+      780,
+      1688
+    ],
+    "clock": "2026-10-01T00:00:00Z",
+    "seed": 20261001,
+    "locale": "en-US",
+    "timezone": "Asia/Seoul"
+  },
+  "captures": [
+    {
+      "file": "before-home.png",
+      "sha256": "db1114a29d6b289b1025f69eea668411e3599429299891a14c52b5bd7779c284"
+    },
+    {
+      "file": "before-settings.png",
+      "sha256": "22014c026e67157472f45b6ae75948eb97f3dbc512133175165f3d90e7eb2a70"
+    },
+    {
+      "file": "before-privacy.png",
+      "sha256": "bfea097cffd6dbd15b097ab5eac6e272763b803bf6bbdcb584003f7298dddf02"
+    },
+    {
+      "file": "before-licenses.png",
+      "sha256": "ac977e9227611a278ef26d8bb36b0fe888b280681c87a84e99f7cde26006ddfb"
+    },
+    {
+      "file": "before-limitless-intro.png",
+      "sha256": "78703dff21892e376cdcc4586ab029be3ab0caf1e14da670108604c2c5bc4073"
+    },
+    {
+      "file": "before-lesson-1.png",
+      "sha256": "7531760c09d4515ceb18b579716888a808931d3d54f2527ef8fea348d6c9fd7f"
+    },
+    {
+      "file": "before-stage-1.png",
+      "sha256": "57397c0b4932c836aa0a24ebb6e368a61441a9634b2db27e572b929b034ea891"
+    },
+    {
+      "file": "before-lesson-6.png",
+      "sha256": "88b91abf9afd9ffb553b0e2cbfba810322eabee4f5c18a2f3fa7198f690879f2"
+    },
+    {
+      "file": "before-stage-6.png",
+      "sha256": "bc6f3eef55f42264d6d6bb16ede8e0090a3e238007474483926fd81fa065dbc0"
+    },
+    {
+      "file": "before-lesson-14.png",
+      "sha256": "7d319d18a25be3c1354989de72695b9b18ccc1649c585f23a34708ee7659d61b"
+    },
+    {
+      "file": "before-stage-14.png",
+      "sha256": "53405d979d63b82fa5e83d0f79122bc52e5f10234c262f75a7f56e947de782c3"
+    },
+    {
+      "file": "before-lesson-23.png",
+      "sha256": "756074ef89661427d30450d9023e611985e99647de2a70a854d0c1307cdcf41a"
+    },
+    {
+      "file": "before-stage-23.png",
+      "sha256": "c93cadf01988b974cb1b11eb4f8293cff2f3b67e260a09287f3feda7c7c8f82a"
+    },
+    {
+      "file": "before-lesson-30.png",
+      "sha256": "9b1d9bdab430f70084caf0a6b792e623dc1cc30209253fb1f5816db765826c96"
+    },
+    {
+      "file": "before-stage-30.png",
+      "sha256": "96654df61110de54bac164730219127fe00a8ac200b91243a8ad1b76aa506fe5"
+    },
+    {
+      "file": "before-timeAttack-intro.png",
+      "sha256": "2cb5f66991aa713aa3f512abd9719d326fced1d699860a9ca962472addd80168"
+    },
+    {
+      "file": "before-timeAttack-instruction.png",
+      "sha256": "f741897d7f686b1661dd031cfd6180b55cc3b9ba98d0a508be6a14c294f5f67f"
+    },
+    {
+      "file": "before-timeAttack-game.png",
+      "sha256": "b095f44c1d1c1fe31705b5b217cee288b28eb0a76dea0a09e532e5cfbabb5a8e"
+    },
+    {
+      "file": "before-timeAttack-pause.png",
+      "sha256": "382bdd13ede7e0f7e0bcf435a7e8b56fb60ed062bf61bdddad008055d2e98276"
+    },
+    {
+      "file": "before-timeless-intro.png",
+      "sha256": "9218e5e2af43dd399a6ce4329a9ce2e68815d176dc97df80a1c31a327bda72ab"
+    },
+    {
+      "file": "before-timeless-instruction.png",
+      "sha256": "2cb03ea3375635e33a845c93761c3d07c95b37199801cfbbbe5243a88c18fa88"
+    },
+    {
+      "file": "before-timeless-game.png",
+      "sha256": "3a234ebb1253e035d6aceb91ff3736918a1be0cf32df24bd7cb4dfad20c2584a"
+    },
+    {
+      "file": "before-timeless-pause.png",
+      "sha256": "8b4d80e13762bc908c7bea5374f465fcdafb7a235627a8d80cd33eab5118c356"
+    },
+    {
+      "file": "before-endless-intro.png",
+      "sha256": "357d3387b0ea4f5dc312854b3810a2ca739667ce378a8da77329597af4e6fdaa"
+    },
+    {
+      "file": "before-endless-instruction.png",
+      "sha256": "15aae7dad00029303561eb651eaf134b5d15f62de45060d7644f0848f325ada8"
+    },
+    {
+      "file": "before-endless-game.png",
+      "sha256": "6ae79390b4387098ebf29b69239345d6dbcb53cb5f1031f58b97d78f4dafd6f9"
+    },
+    {
+      "file": "before-endless-pause.png",
+      "sha256": "bb3a7dff5a0c282fe7d02f6c8f729e5737114860af335204b74cb4e1e15e1eab"
+    },
+    {
+      "file": "before-timeout-card.png",
+      "sha256": "2b0b528f1d2ccddd805d37a6a257a100291ac7d48035193857e586a3778d8f74"
+    },
+    {
+      "file": "before-timeout-result.png",
+      "sha256": "c7879931b484834f2a040829259992e86f6d6f99fb8a5775c03de35c0ffc9519"
+    },
+    {
+      "file": "before-grade-fixture.png",
+      "sha256": "5395fefbb6f0dcd158141ba78fd91cf56a1834e2bc488e0728f9ce7f4827c481"
+    },
+    {
+      "file": "after-home.png",
+      "sha256": "db1114a29d6b289b1025f69eea668411e3599429299891a14c52b5bd7779c284"
+    },
+    {
+      "file": "after-settings.png",
+      "sha256": "22014c026e67157472f45b6ae75948eb97f3dbc512133175165f3d90e7eb2a70"
+    },
+    {
+      "file": "after-privacy.png",
+      "sha256": "bfea097cffd6dbd15b097ab5eac6e272763b803bf6bbdcb584003f7298dddf02"
+    },
+    {
+      "file": "after-licenses.png",
+      "sha256": "2ff70f4e8f0429fd69ce256aa4133d40f577b6916cd77433895c06cfceb6ceae"
+    },
+    {
+      "file": "after-limitless-intro.png",
+      "sha256": "78703dff21892e376cdcc4586ab029be3ab0caf1e14da670108604c2c5bc4073"
+    },
+    {
+      "file": "after-lesson-1.png",
+      "sha256": "aace84f9d20f96b845e03a5b59899c4effb8925ac0434e1c77fbb03b8b7cc431"
+    },
+    {
+      "file": "after-stage-1.png",
+      "sha256": "ddc85aec6b1bd62293eeb46a79d566580c840e7f06f5c31140686b5edab1bd48"
+    },
+    {
+      "file": "after-lesson-6.png",
+      "sha256": "58f55ae6438f3e35f34dd01d158d7ee7bf8cf1060c6c833d4ff714d423eb678e"
+    },
+    {
+      "file": "after-stage-6.png",
+      "sha256": "9491fa7c5692afdf6e146964aebf97c8c8f2b0ee4d67930ea993ebe6717ff034"
+    },
+    {
+      "file": "after-lesson-14.png",
+      "sha256": "bc7b4b99017d733c03f113f243845f296f036746453f9c9dc4a2a0eaef15d432"
+    },
+    {
+      "file": "after-stage-14.png",
+      "sha256": "ec51494a78d4f6d05449e4d6aeb3040289cc5483177f1555f8b16bf507db230c"
+    },
+    {
+      "file": "after-lesson-23.png",
+      "sha256": "de7731c9518df13efc38f6e0503f35fe03088d6c0bf12e9fd5713d0ec7721be3"
+    },
+    {
+      "file": "after-stage-23.png",
+      "sha256": "8387fed7069e37120b7ae951a38145a96fbceefd9a87354a00041a2f94847a7a"
+    },
+    {
+      "file": "after-lesson-30.png",
+      "sha256": "42158542207899bca3735054e50fb8acaf717874ca2941a4c6c3765ad6998a84"
+    },
+    {
+      "file": "after-stage-30.png",
+      "sha256": "e7a36c2c6ec9bdc191541d77df09e8c6161a9924591f8d641e3f8248420bc584"
+    },
+    {
+      "file": "after-timeAttack-intro.png",
+      "sha256": "2cb5f66991aa713aa3f512abd9719d326fced1d699860a9ca962472addd80168"
+    },
+    {
+      "file": "after-timeAttack-instruction.png",
+      "sha256": "46fbe0a24a8d99064b0aca4750e6c3a51fbfd6642924aa3e57f62f8531309e8f"
+    },
+    {
+      "file": "after-timeAttack-game.png",
+      "sha256": "9902428c536a0e8a81009ed9cd118dfcfeb4bc2fe6bc94fbfa6133d8e8f41e25"
+    },
+    {
+      "file": "after-timeAttack-pause.png",
+      "sha256": "02540334dabb71c93cdaf3f7c2cdd8b8ae88dafba690c43d498b0f69bd19d309"
+    },
+    {
+      "file": "after-timeless-intro.png",
+      "sha256": "9218e5e2af43dd399a6ce4329a9ce2e68815d176dc97df80a1c31a327bda72ab"
+    },
+    {
+      "file": "after-timeless-instruction.png",
+      "sha256": "49b9ef752cd488df3dd9c99ef176db314c04e62ec224f7a7afabff38d56d431f"
+    },
+    {
+      "file": "after-timeless-game.png",
+      "sha256": "cb1fdb595b01dd5131689ca6a592e34fb731c80ae045597a5ecbca9df393ab08"
+    },
+    {
+      "file": "after-timeless-pause.png",
+      "sha256": "df402817ec944a0b1c902d599781a48a3f9d41aa4eb93879d12ed210378d211a"
+    },
+    {
+      "file": "after-endless-intro.png",
+      "sha256": "357d3387b0ea4f5dc312854b3810a2ca739667ce378a8da77329597af4e6fdaa"
+    },
+    {
+      "file": "after-endless-instruction.png",
+      "sha256": "e98de1ebf8b89ed53eba2609ca1800c947bb10b5101034d46369feab4cb2158d"
+    },
+    {
+      "file": "after-endless-game.png",
+      "sha256": "45a79c24f1cac602d905da26abfa4c31025b3577adcdc75b0cda8b6f3f9b1003"
+    },
+    {
+      "file": "after-endless-pause.png",
+      "sha256": "81b95fb693d1d02d2d611a16798725a19bf6193fe68db3256a6a9997311e9f07"
+    },
+    {
+      "file": "after-timeout-card.png",
+      "sha256": "4883cffea594cbb78606633983954d91d5852c9c9ba5d96d0aec008535e508c4"
+    },
+    {
+      "file": "after-timeout-result.png",
+      "sha256": "81475186730f749ca0e06bc4a10422a5d71d2ef985c3bf3564944a40530b6dcb"
+    },
+    {
+      "file": "after-grade-fixture.png",
+      "sha256": "fc88c8b8bdcb42e4d081c956652c37fe7356590bb4e9d1ac30bd0fc3580e4ad5"
+    },
+    {
+      "file": "after-inset-home.png",
+      "sha256": "2fe7bd5a1f673ff16356133eb53ec09dc7a0ba37315848f0f4a22450ebc26324"
+    },
+    {
+      "file": "after-inset-settings.png",
+      "sha256": "cdabbb2f6b19c6ae37a8f7a9ee16d18a696293945f155c9fdfebd4d39537bcb0"
+    },
+    {
+      "file": "after-inset-privacy.png",
+      "sha256": "565046a6599d0850e44e912bf4e31279c2684540b4b35571ad314d776ad1fb7c"
+    },
+    {
+      "file": "after-inset-game.png",
+      "sha256": "7df2b189fe97fa56ab9b991c01cfc87141dddc71f45e0a0afb907735c6d70274"
+    },
+    {
+      "file": "after-inset-pause.png",
+      "sha256": "76dcab2a759d06815f62c9af18272ac7de5ac530f96e87a878034375487c30f5"
+    },
+    {
+      "file": "after-inset-grade.png",
+      "sha256": "d8b1f17381e0bc3a4ec071adcce47d3eaea869f725781cfa30ca367213fbbbb6"
+    }
+  ],
+  "metrics": {
+    "before": {
+      "home": {
+        ".brand-mark": {
+          "x": 70,
+          "y": 73.859375,
+          "width": 250,
+          "height": 293.375,
+          "size": "32px",
+          "weight": "700",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "0px"
+        },
+        ".mode-btn": {
+          "x": 25,
+          "y": 425.796875,
+          "width": 340,
+          "height": 79,
+          "size": "13.3333px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".mode-name": {
+          "x": 46,
+          "y": 442.796875,
+          "width": 298,
+          "height": 25,
+          "size": "21px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".mode-desc": {
+          "x": 46,
+          "y": 471.796875,
+          "width": 298,
+          "height": 16,
+          "size": "13px",
+          "weight": "700",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-title-settings": {
+          "x": 163.671875,
+          "y": 741.34375,
+          "width": 62.65625,
+          "height": 33,
+          "size": "14px",
+          "weight": "700",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "settings": {
+        ".picker-title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "size": "20px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".switch-row": {
+          "x": 16,
+          "y": 62,
+          "width": 358,
+          "height": 73,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".switch-text b": {
+          "x": 35,
+          "y": 79,
+          "width": 206.171875,
+          "height": 19,
+          "size": "16px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".switch-text small": {
+          "x": 35,
+          "y": 102,
+          "width": 206.171875,
+          "height": 16,
+          "size": "13px",
+          "weight": "600",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".settings-links": {
+          "x": 16,
+          "y": 327,
+          "width": 358,
+          "height": 44,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "privacy": {
+        "#legal-dialog": {
+          "x": 19,
+          "y": 42,
+          "width": 352,
+          "height": 760,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#legal-title": {
+          "x": 36,
+          "y": 63.5,
+          "width": 93.921875,
+          "height": 19,
+          "size": "16px",
+          "weight": "600",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-legal-close": {
+          "x": 306.546875,
+          "y": 51,
+          "width": 47.453125,
+          "height": 44,
+          "size": "14px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "licenses": {
+        "#legal-dialog": {
+          "x": 19,
+          "y": 42,
+          "width": 352,
+          "height": 760,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#legal-title": {
+          "x": 36,
+          "y": 63.5,
+          "width": 145.90625,
+          "height": 19,
+          "size": "16px",
+          "weight": "600",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-legal-close": {
+          "x": 306.546875,
+          "y": 51,
+          "width": 47.453125,
+          "height": 44,
+          "size": "14px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "limitless-intro": {
+        ".intro-title": {
+          "x": 120.390625,
+          "y": 245.6875,
+          "width": 149.21875,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".intro-mark": {
+          "x": 125,
+          "y": 292.6875,
+          "width": 140,
+          "height": 140,
+          "size": "58px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-intro-start": {
+          "x": 65,
+          "y": 553.6875,
+          "width": 260,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "lesson-1": {
+        ".lesson-intro-title": {
+          "x": 94.828125,
+          "y": 356.984375,
+          "width": 200.34375,
+          "height": 78.625,
+          "size": "31.2px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "39.312px"
+        },
+        ".lesson-intro-tap": {
+          "x": 151.453125,
+          "y": 475.609375,
+          "width": 87.078125,
+          "height": 23.390625,
+          "size": "18px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "23.4px"
+        }
+      },
+      "stage-1": {
+        "#run-title": {
+          "x": 152.75,
+          "y": 22,
+          "width": 84.484375,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "size": "13px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 48.625,
+          "y": 89,
+          "width": 48.75,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14,
+          "y": 232.5,
+          "width": 362,
+          "height": 362,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20,
+          "y": 237.75709533691406,
+          "width": 174,
+          "height": 173.99998474121094,
+          "size": "93.96px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "93.96px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "size": "14px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "size": "13px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "lesson-6": {
+        ".lesson-intro-title": {
+          "x": 94.828125,
+          "y": 356.984375,
+          "width": 200.34375,
+          "height": 78.625,
+          "size": "31.2px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "39.312px"
+        },
+        ".lesson-intro-tap": {
+          "x": 151.453125,
+          "y": 475.609375,
+          "width": 87.078125,
+          "height": 23.390625,
+          "size": "18px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "23.4px"
+        }
+      },
+      "stage-6": {
+        "#run-title": {
+          "x": 152.75,
+          "y": 22,
+          "width": 84.484375,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "size": "13px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 115,
+          "height": 115,
+          "size": "62.1px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "62.1px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "size": "14px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "size": "13px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "lesson-14": {
+        ".lesson-intro-title": {
+          "x": 93.796875,
+          "y": 356.984375,
+          "width": 202.40625,
+          "height": 78.625,
+          "size": "31.2px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "39.312px"
+        },
+        ".lesson-intro-tap": {
+          "x": 151.453125,
+          "y": 475.609375,
+          "width": 87.078125,
+          "height": 23.390625,
+          "size": "18px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "23.4px"
+        }
+      },
+      "stage-14": {
+        "#run-title": {
+          "x": 152.75,
+          "y": 22,
+          "width": 84.484375,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "size": "13px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 115,
+          "height": 115,
+          "size": "62.1px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "62.1px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "size": "14px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "size": "13px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "lesson-23": {
+        ".lesson-intro-title": {
+          "x": 95.09375,
+          "y": 356.984375,
+          "width": 199.8125,
+          "height": 78.625,
+          "size": "31.2px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "39.312px"
+        },
+        ".lesson-intro-tap": {
+          "x": 151.453125,
+          "y": 475.609375,
+          "width": 87.078125,
+          "height": 23.390625,
+          "size": "18px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "23.4px"
+        }
+      },
+      "stage-23": {
+        "#run-title": {
+          "x": 152.75,
+          "y": 22,
+          "width": 84.484375,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "size": "13px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 115,
+          "height": 115,
+          "size": "62.1px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "62.1px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "size": "14px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "size": "13px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "lesson-30": {
+        ".lesson-intro-title": {
+          "x": 118.65625,
+          "y": 356.984375,
+          "width": 152.671875,
+          "height": 78.625,
+          "size": "31.2px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "39.312px"
+        },
+        ".lesson-intro-tap": {
+          "x": 151.453125,
+          "y": 475.609375,
+          "width": 87.078125,
+          "height": 23.390625,
+          "size": "18px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "23.4px"
+        }
+      },
+      "stage-30": {
+        "#run-title": {
+          "x": 152.75,
+          "y": 22,
+          "width": 84.484375,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "size": "13px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 115,
+          "height": 115,
+          "size": "62.1px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "62.1px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "size": "14px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "size": "13px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "timeAttack-intro": {
+        ".intro-title": {
+          "x": 120.390625,
+          "y": 245.6875,
+          "width": 149.21875,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".intro-mark": {
+          "x": 125,
+          "y": 292.6875,
+          "width": 140,
+          "height": 140,
+          "size": "58px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-intro-start": {
+          "x": 65,
+          "y": 553.6875,
+          "width": 260,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "timeAttack-instruction": {
+        ".lesson-intro-title": {
+          "x": 85.8125,
+          "y": 356.984375,
+          "width": 218.375,
+          "height": 78.625,
+          "size": "31.2px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "39.312px"
+        },
+        ".lesson-intro-tap": {
+          "x": 151.453125,
+          "y": 475.609375,
+          "width": 87.078125,
+          "height": 23.390625,
+          "size": "18px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "23.4px"
+        }
+      },
+      "timeAttack-game": {
+        "#run-title": {
+          "x": 144.6875,
+          "y": 22,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "size": "13px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "size": "14px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "size": "13px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "timeAttack-pause": {
+        "#overlay .panel": {
+          "x": 24,
+          "y": 296.25,
+          "width": 342,
+          "height": 251.5,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#overlay-title": {
+          "x": 49,
+          "y": 325.25,
+          "width": 292,
+          "height": 32,
+          "size": "28px",
+          "weight": "700",
+          "family": "Georgia, \"Times New Roman\", serif",
+          "line": "normal"
+        },
+        "#overlay-body": {
+          "x": 49,
+          "y": 367.25,
+          "width": 292,
+          "height": 25.5,
+          "size": "15px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "25.5px"
+        },
+        "#btn-primary": {
+          "x": 49,
+          "y": 412.75,
+          "width": 292,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-secondary": {
+          "x": 49,
+          "y": 472.75,
+          "width": 292,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "timeless-intro": {
+        ".intro-title": {
+          "x": 125.125,
+          "y": 245.6875,
+          "width": 139.734375,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".intro-mark": {
+          "x": 125,
+          "y": 292.6875,
+          "width": 140,
+          "height": 140,
+          "size": "58px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-intro-start": {
+          "x": 65,
+          "y": 553.6875,
+          "width": 260,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "timeless-instruction": {
+        ".lesson-intro-title": {
+          "x": 90.375,
+          "y": 347.5,
+          "width": 209.234375,
+          "height": 97.59375,
+          "size": "23.4px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "32.526px"
+        },
+        ".lesson-intro-tap": {
+          "x": 151.453125,
+          "y": 485.09375,
+          "width": 87.078125,
+          "height": 23.390625,
+          "size": "18px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "23.4px"
+        }
+      },
+      "timeless-game": {
+        "#run-title": {
+          "x": 147.953125,
+          "y": 22,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.578125,
+          "y": 71,
+          "width": 36.84375,
+          "height": 16,
+          "size": "13px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 63.328125,
+          "y": 89,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 216,
+          "width": 361,
+          "height": 361,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 222,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 665,
+          "width": 362,
+          "height": 24,
+          "size": "14px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "size": "13px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "timeless-pause": {
+        "#overlay .panel": {
+          "x": 24,
+          "y": 296.25,
+          "width": 342,
+          "height": 251.5,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#overlay-title": {
+          "x": 49,
+          "y": 325.25,
+          "width": 292,
+          "height": 32,
+          "size": "28px",
+          "weight": "700",
+          "family": "Georgia, \"Times New Roman\", serif",
+          "line": "normal"
+        },
+        "#overlay-body": {
+          "x": 49,
+          "y": 367.25,
+          "width": 292,
+          "height": 25.5,
+          "size": "15px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "25.5px"
+        },
+        "#btn-primary": {
+          "x": 49,
+          "y": 412.75,
+          "width": 292,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-secondary": {
+          "x": 49,
+          "y": 472.75,
+          "width": 292,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "endless-intro": {
+        ".intro-title": {
+          "x": 131.03125,
+          "y": 245.6875,
+          "width": 127.921875,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".intro-mark": {
+          "x": 125,
+          "y": 292.6875,
+          "width": 140,
+          "height": 140,
+          "size": "58px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-intro-start": {
+          "x": 65,
+          "y": 553.6875,
+          "width": 260,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "endless-instruction": {
+        ".lesson-intro-title": {
+          "x": 96.890625,
+          "y": 347.5,
+          "width": 196.21875,
+          "height": 97.59375,
+          "size": "23.4px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "32.526px"
+        },
+        ".lesson-intro-tap": {
+          "x": 151.453125,
+          "y": 485.09375,
+          "width": 87.078125,
+          "height": 23.390625,
+          "size": "18px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "23.4px"
+        }
+      },
+      "endless-game": {
+        "#run-title": {
+          "x": 151.984375,
+          "y": 22,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "size": "13px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "size": "14px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "size": "13px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "endless-pause": {
+        "#overlay .panel": {
+          "x": 24,
+          "y": 296.25,
+          "width": 342,
+          "height": 251.5,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#overlay-title": {
+          "x": 49,
+          "y": 325.25,
+          "width": 292,
+          "height": 32,
+          "size": "28px",
+          "weight": "700",
+          "family": "Georgia, \"Times New Roman\", serif",
+          "line": "normal"
+        },
+        "#overlay-body": {
+          "x": 49,
+          "y": 367.25,
+          "width": 292,
+          "height": 25.5,
+          "size": "15px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "25.5px"
+        },
+        "#btn-primary": {
+          "x": 49,
+          "y": 412.75,
+          "width": 292,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-secondary": {
+          "x": 49,
+          "y": 472.75,
+          "width": 292,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "timeout-card": {
+        ".cheer-headline": {
+          "x": 18,
+          "y": 343.09375,
+          "width": 354,
+          "height": 43,
+          "size": "35.1px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".cheer-score": {
+          "x": 18,
+          "y": 415.09375,
+          "width": 354,
+          "height": 85.796875,
+          "size": "85.8px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "85.8px"
+        }
+      },
+      "timeout-result": {
+        "#overlay .panel": {
+          "x": 24,
+          "y": 270.75,
+          "width": 342,
+          "height": 302.5,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#overlay-title": {
+          "x": 49,
+          "y": 299.75,
+          "width": 292,
+          "height": 32,
+          "size": "28px",
+          "weight": "700",
+          "family": "Georgia, \"Times New Roman\", serif",
+          "line": "normal"
+        },
+        "#overlay-body": {
+          "x": 49,
+          "y": 341.75,
+          "width": 292,
+          "height": 76.5,
+          "size": "15px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "25.5px"
+        },
+        "#btn-primary": {
+          "x": 49,
+          "y": 438.25,
+          "width": 292,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "grade-fixture": {
+        "#cheer-word": {
+          "x": 40.453125,
+          "y": 185.671875,
+          "width": 309.09375,
+          "height": 51.484375,
+          "size": "42.9px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "51.48px"
+        },
+        "#cheer-tap": {
+          "x": 121.625,
+          "y": 803,
+          "width": 146.734375,
+          "height": 17,
+          "size": "14px",
+          "weight": "700",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      }
+    },
+    "after": {
+      "home": {
+        ".brand-mark": {
+          "x": 70,
+          "y": 73.859375,
+          "width": 250,
+          "height": 293.375,
+          "size": "32px",
+          "weight": "700",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "0px"
+        },
+        ".mode-btn": {
+          "x": 25,
+          "y": 425.796875,
+          "width": 340,
+          "height": 79,
+          "size": "13.3333px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".mode-name": {
+          "x": 46,
+          "y": 442.796875,
+          "width": 298,
+          "height": 25,
+          "size": "21px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".mode-desc": {
+          "x": 46,
+          "y": 471.796875,
+          "width": 298,
+          "height": 16,
+          "size": "13px",
+          "weight": "700",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-title-settings": {
+          "x": 163.671875,
+          "y": 741.34375,
+          "width": 62.65625,
+          "height": 33,
+          "size": "14px",
+          "weight": "700",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "settings": {
+        ".picker-title": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "size": "20px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".switch-row": {
+          "x": 16,
+          "y": 62,
+          "width": 358,
+          "height": 73,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".switch-text b": {
+          "x": 35,
+          "y": 79,
+          "width": 206.171875,
+          "height": 19,
+          "size": "16px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".switch-text small": {
+          "x": 35,
+          "y": 102,
+          "width": 206.171875,
+          "height": 16,
+          "size": "13px",
+          "weight": "600",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".settings-links": {
+          "x": 16,
+          "y": 327,
+          "width": 358,
+          "height": 44,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "privacy": {
+        "#legal-dialog": {
+          "x": 19,
+          "y": 42,
+          "width": 352,
+          "height": 760,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#legal-title": {
+          "x": 36,
+          "y": 63.5,
+          "width": 93.921875,
+          "height": 19,
+          "size": "16px",
+          "weight": "600",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-legal-close": {
+          "x": 306.546875,
+          "y": 51,
+          "width": 47.453125,
+          "height": 44,
+          "size": "14px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "licenses": {
+        "#legal-dialog": {
+          "x": 19,
+          "y": 42,
+          "width": 352,
+          "height": 760,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#legal-title": {
+          "x": 36,
+          "y": 63.5,
+          "width": 145.90625,
+          "height": 19,
+          "size": "16px",
+          "weight": "600",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-legal-close": {
+          "x": 306.546875,
+          "y": 51,
+          "width": 47.453125,
+          "height": 44,
+          "size": "14px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "limitless-intro": {
+        ".intro-title": {
+          "x": 120.390625,
+          "y": 245.6875,
+          "width": 149.21875,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".intro-mark": {
+          "x": 125,
+          "y": 292.6875,
+          "width": 140,
+          "height": 140,
+          "size": "58px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-intro-start": {
+          "x": 65,
+          "y": 553.6875,
+          "width": 260,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "lesson-1": {
+        ".lesson-intro-title": {
+          "x": 94.828125,
+          "y": 356.984375,
+          "width": 200.34375,
+          "height": 78.625,
+          "size": "31.2px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "39.312px"
+        },
+        ".lesson-intro-tap": {
+          "x": 151.453125,
+          "y": 475.609375,
+          "width": 87.078125,
+          "height": 23.390625,
+          "size": "18px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "23.4px"
+        }
+      },
+      "stage-1": {
+        "#run-title": {
+          "x": 152.75,
+          "y": 22,
+          "width": 84.484375,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "size": "13px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 48.625,
+          "y": 89,
+          "width": 48.75,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14,
+          "y": 232.5,
+          "width": 362,
+          "height": 362,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20,
+          "y": 237.75746154785156,
+          "width": 174,
+          "height": 173.99998474121094,
+          "size": "93.96px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "93.96px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "size": "14px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "size": "13px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "lesson-6": {
+        ".lesson-intro-title": {
+          "x": 94.828125,
+          "y": 356.984375,
+          "width": 200.34375,
+          "height": 78.625,
+          "size": "31.2px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "39.312px"
+        },
+        ".lesson-intro-tap": {
+          "x": 151.453125,
+          "y": 475.609375,
+          "width": 87.078125,
+          "height": 23.390625,
+          "size": "18px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "23.4px"
+        }
+      },
+      "stage-6": {
+        "#run-title": {
+          "x": 152.75,
+          "y": 22,
+          "width": 84.484375,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "size": "13px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 115,
+          "height": 115,
+          "size": "62.1px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "62.1px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "size": "14px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "size": "13px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "lesson-14": {
+        ".lesson-intro-title": {
+          "x": 93.796875,
+          "y": 356.984375,
+          "width": 202.40625,
+          "height": 78.625,
+          "size": "31.2px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "39.312px"
+        },
+        ".lesson-intro-tap": {
+          "x": 151.453125,
+          "y": 475.609375,
+          "width": 87.078125,
+          "height": 23.390625,
+          "size": "18px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "23.4px"
+        }
+      },
+      "stage-14": {
+        "#run-title": {
+          "x": 152.75,
+          "y": 22,
+          "width": 84.484375,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "size": "13px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 115,
+          "height": 115,
+          "size": "62.1px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "62.1px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "size": "14px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "size": "13px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "lesson-23": {
+        ".lesson-intro-title": {
+          "x": 95.09375,
+          "y": 356.984375,
+          "width": 199.8125,
+          "height": 78.625,
+          "size": "31.2px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "39.312px"
+        },
+        ".lesson-intro-tap": {
+          "x": 151.453125,
+          "y": 475.609375,
+          "width": 87.078125,
+          "height": 23.390625,
+          "size": "18px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "23.4px"
+        }
+      },
+      "stage-23": {
+        "#run-title": {
+          "x": 152.75,
+          "y": 22,
+          "width": 84.484375,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "size": "13px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 115,
+          "height": 115,
+          "size": "62.1px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "62.1px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "size": "14px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "size": "13px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "lesson-30": {
+        ".lesson-intro-title": {
+          "x": 118.65625,
+          "y": 356.984375,
+          "width": 152.671875,
+          "height": 78.625,
+          "size": "31.2px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "39.312px"
+        },
+        ".lesson-intro-tap": {
+          "x": 151.453125,
+          "y": 475.609375,
+          "width": 87.078125,
+          "height": 23.390625,
+          "size": "18px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "23.4px"
+        }
+      },
+      "stage-30": {
+        "#run-title": {
+          "x": 152.75,
+          "y": 22,
+          "width": 84.484375,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "size": "13px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 115,
+          "height": 115,
+          "size": "62.1px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "62.1px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "size": "14px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "size": "13px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "timeAttack-intro": {
+        ".intro-title": {
+          "x": 120.390625,
+          "y": 245.6875,
+          "width": 149.21875,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".intro-mark": {
+          "x": 125,
+          "y": 292.6875,
+          "width": 140,
+          "height": 140,
+          "size": "58px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-intro-start": {
+          "x": 65,
+          "y": 553.6875,
+          "width": 260,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "timeAttack-instruction": {
+        ".lesson-intro-title": {
+          "x": 85.8125,
+          "y": 356.984375,
+          "width": 218.375,
+          "height": 78.625,
+          "size": "31.2px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "39.312px"
+        },
+        ".lesson-intro-tap": {
+          "x": 151.453125,
+          "y": 475.609375,
+          "width": 87.078125,
+          "height": 23.390625,
+          "size": "18px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "23.4px"
+        }
+      },
+      "timeAttack-game": {
+        "#run-title": {
+          "x": 144.6875,
+          "y": 22,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "size": "13px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "size": "14px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "size": "13px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "timeAttack-pause": {
+        "#overlay .panel": {
+          "x": 24,
+          "y": 296.25,
+          "width": 342,
+          "height": 251.5,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#overlay-title": {
+          "x": 49,
+          "y": 325.25,
+          "width": 292,
+          "height": 32,
+          "size": "28px",
+          "weight": "700",
+          "family": "Georgia, \"Times New Roman\", serif",
+          "line": "normal"
+        },
+        "#overlay-body": {
+          "x": 49,
+          "y": 367.25,
+          "width": 292,
+          "height": 25.5,
+          "size": "15px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "25.5px"
+        },
+        "#btn-primary": {
+          "x": 49,
+          "y": 412.75,
+          "width": 292,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-secondary": {
+          "x": 49,
+          "y": 472.75,
+          "width": 292,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "timeless-intro": {
+        ".intro-title": {
+          "x": 125.125,
+          "y": 245.6875,
+          "width": 139.734375,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".intro-mark": {
+          "x": 125,
+          "y": 292.6875,
+          "width": 140,
+          "height": 140,
+          "size": "58px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-intro-start": {
+          "x": 65,
+          "y": 553.6875,
+          "width": 260,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "timeless-instruction": {
+        ".lesson-intro-title": {
+          "x": 90.375,
+          "y": 347.5,
+          "width": 209.234375,
+          "height": 97.59375,
+          "size": "23.4px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "32.526px"
+        },
+        ".lesson-intro-tap": {
+          "x": 151.453125,
+          "y": 485.09375,
+          "width": 87.078125,
+          "height": 23.390625,
+          "size": "18px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "23.4px"
+        }
+      },
+      "timeless-game": {
+        "#run-title": {
+          "x": 147.953125,
+          "y": 22,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.578125,
+          "y": 71,
+          "width": 36.84375,
+          "height": 16,
+          "size": "13px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 63.328125,
+          "y": 89,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 216,
+          "width": 361,
+          "height": 361,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 222,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 665,
+          "width": 362,
+          "height": 24,
+          "size": "14px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "size": "13px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "timeless-pause": {
+        "#overlay .panel": {
+          "x": 24,
+          "y": 296.25,
+          "width": 342,
+          "height": 251.5,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#overlay-title": {
+          "x": 49,
+          "y": 325.25,
+          "width": 292,
+          "height": 32,
+          "size": "28px",
+          "weight": "700",
+          "family": "Georgia, \"Times New Roman\", serif",
+          "line": "normal"
+        },
+        "#overlay-body": {
+          "x": 49,
+          "y": 367.25,
+          "width": 292,
+          "height": 25.5,
+          "size": "15px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "25.5px"
+        },
+        "#btn-primary": {
+          "x": 49,
+          "y": 412.75,
+          "width": 292,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-secondary": {
+          "x": 49,
+          "y": 472.75,
+          "width": 292,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "endless-intro": {
+        ".intro-title": {
+          "x": 131.03125,
+          "y": 245.6875,
+          "width": 127.921875,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".intro-mark": {
+          "x": 125,
+          "y": 292.6875,
+          "width": 140,
+          "height": 140,
+          "size": "58px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-intro-start": {
+          "x": 65,
+          "y": 553.6875,
+          "width": 260,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "endless-instruction": {
+        ".lesson-intro-title": {
+          "x": 96.890625,
+          "y": 347.5,
+          "width": 196.21875,
+          "height": 97.59375,
+          "size": "23.4px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "32.526px"
+        },
+        ".lesson-intro-tap": {
+          "x": 151.453125,
+          "y": 485.09375,
+          "width": 87.078125,
+          "height": 23.390625,
+          "size": "18px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "23.4px"
+        }
+      },
+      "endless-game": {
+        "#run-title": {
+          "x": 151.984375,
+          "y": 22,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-label": {
+          "x": 54.09375,
+          "y": 71,
+          "width": 37.796875,
+          "height": 16,
+          "size": "13px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board": {
+          "x": 14.5,
+          "y": 233,
+          "width": 361,
+          "height": 361,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        },
+        "#notice": {
+          "x": 14,
+          "y": 687,
+          "width": 362,
+          "height": 24,
+          "size": "14px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#selection-sum": {
+          "x": 16,
+          "y": 719,
+          "width": 358,
+          "height": 45,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-label": {
+          "x": 151.203125,
+          "y": 733.5,
+          "width": 29.640625,
+          "height": 16,
+          "size": "13px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".sum-total": {
+          "x": 212.78125,
+          "y": 726,
+          "width": 26,
+          "height": 31,
+          "size": "26px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "endless-pause": {
+        "#overlay .panel": {
+          "x": 24,
+          "y": 296.25,
+          "width": 342,
+          "height": 251.5,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#overlay-title": {
+          "x": 49,
+          "y": 325.25,
+          "width": 292,
+          "height": 32,
+          "size": "28px",
+          "weight": "700",
+          "family": "Georgia, \"Times New Roman\", serif",
+          "line": "normal"
+        },
+        "#overlay-body": {
+          "x": 49,
+          "y": 367.25,
+          "width": 292,
+          "height": 25.5,
+          "size": "15px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "25.5px"
+        },
+        "#btn-primary": {
+          "x": 49,
+          "y": 412.75,
+          "width": 292,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#btn-secondary": {
+          "x": 49,
+          "y": 472.75,
+          "width": 292,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "timeout-card": {
+        ".cheer-headline": {
+          "x": 18,
+          "y": 343.09375,
+          "width": 354,
+          "height": 43,
+          "size": "35.1px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".cheer-score": {
+          "x": 18,
+          "y": 415.09375,
+          "width": 354,
+          "height": 85.796875,
+          "size": "85.8px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "85.8px"
+        }
+      },
+      "timeout-result": {
+        "#overlay .panel": {
+          "x": 24,
+          "y": 270.75,
+          "width": 342,
+          "height": 302.5,
+          "size": "16px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#overlay-title": {
+          "x": 49,
+          "y": 299.75,
+          "width": 292,
+          "height": 32,
+          "size": "28px",
+          "weight": "700",
+          "family": "Georgia, \"Times New Roman\", serif",
+          "line": "normal"
+        },
+        "#overlay-body": {
+          "x": 49,
+          "y": 341.75,
+          "width": 292,
+          "height": 76.5,
+          "size": "15px",
+          "weight": "400",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "25.5px"
+        },
+        "#btn-primary": {
+          "x": 49,
+          "y": 438.25,
+          "width": 292,
+          "height": 50,
+          "size": "17px",
+          "weight": "800",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      },
+      "grade-fixture": {
+        "#cheer-word": {
+          "x": 40.453125,
+          "y": 185.671875,
+          "width": 309.09375,
+          "height": 51.484375,
+          "size": "42.9px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "51.48px"
+        },
+        "#cheer-tap": {
+          "x": 121.625,
+          "y": 803,
+          "width": 146.734375,
+          "height": 17,
+          "size": "14px",
+          "weight": "700",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        }
+      }
+    }
+  },
+  "matrix": [
+    {
+      "w": 320,
+      "h": 568,
+      "t": 0,
+      "b": 0,
+      "mode": "timeAttack",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 320,
+          "top": 0,
+          "bottom": 45,
+          "width": 320,
+          "height": 45
+        },
+        {
+          "selector": "#board",
+          "left": 15.5,
+          "right": 304.5,
+          "top": 148.5,
+          "bottom": 437.5,
+          "width": 289,
+          "height": 289
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 12,
+          "right": 308,
+          "top": 479,
+          "bottom": 508,
+          "width": 296,
+          "height": 29
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 109.6875,
+          "y": 14,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 35.359375,
+          "y": 78,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 21.5,
+          "y": 154.5,
+          "width": 29,
+          "height": 29,
+          "size": "15.66px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "15.66px"
+        }
+      }
+    },
+    {
+      "w": 320,
+      "h": 568,
+      "t": 0,
+      "b": 0,
+      "mode": "timeless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 320,
+          "top": 0,
+          "bottom": 45,
+          "width": 320,
+          "height": 45
+        },
+        {
+          "selector": "#board",
+          "left": 15.5,
+          "right": 304.5,
+          "top": 131.5,
+          "bottom": 420.5,
+          "width": 289,
+          "height": 289
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 12,
+          "right": 308,
+          "top": 479,
+          "bottom": 508,
+          "width": 296,
+          "height": 29
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 112.953125,
+          "y": 14,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 51.65625,
+          "y": 78,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 21.5,
+          "y": 137.5,
+          "width": 29,
+          "height": 29,
+          "size": "15.66px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "15.66px"
+        }
+      }
+    },
+    {
+      "w": 320,
+      "h": 568,
+      "t": 0,
+      "b": 0,
+      "mode": "endless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 320,
+          "top": 0,
+          "bottom": 45,
+          "width": 320,
+          "height": 45
+        },
+        {
+          "selector": "#board",
+          "left": 15.5,
+          "right": 304.5,
+          "top": 148.5,
+          "bottom": 437.5,
+          "width": 289,
+          "height": 289
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 12,
+          "right": 308,
+          "top": 479,
+          "bottom": 508,
+          "width": 296,
+          "height": 29
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 116.984375,
+          "y": 14,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 35.359375,
+          "y": 78,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 21.5,
+          "y": 154.5,
+          "width": 29,
+          "height": 29,
+          "size": "15.66px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "15.66px"
+        }
+      }
+    },
+    {
+      "w": 320,
+      "h": 568,
+      "t": 24,
+      "b": 48,
+      "mode": "timeAttack",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 320,
+          "top": 24,
+          "bottom": 69,
+          "width": 320,
+          "height": 45
+        },
+        {
+          "selector": "#board",
+          "left": 38,
+          "right": 282,
+          "top": 159,
+          "bottom": 403,
+          "width": 244,
+          "height": 244
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 12,
+          "right": 308,
+          "top": 431,
+          "bottom": 460,
+          "width": 296,
+          "height": 29
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 109.6875,
+          "y": 38,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 35.359375,
+          "y": 102,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 44,
+          "y": 165,
+          "width": 24,
+          "height": 24,
+          "size": "12.96px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "12.96px"
+        }
+      }
+    },
+    {
+      "w": 320,
+      "h": 568,
+      "t": 24,
+      "b": 48,
+      "mode": "timeless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 320,
+          "top": 24,
+          "bottom": 69,
+          "width": 320,
+          "height": 45
+        },
+        {
+          "selector": "#board",
+          "left": 42.5,
+          "right": 277.5,
+          "top": 146.5,
+          "bottom": 381.5,
+          "width": 235,
+          "height": 235
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 12,
+          "right": 308,
+          "top": 431,
+          "bottom": 460,
+          "width": 296,
+          "height": 29
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 112.953125,
+          "y": 38,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 51.65625,
+          "y": 102,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 48.5,
+          "y": 152.5,
+          "width": 23,
+          "height": 23,
+          "size": "12.42px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "12.42px"
+        }
+      }
+    },
+    {
+      "w": 320,
+      "h": 568,
+      "t": 24,
+      "b": 48,
+      "mode": "endless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 320,
+          "top": 24,
+          "bottom": 69,
+          "width": 320,
+          "height": 45
+        },
+        {
+          "selector": "#board",
+          "left": 38,
+          "right": 282,
+          "top": 159,
+          "bottom": 403,
+          "width": 244,
+          "height": 244
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 12,
+          "right": 308,
+          "top": 431,
+          "bottom": 460,
+          "width": 296,
+          "height": 29
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 116.984375,
+          "y": 38,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 35.359375,
+          "y": 102,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 44,
+          "y": 165,
+          "width": 24,
+          "height": 24,
+          "size": "12.96px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "12.96px"
+        }
+      }
+    },
+    {
+      "w": 360,
+      "h": 740,
+      "t": 0,
+      "b": 0,
+      "mode": "timeAttack",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 360,
+          "top": 0,
+          "bottom": 56,
+          "width": 360,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 17.5,
+          "right": 342.5,
+          "top": 199,
+          "bottom": 524,
+          "width": 325,
+          "height": 325
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 344,
+          "top": 615,
+          "bottom": 660,
+          "width": 328,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 129.6875,
+          "y": 22,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 42.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 23.5,
+          "y": 205,
+          "width": 33,
+          "height": 33,
+          "size": "17.82px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "17.82px"
+        }
+      }
+    },
+    {
+      "w": 360,
+      "h": 740,
+      "t": 0,
+      "b": 0,
+      "mode": "timeless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 360,
+          "top": 0,
+          "bottom": 56,
+          "width": 360,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 17.5,
+          "right": 342.5,
+          "top": 182,
+          "bottom": 507,
+          "width": 325,
+          "height": 325
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 344,
+          "top": 615,
+          "bottom": 660,
+          "width": 328,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 132.953125,
+          "y": 22,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 58.328125,
+          "y": 89,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 23.5,
+          "y": 188,
+          "width": 33,
+          "height": 33,
+          "size": "17.82px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "17.82px"
+        }
+      }
+    },
+    {
+      "w": 360,
+      "h": 740,
+      "t": 0,
+      "b": 0,
+      "mode": "endless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 360,
+          "top": 0,
+          "bottom": 56,
+          "width": 360,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 17.5,
+          "right": 342.5,
+          "top": 199,
+          "bottom": 524,
+          "width": 325,
+          "height": 325
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 344,
+          "top": 615,
+          "bottom": 660,
+          "width": 328,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 136.984375,
+          "y": 22,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 42.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 23.5,
+          "y": 205,
+          "width": 33,
+          "height": 33,
+          "size": "17.82px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "17.82px"
+        }
+      }
+    },
+    {
+      "w": 360,
+      "h": 740,
+      "t": 24,
+      "b": 48,
+      "mode": "timeAttack",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 360,
+          "top": 24,
+          "bottom": 80,
+          "width": 360,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 17.5,
+          "right": 342.5,
+          "top": 187,
+          "bottom": 512,
+          "width": 325,
+          "height": 325
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 344,
+          "top": 567,
+          "bottom": 612,
+          "width": 328,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 129.6875,
+          "y": 46,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 42.03125,
+          "y": 113,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 23.5,
+          "y": 193,
+          "width": 33,
+          "height": 33,
+          "size": "17.82px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "17.82px"
+        }
+      }
+    },
+    {
+      "w": 360,
+      "h": 740,
+      "t": 24,
+      "b": 48,
+      "mode": "timeless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 360,
+          "top": 24,
+          "bottom": 80,
+          "width": 360,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 17.5,
+          "right": 342.5,
+          "top": 170,
+          "bottom": 495,
+          "width": 325,
+          "height": 325
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 344,
+          "top": 567,
+          "bottom": 612,
+          "width": 328,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 132.953125,
+          "y": 46,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 58.328125,
+          "y": 113,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 23.5,
+          "y": 176,
+          "width": 33,
+          "height": 33,
+          "size": "17.82px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "17.82px"
+        }
+      }
+    },
+    {
+      "w": 360,
+      "h": 740,
+      "t": 24,
+      "b": 48,
+      "mode": "endless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 360,
+          "top": 24,
+          "bottom": 80,
+          "width": 360,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 17.5,
+          "right": 342.5,
+          "top": 187,
+          "bottom": 512,
+          "width": 325,
+          "height": 325
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 344,
+          "top": 567,
+          "bottom": 612,
+          "width": 328,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 136.984375,
+          "y": 46,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 42.03125,
+          "y": 113,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 23.5,
+          "y": 193,
+          "width": 33,
+          "height": 33,
+          "size": "17.82px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "17.82px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 660,
+      "t": 0,
+      "b": 0,
+      "mode": "timeAttack",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "bottom": 45,
+          "width": 390,
+          "height": 45
+        },
+        {
+          "selector": "#board",
+          "left": 14.5,
+          "right": 375.5,
+          "top": 158.5,
+          "bottom": 519.5,
+          "width": 361,
+          "height": 361
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 12,
+          "right": 378,
+          "top": 571,
+          "bottom": 600,
+          "width": 366,
+          "height": 29
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 144.6875,
+          "y": 14,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 78,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 164.5,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 660,
+      "t": 0,
+      "b": 0,
+      "mode": "timeless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "bottom": 45,
+          "width": 390,
+          "height": 45
+        },
+        {
+          "selector": "#board",
+          "left": 14.5,
+          "right": 375.5,
+          "top": 141.5,
+          "bottom": 502.5,
+          "width": 361,
+          "height": 361
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 12,
+          "right": 378,
+          "top": 571,
+          "bottom": 600,
+          "width": 366,
+          "height": 29
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 147.953125,
+          "y": 14,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 63.328125,
+          "y": 78,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 147.5,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 660,
+      "t": 0,
+      "b": 0,
+      "mode": "endless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "bottom": 45,
+          "width": 390,
+          "height": 45
+        },
+        {
+          "selector": "#board",
+          "left": 14.5,
+          "right": 375.5,
+          "top": 158.5,
+          "bottom": 519.5,
+          "width": 361,
+          "height": 361
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 12,
+          "right": 378,
+          "top": 571,
+          "bottom": 600,
+          "width": 366,
+          "height": 29
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 151.984375,
+          "y": 14,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 78,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 164.5,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 660,
+      "t": 24,
+      "b": 48,
+      "mode": "timeAttack",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 24,
+          "bottom": 69,
+          "width": 390,
+          "height": 45
+        },
+        {
+          "selector": "#board",
+          "left": 23.5,
+          "right": 366.5,
+          "top": 155.5,
+          "bottom": 498.5,
+          "width": 343,
+          "height": 343
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 12,
+          "right": 378,
+          "top": 523,
+          "bottom": 552,
+          "width": 366,
+          "height": 29
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 144.6875,
+          "y": 38,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 102,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 29.5,
+          "y": 161.5,
+          "width": 35,
+          "height": 35,
+          "size": "18.9px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "18.9px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 660,
+      "t": 24,
+      "b": 48,
+      "mode": "timeless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 24,
+          "bottom": 69,
+          "width": 390,
+          "height": 45
+        },
+        {
+          "selector": "#board",
+          "left": 28,
+          "right": 362,
+          "top": 143,
+          "bottom": 477,
+          "width": 334,
+          "height": 334
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 12,
+          "right": 378,
+          "top": 523,
+          "bottom": 552,
+          "width": 366,
+          "height": 29
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 147.953125,
+          "y": 38,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 63.328125,
+          "y": 102,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 34,
+          "y": 149,
+          "width": 34,
+          "height": 34,
+          "size": "18.36px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "18.36px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 660,
+      "t": 24,
+      "b": 48,
+      "mode": "endless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 24,
+          "bottom": 69,
+          "width": 390,
+          "height": 45
+        },
+        {
+          "selector": "#board",
+          "left": 23.5,
+          "right": 366.5,
+          "top": 155.5,
+          "bottom": 498.5,
+          "width": 343,
+          "height": 343
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 12,
+          "right": 378,
+          "top": 523,
+          "bottom": 552,
+          "width": 366,
+          "height": 29
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 151.984375,
+          "y": 38,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 102,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 29.5,
+          "y": 161.5,
+          "width": 35,
+          "height": 35,
+          "size": "18.9px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "18.9px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 700,
+      "t": 0,
+      "b": 0,
+      "mode": "timeAttack",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "bottom": 56,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 14.5,
+          "right": 375.5,
+          "top": 161,
+          "bottom": 522,
+          "width": 361,
+          "height": 361
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 575,
+          "bottom": 620,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 144.6875,
+          "y": 22,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 167,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 700,
+      "t": 0,
+      "b": 0,
+      "mode": "timeless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "bottom": 56,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 14.5,
+          "right": 375.5,
+          "top": 144,
+          "bottom": 505,
+          "width": 361,
+          "height": 361
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 575,
+          "bottom": 620,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 147.953125,
+          "y": 22,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 63.328125,
+          "y": 89,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 150,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 700,
+      "t": 0,
+      "b": 0,
+      "mode": "endless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "bottom": 56,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 14.5,
+          "right": 375.5,
+          "top": 161,
+          "bottom": 522,
+          "width": 361,
+          "height": 361
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 575,
+          "bottom": 620,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 151.984375,
+          "y": 22,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 167,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 700,
+      "t": 24,
+      "b": 48,
+      "mode": "timeAttack",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 24,
+          "bottom": 80,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 32.5,
+          "right": 357.5,
+          "top": 167,
+          "bottom": 492,
+          "width": 325,
+          "height": 325
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 527,
+          "bottom": 572,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 144.6875,
+          "y": 46,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 113,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 38.5,
+          "y": 173,
+          "width": 33,
+          "height": 33,
+          "size": "17.82px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "17.82px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 700,
+      "t": 24,
+      "b": 48,
+      "mode": "timeless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 24,
+          "bottom": 80,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 37,
+          "right": 353,
+          "top": 154.5,
+          "bottom": 470.5,
+          "width": 316,
+          "height": 316
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 527,
+          "bottom": 572,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 147.953125,
+          "y": 46,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 63.328125,
+          "y": 113,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 43,
+          "y": 160.5,
+          "width": 32,
+          "height": 32,
+          "size": "17.28px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "17.28px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 700,
+      "t": 24,
+      "b": 48,
+      "mode": "endless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 24,
+          "bottom": 80,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 32.5,
+          "right": 357.5,
+          "top": 167,
+          "bottom": 492,
+          "width": 325,
+          "height": 325
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 527,
+          "bottom": 572,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 151.984375,
+          "y": 46,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 113,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 38.5,
+          "y": 173,
+          "width": 33,
+          "height": 33,
+          "size": "17.82px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "17.82px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 701,
+      "t": 0,
+      "b": 0,
+      "mode": "timeAttack",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "bottom": 56,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 14.5,
+          "right": 375.5,
+          "top": 161.5,
+          "bottom": 522.5,
+          "width": 361,
+          "height": 361
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 576,
+          "bottom": 621,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 144.6875,
+          "y": 22,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 167.5,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 701,
+      "t": 0,
+      "b": 0,
+      "mode": "timeless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "bottom": 56,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 14.5,
+          "right": 375.5,
+          "top": 144.5,
+          "bottom": 505.5,
+          "width": 361,
+          "height": 361
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 576,
+          "bottom": 621,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 147.953125,
+          "y": 22,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 63.328125,
+          "y": 89,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 150.5,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 701,
+      "t": 0,
+      "b": 0,
+      "mode": "endless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "bottom": 56,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 14.5,
+          "right": 375.5,
+          "top": 161.5,
+          "bottom": 522.5,
+          "width": 361,
+          "height": 361
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 576,
+          "bottom": 621,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 151.984375,
+          "y": 22,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 167.5,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 701,
+      "t": 24,
+      "b": 48,
+      "mode": "timeAttack",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 24,
+          "bottom": 80,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 32.5,
+          "right": 357.5,
+          "top": 167.5,
+          "bottom": 492.5,
+          "width": 325,
+          "height": 325
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 528,
+          "bottom": 573,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 144.6875,
+          "y": 46,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 113,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 38.5,
+          "y": 173.5,
+          "width": 33,
+          "height": 33,
+          "size": "17.82px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "17.82px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 701,
+      "t": 24,
+      "b": 48,
+      "mode": "timeless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 24,
+          "bottom": 80,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 37,
+          "right": 353,
+          "top": 155,
+          "bottom": 471,
+          "width": 316,
+          "height": 316
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 528,
+          "bottom": 573,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 147.953125,
+          "y": 46,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 63.328125,
+          "y": 113,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 43,
+          "y": 161,
+          "width": 32,
+          "height": 32,
+          "size": "17.28px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "17.28px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 701,
+      "t": 24,
+      "b": 48,
+      "mode": "endless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 24,
+          "bottom": 80,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 32.5,
+          "right": 357.5,
+          "top": 167.5,
+          "bottom": 492.5,
+          "width": 325,
+          "height": 325
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 528,
+          "bottom": 573,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 151.984375,
+          "y": 46,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 113,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 38.5,
+          "y": 173.5,
+          "width": 33,
+          "height": 33,
+          "size": "17.82px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "17.82px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "t": 0,
+      "b": 0,
+      "mode": "timeAttack",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "bottom": 56,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 14.5,
+          "right": 375.5,
+          "top": 233,
+          "bottom": 594,
+          "width": 361,
+          "height": 361
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 719,
+          "bottom": 764,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 144.6875,
+          "y": 22,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "t": 0,
+      "b": 0,
+      "mode": "timeless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "bottom": 56,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 14.5,
+          "right": 375.5,
+          "top": 216,
+          "bottom": 577,
+          "width": 361,
+          "height": 361
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 719,
+          "bottom": 764,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 147.953125,
+          "y": 22,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 63.328125,
+          "y": 89,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 222,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "t": 0,
+      "b": 0,
+      "mode": "endless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "bottom": 56,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 14.5,
+          "right": 375.5,
+          "top": 233,
+          "bottom": 594,
+          "width": 361,
+          "height": 361
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 719,
+          "bottom": 764,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 151.984375,
+          "y": 22,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 239,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "t": 24,
+      "b": 48,
+      "mode": "timeAttack",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 24,
+          "bottom": 80,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 14.5,
+          "right": 375.5,
+          "top": 221,
+          "bottom": 582,
+          "width": 361,
+          "height": 361
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 671,
+          "bottom": 716,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 144.6875,
+          "y": 46,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 113,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 227,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "t": 24,
+      "b": 48,
+      "mode": "timeless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 24,
+          "bottom": 80,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 14.5,
+          "right": 375.5,
+          "top": 204,
+          "bottom": 565,
+          "width": 361,
+          "height": 361
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 671,
+          "bottom": 716,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 147.953125,
+          "y": 46,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 63.328125,
+          "y": 113,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 210,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        }
+      }
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "t": 24,
+      "b": 48,
+      "mode": "endless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 390,
+          "top": 24,
+          "bottom": 80,
+          "width": 390,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 14.5,
+          "right": 375.5,
+          "top": 221,
+          "bottom": 582,
+          "width": 361,
+          "height": 361
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 374,
+          "top": 671,
+          "bottom": 716,
+          "width": 358,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 151.984375,
+          "y": 46,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 47.03125,
+          "y": 113,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 20.5,
+          "y": 227,
+          "width": 37,
+          "height": 37,
+          "size": "19.98px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "19.98px"
+        }
+      }
+    },
+    {
+      "w": 412,
+      "h": 915,
+      "t": 0,
+      "b": 0,
+      "mode": "timeAttack",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 412,
+          "top": 0,
+          "bottom": 56,
+          "width": 412,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 16.5,
+          "right": 395.5,
+          "top": 259.5,
+          "bottom": 638.5,
+          "width": 379,
+          "height": 379
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 396,
+          "top": 790,
+          "bottom": 835,
+          "width": 380,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 155.6875,
+          "y": 22,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 50.703125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 22.5,
+          "y": 265.5,
+          "width": 39,
+          "height": 39,
+          "size": "21.06px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "21.06px"
+        }
+      }
+    },
+    {
+      "w": 412,
+      "h": 915,
+      "t": 0,
+      "b": 0,
+      "mode": "timeless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 412,
+          "top": 0,
+          "bottom": 56,
+          "width": 412,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 16.5,
+          "right": 395.5,
+          "top": 242.5,
+          "bottom": 621.5,
+          "width": 379,
+          "height": 379
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 396,
+          "top": 790,
+          "bottom": 835,
+          "width": 380,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 158.953125,
+          "y": 22,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 66.984375,
+          "y": 89,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 22.5,
+          "y": 248.5,
+          "width": 39,
+          "height": 39,
+          "size": "21.06px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "21.06px"
+        }
+      }
+    },
+    {
+      "w": 412,
+      "h": 915,
+      "t": 0,
+      "b": 0,
+      "mode": "endless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 412,
+          "top": 0,
+          "bottom": 56,
+          "width": 412,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 16.5,
+          "right": 395.5,
+          "top": 259.5,
+          "bottom": 638.5,
+          "width": 379,
+          "height": 379
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 396,
+          "top": 790,
+          "bottom": 835,
+          "width": 380,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 162.984375,
+          "y": 22,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 50.703125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 22.5,
+          "y": 265.5,
+          "width": 39,
+          "height": 39,
+          "size": "21.06px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "21.06px"
+        }
+      }
+    },
+    {
+      "w": 412,
+      "h": 915,
+      "t": 24,
+      "b": 48,
+      "mode": "timeAttack",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 412,
+          "top": 24,
+          "bottom": 80,
+          "width": 412,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 16.5,
+          "right": 395.5,
+          "top": 247.5,
+          "bottom": 626.5,
+          "width": 379,
+          "height": 379
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 396,
+          "top": 742,
+          "bottom": 787,
+          "width": 380,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 155.6875,
+          "y": 46,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 50.703125,
+          "y": 113,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 22.5,
+          "y": 253.5,
+          "width": 39,
+          "height": 39,
+          "size": "21.06px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "21.06px"
+        }
+      }
+    },
+    {
+      "w": 412,
+      "h": 915,
+      "t": 24,
+      "b": 48,
+      "mode": "timeless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 412,
+          "top": 24,
+          "bottom": 80,
+          "width": 412,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 16.5,
+          "right": 395.5,
+          "top": 230.5,
+          "bottom": 609.5,
+          "width": 379,
+          "height": 379
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 396,
+          "top": 742,
+          "bottom": 787,
+          "width": 380,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 158.953125,
+          "y": 46,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 66.984375,
+          "y": 113,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 22.5,
+          "y": 236.5,
+          "width": 39,
+          "height": 39,
+          "size": "21.06px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "21.06px"
+        }
+      }
+    },
+    {
+      "w": 412,
+      "h": 915,
+      "t": 24,
+      "b": 48,
+      "mode": "endless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 412,
+          "top": 24,
+          "bottom": 80,
+          "width": 412,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 16.5,
+          "right": 395.5,
+          "top": 247.5,
+          "bottom": 626.5,
+          "width": 379,
+          "height": 379
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 396,
+          "top": 742,
+          "bottom": 787,
+          "width": 380,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 162.984375,
+          "y": 46,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 50.703125,
+          "y": 113,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 22.5,
+          "y": 253.5,
+          "width": 39,
+          "height": 39,
+          "size": "21.06px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "21.06px"
+        }
+      }
+    },
+    {
+      "w": 430,
+      "h": 932,
+      "t": 0,
+      "b": 0,
+      "mode": "timeAttack",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 430,
+          "top": 0,
+          "bottom": 56,
+          "width": 430,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 16.5,
+          "right": 413.5,
+          "top": 259,
+          "bottom": 656,
+          "width": 397,
+          "height": 397
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 414,
+          "top": 807,
+          "bottom": 852,
+          "width": 398,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 164.6875,
+          "y": 22,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 53.703125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 22.5,
+          "y": 265,
+          "width": 41,
+          "height": 41,
+          "size": "22.14px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "22.14px"
+        }
+      }
+    },
+    {
+      "w": 430,
+      "h": 932,
+      "t": 0,
+      "b": 0,
+      "mode": "timeless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 430,
+          "top": 0,
+          "bottom": 56,
+          "width": 430,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 16.5,
+          "right": 413.5,
+          "top": 242,
+          "bottom": 639,
+          "width": 397,
+          "height": 397
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 414,
+          "top": 807,
+          "bottom": 852,
+          "width": 398,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 167.953125,
+          "y": 22,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 69.984375,
+          "y": 89,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 22.5,
+          "y": 248,
+          "width": 41,
+          "height": 41,
+          "size": "22.14px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "22.14px"
+        }
+      }
+    },
+    {
+      "w": 430,
+      "h": 932,
+      "t": 0,
+      "b": 0,
+      "mode": "endless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 430,
+          "top": 0,
+          "bottom": 56,
+          "width": 430,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 16.5,
+          "right": 413.5,
+          "top": 259,
+          "bottom": 656,
+          "width": 397,
+          "height": 397
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 414,
+          "top": 807,
+          "bottom": 852,
+          "width": 398,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 171.984375,
+          "y": 22,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 53.703125,
+          "y": 89,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 22.5,
+          "y": 265,
+          "width": 41,
+          "height": 41,
+          "size": "22.14px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "22.14px"
+        }
+      }
+    },
+    {
+      "w": 430,
+      "h": 932,
+      "t": 24,
+      "b": 48,
+      "mode": "timeAttack",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 430,
+          "top": 24,
+          "bottom": 80,
+          "width": 430,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 16.5,
+          "right": 413.5,
+          "top": 247,
+          "bottom": 644,
+          "width": 397,
+          "height": 397
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 414,
+          "top": 759,
+          "bottom": 804,
+          "width": 398,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 164.6875,
+          "y": 46,
+          "width": 100.625,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 53.703125,
+          "y": 113,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 22.5,
+          "y": 253,
+          "width": 41,
+          "height": 41,
+          "size": "22.14px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "22.14px"
+        }
+      }
+    },
+    {
+      "w": 430,
+      "h": 932,
+      "t": 24,
+      "b": 48,
+      "mode": "timeless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 430,
+          "top": 24,
+          "bottom": 80,
+          "width": 430,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 16.5,
+          "right": 413.5,
+          "top": 230,
+          "bottom": 627,
+          "width": 397,
+          "height": 397
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 414,
+          "top": 759,
+          "bottom": 804,
+          "width": 398,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 167.953125,
+          "y": 46,
+          "width": 94.078125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 69.984375,
+          "y": 113,
+          "width": 19.34375,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 22.5,
+          "y": 236,
+          "width": 41,
+          "height": 41,
+          "size": "22.14px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "22.14px"
+        }
+      }
+    },
+    {
+      "w": 430,
+      "h": 932,
+      "t": 24,
+      "b": 48,
+      "mode": "endless",
+      "rects": [
+        {
+          "selector": ".hud",
+          "left": 0,
+          "right": 430,
+          "top": 24,
+          "bottom": 80,
+          "width": 430,
+          "height": 56
+        },
+        {
+          "selector": "#board",
+          "left": 16.5,
+          "right": 413.5,
+          "top": 247,
+          "bottom": 644,
+          "width": 397,
+          "height": 397
+        },
+        {
+          "selector": "#selection-sum",
+          "left": 16,
+          "right": 414,
+          "top": 759,
+          "bottom": 804,
+          "width": 398,
+          "height": 45
+        }
+      ],
+      "metrics": {
+        ".run-title": {
+          "x": 171.984375,
+          "y": 46,
+          "width": 86.03125,
+          "height": 20,
+          "size": "17px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        ".run-stat-value": {
+          "x": 53.703125,
+          "y": 113,
+          "width": 51.921875,
+          "height": 24,
+          "size": "20px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "normal"
+        },
+        "#board .tile": {
+          "x": 22.5,
+          "y": 253,
+          "width": 41,
+          "height": 41,
+          "size": "22.14px",
+          "weight": "900",
+          "family": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "line": "22.14px"
+        }
+      }
+    }
+  ],
+  "grades": [
+    {
+      "word": "OH MY GOD~!",
+      "left": 44.671875,
+      "right": 275.3125,
+      "width": 320,
+      "size": "35.2px"
+    },
+    {
+      "word": "UNBELIEVABLE!!",
+      "left": 24.140625,
+      "right": 295.859375,
+      "width": 320,
+      "size": "35.2px"
+    },
+    {
+      "word": "AMAZING!",
+      "left": 75.65625,
+      "right": 244.34375,
+      "width": 320,
+      "size": "35.2px"
+    },
+    {
+      "word": "GREAT!",
+      "left": 100.15625,
+      "right": 219.84375,
+      "width": 320,
+      "size": "35.2px"
+    },
+    {
+      "word": "GOOD TRY!",
+      "left": 67.515625,
+      "right": 252.46875,
+      "width": 320,
+      "size": "35.2px"
+    },
+    {
+      "word": "NOT BAD!",
+      "left": 78.71875,
+      "right": 241.28125,
+      "width": 320,
+      "size": "35.2px"
+    },
+    {
+      "word": "OH MY GOD~!",
+      "left": 52.359375,
+      "right": 322.640625,
+      "width": 375,
+      "size": "41.25px"
+    },
+    {
+      "word": "UNBELIEVABLE!!",
+      "left": 28.28125,
+      "right": 346.703125,
+      "width": 375,
+      "size": "41.25px"
+    },
+    {
+      "word": "AMAZING!",
+      "left": 88.65625,
+      "right": 286.328125,
+      "width": 375,
+      "size": "41.25px"
+    },
+    {
+      "word": "GREAT!",
+      "left": 117.375,
+      "right": 257.625,
+      "width": 375,
+      "size": "41.25px"
+    },
+    {
+      "word": "GOOD TRY!",
+      "left": 79.125,
+      "right": 295.859375,
+      "width": 375,
+      "size": "41.25px"
+    },
+    {
+      "word": "NOT BAD!",
+      "left": 92.25,
+      "right": 282.75,
+      "width": 375,
+      "size": "41.25px"
+    },
+    {
+      "word": "OH MY GOD~!",
+      "left": 54.453125,
+      "right": 335.546875,
+      "width": 390,
+      "size": "42.9px"
+    },
+    {
+      "word": "UNBELIEVABLE!!",
+      "left": 29.421875,
+      "right": 360.578125,
+      "width": 390,
+      "size": "42.9px"
+    },
+    {
+      "word": "AMAZING!",
+      "left": 92.203125,
+      "right": 297.78125,
+      "width": 390,
+      "size": "42.9px"
+    },
+    {
+      "word": "GREAT!",
+      "left": 122.0625,
+      "right": 267.9375,
+      "width": 390,
+      "size": "42.9px"
+    },
+    {
+      "word": "GOOD TRY!",
+      "left": 82.296875,
+      "right": 307.703125,
+      "width": 390,
+      "size": "42.9px"
+    },
+    {
+      "word": "NOT BAD!",
+      "left": 95.9375,
+      "right": 294.0625,
+      "width": 390,
+      "size": "42.9px"
+    },
+    {
+      "word": "OH MY GOD~!",
+      "left": 57.53125,
+      "right": 354.46875,
+      "width": 412,
+      "size": "45.32px"
+    },
+    {
+      "word": "UNBELIEVABLE!!",
+      "left": 31.078125,
+      "right": 380.90625,
+      "width": 412,
+      "size": "45.32px"
+    },
+    {
+      "word": "AMAZING!",
+      "left": 97.40625,
+      "right": 314.59375,
+      "width": 412,
+      "size": "45.32px"
+    },
+    {
+      "word": "GREAT!",
+      "left": 128.953125,
+      "right": 283.046875,
+      "width": 412,
+      "size": "45.32px"
+    },
+    {
+      "word": "GOOD TRY!",
+      "left": 86.9375,
+      "right": 325.0625,
+      "width": 412,
+      "size": "45.32px"
+    },
+    {
+      "word": "NOT BAD!",
+      "left": 101.34375,
+      "right": 310.640625,
+      "width": 412,
+      "size": "45.32px"
+    },
+    {
+      "word": "OH MY GOD~!",
+      "left": 60.03125,
+      "right": 369.953125,
+      "width": 430,
+      "size": "47.3px"
+    },
+    {
+      "word": "UNBELIEVABLE!!",
+      "left": 32.4375,
+      "right": 397.546875,
+      "width": 430,
+      "size": "47.3px"
+    },
+    {
+      "word": "AMAZING!",
+      "left": 101.65625,
+      "right": 328.328125,
+      "width": 430,
+      "size": "47.3px"
+    },
+    {
+      "word": "GREAT!",
+      "left": 134.578125,
+      "right": 295.40625,
+      "width": 430,
+      "size": "47.3px"
+    },
+    {
+      "word": "GOOD TRY!",
+      "left": 90.734375,
+      "right": 339.25,
+      "width": 430,
+      "size": "47.3px"
+    },
+    {
+      "word": "NOT BAD!",
+      "left": 105.78125,
+      "right": 324.21875,
+      "width": 430,
+      "size": "47.3px"
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "src/ui/styles/title.css": "5505267ba7942601a0be275d79b8755d48629c459b859d4202bc47e9b436d15c",
+    "src/ui/styles/tokens.css": "3fdda6680f261f5e4e97270993ae09f398e1dfde84d73cff119ea6335627bb13",
+    "src/ui/styles/game.css": "5b73bab2a912ace7fd504f30d1c3b2e560faa8f24aaccdfa7c87f6e66c63a801",
+    "src/ui/styles/picker.css": "72d94df0c976c9d7317c39ac6d5bf79c008792c089a1961fe7712c83620ed891",
+    "src/ui/styles/overlay.css": "60c5921e91a70d10b60d42f9b12605170cc8b4ef2ea450a097719697101afa7e",
+    "src/ui/styles/safeArea.css": "bd1bfbc482bc3c509723ed79d0ef12fea5208bc9a5d3a0d34466a3172887aeef",
+    "src/ui/screens/cheer.ts": "2f2b45cbd20d6aafd77c21a71a272d352b188840ab42c154026964ab75dce9fe"
+  },
+  "limitations": [
+    "macOS Chrome, not a physical Android/WebView test.",
+    "Nonzero system-bar insets are simulated native CSS inputs, not measured from the user phone.",
+    "Stage/best-score fixtures and explicit grade fixtures are not earned results.",
+    "Current dependencies reused for git archive; original sources unchanged.",
+    "System font choice intentionally retained: different OS glyphs can differ.",
+    "Media frame timings and random block colours are not pixel-diff assertions."
+  ],
+  "viewportDiagnostic": {
+    "inner": [
+      430,
+      932
+    ],
+    "visual": [
+      430,
+      932,
+      1
+    ],
+    "body": "932px",
+    "app": "932px",
+    "css": "932px",
+    "logo": "250px"
+  },
+  "pass": true
+}

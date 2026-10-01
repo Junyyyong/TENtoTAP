@@ -34,10 +34,7 @@
   --btn-deep: var(--go-deep);
 }
 
-/*
- * A panel button is a block like everything else: a lit face over a slab that
- * it presses down into. Green carries on, blue chooses, red starts over.
- */
+/* Primary actions retain the original coloured face and pressed bevel. */
 .wood-btn {
   width: 100%;
   padding: 14px;
@@ -45,10 +42,10 @@
   font-size: 17px;
   font-weight: 800;
   color: #fff;
-  text-shadow: 0 2px 0 var(--slab);
+  text-shadow: 0 2px 0 var(--accent-shadow);
   cursor: pointer;
   background: linear-gradient(180deg, color-mix(in srgb, var(--btn-face) 78%, white), var(--btn-face));
-  border: 1px solid var(--slab);
+  border: 1px solid var(--accent-shadow);
   border-radius: 12px;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.4),
@@ -85,7 +82,7 @@
    * Rows sized by what is in them, not by a number picked in advance.
    *
    * The word's row was a flat `1.2em` — of this element's font size, about
-   * 19px — while the word itself is set at 11vw, around 43px. The text
+   * 19px — while the word itself is set at 11 reference vw, around 43px. The text
    * overflowed its own box and ran down into the clip, which is what put the
    * dancer over the prompt. Nothing here is measured in `em`, `vh` or
    * percentages any more: the word and the prompt take exactly the room they
@@ -162,7 +159,7 @@
 
 .cheer-headline {
   margin: 0 0 10px;
-  font-size: clamp(26px, 9vw, 52px);
+  font-size: clamp(26px, calc(9 * var(--layout-vw, 1vw)), 52px);
   font-weight: 900;
   font-style: italic;
   letter-spacing: 0.04em;
@@ -180,7 +177,7 @@
 
 .cheer-score {
   margin: 0;
-  font-size: clamp(56px, 22vw, 132px);
+  font-size: clamp(56px, calc(22 * var(--layout-vw, 1vw)), 132px);
   font-weight: 900;
   line-height: 1;
   color: var(--warm);
@@ -260,7 +257,7 @@
   /* Wide as the screen allows, tall as that makes it — but never taller than
      the slot, so a portrait clip is bounded by the same box every other one
      lands in and the prompt below stays put. */
-  width: min(86vw, 420px);
+  width: min(calc(86 * var(--layout-vw, 1vw)), 420px);
   max-width: 100%;
   height: auto;
   max-height: 100%;
@@ -284,7 +281,7 @@
   /* The comfortable size for a short word. A long one is measured and scaled
      down to fit when it is set — see `Cheer.fitWord` — so this does not have
      to be the size that suits the longest word anyone ever writes. */
-  font-size: clamp(30px, 11vw, 68px);
+  font-size: clamp(30px, calc(11 * var(--layout-vw, 1vw)), 68px);
   white-space: nowrap;
   font-weight: 900;
   font-style: italic;
@@ -345,7 +342,7 @@
   touch-action: manipulation;
 }
 .lesson-intro-title {
-  font-size: clamp(28px, 8vw, 48px);
+  font-size: clamp(28px, calc(8 * var(--layout-vw, 1vw)), 48px);
   font-weight: 800;
   line-height: 1.26;
   white-space: pre-line;
@@ -358,7 +355,7 @@
   animation: lesson-tap-pulse 2.4s ease-in-out infinite;
 }
 .mode-announcement .lesson-intro-title {
-  font-size: clamp(22px, 6vw, 34px);
+  font-size: clamp(22px, calc(6 * var(--layout-vw, 1vw)), 34px);
   line-height: 1.39;
 }
 @keyframes lesson-tap-pulse {

@@ -1,10 +1,13 @@
 import "./ui/styles/index.css";
 import { App } from "./ui/app";
 import { trackViewport } from "./ui/viewport";
+import { Capacitor } from '@capacitor/core';
+import { trackNativeFrame } from './ui/nativeFrame';
 import { initializeStorage, flushStorage, onStorageSaveFailure } from './ui/storage';
 import { StorageNotice } from './ui/storageNotice';
 
 trackViewport();
+trackNativeFrame(Capacitor.getPlatform() === 'android');
 const storageNotice = new StorageNotice();
 onStorageSaveFailure(failed => {
   if (failed) storageNotice.show(false, flushStorage);

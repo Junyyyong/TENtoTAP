@@ -1,6 +1,6 @@
 /* Compact game layout based on the supplied purple mobile reference. */
 .game-screen {
-  background: linear-gradient(180deg, rgba(86, 53, 125, 0.08), transparent 34%);
+  background: var(--paper);
 }
 
 .hud {
@@ -21,12 +21,12 @@
   padding: 0;
   font-size: 24px;
   font-weight: 800;
-  color: var(--hot-deep);
+  color: var(--ink);
   cursor: pointer;
   background: var(--panel-lit);
   border: 1px solid var(--paper-edge);
-  border-radius: 12px;
-  box-shadow: inset 0 0 12px var(--recess);
+  border-radius: 50%;
+  box-shadow: none;
 }
 
 .icon-btn svg {
@@ -38,7 +38,10 @@
   stroke-linecap: round;
 }
 
-.icon-btn:active { transform: translateY(1px); }
+.icon-btn:active { transform: translateY(1px); background: var(--tile-sel); }
+@media (hover: hover) {
+  .icon-btn:hover:not(:active) { background: var(--panel-deep); }
+}
 
 .score-block {
   justify-self: center;
@@ -95,7 +98,7 @@
   height: 6px;
   margin: 0 14px 6px;
   overflow: hidden;
-  background: rgba(7, 1, 16, 0.68);
+  background: var(--recess);
   border-radius: 999px;
 }
 
@@ -185,10 +188,10 @@
   display: grid;
   gap: var(--gap);
   padding: 5px;
-  background: var(--stage-edge);
+  background: var(--recess);
   border: 1px solid var(--paper-edge);
   border-radius: 12px;
-  box-shadow: 0 3px 16px var(--slab-hard);
+  box-shadow: none;
   touch-action: none;
 }
 
@@ -204,18 +207,16 @@
   font-size: calc(var(--tile, 38px) * 0.54);
   font-weight: 900;
   line-height: 1;
-  /* White numerals on a coloured face, ringed in the night colour so the
-     block reads against the picture surfacing behind it. */
   color: #fff;
-  text-shadow: 0 2px 0 var(--slab);
+  text-shadow: 0 2px 0 var(--block-shadow);
   cursor: pointer;
   background: linear-gradient(180deg, var(--face-lit, #7a8bd8), var(--face, #3d5be0));
-  border: 1px solid var(--slab);
+  border: 1px solid var(--block-shadow);
   border-radius: 6px;
   box-shadow:
     inset 0 2px 0 rgba(255, 255, 255, 0.85),
-    inset 0 -2px 3px var(--slab),
-    0 2px 0 var(--slab);
+    inset 0 -2px 3px var(--block-shadow),
+    0 2px 0 var(--block-shadow);
   transition: transform 90ms ease, box-shadow 90ms ease, background 140ms ease;
 }
 
@@ -224,18 +225,18 @@
   cursor: default;
   background: var(--recess);
   border-color: var(--recess);
-  box-shadow: inset 0 1px 4px var(--recess);
+  box-shadow: none;
 }
 
 .tile.sel {
   z-index: 1;
-  background: linear-gradient(160deg, #ffffff, var(--tile-sel));
+  background: linear-gradient(160deg, #ffffff, var(--block-selected));
   transform: scale(1.055);
-  box-shadow: 0 0 0 3px var(--ring-sel), 0 0 14px rgba(255, 139, 0, 0.55);
+  box-shadow: 0 0 0 3px var(--block-ring-selected), 0 0 14px rgba(255, 139, 0, 0.55);
 }
 
-.board.ok .tile.sel { box-shadow: 0 0 0 3px var(--ring-ok), 0 0 14px rgba(22, 163, 74, 0.55); }
-.tile.hint { animation: hint-pulse 900ms ease-in-out 3; }
+.board.ok .tile.sel { box-shadow: 0 0 0 3px var(--block-ring-ok), 0 0 14px rgba(22, 163, 74, 0.55); }
+.tile.hint { animation: tile-hint-pulse 900ms ease-in-out 3; }
 .board.shake { animation: shake 260ms ease; }
 
 .pop {
@@ -304,7 +305,7 @@
 }
 
 .selection-sum.ready {
-  background: #fff3cf;
+  background: var(--panel-deep);
   border-color: var(--warm);
 }
 
@@ -326,7 +327,7 @@
   background: linear-gradient(160deg, var(--warm), var(--warm-deep));
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 4px 0 var(--slab);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.4), 0 4px 0 var(--accent-shadow);
 }
 
 .round-btn:active:not(:disabled) { transform: translateY(2px); }
@@ -352,7 +353,7 @@
 }
 
 @media (max-height: 660px) {
-  .round-btn svg.glyph { width: 25px; height: 25px; }
+  :where(#app:not(.is-native-frame)) .round-btn svg.glyph { width: 25px; height: 25px; }
 }
 
 .badge {
@@ -391,93 +392,93 @@
   width: min(360px, 100%);
   padding: 28px 24px 24px;
   text-align: center;
-  background: linear-gradient(160deg, #3a2062, #1d0a39);
-  border: 1px solid rgba(238, 181, 73, 0.68);
+  background: var(--panel-lit);
+  border: 1px solid var(--paper-edge);
   border-radius: 16px;
-  box-shadow: 0 14px 42px rgba(5, 1, 12, 0.62);
+  box-shadow: none;
   animation: panel-rise 260ms cubic-bezier(.2,.8,.2,1) both;
 }
 
 @media (max-height: 660px) {
-  .hud { grid-template-columns: 38px 1fr 38px; padding-top: 5px; }
-  .icon-btn { width: 38px; height: 38px; font-size: 21px; }
-  .score { font-size: 29px; }
-  .score-label,
-  .score-best { font-size: 11px; }
-  .sub-hud { padding-top: 4px; padding-bottom: 6px; }
-  .chip { padding: 4px 10px; font-size: 11px; }
-    .notice { flex-basis: 20px; min-height: 20px; font-size: 12px; }
-  .actions { padding: 2px 0 6px; }
-  .round-btn { width: 52px; height: 52px; font-size: 23px; }
+  :where(#app:not(.is-native-frame)) .hud { grid-template-columns: 38px 1fr 38px; padding-top: 5px; }
+  :where(#app:not(.is-native-frame)) .icon-btn { width: 38px; height: 38px; font-size: 21px; }
+  :where(#app:not(.is-native-frame)) .score { font-size: 29px; }
+  :where(#app:not(.is-native-frame)) .score-label,
+  :where(#app:not(.is-native-frame)) .score-best { font-size: 11px; }
+  :where(#app:not(.is-native-frame)) .sub-hud { padding-top: 4px; padding-bottom: 6px; }
+  :where(#app:not(.is-native-frame)) .chip { padding: 4px 10px; font-size: 11px; }
+    :where(#app:not(.is-native-frame)) .notice { flex-basis: 20px; min-height: 20px; font-size: 12px; }
+  :where(#app:not(.is-native-frame)) .actions { padding: 2px 0 6px; }
+  :where(#app:not(.is-native-frame)) .round-btn { width: 52px; height: 52px; font-size: 23px; }
   /* Landscape is the tightest case in the game: nine rows of blocks plus the
      equation row. Everything around the board gives up what it can so the
      blocks stay above the thumb floor. */
-  .selection-sum {
+  :where(#app:not(.is-native-frame)) .selection-sum {
     min-height: 26px;
     margin: 2px 12px 0;
     padding: 2px 8px;
   }
 
-  .sum-terms {
+  :where(#app:not(.is-native-frame)) .sum-terms {
     min-height: 18px;
   }
 
-  .sum-term {
+  :where(#app:not(.is-native-frame)) .sum-term {
     min-width: 18px;
     padding: 0 4px;
     font-size: 13px;
   }
 
-  .run-stats {
+  :where(#app:not(.is-native-frame)) .run-stats {
     gap: 6px;
     padding: 2px 12px 4px;
   }
 
-  .run-stat {
+  :where(#app:not(.is-native-frame)) .run-stat {
     padding: 2px 4px;
   }
 
-  .run-stat-value {
+  :where(#app:not(.is-native-frame)) .run-stat-value {
     font-size: 14px;
   }
 
-  .run-stat-label {
+  :where(#app:not(.is-native-frame)) .run-stat-label {
     font-size: 11px;
   }
 
   /* The equation row grew so it could be read on a phone held upright; in
      landscape that growth is exactly what the blocks cannot spare. */
-  .sum-label {
+  :where(#app:not(.is-native-frame)) .sum-label {
     font-size: 11px;
   }
 
-  .selection-sum span {
+  :where(#app:not(.is-native-frame)) .selection-sum span {
     font-size: 11px;
   }
 
-  .selection-sum b {
+  :where(#app:not(.is-native-frame)) .selection-sum b {
     font-size: 19px;
   }
 }
 
 @media (max-height: 520px) {
-    .notice { display: none; }
+    :where(#app:not(.is-native-frame)) .notice { display: none; }
   /* Bottom of the barrel: the labels go, the numbers stay. Nine rows of
      blocks need every pixel left over. */
-  .sum-label,
-  .run-stat-label { font-size: 10px; }
-  .selection-sum span { font-size: 10px; }
-  .selection-sum b { font-size: 17px; }
-  .selection-sum { min-height: 22px; margin: 0 12px; padding: 1px 8px; }
-  .run-stats { gap: 4px; padding: 1px 12px 2px; }
-  .run-stat { padding: 1px 4px; }
-  .run-stat-value { font-size: 13px; }
-  .hud { grid-template-columns: 34px 1fr 34px; padding: 2px 8px; }
-  .icon-btn { width: 34px; height: 34px; }
-  .score { font-size: 26px; }
-  .sub-hud { padding: 2px 8px 4px; }
-  .actions { padding: 2px 0 4px; }
-  .round-btn { width: 44px; height: 44px; }
+  :where(#app:not(.is-native-frame)) .sum-label,
+  :where(#app:not(.is-native-frame)) .run-stat-label { font-size: 10px; }
+  :where(#app:not(.is-native-frame)) .selection-sum span { font-size: 10px; }
+  :where(#app:not(.is-native-frame)) .selection-sum b { font-size: 17px; }
+  :where(#app:not(.is-native-frame)) .selection-sum { min-height: 22px; margin: 0 12px; padding: 1px 8px; }
+  :where(#app:not(.is-native-frame)) .run-stats { gap: 4px; padding: 1px 12px 2px; }
+  :where(#app:not(.is-native-frame)) .run-stat { padding: 1px 4px; }
+  :where(#app:not(.is-native-frame)) .run-stat-value { font-size: 13px; }
+  :where(#app:not(.is-native-frame)) .hud { grid-template-columns: 34px 1fr 34px; padding: 2px 8px; }
+  :where(#app:not(.is-native-frame)) .icon-btn { width: 34px; height: 34px; }
+  :where(#app:not(.is-native-frame)) .score { font-size: 26px; }
+  :where(#app:not(.is-native-frame)) .sub-hud { padding: 2px 8px 4px; }
+  :where(#app:not(.is-native-frame)) .actions { padding: 2px 0 4px; }
+  :where(#app:not(.is-native-frame)) .round-btn { width: 44px; height: 44px; }
 }
 
 /* ── the picture under the board ──────────────────────────────────────
@@ -530,9 +531,7 @@
   pointer-events: none;
 }
 
-/* One family per item, the same three the wordmark uses: orange finds
-   something, cyan changes the board, pink undoes. Three gold circles told the
-   player nothing about which was which. */
+/* Original action colours distinguish the tools without changing their size. */
 #btn-split {
   background: linear-gradient(160deg, var(--cool), var(--cool-deep));
 }
@@ -576,7 +575,7 @@
   animation: drift-up-settle 620ms ease 260ms both;
 }
 
-/* ── random colour per block ──────────────────────────────────────────── */
+/* Original random colour per block, also used by the equation chips. */
 .tile[data-color="1"] { --face: var(--v1); }
 .tile[data-color="2"] { --face: var(--v2); }
 .tile[data-color="3"] { --face: var(--v3); }
@@ -587,18 +586,15 @@
 .tile[data-color="8"] { --face: var(--v8); }
 .tile[data-color="9"] { --face: var(--v9); }
 
-/* The lit top edge is the face again, lightened — one rule instead of
-   nine more colours to keep in step. */
+/* The original lightened top edge and pale selected block face. */
 .tile:not(.cleared) {
   --face-lit: color-mix(in srgb, var(--face) 72%, white);
 }
 
-/* Chosen: the block lifts and goes pale, whatever colour it was. */
 .tile.sel {
-  --face: var(--cool);
+  --face: #2c7fe0;
   --face-lit: #eaf9ff;
-
-  color: var(--tile-ink);
+  color: var(--block-ink);
   text-shadow: none;
 }
 
@@ -640,7 +636,7 @@
 .run-stat-value {
   font-size: 20px;
   font-weight: 900;
-  color: var(--ink);
+  color: var(--record-ink);
   font-variant-numeric: tabular-nums;
 }
 
@@ -673,8 +669,8 @@
 }
 
 /* ── the equation ─────────────────────────────────────────────────────
-   The selection written out — 2 + 3 + 2 = ? — with each term in its own
-   block colour, so the row and the board say the same thing. */
+   The selection written out — 2 + 3 + 2 = ? — with each term in its original
+   block colour, so the equation and the board say the same thing. */
 .sum-label {
   font-size: 13px;
   font-weight: 800;
@@ -696,7 +692,7 @@
   font-weight: 900;
   color: #fff;
   text-align: center;
-  background: var(--face, var(--cool-deep));
+  background: var(--face, #1f5bb0);
   border-radius: 5px;
 }
 

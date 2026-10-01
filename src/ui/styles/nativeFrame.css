@@ -1,0 +1,46 @@
+/* Android only. All original px/type/spacing values live inside this canvas.
+   System bars/cutouts are consumed outside it, never again on each screen. */
+#app.is-native-frame,
+.native-frame-notice {
+  --app-h: 844px;
+  --layout-vw: 3.9px;
+  --layout-vh: 8.44px;
+  --app-safe-top: 0px;
+  --app-safe-right: 0px;
+  --app-safe-bottom: 0px;
+  --app-safe-left: 0px;
+  position: absolute;
+  left: var(--frame-left, 0px);
+  top: var(--frame-top, 0px);
+  width: 390px;
+  height: 844px;
+  transform: scale(var(--frame-scale, 1));
+  transform-origin: top left;
+}
+
+/* Keep storage retry outside the inert game; still use the same composition. */
+.native-frame-notice { z-index: 10000; pointer-events: none; }
+.native-frame-notice .storage-notice { position: absolute; pointer-events: auto; }
+
+/* showModal() lives in the top layer, outside ancestor transforms. The legal
+   dialog is a sibling of #app: explicitly use that same canvas transform. */
+.has-native-frame .legal-dialog {
+  /* Preserve Chromium's original dialog max-width at the reference viewport
+     (100% - 2em - 6px), not the device viewport's top-layer width limit. */
+  --frame-legal-width: min(366px, calc(390px - 2em - 6px));
+  --app-h: 844px;
+  --app-safe-top: 0px;
+  --app-safe-right: 0px;
+  --app-safe-bottom: 0px;
+  --app-safe-left: 0px;
+  inset: auto;
+  left: calc(var(--frame-left) + (390px - var(--frame-legal-width)) * .5 * var(--frame-scale));
+  top: calc(var(--frame-top) + 42px * var(--frame-scale));
+  margin: 0;
+  width: var(--frame-legal-width);
+  height: 760px;
+  max-width: none;
+  max-height: none;
+  transform: scale(var(--frame-scale));
+  transform-origin: top left;
+}

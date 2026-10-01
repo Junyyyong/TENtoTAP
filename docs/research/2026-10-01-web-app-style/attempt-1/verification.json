@@ -1,0 +1,1416 @@
+{
+  "capturedAt": "2026-09-30T15:25:18.992Z",
+  "previousCommit": "cae2e49b5af230a95b2f1890daf01b47b321b621",
+  "currentBaseline": "cae2e49b5af230a95b2f1890daf01b47b321b621",
+  "browser": "154.0.8037.58",
+  "conditions": {
+    "viewport": [
+      390,
+      844
+    ],
+    "dpr": 2,
+    "png": [
+      780,
+      1688
+    ],
+    "locale": "en-US",
+    "timezone": "Asia/Seoul",
+    "clock": "2026-10-01T00:00:00Z",
+    "seed": 20261001,
+    "profile": "fresh context, local stage10/best scores fixture, audio off"
+  },
+  "screenshots": [
+    {
+      "file": "before-title.png",
+      "sha256": "db1114a29d6b289b1025f69eea668411e3599429299891a14c52b5bd7779c284"
+    },
+    {
+      "file": "before-settings.png",
+      "sha256": "22014c026e67157472f45b6ae75948eb97f3dbc512133175165f3d90e7eb2a70"
+    },
+    {
+      "file": "before-stage10.png",
+      "sha256": "0e7c8f1ecde0f271a68ce4289f9a2698215f200a13e7abb9a6bbeba00fad1b14"
+    },
+    {
+      "file": "before-grade-fixture.png",
+      "sha256": "d80f0977126df0fa6f4ddaadd78c340a98bed334fdff6ba52ccc9316d6cc7d91"
+    },
+    {
+      "file": "after-title.png",
+      "sha256": "4a74068642046d0c5302beb6577c56e9a111c1681070186f968c0e4cac1a3f9d"
+    },
+    {
+      "file": "after-settings.png",
+      "sha256": "58dd45b1aacdba6e9dd4918777be03abe85f95426522d2d55316351fa564aa5a"
+    },
+    {
+      "file": "after-stage10.png",
+      "sha256": "a9969b953b2c2728403df6e8aa4234626f393907dc46c0b8ac6e82e8a010c91f"
+    },
+    {
+      "file": "after-grade-fixture.png",
+      "sha256": "eb24be090ec3ab57b9b4e92d12bf6ad30f4122035dd792e766afdcdb3717133d"
+    },
+    {
+      "file": "after-timeAttack-game.png",
+      "sha256": "427f36cd0eabf8283a4fb23f9cf29b0897587af1beacea0df9ec7d98b18a8dd7"
+    },
+    {
+      "file": "after-timeless-game.png",
+      "sha256": "9bc1fef464c30973e5b3a842624cf659376ce3bb381241aecdd1c715e7c73176"
+    },
+    {
+      "file": "after-endless-game.png",
+      "sha256": "d1f1698cd7cf72dfc719864cd25f83a3fe3f59cdf9d522fd88ecb526fc481b78"
+    }
+  ],
+  "metrics": {
+    "before": {
+      "title": {
+        "viewport": [
+          390,
+          844
+        ],
+        "logo": {
+          "width": 250,
+          "height": 293.375,
+          "font": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "32px",
+          "weight": "700",
+          "line": "0px"
+        },
+        "button": {
+          "width": 340,
+          "height": 79,
+          "font": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13.3333px",
+          "weight": "400",
+          "line": "normal"
+        },
+        "name": {
+          "width": 298,
+          "height": 25,
+          "font": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "21px",
+          "weight": "800",
+          "line": "normal"
+        },
+        "desc": {
+          "width": 298,
+          "height": 16,
+          "font": "\"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "size": "13px",
+          "weight": "700",
+          "line": "normal"
+        },
+        "fontLoaded": false
+      },
+      "fonts": [
+        {
+          "familyName": "Apple SD Gothic Neo",
+          "postScriptName": "AppleSDGothicNeo-ExtraBold",
+          "isCustomFont": false,
+          "glyphCount": 9
+        }
+      ]
+    },
+    "after": {
+      "title": {
+        "viewport": [
+          390,
+          844
+        ],
+        "logo": {
+          "width": 215,
+          "height": 252.296875,
+          "font": "\"TAP Sans KR\", sans-serif",
+          "size": "32px",
+          "weight": "700",
+          "line": "0px"
+        },
+        "button": {
+          "width": 340,
+          "height": 64,
+          "font": "\"TAP Sans KR\", sans-serif",
+          "size": "13.3333px",
+          "weight": "400",
+          "line": "normal"
+        },
+        "name": {
+          "width": 302,
+          "height": 23,
+          "font": "\"TAP Sans KR\", sans-serif",
+          "size": "18px",
+          "weight": "600",
+          "line": "23px"
+        },
+        "desc": {
+          "width": 302,
+          "height": 15,
+          "font": "\"TAP Sans KR\", sans-serif",
+          "size": "12px",
+          "weight": "500",
+          "line": "15px"
+        },
+        "fontLoaded": true
+      },
+      "fonts": [
+        {
+          "familyName": "Noto Sans KR Thin",
+          "postScriptName": "NotoSansKR-Thin_SemiBold",
+          "isCustomFont": true,
+          "glyphCount": 9
+        }
+      ]
+    }
+  },
+  "matrix": [
+    {
+      "viewport": [
+        320,
+        660
+      ],
+      "logo": {
+        "width": 185.59375,
+        "height": 217.796875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 276,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 238,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 238,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        320,
+        700
+      ],
+      "logo": {
+        "width": 185.59375,
+        "height": 217.796875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 276,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 238,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 238,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        320,
+        701
+      ],
+      "logo": {
+        "width": 185.59375,
+        "height": 217.796875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 276,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 238,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 238,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        320,
+        844
+      ],
+      "logo": {
+        "width": 185.59375,
+        "height": 217.796875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 276,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 238,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 238,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        320,
+        932
+      ],
+      "logo": {
+        "width": 185.59375,
+        "height": 217.796875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 276,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 238,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 238,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        375,
+        660
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 331,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 293,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 293,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        375,
+        700
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 331,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 293,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 293,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        375,
+        701
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 331,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 293,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 293,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        375,
+        844
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 331,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 293,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 293,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        375,
+        932
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 331,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 293,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 293,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        390,
+        660
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 340,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 302,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 302,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        390,
+        700
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 340,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 302,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 302,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        390,
+        701
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 340,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 302,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 302,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 340,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 302,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 302,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        390,
+        932
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 340,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 302,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 302,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        412,
+        660
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 340,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 302,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 302,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        412,
+        700
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 340,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 302,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 302,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        412,
+        701
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 340,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 302,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 302,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        412,
+        844
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 340,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 302,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 302,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        412,
+        932
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 340,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 302,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 302,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        430,
+        660
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 340,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 302,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 302,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        430,
+        700
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 340,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 302,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 302,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        430,
+        701
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 340,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 302,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 302,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        430,
+        844
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 340,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 302,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 302,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    },
+    {
+      "viewport": [
+        430,
+        932
+      ],
+      "logo": {
+        "width": 215,
+        "height": 252.296875,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "32px",
+        "weight": "700",
+        "line": "0px"
+      },
+      "button": {
+        "width": 340,
+        "height": 64,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "13.3333px",
+        "weight": "400",
+        "line": "normal"
+      },
+      "name": {
+        "width": 302,
+        "height": 23,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "18px",
+        "weight": "600",
+        "line": "23px"
+      },
+      "desc": {
+        "width": 302,
+        "height": 15,
+        "font": "\"TAP Sans KR\", sans-serif",
+        "size": "12px",
+        "weight": "500",
+        "line": "15px"
+      },
+      "fontLoaded": true
+    }
+  ],
+  "grades": [
+    {
+      "word": "OH MY GOD~!",
+      "left": 35.3125,
+      "right": 284.671875,
+      "width": 320
+    },
+    {
+      "word": "UNBELIEVABLE!!",
+      "left": 16.359375,
+      "right": 303.625,
+      "width": 320
+    },
+    {
+      "word": "AMAZING!",
+      "left": 68.203125,
+      "right": 251.78125,
+      "width": 320
+    },
+    {
+      "word": "GREAT!",
+      "left": 93.140625,
+      "right": 226.84375,
+      "width": 320
+    },
+    {
+      "word": "GOOD TRY!",
+      "left": 57.5,
+      "right": 262.484375,
+      "width": 320
+    },
+    {
+      "word": "NOT BAD!",
+      "left": 70.703125,
+      "right": 249.28125,
+      "width": 320
+    },
+    {
+      "word": "OH MY GOD~!",
+      "left": 41.390625,
+      "right": 333.609375,
+      "width": 375
+    },
+    {
+      "word": "UNBELIEVABLE!!",
+      "left": 17.75,
+      "right": 357.25,
+      "width": 375
+    },
+    {
+      "word": "AMAZING!",
+      "left": 79.9375,
+      "right": 295.0625,
+      "width": 375
+    },
+    {
+      "word": "GREAT!",
+      "left": 109.15625,
+      "right": 265.828125,
+      "width": 375
+    },
+    {
+      "word": "GOOD TRY!",
+      "left": 67.390625,
+      "right": 307.59375,
+      "width": 375
+    },
+    {
+      "word": "NOT BAD!",
+      "left": 82.859375,
+      "right": 292.125,
+      "width": 375
+    },
+    {
+      "word": "OH MY GOD~!",
+      "left": 43.046875,
+      "right": 346.953125,
+      "width": 390
+    },
+    {
+      "word": "UNBELIEVABLE!!",
+      "left": 16.546875,
+      "right": 373.453125,
+      "width": 390
+    },
+    {
+      "word": "AMAZING!",
+      "left": 83.125,
+      "right": 306.859375,
+      "width": 390
+    },
+    {
+      "word": "GREAT!",
+      "left": 113.53125,
+      "right": 276.46875,
+      "width": 390
+    },
+    {
+      "word": "GOOD TRY!",
+      "left": 70.09375,
+      "right": 319.90625,
+      "width": 390
+    },
+    {
+      "word": "NOT BAD!",
+      "left": 86.171875,
+      "right": 303.8125,
+      "width": 390
+    },
+    {
+      "word": "OH MY GOD~!",
+      "left": 45.46875,
+      "right": 366.515625,
+      "width": 412
+    },
+    {
+      "word": "UNBELIEVABLE!!",
+      "left": 14.484375,
+      "right": 397.515625,
+      "width": 412
+    },
+    {
+      "word": "AMAZING!",
+      "left": 87.828125,
+      "right": 324.171875,
+      "width": 412
+    },
+    {
+      "word": "GREAT!",
+      "left": 119.921875,
+      "right": 292.0625,
+      "width": 412
+    },
+    {
+      "word": "GOOD TRY!",
+      "left": 74.046875,
+      "right": 337.953125,
+      "width": 412
+    },
+    {
+      "word": "NOT BAD!",
+      "left": 91.03125,
+      "right": 320.953125,
+      "width": 412
+    },
+    {
+      "word": "OH MY GOD~!",
+      "left": 47.453125,
+      "right": 382.53125,
+      "width": 430
+    },
+    {
+      "word": "UNBELIEVABLE!!",
+      "left": 14.78125,
+      "right": 415.21875,
+      "width": 430
+    },
+    {
+      "word": "AMAZING!",
+      "left": 91.65625,
+      "right": 338.328125,
+      "width": 430
+    },
+    {
+      "word": "GREAT!",
+      "left": 125.171875,
+      "right": 304.828125,
+      "width": 430
+    },
+    {
+      "word": "GOOD TRY!",
+      "left": 77.28125,
+      "right": 352.71875,
+      "width": 430
+    },
+    {
+      "word": "NOT BAD!",
+      "left": 95.015625,
+      "right": 334.96875,
+      "width": 430
+    }
+  ],
+  "modes": [
+    {
+      "mode": "timeAttack",
+      "title": "MAKE 10",
+      "board": {
+        "left": 14.5,
+        "right": 375.5,
+        "top": 232.75,
+        "bottom": 593.75
+      },
+      "wrap": {
+        "left": 14,
+        "right": 376,
+        "top": 143,
+        "bottom": 683.5
+      },
+      "sum": {
+        "left": 16,
+        "right": 374,
+        "top": 717.5,
+        "bottom": 764
+      },
+      "font": "\"TAP Sans KR\", sans-serif",
+      "tiles": 9
+    },
+    {
+      "mode": "timeless",
+      "title": "TIMELESS",
+      "board": {
+        "left": 14.5,
+        "right": 375.5,
+        "top": 215.625,
+        "bottom": 576.625
+      },
+      "wrap": {
+        "left": 14,
+        "right": 376,
+        "top": 131,
+        "bottom": 661.25
+      },
+      "sum": {
+        "left": 16,
+        "right": 374,
+        "top": 717.5,
+        "bottom": 764
+      },
+      "font": "\"TAP Sans KR\", sans-serif",
+      "tiles": 81
+    },
+    {
+      "mode": "endless",
+      "title": "ENDLESS",
+      "board": {
+        "left": 14.5,
+        "right": 375.5,
+        "top": 232.75,
+        "bottom": 593.75
+      },
+      "wrap": {
+        "left": 14,
+        "right": 376,
+        "top": 143,
+        "bottom": 683.5
+      },
+      "sum": {
+        "left": 16,
+        "right": 374,
+        "top": 717.5,
+        "bottom": 764
+      },
+      "font": "\"TAP Sans KR\", sans-serif",
+      "tiles": 81
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "index.html": "473e4dd2567c7f50a6cd00bbdee7cf54ed42904640f7d8a65f4757c9bc233145",
+    "src/ui/styles/tokens.css": "649010704b8394c7b32458df1b96b524e76620bc5da07dc8d7b5a4d12b0fceb6",
+    "src/ui/styles/title.css": "ae248faa9d4337dbf17ccb2468c248fae04457f7cd49a36ce1c03f8b0f10b177",
+    "src/ui/styles/typography.css": "f23f8c9ddbe5844d98044b151ce1302eff2448499645bc144d8a038a14ec0a0b",
+    "src/ui/screens/cheer.ts": "62ed6bca74c52171726d0579316ff256b9415ee8516911660bc7ef772129563b",
+    "public/assets/fonts/NotoSansKR-Variable.woff2": "e01974f5a88c7fa0e8a24b84bccc79e4de3f56ab1b2649f887f32c7a72204c93"
+  },
+  "notes": [
+    "Historical commit extracted with git archive; current files never replaced.",
+    "macOS Chrome captures, not an actual Android/Safari device reproduction. Shared dependencies reused for historical execution.",
+    "Grade shots are explicit component fixtures, not earned scores. Video frame decoding can differ between captures.",
+    "Real OEM font/bold/Easy Mode and in-place Play update NOT TESTED. OS density and magnifier are not modified."
+  ]
+}

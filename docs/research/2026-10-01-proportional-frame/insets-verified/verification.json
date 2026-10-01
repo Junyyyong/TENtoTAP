@@ -1,0 +1,423 @@
+{
+  "verifiedAt": "2026-10-01T02:52:57.730Z",
+  "browser": "154.0.8037.58",
+  "kind": "macOS Chromium simulation, NOT Android device",
+  "cases": [
+    {
+      "resizeObserver": true,
+      "env": [
+        0,
+        0
+      ],
+      "cap": null,
+      "overlap": null,
+      "expected": [
+        0,
+        0
+      ],
+      "result": {
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "prompt": {
+          "x": 130.109375,
+          "y": 741.84375,
+          "right": 259.890625,
+          "bottom": 785.84375
+        },
+        "padding": {
+          "top": 25.32,
+          "bottom": 21.1
+        }
+      }
+    },
+    {
+      "resizeObserver": true,
+      "env": [
+        24,
+        48
+      ],
+      "cap": null,
+      "overlap": null,
+      "expected": [
+        24,
+        48
+      ],
+      "result": {
+        "frame": {
+          "x": 16.625,
+          "y": 24,
+          "width": 356.7298583984375,
+          "height": 772
+        },
+        "prompt": {
+          "x": 135.63499450683594,
+          "y": 702.5584716796875,
+          "right": 254.3448486328125,
+          "bottom": 742.804931640625
+        },
+        "padding": {
+          "top": 25.32,
+          "bottom": 21.1
+        }
+      }
+    },
+    {
+      "resizeObserver": true,
+      "env": [
+        24,
+        48
+      ],
+      "cap": [
+        24,
+        48
+      ],
+      "overlap": [
+        24,
+        48
+      ],
+      "expected": [
+        24,
+        48
+      ],
+      "result": {
+        "frame": {
+          "x": 16.625,
+          "y": 24,
+          "width": 356.7298583984375,
+          "height": 772
+        },
+        "prompt": {
+          "x": 135.63499450683594,
+          "y": 702.5584716796875,
+          "right": 254.3448486328125,
+          "bottom": 742.804931640625
+        },
+        "padding": {
+          "top": 25.32,
+          "bottom": 21.1
+        }
+      }
+    },
+    {
+      "resizeObserver": true,
+      "env": [
+        24,
+        48
+      ],
+      "cap": [
+        24,
+        48
+      ],
+      "overlap": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "result": {
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "prompt": {
+          "x": 130.109375,
+          "y": 741.84375,
+          "right": 259.890625,
+          "bottom": 785.84375
+        },
+        "padding": {
+          "top": 25.32,
+          "bottom": 21.1
+        }
+      }
+    },
+    {
+      "resizeObserver": true,
+      "env": [
+        24,
+        48
+      ],
+      "cap": [
+        24,
+        48
+      ],
+      "overlap": [
+        10,
+        20
+      ],
+      "expected": [
+        10,
+        20
+      ],
+      "result": {
+        "frame": {
+          "x": 6.921875,
+          "y": 10,
+          "width": 376.1374206542969,
+          "height": 814
+        },
+        "prompt": {
+          "x": 132.40650939941406,
+          "y": 725.474853515625,
+          "right": 257.5746765136719,
+          "bottom": 767.910888671875
+        },
+        "padding": {
+          "top": 25.32,
+          "bottom": 21.1
+        }
+      }
+    },
+    {
+      "resizeObserver": true,
+      "env": [
+        24,
+        48
+      ],
+      "cap": [
+        0,
+        0
+      ],
+      "overlap": null,
+      "expected": [
+        0,
+        0
+      ],
+      "result": {
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "prompt": {
+          "x": 130.109375,
+          "y": 741.84375,
+          "right": 259.890625,
+          "bottom": 785.84375
+        },
+        "padding": {
+          "top": 25.32,
+          "bottom": 21.1
+        }
+      }
+    },
+    {
+      "resizeObserver": false,
+      "env": [
+        0,
+        0
+      ],
+      "cap": null,
+      "overlap": null,
+      "expected": [
+        0,
+        0
+      ],
+      "result": {
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "prompt": {
+          "x": 130.109375,
+          "y": 741.84375,
+          "right": 259.890625,
+          "bottom": 785.84375
+        },
+        "padding": {
+          "top": 25.32,
+          "bottom": 21.1
+        }
+      }
+    },
+    {
+      "resizeObserver": false,
+      "env": [
+        24,
+        48
+      ],
+      "cap": null,
+      "overlap": null,
+      "expected": [
+        24,
+        48
+      ],
+      "result": {
+        "frame": {
+          "x": 16.625,
+          "y": 24,
+          "width": 356.7298583984375,
+          "height": 772
+        },
+        "prompt": {
+          "x": 135.63499450683594,
+          "y": 702.5584716796875,
+          "right": 254.3448486328125,
+          "bottom": 742.804931640625
+        },
+        "padding": {
+          "top": 25.32,
+          "bottom": 21.1
+        }
+      }
+    },
+    {
+      "resizeObserver": false,
+      "env": [
+        24,
+        48
+      ],
+      "cap": [
+        24,
+        48
+      ],
+      "overlap": [
+        24,
+        48
+      ],
+      "expected": [
+        24,
+        48
+      ],
+      "result": {
+        "frame": {
+          "x": 16.625,
+          "y": 24,
+          "width": 356.7298583984375,
+          "height": 772
+        },
+        "prompt": {
+          "x": 135.63499450683594,
+          "y": 702.5584716796875,
+          "right": 254.3448486328125,
+          "bottom": 742.804931640625
+        },
+        "padding": {
+          "top": 25.32,
+          "bottom": 21.1
+        }
+      }
+    },
+    {
+      "resizeObserver": false,
+      "env": [
+        24,
+        48
+      ],
+      "cap": [
+        24,
+        48
+      ],
+      "overlap": [
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "result": {
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "prompt": {
+          "x": 130.109375,
+          "y": 741.84375,
+          "right": 259.890625,
+          "bottom": 785.84375
+        },
+        "padding": {
+          "top": 25.32,
+          "bottom": 21.1
+        }
+      }
+    },
+    {
+      "resizeObserver": false,
+      "env": [
+        24,
+        48
+      ],
+      "cap": [
+        24,
+        48
+      ],
+      "overlap": [
+        10,
+        20
+      ],
+      "expected": [
+        10,
+        20
+      ],
+      "result": {
+        "frame": {
+          "x": 6.921875,
+          "y": 10,
+          "width": 376.1374206542969,
+          "height": 814
+        },
+        "prompt": {
+          "x": 132.40650939941406,
+          "y": 725.474853515625,
+          "right": 257.5746765136719,
+          "bottom": 767.910888671875
+        },
+        "padding": {
+          "top": 25.32,
+          "bottom": 21.1
+        }
+      }
+    },
+    {
+      "resizeObserver": false,
+      "env": [
+        24,
+        48
+      ],
+      "cap": [
+        0,
+        0
+      ],
+      "overlap": null,
+      "expected": [
+        0,
+        0
+      ],
+      "result": {
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 844
+        },
+        "prompt": {
+          "x": 130.109375,
+          "y": 741.84375,
+          "right": 259.890625,
+          "bottom": 785.84375
+        },
+        "padding": {
+          "top": 25.32,
+          "bottom": 21.1
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "pass": true
+}

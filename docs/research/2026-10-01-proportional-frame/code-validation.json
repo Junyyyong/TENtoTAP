@@ -1,0 +1,55 @@
+{
+  "recordedAt": "2026-10-01T02:59:20.205Z",
+  "kind": "Commands observed during this task; browser proof is in separate manifests",
+  "vitest": {
+    "command": "npm test",
+    "passedFiles": 24,
+    "passedTests": 236
+  },
+  "webBuild": {
+    "command": "npm run build",
+    "pass": true
+  },
+  "nativeJavaCompile": {
+    "command": ":app:compileDebugJavaWithJavac --offline --no-daemon",
+    "pass": true,
+    "bundleOrApkCreated": false,
+    "warnings": [
+      "flatDir metadata",
+      "SDK XML version mismatch",
+      "Gradle deprecated features"
+    ]
+  },
+  "javaContract": {
+    "command": "node tests/native/text-zoom-contract.mjs",
+    "pass": true,
+    "kind": "Android/Capacitor test doubles, NOT device rendering"
+  },
+  "device": {
+    "command": "adb devices -l",
+    "connectedDevices": [],
+    "actualGalaxySettingsTested": false
+  },
+  "browser": {
+    "pass": true,
+    "version": "154.0.8037.58",
+    "captures": 58,
+    "sourceHashesStillMatch": true
+  },
+  "scope": {
+    "aabCreated": false,
+    "versionBumped": false,
+    "gitCommitCreated": false,
+    "gitPush": false,
+    "otherGameRepositoriesModified": false
+  },
+  "hashes": {
+    "android/app/src/main/java/io/github/junyyyong/makezero/MainActivity.java": "176757fc6bd10dacca04835a1f2b81162da203786254d1c048446d603fa093a7",
+    "android/app/src/main/AndroidManifest.xml": "cbea0f04c050d30e9a0ade1640668c6abd48aa5bc11d8768dd64d71eb67f4c5f",
+    "android/app/build.gradle": "c80507978dd83ec449371f1b1d6bc8456fa4bb6ccb5eff79986ad2458eac2584",
+    "tests/nativeFrame.test.ts": "e85af40b30fc1be015d73c36feb0715310caea4a311b6e67f6c80ec65cbd9e46",
+    "tests/native/text-zoom-contract.mjs": "adfa7a8c9aae41bcb3cfc41ca499a82017a662f3cf1e76575152dc253e27ed12",
+    "docs/research/2026-10-01-proportional-frame/check.mjs": "b4777e7f449433401664ba0221478b07391b87f23113a1ccb3d77eef62cb49de",
+    "docs/research/2026-10-01-proportional-frame/insets-check.mjs": "bab817e50032c6ac0be492624134d81e23f2d2644e3344e4abdb5ea75ac242ec"
+  }
+}

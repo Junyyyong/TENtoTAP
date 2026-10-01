@@ -13,3 +13,5 @@
 @import "./overlay.css";
 @import "./motion.css";
 @import "./storage.css";
+@import "./safeArea.css";
+@import "./nativeFrame.css";

@@ -1,0 +1,161 @@
+{
+  "verifiedAt": "2026-10-01T04:07:34.640Z",
+  "artifact": "releases/TAPtoTEN-1.0.5-code7.aab",
+  "sha256": "f2195eace82e692f70fafb4dae6a9368f7aa4797c3c27c655d771b334f9042eb",
+  "browser": "154.0.8037.58",
+  "frames": [
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "remainingInsets": [
+        0,
+        0
+      ],
+      "expectedScale": 1,
+      "logical": [
+        390,
+        844
+      ],
+      "rect": [
+        0,
+        0,
+        390,
+        844
+      ],
+      "scale": 1,
+      "native": true
+    },
+    {
+      "viewport": [
+        320,
+        700
+      ],
+      "remainingInsets": [
+        24,
+        48
+      ],
+      "expectedScale": 0.7440758293838863,
+      "logical": [
+        390,
+        844
+      ],
+      "rect": [
+        14.890625,
+        24,
+        290.1895751953125,
+        628
+      ],
+      "scale": 0.7440758338341347,
+      "native": true
+    },
+    {
+      "viewport": [
+        480,
+        1000
+      ],
+      "remainingInsets": [
+        24,
+        48
+      ],
+      "expectedScale": 1.099526066350711,
+      "logical": [
+        390,
+        844
+      ],
+      "rect": [
+        25.578125,
+        24,
+        428.8151550292969,
+        928
+      ],
+      "scale": 1.0995260385366588,
+      "native": true
+    },
+    {
+      "viewport": [
+        360,
+        780
+      ],
+      "remainingInsets": [
+        24,
+        48
+      ],
+      "expectedScale": 0.8388625592417062,
+      "logical": [
+        390,
+        844
+      ],
+      "rect": [
+        16.40625,
+        24,
+        327.1564025878906,
+        708
+      ],
+      "scale": 0.838862570738181,
+      "native": true
+    },
+    {
+      "viewport": [
+        270,
+        585
+      ],
+      "remainingInsets": [
+        18,
+        36
+      ],
+      "expectedScale": 0.6291469194312796,
+      "logical": [
+        390,
+        844
+      ],
+      "rect": [
+        12.3125,
+        18,
+        245.3673095703125,
+        531
+      ],
+      "scale": 0.629146947616186,
+      "native": true
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "remainingInsets": [
+        0,
+        0
+      ],
+      "expectedScale": 1,
+      "logical": [
+        390,
+        844
+      ],
+      "rect": [
+        0,
+        0,
+        390,
+        844
+      ],
+      "scale": 1,
+      "native": true
+    }
+  ],
+  "screens": [
+    {
+      "name": "home",
+      "buttons": [],
+      "white": "rgb(255, 255, 255)",
+      "blue": "rgb(44, 127, 224)",
+      "settings": "rgb(212, 54, 0)",
+      "reaction": "rgb(255, 181, 0)"
+    }
+  ],
+  "touches": [],
+  "errors": [],
+  "pass": false,
+  "limitations": "macOS Chrome with CapacitorCustomPlatform android and web Preferences test storage; unmodified extracted AAB assets. Not native Android/WebView, OEM setting, video/audio decoding, or real app update verification.",
+  "failure": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'rgba(0, 0, 0, 0)'\n- 'rgb(255, 255, 255)'\n      ^\n"
+}

@@ -1,5 +1,6 @@
 import { el } from "../dom";
 import { DancePlayback } from './dancePlayback';
+import { nativeCanvasScale } from '../nativeFrame';
 
 /**
  * The beat between the last move and the results panel.
@@ -225,6 +226,12 @@ export class Cheer {
   constructor() {
     // The clip stops on its own last frame; the player decides when to leave it.
     this.root.addEventListener("pointerdown", () => this.finish());
+    // A bundled font can finish decoding after the first measurement. Refit
+    // the visible word on font/layout changes, not just when a grade starts.
+    const refit = () => { if (this.done) this.fitWord(); };
+    window.addEventListener("resize", refit);
+    document.fonts?.addEventListener("loadingdone", refit);
+    if (typeof ResizeObserver !== "undefined") new ResizeObserver(refit).observe(this.root);
   }
 
   /**
@@ -360,7 +367,14 @@ export class Cheer {
     if (room <= 0) return;
     const range = document.createRange();
     range.selectNodeContents(this.word);
-    const drawn = range.getBoundingClientRect().width;
+    // Refit callbacks can arrive during the pop animation: measure its
+    // untransformed lettering, not the temporary 0.3x/1.18x painted size.
+    const transform = this.word.style.getPropertyValue("transform");
+    const priority = this.word.style.getPropertyPriority("transform");
+    this.word.style.setProperty("transform", "none", "important");
+    const drawn = range.getBoundingClientRect().width / nativeCanvasScale(this.root);
+    if (transform) this.word.style.setProperty("transform", transform, priority);
+    else this.word.style.removeProperty("transform");
     if (drawn <= room) return;
     const size = parseFloat(getComputedStyle(this.word).fontSize);
     this.word.style.fontSize = `${Math.floor((size * room) / drawn)}px`;

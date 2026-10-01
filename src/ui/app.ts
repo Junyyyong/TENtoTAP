@@ -21,6 +21,7 @@ import { TIMELESS_CONFIG, ENDLESS_CONFIG, TIME_ATTACK_CONFIG, stageConfig } from
 import { learningConfig, lessonCount, lessonGuided, lessonHint, bonusAfter, lessonIntro, scoreAttackConfig } from '../core/learningStages';
 import { initialLearningStage, RESUME_LEARNING_PROGRESS } from '../content/testSettings';
 import { BoardView } from "./boardView";
+import { nativeCanvasScale } from './nativeFrame';
 import { AppStateMachine } from "./appStateMachine";
 import { feedback } from "./feedback";
 import { SceneMusic } from "./sceneMusic";
@@ -784,10 +785,11 @@ export class App {
     const board = el<HTMLDivElement>("board").getBoundingClientRect();
     const wrap = el<HTMLDivElement>("board-wrap").getBoundingClientRect();
     const done = el<HTMLDivElement>("plate-done");
-    done.style.left = `${board.left - wrap.left}px`;
-    done.style.top = `${board.top - wrap.top}px`;
-    done.style.width = `${board.width}px`;
-    done.style.height = `${board.height}px`;
+    const scale = nativeCanvasScale(done);
+    done.style.left = `${(board.left - wrap.left) / scale}px`;
+    done.style.top = `${(board.top - wrap.top) / scale}px`;
+    done.style.width = `${board.width / scale}px`;
+    done.style.height = `${board.height / scale}px`;
     done.style.backgroundImage = artFor(stage);
     el<HTMLSpanElement>("plate-done-label").textContent = `${plateFor(stage).title} complete!`;
     // The score pops from the last clear are still drifting over the board;

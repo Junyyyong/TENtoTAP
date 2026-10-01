@@ -1,0 +1,61 @@
+/* Keep the recorded web design. Only reserve actual system-bar/cutout space.
+ * Capacitor supplies CSS variables; ordinary browsers supply env(). Never
+ * add the two together: some WebViews have already inset their native view.
+ */
+:root {
+  --app-safe-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px));
+  --app-safe-right: var(--safe-area-inset-right, env(safe-area-inset-right, 0px));
+  --app-safe-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
+  --app-safe-left: var(--safe-area-inset-left, env(safe-area-inset-left, 0px));
+}
+
+.screen {
+  padding: var(--app-safe-top) var(--app-safe-right) var(--app-safe-bottom) var(--app-safe-left);
+}
+
+/* Artwork still paints edge to edge. Interactive screens respect the bars. */
+.studio-screen, .splash-screen { padding: 0; }
+.title-screen {
+  padding: calc(max(calc(3 * var(--layout-vh, 1vh)), 16px) + var(--app-safe-top))
+    calc(22px + var(--app-safe-right))
+    calc(max(calc(2.5 * var(--layout-vh, 1vh)), 14px) + var(--app-safe-bottom))
+    calc(22px + var(--app-safe-left));
+}
+.tutorial-screen {
+  padding: calc(14px + var(--app-safe-top)) calc(14px + var(--app-safe-right))
+    calc(14px + var(--app-safe-bottom)) calc(14px + var(--app-safe-left));
+}
+.story-screen {
+  padding: calc(26px + var(--app-safe-top)) calc(26px + var(--app-safe-right))
+    calc(26px + var(--app-safe-bottom)) calc(26px + var(--app-safe-left));
+}
+
+/* Reserve the existing 44px music slot plus its 2px offset only when shown. */
+.title-links:has(.title-music-prompt:not(.hidden)) { margin-bottom: 46px; }
+
+.cheer, .lesson-intro, .overlay {
+  position: absolute;
+  inset: var(--app-safe-top) var(--app-safe-right) var(--app-safe-bottom) var(--app-safe-left);
+  width: auto;
+  height: auto;
+}
+.cheer {
+  padding-top: clamp(64px, calc((var(--app-h, 100dvh) - var(--app-safe-top) - var(--app-safe-bottom)) * .22), 210px);
+}
+.overlay .panel { max-height: 100%; overflow-y: auto; }
+.legal-dialog {
+  position: fixed;
+  inset: var(--app-safe-top) var(--app-safe-right) var(--app-safe-bottom) var(--app-safe-left);
+  margin: auto;
+  width: min(640px, calc(100% - var(--app-safe-left) - var(--app-safe-right) - 24px));
+  height: min(760px, calc(var(--app-h, 100dvh) - var(--app-safe-top) - var(--app-safe-bottom) - 32px));
+  max-height: calc(var(--app-h, 100dvh) - var(--app-safe-top) - var(--app-safe-bottom) - 32px);
+}
+.storage-notice {
+  bottom: max(12px, var(--app-safe-bottom));
+  left: max(12px, var(--app-safe-left));
+  right: max(12px, var(--app-safe-right));
+}
+.storage-notice.storage-blocking {
+  inset: var(--app-safe-top) var(--app-safe-right) var(--app-safe-bottom) var(--app-safe-left);
+}

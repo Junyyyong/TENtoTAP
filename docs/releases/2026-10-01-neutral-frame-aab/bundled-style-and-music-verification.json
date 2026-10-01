@@ -1,0 +1,502 @@
+{
+  "verifiedAt": "2026-10-01T04:02:12.930Z",
+  "artifact": "releases/TAPtoTEN-1.0.5-code7.aab",
+  "sha256": "f2195eace82e692f70fafb4dae6a9368f7aa4797c3c27c655d771b334f9042eb",
+  "cases": [
+    {
+      "height": 660,
+      "logo": {
+        "size": "32px",
+        "weight": "700",
+        "width": 215,
+        "height": 252.296875
+      },
+      "button": {
+        "size": "13.3333px",
+        "weight": "400",
+        "width": 340,
+        "height": 64
+      },
+      "name": {
+        "size": "19px",
+        "weight": "800",
+        "width": 302,
+        "height": 23
+      },
+      "desc": {
+        "size": "12px",
+        "weight": "700",
+        "width": 302,
+        "height": 15
+      },
+      "faces": [
+        {
+          "family": "TAP Sans KR",
+          "status": "unloaded"
+        }
+      ]
+    },
+    {
+      "height": 700,
+      "logo": {
+        "size": "32px",
+        "weight": "700",
+        "width": 215,
+        "height": 252.296875
+      },
+      "button": {
+        "size": "13.3333px",
+        "weight": "400",
+        "width": 340,
+        "height": 64
+      },
+      "name": {
+        "size": "19px",
+        "weight": "800",
+        "width": 302,
+        "height": 23
+      },
+      "desc": {
+        "size": "12px",
+        "weight": "700",
+        "width": 302,
+        "height": 15
+      },
+      "faces": [
+        {
+          "family": "TAP Sans KR",
+          "status": "unloaded"
+        }
+      ]
+    },
+    {
+      "height": 701,
+      "logo": {
+        "size": "32px",
+        "weight": "700",
+        "width": 250,
+        "height": 293.375
+      },
+      "button": {
+        "size": "13.3333px",
+        "weight": "400",
+        "width": 340,
+        "height": 79
+      },
+      "name": {
+        "size": "21px",
+        "weight": "800",
+        "width": 298,
+        "height": 25
+      },
+      "desc": {
+        "size": "13px",
+        "weight": "700",
+        "width": 298,
+        "height": 16
+      },
+      "faces": [
+        {
+          "family": "TAP Sans KR",
+          "status": "unloaded"
+        }
+      ]
+    },
+    {
+      "height": 844,
+      "logo": {
+        "size": "32px",
+        "weight": "700",
+        "width": 250,
+        "height": 293.375
+      },
+      "button": {
+        "size": "13.3333px",
+        "weight": "400",
+        "width": 340,
+        "height": 79
+      },
+      "name": {
+        "size": "21px",
+        "weight": "800",
+        "width": 298,
+        "height": 25
+      },
+      "desc": {
+        "size": "13px",
+        "weight": "700",
+        "width": 298,
+        "height": 16
+      },
+      "faces": [
+        {
+          "family": "TAP Sans KR",
+          "status": "unloaded"
+        }
+      ]
+    },
+    {
+      "height": 932,
+      "logo": {
+        "size": "32px",
+        "weight": "700",
+        "width": 250,
+        "height": 293.375
+      },
+      "button": {
+        "size": "13.3333px",
+        "weight": "400",
+        "width": 340,
+        "height": 79
+      },
+      "name": {
+        "size": "21px",
+        "weight": "800",
+        "width": 298,
+        "height": 25
+      },
+      "desc": {
+        "size": "13px",
+        "weight": "700",
+        "width": 298,
+        "height": 16
+      },
+      "faces": [
+        {
+          "family": "TAP Sans KR",
+          "status": "unloaded"
+        }
+      ]
+    }
+  ],
+  "musicCases": [
+    {
+      "width": 320,
+      "height": 568,
+      "top": 0,
+      "bottom": 0,
+      "rects": [
+        {
+          "selector": ".mode-list",
+          "left": 22,
+          "right": 298,
+          "top": 225.53125,
+          "bottom": 431.53125
+        },
+        {
+          "selector": "#btn-title-settings",
+          "left": 128.671875,
+          "right": 191.328125,
+          "top": 458.171875,
+          "bottom": 491.171875
+        },
+        {
+          "selector": ".title-music-prompt",
+          "left": 95.109375,
+          "right": 224.890625,
+          "top": 493.171875,
+          "bottom": 533.171875
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "top": 24,
+      "bottom": 48,
+      "rects": [
+        {
+          "selector": ".mode-list",
+          "left": 22,
+          "right": 298,
+          "top": 216.25,
+          "bottom": 422.25
+        },
+        {
+          "selector": "#btn-title-settings",
+          "left": 128.671875,
+          "right": 191.328125,
+          "top": 432.25,
+          "bottom": 465.25
+        },
+        {
+          "selector": ".title-music-prompt",
+          "left": 95.109375,
+          "right": 224.890625,
+          "top": 467.25,
+          "bottom": 507.25
+        }
+      ]
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "top": 0,
+      "bottom": 0,
+      "rects": [
+        {
+          "selector": ".mode-list",
+          "left": 22,
+          "right": 338,
+          "top": 347.46875,
+          "bottom": 604.46875
+        },
+        {
+          "selector": "#btn-title-settings",
+          "left": 148.671875,
+          "right": 211.328125,
+          "top": 628.484375,
+          "bottom": 661.484375
+        },
+        {
+          "selector": ".title-music-prompt",
+          "left": 115.109375,
+          "right": 244.890625,
+          "top": 663.484375,
+          "bottom": 707.484375
+        }
+      ]
+    },
+    {
+      "width": 360,
+      "height": 740,
+      "top": 24,
+      "bottom": 48,
+      "rects": [
+        {
+          "selector": ".mode-list",
+          "left": 22,
+          "right": 338,
+          "top": 343.453125,
+          "bottom": 600.453125
+        },
+        {
+          "selector": "#btn-title-settings",
+          "left": 148.671875,
+          "right": 211.328125,
+          "top": 610.453125,
+          "bottom": 643.453125
+        },
+        {
+          "selector": ".title-music-prompt",
+          "left": 115.109375,
+          "right": 244.890625,
+          "top": 645.453125,
+          "bottom": 689.453125
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 660,
+      "top": 0,
+      "bottom": 0,
+      "rects": [
+        {
+          "selector": ".mode-list",
+          "left": 25,
+          "right": 365,
+          "top": 315.296875,
+          "bottom": 521.296875
+        },
+        {
+          "selector": "#btn-title-settings",
+          "left": 163.671875,
+          "right": 226.328125,
+          "top": 547.890625,
+          "bottom": 580.890625
+        },
+        {
+          "selector": ".title-music-prompt",
+          "left": 130.109375,
+          "right": 259.890625,
+          "top": 582.890625,
+          "bottom": 626.890625
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 660,
+      "top": 24,
+      "bottom": 48,
+      "rects": [
+        {
+          "selector": ".mode-list",
+          "left": 25,
+          "right": 365,
+          "top": 306.09375,
+          "bottom": 512.09375
+        },
+        {
+          "selector": "#btn-title-settings",
+          "left": 163.671875,
+          "right": 226.328125,
+          "top": 522.09375,
+          "bottom": 555.09375
+        },
+        {
+          "selector": ".title-music-prompt",
+          "left": 130.109375,
+          "right": 259.890625,
+          "top": 557.09375,
+          "bottom": 601.09375
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "bottom": 0,
+      "rects": [
+        {
+          "selector": ".mode-list",
+          "left": 25,
+          "right": 365,
+          "top": 402.796875,
+          "bottom": 659.796875
+        },
+        {
+          "selector": "#btn-title-settings",
+          "left": 163.671875,
+          "right": 226.328125,
+          "top": 706.84375,
+          "bottom": 739.84375
+        },
+        {
+          "selector": ".title-music-prompt",
+          "left": 130.109375,
+          "right": 259.890625,
+          "top": 741.84375,
+          "bottom": 785.84375
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "top": 24,
+      "bottom": 48,
+      "rects": [
+        {
+          "selector": ".mode-list",
+          "left": 25,
+          "right": 365,
+          "top": 390.796875,
+          "bottom": 647.796875
+        },
+        {
+          "selector": "#btn-title-settings",
+          "left": 163.671875,
+          "right": 226.328125,
+          "top": 676.84375,
+          "bottom": 709.84375
+        },
+        {
+          "selector": ".title-music-prompt",
+          "left": 130.109375,
+          "right": 259.890625,
+          "top": 711.84375,
+          "bottom": 755.84375
+        }
+      ]
+    }
+  ],
+  "insetCases": [
+    {
+      "envTop": 0,
+      "envBottom": 0,
+      "nativeTop": null,
+      "nativeBottom": null,
+      "padding": {
+        "top": 25.32,
+        "bottom": 21.1
+      },
+      "expected": {
+        "top": 25.32,
+        "bottom": 21.1
+      }
+    },
+    {
+      "envTop": 24,
+      "envBottom": 48,
+      "nativeTop": null,
+      "nativeBottom": null,
+      "padding": {
+        "top": 49.32,
+        "bottom": 69.1
+      },
+      "expected": {
+        "top": 49.32,
+        "bottom": 69.1
+      }
+    },
+    {
+      "envTop": 0,
+      "envBottom": 0,
+      "nativeTop": 24,
+      "nativeBottom": 48,
+      "padding": {
+        "top": 49.32,
+        "bottom": 69.1
+      },
+      "expected": {
+        "top": 49.32,
+        "bottom": 69.1
+      }
+    },
+    {
+      "envTop": 24,
+      "envBottom": 48,
+      "nativeTop": 24,
+      "nativeBottom": 48,
+      "padding": {
+        "top": 49.32,
+        "bottom": 69.1
+      },
+      "expected": {
+        "top": 49.32,
+        "bottom": 69.1
+      }
+    },
+    {
+      "envTop": 24,
+      "envBottom": 48,
+      "nativeTop": 0,
+      "nativeBottom": 0,
+      "padding": {
+        "top": 25.32,
+        "bottom": 21.1
+      },
+      "expected": {
+        "top": 25.32,
+        "bottom": 21.1
+      }
+    },
+    {
+      "envTop": 24,
+      "envBottom": 48,
+      "nativeTop": 10,
+      "nativeBottom": 20,
+      "padding": {
+        "top": 35.32,
+        "bottom": 41.1
+      },
+      "expected": {
+        "top": 35.32,
+        "bottom": 41.1
+      }
+    }
+  ],
+  "fonts": [
+    {
+      "familyName": "Apple SD Gothic Neo",
+      "postScriptName": "AppleSDGothicNeo-ExtraBold",
+      "isCustomFont": false,
+      "glyphCount": 9
+    }
+  ],
+  "errors": [],
+  "limitations": "Extracted AAB assets in macOS Chrome, not a physical Android device. Music prompt manually made visible; env() and native CSS insets simulated. OEM font/bold/density settings and Play update not tested."
+}
