@@ -1,0 +1,368 @@
+{
+  "pass": true,
+  "comparison": {
+    "images": [
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-studio.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-studio.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-cover.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-cover.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-home.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-home.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-settings.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-settings.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-privacy.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-privacy.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-limitless-start.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-limitless-start.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-limitless-announcement.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-limitless-announcement.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-limitless-game.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-limitless-game.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-limitless-pause.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-limitless-pause.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-limitless-result.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-limitless-result.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-timeless-start.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-timeless-start.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-timeless-announcement.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-timeless-announcement.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-timeless-game.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-timeless-game.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-timeless-pause.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-timeless-pause.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-timeless-result.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-timeless-result.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-endless-start.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-endless-start.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-endless-announcement.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-endless-announcement.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-endless-game.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-endless-game.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-endless-pause.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-endless-pause.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-endless-result.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-endless-result.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-lesson-1-announcement.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-lesson-1-announcement.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-lesson-1-game.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-lesson-1-game.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-lesson-6-announcement.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-lesson-6-announcement.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-lesson-6-game.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-lesson-6-game.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-lesson-14-announcement.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-lesson-14-announcement.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-lesson-14-game.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-lesson-14-game.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-lesson-23-announcement.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-lesson-23-announcement.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-lesson-23-game.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-lesson-23-game.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-lesson-30-announcement.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-lesson-30-announcement.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-lesson-30-game.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-lesson-30-game.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/before-long-grade.png",
+        "width": 780,
+        "height": 1688
+      },
+      {
+        "src": "/docs/research/2026-10-01-responsive-native/final-2/after-long-grade.png",
+        "width": 780,
+        "height": 1688
+      }
+    ],
+    "controls": true
+  },
+  "store": {
+    "images": [
+      {
+        "src": "/store/2026-10-01-responsive/01-cover.png",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "src": "/store/2026-10-01-responsive/02-main.png",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "src": "/store/2026-10-01-responsive/03-limitless-start.png",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "src": "/store/2026-10-01-responsive/04-lesson-instruction.png",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "src": "/store/2026-10-01-responsive/05-lesson-game.png",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "src": "/store/2026-10-01-responsive/06-timeless.png",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "src": "/store/2026-10-01-responsive/07-good-try.png",
+        "width": 1080,
+        "height": 1920
+      }
+    ],
+    "downloads": [
+      "/store/2026-10-01-responsive/TAPtoTEN-store-screenshots-7.zip",
+      "/store/2026-10-01-responsive/01-cover.png",
+      "/store/2026-10-01-responsive/02-main.png",
+      "/store/2026-10-01-responsive/03-limitless-start.png",
+      "/store/2026-10-01-responsive/04-lesson-instruction.png",
+      "/store/2026-10-01-responsive/05-lesson-game.png",
+      "/store/2026-10-01-responsive/06-timeless.png",
+      "/store/2026-10-01-responsive/07-good-try.png",
+      "/store/play-icon-512.png"
+    ]
+  }
+}

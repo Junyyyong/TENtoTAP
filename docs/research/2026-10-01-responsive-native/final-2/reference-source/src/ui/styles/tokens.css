@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "TAP Sans KR";
+  src: url("/assets/fonts/NotoSansKR-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TAP Serif KR";
+  src: url("/assets/fonts/NotoSerifKR-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}
+
+/*
+ * The palette comes off the wordmark: cyan-to-blue, pink-to-purple, and one
+ * orange for the things that need to be found. Nothing else. If a new colour
+ * feels necessary, it almost certainly belongs to one of these three families
+ * at a different lightness.
+ *
+ * These were sampled from the block wordmark the game shipped with. The
+ * wordmark has since been replaced by the drawn one in public/cover-logo.svg,
+ * which is warmer — so the two no longer match, and the skin is due a pass.
+ */
+/*
+ * The palette comes off the cover: a warm paper ground, the wordmark's orange
+ * and yellow, and one deep maroon that every dark thing on screen is made of.
+ *
+ * It is a light skin, and not only because the cover is. Clearing a block
+ * uncovers the picture hidden under it, and those pictures are toy renders on
+ * white — on a night-blue board every cleared square opened as a glaring white
+ * hole. On paper the reveal is seamless, which is the whole point of the mode.
+ *
+ * Nine block colours are spread around the wheel rather than picked to taste:
+ * the board is read in groups, so no two digits may be confusable at 35px.
+ */
+:root {
+  /* Neutral interface only. Keep the original gameplay palette below: card
+     faces, puzzle pieces, guidance and hit/error effects still depend on it. */
+  --ui-background: #ffffff;
+  --ui-surface: #f5f6f8;
+  --ui-hover: #edf0f4;
+  --ui-pressed: #dce1e8;
+  --ui-border: #cdd2da;
+  --ui-ink: #363c46;
+  --ui-muted: #626b78;
+  --ui-scrim: rgba(0, 0, 0, 0.55);
+  /* Capacitor is authoritative, including an explicit 0 when native padding
+     already handles system bars. Use env() only before/without that value. */
+  --app-safe-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px));
+  --app-safe-right: var(--safe-area-inset-right, env(safe-area-inset-right, 0px));
+  --app-safe-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
+  --app-safe-left: var(--safe-area-inset-left, env(safe-area-inset-left, 0px));
+  --app-content-h: calc(var(--app-h, 100dvh) - var(--app-safe-top) - var(--app-safe-bottom));
+  /* TAPtoTEN paper skin, copied from the source project. */
+  --paper: #fff6e9;
+  --paper-lit: #fffdf8;
+  --paper-deep: #f6e6d2;
+  --paper-edge: #e8d3ba;
+
+  /* Maroon: every dark thing — text, outlines, the shadow under a block */
+  --ink: #3a0f0a;
+  --ink-soft: #8a6552;
+  --ink-faint: #b79a89;
+
+  /* Warm: the wordmark's own two, and the accent everything active uses */
+  --hot: #ff5000;
+  --hot-deep: #d43600;
+  --warm: #ffb500;
+  --warm-deep: #ff8b00;
+  --sun: #fff500;
+
+  /* Cool: kept for the things that must read as calm next to all that orange */
+  --cool: #2c7fe0;
+  --cool-deep: #1f5bb0;
+  --cool-dim: rgba(58, 15, 10, 0.14);
+
+  /* Primary interface accent, separate from success/error feedback. */
+  --accent: var(--cool);
+  --accent-deep: var(--cool-deep);
+
+  /* Board families: related, but distinguishable at tile size. */
+  --consonant-ink: #ffffff;
+  --consonant-face: var(--cool);
+  --vowel-ink: #ffffff;
+  --vowel-face: var(--hot);
+
+  /* Surfaces: a panel, the slab it presses into, the hollow it presses out of */
+  --panel: rgba(255, 255, 255, 0.72);
+  --panel-lit: rgba(255, 255, 255, 0.94);
+  --panel-deep: rgba(246, 230, 210, 0.9);
+  --slab: rgba(58, 15, 10, 0.22);
+  --slab-hard: rgba(58, 15, 10, 0.32);
+  --recess: rgba(58, 15, 10, 0.12);
+  --sheen: rgba(255, 255, 255, 0.9);
+  --scrim: rgba(58, 15, 10, 0.55);
+
+  /* Legacy names, kept so nothing has to be renamed twice. */
+  --night: var(--paper);
+  --house-deep: var(--paper);
+  --house: var(--paper-lit);
+  --house-lit: var(--paper-lit);
+  --velvet: var(--paper-deep);
+  --velvet-deep: var(--paper-deep);
+  --hot-dim: rgba(255, 80, 0, 0.16);
+  --brass-dark: var(--warm-deep);
+  --brass: var(--warm-deep);
+  --brass-bright: var(--warm);
+  --marquee: var(--hot);
+  --bulb: var(--sun);
+  --spotlight: var(--warm);
+  --stage: var(--paper);
+  --stage-edge: var(--paper-edge);
+
+  /* Blocks: saturated faces, white numerals, on paper */
+  --tile-face: #ffffff;
+  --tile-face-low: #f0dcc4;
+  --tile-ink: var(--ink);
+  --tile-sel: #fff2c4;
+
+  --ring-sel: var(--warm-deep);
+  --ring-ok: #16a34a;
+  --ring-bad: #dc2626;
+
+  /*
+   * One colour per digit, nine hues spread around the wheel. A board of
+   * identical blocks is read one number at a time; a board of coloured ones is
+   * read in groups, which is what the game actually asks for. They are drawn
+   * from the cast on the cover so the board and the characters are one world.
+   */
+  --v1: #f238a0;
+  --v2: #ee2b35;
+  --v3: #f47b16;
+  --v4: #f2cf0b;
+  --v5: #17d65b;
+  --v6: #08a936;
+  --v7: #16b7e8;
+  --v8: #155ce5;
+  --v9: #9a35e8;
+
+  /* Panel buttons: go, choose, back. Green carries on everywhere. */
+  --go: #22a03f;
+  --go-deep: #16752c;
+  --pick: var(--cool);
+  --pick-deep: var(--cool-deep);
+  --stop: #dc2626;
+  --stop-deep: #a01818;
+
+  --gap: 2px;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*
+ * The page is an app, not a document: it must never scroll or rubber-band.
+ *
+ * `overscroll-behavior` alone is not enough on a phone browser — the document
+ * itself still bounces under a drag, which reads as the whole screen wobbling
+ * like a web page. Pinning the body to the viewport removes the scroll it
+ * would bounce, and every screen sizes itself from that box instead of from
+ * the viewport units, so the chrome sliding in and out cannot leave the app
+ * taller than the room it is being shown in.
+ */
+html {
+  background: var(--ui-background);
+  height: 100%;
+  overscroll-behavior: none;
+  /* Keep mobile text inflation from changing the game's designed proportions.
+     Android WebView text zoom is separately enforced in MainActivity. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/*
+ * The app is exactly as tall as the screen actually is, right now.
+ *
+ * `inset: 0` on a fixed element measures the initial containing block, and on
+ * iOS Safari that is the viewport at its *tallest* — the height it would have
+ * with the address bar retracted. The app was therefore taller than what was
+ * on screen: the bottom of the board sat under the browser chrome, and
+ * anything centred in it (the end-of-run flourish, most visibly) was pushed
+ * down by half the difference.
+ *
+ * `dvh` is the height at this moment and shrinks and grows with the bars.
+ * The `100%` above it is the fallback for anything that does not know `dvh`,
+ * where the old behaviour was correct anyway.
+ */
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  height: 100dvh;
+  /* Measured, when the browser will tell us — see ui/viewport.ts. */
+  height: var(--app-h, 100dvh);
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+  color: var(--ui-ink);
+  background: var(--ui-background);
+  overscroll-behavior: none;
+  /* A double tap on a tile is two taps, never a zoom. */
+  touch-action: manipulation;
+  user-select: none;
+}
+
+#app {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  /* Query our canvas, not the OS-density-dependent outer viewport. */
+  container: app / size;
+  background: var(--ui-background);
+}
+
+/* Android uses density-independent logical dimensions with a responsive
+   aspect ratio. The canvas fills the usable window; only splashes paint into
+   system-bar areas. Interactive screens keep those areas outside the canvas. */
+#app.is-native-frame {
+  position: absolute;
+  left: var(--frame-left, 0px);
+  top: var(--frame-top, 0px);
+  width: var(--frame-width, 390px);
+  height: var(--frame-height, 844px);
+  overflow: visible;
+  transform: scale(var(--frame-scale, 1));
+  transform-origin: top left;
+  --app-safe-top: 0px;
+  --app-safe-right: 0px;
+  --app-safe-bottom: 0px;
+  --app-safe-left: 0px;
+  --app-content-h: var(--app-h, 844px);
+}
+
+#app::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: none;
+}
+
+.screen {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding:
+    var(--app-safe-top)
+    var(--app-safe-right)
+    var(--app-safe-bottom)
+    var(--app-safe-left);
+}
+
+.screen.hidden {
+  display: none;
+}
+
+/*
+ * The catch-all. Every `.hidden` rule used to be scoped to one selector, so
+ * adding the class to something new silently did nothing — which is how the
+ * results panel kept showing a second button it had been told to drop. The
+ * scoped rules above and below still win where they need different behaviour
+ * (`.timer-bar.hidden` keeps its space, for one).
+ */
+.hidden {
+  display: none;
+}

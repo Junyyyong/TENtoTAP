@@ -1,0 +1,82 @@
+{
+  "capturedAt": "2026-10-01T06:44:42.806Z",
+  "conditions": {
+    "css": [
+      360,
+      640
+    ],
+    "dpr": 3,
+    "png": [
+      1080,
+      1920
+    ],
+    "clock": "2026-10-01T00:00:00Z",
+    "seed": 20261001,
+    "locale": "en-US",
+    "timezone": "Asia/Seoul",
+    "native": "Chromium trackNativeFrame(true), zero insets, no OS chrome"
+  },
+  "assets": [
+    {
+      "file": "01-cover.png",
+      "label": "커버",
+      "sha256": "5279ac91e7275b11a224a3ff8a155114cd7be1c5cbb60e9fa82600a9125e8ea3"
+    },
+    {
+      "file": "02-main.png",
+      "label": "메인",
+      "sha256": "b558fff5b40db6229e466c255e97b7a6327f9b9e283b4ccff5e2fce7525febbd"
+    },
+    {
+      "file": "03-limitless-start.png",
+      "label": "LIMITLESS START",
+      "sha256": "cecf680d2c7a861e0dadbd52ffcd9fcc3241b8a8df01782add7645805035d631"
+    },
+    {
+      "file": "04-lesson-instruction.png",
+      "label": "튜토리얼 안내",
+      "sha256": "e07ff4aea73ac4d0a8ba056db04ae409050b1fcb42829e49bae7568b1ab6353f"
+    },
+    {
+      "file": "05-lesson-game.png",
+      "label": "튜토리얼 2×2",
+      "sha256": "f6b6740da8c8345d896628269d32b6bc9808e547fc44ec817038812c007c3fa9"
+    },
+    {
+      "file": "06-timeless.png",
+      "label": "TIMELESS 9×9",
+      "sha256": "1b9d5f4a04b723271caa611dd563d7432b7e06d6d4159db5792d70a084f782fc"
+    },
+    {
+      "file": "07-good-try.png",
+      "label": "GOOD TRY 리액션",
+      "sha256": "4d29012c1aad5800cabc0dfeb630330210014306373ffbc7072ee4505e23024d"
+    }
+  ],
+  "notes": [
+    "Separate from 780×1688 research evidence; captured directly at 1080×1920, not stretched/resized.",
+    "Saved progress and record values are controlled capture data. GOOD TRY is earned by a real ENDLESS pair clear, then letting the board fill. Existing movie/1.webm is held at t=0.8s.",
+    "No Android physical device validation. Existing artwork and video are unchanged."
+  ],
+  "browser": "154.0.8037.58",
+  "reaction": {
+    "mode": "endless",
+    "clearedPair": [
+      "0",
+      "6"
+    ],
+    "displayedStats": [
+      "00:02",
+      "10",
+      "123"
+    ]
+  },
+  "video": {
+    "source": "/movie/1.webm",
+    "time": 0.8,
+    "width": 960,
+    "height": 944,
+    "readyState": 4
+  },
+  "pass": true
+}

@@ -51,6 +51,12 @@ android/                Capacitor 네이티브 프로젝트
 store/                  Play 스토어 등록용 이미지
 ```
 
+## Android 화면 배치
+
+`src/ui/nativeFrame.ts`는 OS density를 정규화한 뒤 실제 WebView 가용 너비·높이로 논리 화면을 계산한다. 390×844는 디자인 참고이고 고정 종횡비가 아니다. `nativeFrame.css`가 실제 크기·변환/안전영역을, `nativeResponsive.css`가 Android 전용 배치를 담당한다. Java가 보고한 나머지 시스템 바 겹침을 한 번만 제외하며, 스튜디오와 커버만 전체 창까지 그린다. 일반 웹의 기존 미디어 쿼리/배치는 유지한다.
+
+보드 측정은 CSS 좌표, 포인터 적중은 client 좌표다. 변환된 DOMRect를 다시 CSS에 기록할 때만 `nativeCanvasScale`로 나눈다. `titleLayout.ts`는 Android 메뉴 겹침을 검출해 필요한 경우 자연스러운 스크롤로 보완한다. 연구·촬영 스크립트는 런타임 import 대상이 아니다. [검증 조건과 실기기 한계](research/2026-10-01-responsive-native/README.md).
+
 ## 의존 방향
 
 ```

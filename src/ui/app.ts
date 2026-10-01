@@ -22,6 +22,7 @@ import { learningConfig, lessonCount, lessonGuided, lessonHint, bonusAfter, less
 import { initialLearningStage, RESUME_LEARNING_PROGRESS } from '../content/testSettings';
 import { BoardView } from "./boardView";
 import { nativeCanvasScale } from './nativeFrame';
+import { trackTitleLayout } from './titleLayout';
 import { AppStateMachine } from "./appStateMachine";
 import { feedback } from "./feedback";
 import { SceneMusic } from "./sceneMusic";
@@ -183,6 +184,7 @@ export class App {
       (mode) => this.chooseMode(mode),
       () => this.showSettings(),
     );
+    trackTitleLayout(el('screen-title'));
 
     this.gallery = new GalleryScreen(() => this.showTitle());
     this.picker = new PickerScreen(

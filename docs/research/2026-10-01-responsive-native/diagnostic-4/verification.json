@@ -1,0 +1,646 @@
+{
+  "capturedAt": "2026-10-01T06:39:17.062Z",
+  "revision": "02cd27ca22baded07c691b35a6b58601cdbb2a78",
+  "beforeDirectory": "/var/folders/d9/t0cdtg0d5lv7bwx2zgjbz6t80000gn/T/tapten-responsive-before-eGx092",
+  "conditions": {
+    "viewport": [
+      390,
+      844
+    ],
+    "dpr": 2,
+    "png": [
+      780,
+      1688
+    ],
+    "clock": "2026-10-01T00:00:00Z",
+    "seed": 20261001,
+    "locale": "en-US",
+    "timezone": "Asia/Seoul",
+    "native": "Both before/after invoke trackNativeFrame(true); Java overlap represented by CSS variables; real web Preferences.",
+    "animation": "Finite animations finished; infinite paused at 0; muted audio. Grade layout fixtures hide video except separate store capture."
+  },
+  "captures": [],
+  "sourceHashes": {
+    "before": {
+      "src/ui/nativeFrame.ts": "144c145e4623d7a9bcaef82e5c979a278e6816ff1e4d8d40eb9e83b406e1ec66",
+      "src/ui/titleLayout.ts": null,
+      "src/ui/boardView.ts": "e172bb304eced8f2f0d46efddd4aabd7f31c2133104c202d53ef8a8ab7d1921d",
+      "src/ui/app.ts": "2817242793bbdda1d7fb25547ca788304b7b059efe0731dd31b6d1657b9b737e",
+      "src/ui/styles/nativeFrame.css": "1d6abba62acc37d5f6754028a367c73a2b04f3db80ec4ff363a2eaa70994b77b",
+      "src/ui/styles/nativeResponsive.css": null,
+      "src/ui/styles/title.css": "e13ec686d51cc5deb0cc648b931244f6f1f10a53d816439ca4772d83594f208a",
+      "scripts/build-launcher-icons.mjs": "6311d5f599a0eb6a77e9a1a7d9e0c99afa5e4aa1f8f2e08fabb97f4d67f00943",
+      "store/icon-source.png": "1e98bcab00a78359d0641cf78bc0c2295cc4f7c1a1b69e3ec23b2782b235961a"
+    },
+    "after": {
+      "src/ui/nativeFrame.ts": "5b6681d28c1f8af85c2d826df6bb8269c52667ac511c0aaebf5158c97c688242",
+      "src/ui/titleLayout.ts": "8daefa65e74d9f0779171bd4129c1c8a142c8b71c4066fc10b9392693d963870",
+      "src/ui/boardView.ts": "549084daa945f291019b27bc081c2a97e461d75dc81b2d5a314caa229ec2cb11",
+      "src/ui/app.ts": "6d5ad07516a8a4a2fb1cab78a86a05e19ecf5e7761978f68ad093cb301241269",
+      "src/ui/styles/nativeFrame.css": "3ea7624062735c72c4afa87974b7ec58330426f01a5c9829f42c07bda703ef7d",
+      "src/ui/styles/nativeResponsive.css": "0101766b1762009e24148a9fb5a48e3f5483aa121ed3e426e59b9ba2ab901338",
+      "src/ui/styles/title.css": "cd538e019c2ebf3337c00773a00b0b505a21a5bfe13b1fe111375c6d1ea5ccba",
+      "scripts/build-launcher-icons.mjs": "563cc19f04dd8ad03caa2046883ffc5f6977337904ed6e4717442f983595db23",
+      "store/icon-source.png": "a2ffb3c0936d89cc020fd3014c6321e61c7c0bc0b7af1407aad8c8bfaf6201e0"
+    }
+  },
+  "referenceHashes": {
+    "src/ui/nativeFrame.ts": "abcd105f072f6fd4a4c9c415f5641eb5d9b76e94271fe8c0215a59b27b34e232",
+    "src/ui/pickLayout.ts": "df34b512e38fd0f7dff58fb412516a8088fc6fd55d9804e5c19ed544f1ca0106",
+    "src/ui/styles/nativeResponsive.css": "57d4db27afc93c231829775b4820bff5631bbc6ddcb085c6551e413552a26637",
+    "src/ui/styles/title.css": "26dbb4f09505a7077c2ad005833e2dcbe71dde15d78a63e0f317363b88031e79",
+    "src/ui/styles/tokens.css": "889e412890c8c7a464da166a8083ef9b2d89afeea24f16a29b1651da6d3dc6da"
+  },
+  "preservedHashes": {
+    "src/core/board.ts": "8beacbc77792fb33dedcf4a1f3622f7e664cd4c3b26333669a0fdba878f9a7ce",
+    "src/core/game.test.ts": "b0542e5fe7f39c84b3813a529759595251aa2d2415ac2ae452d64d062f37b672",
+    "src/core/game.ts": "f9c5981c5e2b8ae64725af5b93fbf04d6bddff1d9cfdf4a26b150db4998a2f4c",
+    "src/core/learningStages.test.ts": "d1547aa6f3a509f5bd0c078fb4b38cec203359851f15cc86e46acec01c59a1de",
+    "src/core/learningStages.ts": "d614a98f40613944f697fa25e51e3384878015a226a8e94e4b758ae1f4be20cf",
+    "src/core/mistakePenalty.test.ts": "e6738d1c2fc5d16fe498ad518de2748e3e1de504aeb6b1e62ad6a82d82a617b6",
+    "src/core/rng.ts": "1797945ebccfb110b672b5c4dfca123ee95f201ae230fd98588bd0910d04a314",
+    "src/core/rules.test.ts": "cdc471c658bff0e958d0d83f787d7595222304fd2b6700e09f3ff17566465c90",
+    "src/core/rules.ts": "6735538f918de0ed91bf3110f0434e4b85ff3c63cdc1769bc5ea937dd731ef98",
+    "src/core/solver.ts": "48eeb04af2dd96d80776a5e836bdaf3c99effefbe3044af71325754972c5f3fa",
+    "src/core/timeAttackLevels.test.ts": "abd98bfc9039252b8401cb1a3bbb85f22762a5cd1c3f86bf661214ad73b93745",
+    "src/core/tutorialRun.ts": "0a222c93c7f0bf13b659b33c7f4730754ac84afddade54be24b6d0fb3285e1af",
+    "src/core/types.ts": "bf34affeed39c40be1e5b5e23d66777fa8eee1db274e385c25deb162b1e17977",
+    "src/content/balance.test.ts": "8ed74299c2e923fe512793ba044f9c3a2d26fc24eeaa669afcc170a59a1582cb",
+    "src/content/chapters.ts": "b6bdd0da11c9c9c60a7fb53a34780868ecd14de385e07f0da41d163a576bbc0c",
+    "src/content/clearable.test.ts": "b56d6138f8f71885c3513d4e2534dd27023af5f8321bddcffa0eab3b209c6cbd",
+    "src/content/content.test.ts": "0a660f145abd988366300acf3d9dde4caee7254ed09c7a22a1f4e9615fe23b3c",
+    "src/content/gallery.ts": "71074a028fc11c209ef04db66dfc7918e0db61b0f197662789e414b0ea9a2e89",
+    "src/content/pacing.test.ts": "f9869991d4fc682df4759ffdd90388e87622a646c076a7e9ebbf8209259b1b99",
+    "src/content/stages.ts": "54474b97f37527542acf88b7dec2f3ee08537ac90fca3480dc0dfb57ac923bf2",
+    "src/content/testSettings.test.ts": "2ac2a22147470feb06abd3940c5fb034725295ffecaf4a2fb32bd3cacd73f563",
+    "src/content/testSettings.ts": "40dc7abf9935afadfab15daf9a92f7bd31770ed653073fa0dbd13f15afd26880",
+    "src/content/timeless.test.ts": "6fa3e3341e5a3e0f4d9b57655353ee3647b8d072be0fc0148e1023b3cc3b27b5",
+    "src/content/tutorial.test.ts": "db54e70fdd51ba57e380beb976ec14e6ba3810ff059ebe96263d8d331bd2e10e",
+    "src/content/tutorial.ts": "04523993d91fbcbd5f58b22c8141c8698863e38118ae0c9f9ea4b5f9d3a6f4d4",
+    "public/assets/audio/ten-game.mp3": "7df24c30cc64204287839a775a0cbee66e0aa37ccefafa6c242f2d6bef18e7f1",
+    "public/assets/audio/ten-lobby.mp3": "fd932c139e54b83e3ba3c71eca82b5522c303f72888c1ee93894670dd5092111",
+    "public/assets/fonts/NotoSansKR-Variable.woff2": "e01974f5a88c7fa0e8a24b84bccc79e4de3f56ab1b2649f887f32c7a72204c93",
+    "public/cover-logo.svg": "85b3cc91fe2d5521ffb9fb9d7fab58d7b9c4318b434a90e7e8f46c739e572b63",
+    "public/cover.webp": "aefa441be1d5977bfe6d9f88c6fd24f651ffe8591b09f193ec1462ce8271be20",
+    "public/icon.svg": "ee089c4b85718a0256fb4c9f74d97b019793f28e5973cd14c1d8fcc34ad1c06e",
+    "public/infinity.svg": "9b7ccd6098a1d3fd2b5cce5135a12e436dd0e5891eb65080a1cd0657a94384a3",
+    "public/legal/Apache-2.0.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "public/legal/Cordova-LICENSE.txt": "401f08372facabc78d6d408a32de4f617fd9552c95e01797838c9d60a938b4da",
+    "public/legal/Cordova-NOTICE.txt": "e94707080ab2781d5ba4ceac999f31db2539d2477783287969c52580b9fa84b0",
+    "public/legal/NotoSansKR-OFL.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+    "public/legal/dependencies.json": "3c94e1febae2594c92ebb3222374e29ba1ab26f9edc0633a74853f704042d88e",
+    "public/legal/legal.css": "dd0bc5f1db2cf776294697350d94e11b735c7bc57db56cc805ce613972d17c93",
+    "public/licenses.html": "4ad42827748cdd36215c987b056cc22c527f265946f9469acee9f27953e25668",
+    "public/movie/1-hevc.mp4": "5923b13040176adfe8a8a3c8d28164a45963189c6aac5ad3960c8a6d7116790f",
+    "public/movie/1.mp3": "7030426ad20f27dac0e86ef305715e4b691530e3e620d093f29f9c54b76a617b",
+    "public/movie/1.webm": "9a485ed37d02dd825e8d2c932dd3edd9864cfe0ae8647e348e115ca9929b6136",
+    "public/movie/2-hevc.mp4": "921b0a7be3c222bda923d820d28c908deddee02902a6423b783145a3e8fc7878",
+    "public/movie/2.mp3": "ed69ae177f274f9638ae1d3fd0b9ba460af63c1a11d34b2adf92a40d0b7b226a",
+    "public/movie/2.webm": "c4c77642b9bd89ff469ace87773cb62e6ae134d7fd6ba16c2bc649a91e9dd58c",
+    "public/movie/3-hevc.mp4": "6356490b5ed54ce0e694052a6db7051c494d57810cf4174ce8853b2364e0f8dd",
+    "public/movie/3.mp3": "b16eda85a8839d6f182a62a18e44be491e58aa66804c97ec8488a7495df7958b",
+    "public/movie/3.webm": "63ead3e6c9d87a21a77bb3ce5faedb43bf191fc5353c54c279eda5af24c12001",
+    "public/movie/4-hevc.mp4": "f7c7543b80c2b379d01d52427ef9e8b2cccb2d57d8989b58077750f6d6d958c0",
+    "public/movie/4.mp3": "1560ac5192767052d94ab592dea4e5cf7983cbb02105f1a8edd90d9010d68da0",
+    "public/movie/4.webm": "aa19ec712f247ba866b5c8766dc8d3918465161cc1ccf0d9b3125a846b0120c7",
+    "public/movie/5-hevc.mp4": "5fff8718ff212a8d0bdbcefa3e1b00ca43803e302dd7f608e46976cca56843ec",
+    "public/movie/5.mp3": "83d0fc7cbfb468285d0c562b878ace9d2bf1559596ea932612269198e3489cbb",
+    "public/movie/5.webm": "aa5a6314ea7012332870286f2f0ef44bfcfeaf1c6c7992eb75f4e1eaab848ebe",
+    "public/movie/6-hevc.mp4": "e04468f793163cd51b08df0242e558c62d836175a12206f9197a0549152b57aa",
+    "public/movie/6.mp3": "bbad27b43c2cfa3b90f35eab8adb5996ea45d41539d295f393a2c2d45a241272",
+    "public/movie/6.webm": "6502297798578783379285d018dd361337e82c0d43d43202b6ef89094a4e5c50",
+    "public/privacy.html": "0303b16182902cce4be875987f8f2b6a3dcffd6baad8f3e315a30c6a010fc3c1",
+    "public/stopwatch-15.svg": "3c5b83f198bbb8ad224a4cd04e3d1cce5f5af8f35f7ec545a3a1e0495fc530bf",
+    "public/stopwatch-60.svg": "6a8ffa2ee2a71a39c788aa8669c0e48c658bb5961b2ecd725a3206fe88762472",
+    "public/stopwatch-forever.svg": "288e7ce517222b8a50e4e6184739b0270514b03e43b4d67427b0b32f88b01e9a",
+    "public/story/canopy.svg": "eef8e2487d13cddb2212c6cb1852339b49383a9c11024b093ca9c3b9c0dda8bb",
+    "public/story/grove.svg": "2250f6f3b50e350a9e13797dabb977444ab6e598d387a593efb70508ce6acc83",
+    "public/story/hollow.svg": "02e59c4c47f185bb2f2a22fe9ce00f564a908aa91c44014aa5655f730bd5de73",
+    "public/story/sprout.svg": "023e8c857d2a22a8e5a7eebd62c7b0416e4da5df44cfa75b6dfe5a584ca39a8a",
+    "public/studio-logo.png": "d6c7f7b9f4fd90e7446059f6a1c402adf4701a54c54c97129d6b8f5e7039c158",
+    "src/ui/storage.ts": "5c9f4835344ce39137d35a3060881479bd5d5afc908fd468df0ba93cf9850b49",
+    "src/ui/persistentStore.ts": "d6b2297b56709a304d0b432821c02be29d5abe4f40ba165f400d848ec7c3b7bc",
+    "src/ui/blockColors.ts": "a6d639753efca448d93ca0a570d50e81d12e2369cb1941cb57ffd6d23632f9ce",
+    "src/ui/styles/tokens.css": "f6ea274f4088c36679e4bb521d32f5909c51cc3f772dd9fbd549df44d4cddb3b",
+    "src/ui/styles/game.css": "cc9db754ed7f5cb556ddbc4a729cc5c2e4069362ad6f35a56977644edd6b1ff5",
+    "src/ui/styles/picker.css": "967f7dfeaea502fb3c10046f63c6676e43e6471304a392a092377d591a4b601e",
+    "src/ui/styles/overlay.css": "3261792a799c96f30a89ab7bdae3edb4492f01bab20ae224e971464cae8bb3cf",
+    "index.html": "5cc22d299180b406ab485f2005fb2c5c285fb991dc67f7d2fc1158d7dd438a25",
+    "capacitor.config.ts": "f46bd2c4f6f74a14811303d06bf179de2404ebd8e86b61328c199cbb69616564",
+    "android/app/build.gradle": "668f2296a5d1356fe6406ac0b641b719d4e2bcb9fae465aa405fa42a419a42b6",
+    "android/app/src/main/java/io/github/junyyyong/makezero/MainActivity.java": "176757fc6bd10dacca04835a1f2b81162da203786254d1c048446d603fa093a7"
+  },
+  "screens": [],
+  "ratios": [
+    {
+      "size": [
+        320,
+        568
+      ],
+      "checks": [
+        {
+          "name": "home",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 5,
+            "bad": [],
+            "boardFit": true,
+            "square": true
+          }
+        },
+        {
+          "name": "settings",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 6,
+            "bad": [],
+            "boardFit": true,
+            "square": true
+          }
+        },
+        {
+          "name": "privacy",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 6,
+            "bad": [],
+            "boardFit": true,
+            "square": true
+          }
+        },
+        {
+          "name": "limitless-start",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 2,
+            "bad": [],
+            "boardFit": true,
+            "square": true
+          }
+        },
+        {
+          "name": "limitless-announcement",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 85,
+            "bad": [],
+            "boardFit": true,
+            "square": true,
+            "boardMeasure": {
+              "width": 258.8500061035156,
+              "height": 258.8500061035156,
+              "wrapWidth": 282.2937316894531,
+              "wrapHeight": 262.7250061035156,
+              "tileWidth": 26.349998474121094,
+              "tileHeight": 26.350006103515625
+            }
+          }
+        },
+        {
+          "name": "limitless-game",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 84,
+            "bad": [],
+            "boardFit": true,
+            "square": true,
+            "boardMeasure": {
+              "width": 258.8500061035156,
+              "height": 258.8500061035156,
+              "wrapWidth": 282.2937316894531,
+              "wrapHeight": 262.7250061035156,
+              "tileWidth": 26.349998474121094,
+              "tileHeight": 26.350006103515625
+            }
+          }
+        },
+        {
+          "name": "limitless-pause",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 86,
+            "bad": [],
+            "boardFit": true,
+            "square": true,
+            "boardMeasure": {
+              "width": 258.8500061035156,
+              "height": 258.8500061035156,
+              "wrapWidth": 282.2937316894531,
+              "wrapHeight": 262.7250061035156,
+              "tileWidth": 26.349998474121094,
+              "tileHeight": 26.350006103515625
+            }
+          }
+        },
+        {
+          "name": "limitless-result",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 86,
+            "bad": [],
+            "boardFit": true,
+            "square": true,
+            "boardMeasure": {
+              "width": 258.8500061035156,
+              "height": 258.8500061035156,
+              "wrapWidth": 282.2937316894531,
+              "wrapHeight": 262.7250061035156,
+              "tileWidth": 26.349998474121094,
+              "tileHeight": 26.350006103515625
+            }
+          }
+        },
+        {
+          "name": "timeless-start",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 2,
+            "bad": [],
+            "boardFit": true,
+            "square": true
+          }
+        },
+        {
+          "name": "timeless-announcement",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 87,
+            "bad": [],
+            "boardFit": true,
+            "square": true,
+            "boardMeasure": {
+              "width": 251.87498474121094,
+              "height": 251.875,
+              "wrapWidth": 282.2937316894531,
+              "wrapHeight": 254.9749755859375,
+              "tileWidth": 25.57500457763672,
+              "tileHeight": 25.574996948242188
+            }
+          }
+        },
+        {
+          "name": "timeless-game",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 86,
+            "bad": [],
+            "boardFit": true,
+            "square": true,
+            "boardMeasure": {
+              "width": 251.87498474121094,
+              "height": 251.875,
+              "wrapWidth": 282.2937316894531,
+              "wrapHeight": 254.9749755859375,
+              "tileWidth": 25.57500457763672,
+              "tileHeight": 25.574996948242188
+            }
+          }
+        },
+        {
+          "name": "timeless-pause",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 88,
+            "bad": [],
+            "boardFit": true,
+            "square": true,
+            "boardMeasure": {
+              "width": 251.87498474121094,
+              "height": 251.875,
+              "wrapWidth": 282.2937316894531,
+              "wrapHeight": 254.9749755859375,
+              "tileWidth": 25.57500457763672,
+              "tileHeight": 25.574996948242188
+            }
+          }
+        },
+        {
+          "name": "timeless-result",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 88,
+            "bad": [],
+            "boardFit": true,
+            "square": true,
+            "boardMeasure": {
+              "width": 251.87498474121094,
+              "height": 251.875,
+              "wrapWidth": 282.2937316894531,
+              "wrapHeight": 254.9749755859375,
+              "tileWidth": 25.57500457763672,
+              "tileHeight": 25.574996948242188
+            }
+          }
+        },
+        {
+          "name": "endless-start",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 2,
+            "bad": [],
+            "boardFit": true,
+            "square": true
+          }
+        },
+        {
+          "name": "endless-announcement",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 86,
+            "bad": [],
+            "boardFit": true,
+            "square": true,
+            "boardMeasure": {
+              "width": 258.8500061035156,
+              "height": 258.8500061035156,
+              "wrapWidth": 282.2937316894531,
+              "wrapHeight": 262.7250061035156,
+              "tileWidth": 26.349998474121094,
+              "tileHeight": 26.350006103515625
+            }
+          }
+        },
+        {
+          "name": "endless-game",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 85,
+            "bad": [],
+            "boardFit": true,
+            "square": true,
+            "boardMeasure": {
+              "width": 258.8500061035156,
+              "height": 258.8500061035156,
+              "wrapWidth": 282.2937316894531,
+              "wrapHeight": 262.7250061035156,
+              "tileWidth": 26.349998474121094,
+              "tileHeight": 26.350006103515625
+            }
+          }
+        },
+        {
+          "name": "endless-pause",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 87,
+            "bad": [],
+            "boardFit": true,
+            "square": true,
+            "boardMeasure": {
+              "width": 258.8500061035156,
+              "height": 258.8500061035156,
+              "wrapWidth": 282.2937316894531,
+              "wrapHeight": 262.7250061035156,
+              "tileWidth": 26.349998474121094,
+              "tileHeight": 26.350006103515625
+            }
+          }
+        },
+        {
+          "name": "endless-result",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 87,
+            "bad": [],
+            "boardFit": true,
+            "square": true,
+            "boardMeasure": {
+              "width": 258.8500061035156,
+              "height": 258.8500061035156,
+              "wrapWidth": 282.2937316894531,
+              "wrapHeight": 262.7250061035156,
+              "tileWidth": 26.349998474121094,
+              "tileHeight": 26.350006103515625
+            }
+          }
+        },
+        {
+          "name": "long-grade",
+          "frame": {
+            "x": 8,
+            "y": 24,
+            "width": 303.9937438964844,
+            "height": 496,
+            "scale": 0.7749999844397307,
+            "logicalWidth": 392.25,
+            "logicalHeight": 640
+          },
+          "bounds": {
+            "count": 85,
+            "bad": [],
+            "boardFit": true,
+            "square": true,
+            "boardMeasure": {
+              "width": 258.8500061035156,
+              "height": 258.8500061035156,
+              "wrapWidth": 282.2937316894531,
+              "wrapHeight": 262.7250061035156,
+              "tileWidth": 26.349998474121094,
+              "tileHeight": 26.350006103515625
+            }
+          }
+        }
+      ],
+      "pass": true
+    }
+  ],
+  "density": [],
+  "live": [],
+  "web": [],
+  "grades": [],
+  "touch": [
+    {
+      "name": "limitless",
+      "bar": {
+        "top": 24,
+        "right": 8,
+        "bottom": 48,
+        "left": 8
+      },
+      "pass": true
+    },
+    {
+      "name": "timeless",
+      "bar": {
+        "top": 24,
+        "right": 8,
+        "bottom": 48,
+        "left": 8
+      },
+      "pass": true
+    },
+    {
+      "name": "endless",
+      "bar": {
+        "top": 24,
+        "right": 8,
+        "bottom": 48,
+        "left": 8
+      },
+      "pass": true
+    },
+    {
+      "name": "limitless",
+      "bar": {
+        "top": 24,
+        "right": 8,
+        "bottom": 48,
+        "left": 8
+      },
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "macOS Chrome, not an Android System WebView or connected physical phone.",
+    "Results/reactions are labelled layout fixtures, not earned scores. Store reaction uses an actual decoded existing video frame.",
+    "OS density/insets are simulated. Accessibility magnification above visualViewport scale 1.01 is deliberately not overridden."
+  ],
+  "browser": "154.0.8037.58",
+  "pass": false,
+  "failure": "AssertionError [ERR_ASSERTION]: timeless-announcement board fit/squares: {\"count\":87,\"bad\":[],\"boardFit\":false,\"square\":true,\"boardMeasure\":{\"width\":294.60516357421875,\"height\":294.6051330566406,\"wrapWidth\":319.30255126953125,\"wrapHeight\":293.7644348144531,\"tileWidth\":29.98974609375,\"tileHeight\":29.98974609375}}"
+}

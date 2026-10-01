@@ -1,0 +1,297 @@
+/* Mode picker: wordmark, mode buttons, rules link. */
+/* title ─────────────────────────────────────────────────────── */
+
+/*
+ * Fit the original cover to the full window width without cropping its sides.
+ * Keep its aspect ratio and centre vertically. The artwork's existing white
+ * fade blends into the white screen on tall phones; short windows crop only
+ * the top/bottom. Do not manufacture or repeat a background.
+ */
+.studio-splash-screen,
+.splash-screen {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.studio-splash-screen {
+  align-items: center;
+  justify-content: center;
+  background: #fccf00;
+}
+
+.studio-splash-cover {
+  width: min(42%, 164px);
+  height: auto;
+  max-height: 70%;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.splash-screen {
+  background: #fff;
+}
+
+.splash-cover {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: translateY(-50%);
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Splash paint can extend behind status/navigation bars. Controls cannot. */
+#app.is-native-frame .studio-splash-screen,
+#app.is-native-frame .splash-screen {
+  position: absolute;
+  top: calc(-1 * var(--frame-safe-top, 0px));
+  left: calc(-1 * var(--frame-safe-left, 0px));
+  width: var(--frame-full-width, 100%);
+  height: var(--frame-full-height, 100%);
+}
+
+.title-screen {
+  align-items: center;
+  /*
+   * Three bands, not one centred stack: the wordmark sits in the upper third,
+   * PLAY where the thumb is, and the links along the bottom edge. Centring
+   * everything left a long empty stretch under the links — and the mode list
+   * hid the modes behind a tap and left holes where its gaps were.
+   */
+  /*
+   * Everything is on screen at once, so the screen has to fit it: wordmark,
+   * three modes, links. It is laid out as one column that shares out whatever
+   * room the phone has rather than as fixed bands — a tall phone gets air
+   * between the groups, a short one gets none, and nothing is ever pushed off
+   * the bottom.
+   */
+  justify-content: space-evenly;
+  gap: 10px;
+  padding: calc(max(calc(3 * var(--layout-vh, 1vh)), 16px) + var(--app-safe-top)) max(22px, var(--app-safe-right)) calc(max(calc(2.5 * var(--layout-vh, 1vh)), 14px) + var(--app-safe-bottom)) max(22px, var(--app-safe-left));
+  overflow-y: auto;
+  scroll-padding-top: var(--app-safe-top);
+  scroll-padding-bottom: var(--app-safe-bottom);
+  background: var(--ui-background);
+}
+
+/* Only used when the measured artwork or music prompt would overlap/clip.
+   Preserve original sizes; the whole menu remains reachable by scrolling. */
+.title-screen.is-space-limited { justify-content: flex-start; }
+.title-screen.is-space-limited .brand-block { height: auto; }
+.title-screen.is-space-limited .mode-list { flex-shrink: 0; }
+.title-screen.is-space-limited .title-links { margin-bottom: var(--music-footer-space, 0px); }
+
+.brand-block {
+  text-align: center;
+  /* Match TEN's logo-area height without resizing PICK's artwork. */
+  height: calc(min(calc(68 * var(--layout-vw, 1vw)), 250px) * 725.7594137 / 618.4357745);
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+}
+
+.brand-wordmark,
+.pick-splash-mark {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: .08em;
+  margin: 0;
+  font-family: "TAP Sans KR", sans-serif;
+  font-size: clamp(52px, calc(15 * var(--layout-vw, 1vw)), 76px);
+  font-weight: 900;
+  line-height: .9;
+  letter-spacing: -.09em;
+  filter: none;
+}
+
+.brand-wordmark span,
+.pick-splash-mark span { color: var(--cool); }
+.brand-wordmark strong,
+.pick-splash-mark strong { color: var(--hot); }
+.brand-wordmark small,
+.pick-splash-mark small { color: var(--warm-deep); font-size: .34em; font-style: italic; letter-spacing: -.05em; }
+
+.pick-splash-mark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  flex-wrap: wrap;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.pick-splash-mark em {
+  flex-basis: 100%;
+  margin-top: 18px;
+  color: var(--ink);
+  font-size: 12px;
+  font-style: normal;
+  letter-spacing: .48em;
+  text-align: center;
+}
+
+/*
+ * The wordmark is drawn artwork, not type — TAPtoTALK-logo.svg. It is
+ * vector, so it is sized freely and stays sharp at any density, and it is
+ * trimmed to its own edges so the layout aligns to the letters rather than to
+ * a margin baked into the file. It is taller than it is wide, which is why
+ * the widths below are far smaller than the ones the old landscape mark used.
+ */
+.brand {
+  margin: 0;
+  line-height: 0;
+}
+
+.brand-mark {
+  display: block;
+  width: min(calc(89.76 * var(--layout-vw, 1vw)), 330px);
+  height: auto;
+  /* The artwork's own outline/shadow is untouched; remove only CSS shadow. */
+  filter: none;
+}
+
+.brand-version {
+  margin: 10px 0 0;
+  padding-left: .58em;
+  color: var(--ui-ink);
+  font-family: "TAP Sans KR", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .58em;
+  text-align: center;
+}
+
+.tagline {
+  margin: 14px 0 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: var(--ui-muted);
+}
+
+.mode-list {
+  display: flex;
+  width: min(340px, 100%);
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mode-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 20px;
+  font-family: inherit;
+  text-align: left;
+  color: var(--ui-ink);
+  cursor: pointer;
+  background: var(--ui-surface);
+  border: 1px solid var(--ui-border);
+  border-radius: 16px;
+  box-shadow: none;
+  transition: transform 120ms ease, background 160ms ease;
+}
+
+.mode-btn:active {
+  background: var(--ui-pressed);
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.mode-name {
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--cool);
+}
+
+.mode-desc {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ui-muted);
+}
+
+.text-btn {
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ui-ink);
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* ── game ──────────────────────────────────────────────────────── */
+
+/* One row along the bottom: a footer, not a second menu. Four of these only
+   fit on a narrow phone at this size, which is why they are set smaller than
+   the rest of the screen rather than matching it. */
+.title-links {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 2px 6px;
+  justify-content: center;
+}
+
+.title-links .text-btn {
+  padding: 8px 6px;
+  font-size: 14px;
+}
+
+/*
+ * Short screens. The wordmark gives way first — the three modes and the links
+ * are the screen's job, and it is the only thing here with room to spare.
+ */
+@supports not (container-type: size) {
+@media (max-height: 700px) {
+  .brand-block { height: calc(min(calc(58 * var(--layout-vw, 1vw)), 215px) * 725.7594137 / 618.4357745); }
+  .brand-mark {
+    width: min(calc(76.56 * var(--layout-vw, 1vw)), 284px);
+  }
+
+  .mode-btn {
+    padding: 10px 18px;
+  }
+
+  .mode-list { gap: 7px; }
+  .mode-name { font-size: 19px; }
+  .mode-desc { font-size: 12px; }
+}
+}
+@container app (max-height: 700px) {
+  .brand-block { height: calc(min(calc(58 * var(--layout-vw, 1vw)), 215px) * 725.7594137 / 618.4357745); }
+  .brand-mark {
+    width: min(calc(76.56 * var(--layout-vw, 1vw)), 284px);
+  }
+
+  .mode-btn {
+    padding: 10px 18px;
+  }
+
+  .mode-list { gap: 7px; }
+  .mode-name { font-size: 19px; }
+  .mode-desc { font-size: 12px; }
+}
+
+@supports not (container-type: size) {
+
+@media (max-height: 580px) {
+  .brand-block { height: calc(min(calc(44 * var(--layout-vw, 1vw)), 165px) * 725.7594137 / 618.4357745); }
+  .brand-mark {
+    width: min(calc(58.08 * var(--layout-vw, 1vw)), 218px);
+  }
+}
+}
+
+@container app (max-height: 580px) {
+  .brand-block { height: calc(min(calc(44 * var(--layout-vw, 1vw)), 165px) * 725.7594137 / 618.4357745); }
+  .brand-mark {
+    width: min(calc(58.08 * var(--layout-vw, 1vw)), 218px);
+  }
+}

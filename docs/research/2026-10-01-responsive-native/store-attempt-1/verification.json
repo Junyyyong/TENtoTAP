@@ -1,0 +1,70 @@
+{
+  "capturedAt": "2026-10-01T06:36:26.946Z",
+  "conditions": {
+    "css": [
+      360,
+      640
+    ],
+    "dpr": 3,
+    "png": [
+      1080,
+      1920
+    ],
+    "clock": "2026-10-01T00:00:00Z",
+    "seed": 20261001,
+    "locale": "en-US",
+    "timezone": "Asia/Seoul",
+    "native": "Chromium trackNativeFrame(true), zero insets, no OS chrome"
+  },
+  "assets": [
+    {
+      "file": "01-cover.png",
+      "label": "커버",
+      "sha256": "5279ac91e7275b11a224a3ff8a155114cd7be1c5cbb60e9fa82600a9125e8ea3"
+    },
+    {
+      "file": "02-main.png",
+      "label": "메인",
+      "sha256": "b558fff5b40db6229e466c255e97b7a6327f9b9e283b4ccff5e2fce7525febbd"
+    },
+    {
+      "file": "03-limitless-start.png",
+      "label": "LIMITLESS START",
+      "sha256": "cecf680d2c7a861e0dadbd52ffcd9fcc3241b8a8df01782add7645805035d631"
+    },
+    {
+      "file": "04-lesson-instruction.png",
+      "label": "튜토리얼 안내",
+      "sha256": "308c02bbf44eb7dbbf29b1bce98c54399d019244c16bb2ada22bf5a98ebee844"
+    },
+    {
+      "file": "05-lesson-game.png",
+      "label": "튜토리얼 2×2",
+      "sha256": "ba08fe56ab505e70ca33518b53b42e5c2045a193d16e6a00a6e6eb831aed4522"
+    },
+    {
+      "file": "06-timeless.png",
+      "label": "TIMELESS 9×9",
+      "sha256": "4fc355032a5e88869936772749305636b5f67c42fd14b79b9963eefed7ca9b6e"
+    },
+    {
+      "file": "07-good-try.png",
+      "label": "GOOD TRY 리액션",
+      "sha256": "cc1ec6413a90f1550eb83c42fc5ac8abb44fb493f4c8e4e4c5bdadaf217aef3f"
+    }
+  ],
+  "notes": [
+    "Separate from 780×1688 research evidence; captured directly at 1080×1920, not stretched/resized.",
+    "Saved progress and record values are controlled capture data. Reaction uses real Cheer band 4/movie/1.webm at t=0.8s, not an earned outcome.",
+    "No Android physical device validation. Existing artwork and video are unchanged."
+  ],
+  "browser": "154.0.8037.58",
+  "video": {
+    "source": "/movie/1.webm",
+    "time": 0.8,
+    "width": 960,
+    "height": 944,
+    "readyState": 4
+  },
+  "pass": true
+}

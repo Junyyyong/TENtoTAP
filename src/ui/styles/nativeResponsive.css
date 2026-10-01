@@ -1,0 +1,44 @@
+/* Layout only, Android only. Preserve the original font sizes/weights/paint.
+   Density-normalized width and height respond to the real usable window. */
+#app.is-native-frame .studio-screen,
+#app.is-native-frame .splash-screen {
+  position: absolute;
+  top: calc(-1 * var(--frame-safe-top, 0px));
+  left: calc(-1 * var(--frame-safe-left, 0px));
+  width: var(--frame-full-width, 100%);
+  height: var(--frame-full-height, 100%);
+}
+#app.is-native-frame .studio-logo { width: min(42%, 360px); }
+
+#app.is-native-frame .title-screen { overflow-y: auto; }
+#app.is-native-frame .brand-block,
+#app.is-native-frame .mode-list { flex-shrink: 0; }
+#app.is-native-frame .brand-mark {
+  width: min(calc(68 * var(--layout-vw)), clamp(148px, calc(250px + (var(--app-h) - 844px) * .5), 250px));
+}
+#app.is-native-frame .title-screen.is-space-limited { justify-content: flex-start; }
+#app.is-native-frame .title-screen.is-space-limited .title-links {
+  margin-bottom: var(--music-footer-space, 0px);
+}
+
+/* Keep wide-tablet controls near their content instead of the far corners. */
+#app.is-native-frame .hud,
+#app.is-native-frame .run-stats,
+#app.is-native-frame .intro-body,
+#app.is-native-frame .picker-body {
+  width: min(100%, 560px);
+  align-self: center;
+}
+#app.is-native-frame .board-wrap,
+#app.is-native-frame .timer-bar { width: min(calc(100% - 28px), 532px); align-self: center; }
+#app.is-native-frame .selection-sum { width: min(calc(100% - 32px), 528px); align-self: center; }
+#app.is-native-frame .intro-body {
+  overflow-y: auto;
+  justify-content: safe center;
+}
+#app.is-native-frame .intro-body > * { flex-shrink: 0; }
+@container app (max-height: 700px) {
+  #app.is-native-frame .mode-list { gap: 7px; }
+  #app.is-native-frame .mode-btn { padding: 10px 18px; }
+  #app.is-native-frame .intro-body { gap: 10px; padding-bottom: 28px; }
+}

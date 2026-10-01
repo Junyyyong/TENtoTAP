@@ -19,6 +19,8 @@
  * logo is the only thing that has to be an image.
  */
 .studio-screen {
+  position: relative;
+  overflow: hidden;
   align-items: center;
   justify-content: center;
   padding: 0;
@@ -36,6 +38,9 @@
 .studio-logo {
   width: min(calc(42 * var(--layout-vw, 1vw)), 360px);
   height: auto;
+  max-height: 70%;
+  object-fit: contain;
+  flex: 0 0 auto;
 }
 
 .splash-screen {
@@ -58,6 +63,7 @@
   width: 100%;
   height: auto;
   transform: translateY(-50%);
+  object-fit: contain;
 }
 
 .title-screen {

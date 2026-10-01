@@ -9,7 +9,9 @@ const root = resolve(import.meta.dirname, '..');
 const source = resolve(root, 'store/icon-source.png');
 const input = readFileSync(source);
 const metadata = await sharp(input).metadata();
-assert.equal(metadata.width, metadata.height, 'Original icon must be square');
+assert(Math.abs(metadata.width - metadata.height) <= 1, 'Original icon must be square (one-pixel export rounding allowed)');
+// Matches the supplied artwork's orange ground; do not add a white rim.
+const background = '#ea5836';
 const outputs = [];
 async function save(path, bytes) {
   path = resolve(root, path);
@@ -17,16 +19,16 @@ async function save(path, bytes) {
   outputs.push({ path: path.slice(root.length + 1), sha256: createHash('sha256').update(bytes).digest('hex') });
 }
 async function artwork(canvasSize, contentSize, transparent) {
-  const content = await sharp(input).resize(contentSize, contentSize, { fit: 'contain', kernel: 'lanczos3' }).toColourspace('srgb').png().toBuffer();
+  const content = await sharp(input).resize(contentSize, contentSize, { fit: 'contain', background, kernel: 'lanczos3' }).toColourspace('srgb').png().toBuffer();
   const inset = Math.round((canvasSize - contentSize) / 2);
   return sharp({ create: { width: canvasSize, height: canvasSize, channels: 4,
-    background: transparent ? {r:255,g:255,b:255,alpha:0} : '#ffffff' } })
+    background: transparent ? {r:234,g:88,b:54,alpha:0} : background } })
     .composite([{ input: content, left: inset, top: inset }]).png().toBuffer();
 }
 for (const [density, scale] of [['mdpi',1],['hdpi',1.5],['xhdpi',2],['xxhdpi',3],['xxxhdpi',4]]) {
   const folder = `android/app/src/main/res/mipmap-${density}`;
   mkdirSync(resolve(root, folder), { recursive:true });
-  // Adaptive: 108dp layer; 60dp unmodified square artwork, centred on white.
+  // Adaptive: 108dp layer; 60dp supplied artwork, centred on orange.
   await save(`${folder}/ic_launcher_foreground.png`, await artwork(108*scale,60*scale,true));
   // Legacy 48dp preview mirrors the 72dp adaptive viewport.
   const size = 48*scale;
@@ -35,6 +37,6 @@ for (const [density, scale] of [['mdpi',1],['hdpi',1.5],['xhdpi',2],['xxhdpi',3]
   const mask = Buffer.from(`<svg width="${size}" height="${size}"><circle cx="${size/2}" cy="${size/2}" r="${size/2}" fill="white"/></svg>`);
   await save(`${folder}/ic_launcher_round.png`, await sharp(legacy).composite([{input:mask,blend:'dest-in'}]).png().toBuffer());
 }
-await save('store/play-icon-512.png',await sharp(input).resize(512,512).flatten({background:'#ffffff'}).toColourspace('srgb').png().toBuffer());
+await save('store/play-icon-512.png',await sharp(input).resize(512,512,{fit:'contain',background}).flatten({background}).toColourspace('srgb').png().toBuffer());
 console.log(JSON.stringify({ source:'store/icon-source.png', sourceSize:[metadata.width,metadata.height],
-  sourceSha256:createHash('sha256').update(input).digest('hex'), adaptiveContentDp:60,adaptiveLayerDp:108,outputs },null,2));
+  sourceSha256:createHash('sha256').update(input).digest('hex'), background, adaptiveContentDp:60,adaptiveLayerDp:108,outputs },null,2));

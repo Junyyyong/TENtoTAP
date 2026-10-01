@@ -463,10 +463,19 @@ export class BoardView {
      * others for the rest of the run. These two properties report the layout
      * box, which the animation never touches.
      */
-    const box = { width: this.options.wrap.clientWidth, height: this.options.wrap.clientHeight };
+    const native = this.options.wrap.closest('#app.is-native-frame');
+    const wrapStyles = native ? getComputedStyle(this.options.wrap) : undefined;
+    // Responsive native dimensions can be fractional. clientHeight rounds up
+    // and can give the final row a pixel the wrap does not actually have.
+    // Computed CSS geometry excludes screen-entry transforms, just like client*
+    // did, while retaining fractions. Leave the established web path unchanged.
+    const box = {
+      width: wrapStyles ? parseFloat(wrapStyles.width) : this.options.wrap.clientWidth,
+      height: wrapStyles ? parseFloat(wrapStyles.height) : this.options.wrap.clientHeight,
+    };
     // The screen may still be hidden when a run is set up; leave the board
     // unmeasured so the next render tries again once it has a size.
-    if (box.width <= 0 || box.height <= 0) {
+    if (!Number.isFinite(box.width) || !Number.isFinite(box.height) || box.width <= 0 || box.height <= 0) {
       this.laidOut = "";
       return;
     }
@@ -488,7 +497,7 @@ export class BoardView {
 
     const byWidth = (box.width - padX - gap * (width - 1)) / width;
 
-    const byHeight = (this.options.wrap.clientHeight - padY - gap * (rows - 1)) / rows;
+    const byHeight = (box.height - padY - gap * (rows - 1)) / rows;
     const cap = this.options.fixedSquare?.() ? Infinity : this.options.maxTilePx ?? 74;
     const tile = Math.max(MIN_TILE_PX, Math.floor(Math.min(byWidth, byHeight, cap)));
 
@@ -507,7 +516,8 @@ export class BoardView {
     this.cutBackdrop(tile, gap, width, rows);
 
     // Only a board too big even at the minimum tile size may scroll.
-    const overflows = rows * (tile + gap) + padY > this.options.wrap.clientHeight + 1;
+    const neededHeight = native ? rows * tile + gap * (rows - 1) + padY : rows * (tile + gap) + padY;
+    const overflows = neededHeight > box.height + 1;
     this.options.wrap.classList.toggle("scrolls", overflows);
     this.laidOut = signature;
   }

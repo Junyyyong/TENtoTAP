@@ -1,0 +1,28 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TAPtoTEN — 반응형·밀도 보정·새 아이콘</title><style>
+body{margin:0;background:#fff;color:#363c46;font:16px/1.6 system-ui,sans-serif;padding:28px}main{max-width:1320px;margin:auto}h1{font-size:28px}h2{font-size:22px;margin-top:36px}.note,.summary{padding:18px;border:1px solid #cdd2da;border-radius:14px;background:#f5f6f8}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.toolbar button{font:inherit;padding:9px 18px;border:1px solid #cdd2da;border-radius:10px;background:#fff;cursor:pointer}.toolbar button[aria-pressed=true]{color:#fff;background:#1f5bb0}a{color:#1f5bb0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px}.card{padding:14px;border:1px solid #cdd2da;border-radius:14px}.card h3{margin:0 0 12px;font-size:17px}.pair{display:flex;gap:10px}.pair figure{margin:0;flex:1;min-width:0}.pair img{width:100%;height:auto;border:1px solid #edf0f4;box-sizing:border-box;vertical-align:top}.pair figcaption{text-align:center;color:#626b78;font-size:13px}.after-only figure:first-child{display:none}.icon-grid{display:flex;gap:20px;flex-wrap:wrap}.icon-grid figure{margin:0;max-width:200px}.icon-grid img{width:160px;height:160px;object-fit:contain}.hidden{display:none}.dim{color:#626b78}
+</style><main><h1>TAPtoTEN — 반응형 화면·밀도 보정·새 아이콘</h1>
+<p>고정 390×844 전체 축소 → 실제 가용 화면 반응형. 서체·기준 글자 크기·흰/회색 바탕과 기존 컬러 강조·규칙·기록은 유지.</p>
+<div class="note"><b>모의검사와 실기기는 다릅니다.</b> 여기서는 macOS Chrome에서 Android 화면 계산·밀도·안전영역을 모의했다. 실제 Galaxy/Android WebView 연결 기기는 없었어. AAB·버전 변경·commit/push는 하지 않았어. 전후는 같은 브라우저/시계/난수 조건의 780×1688 원본이며, 이전 버전은 git archive로 별도 재현했다.</div>
+<p><a href="../../../store/2026-10-01-responsive/index.html">스토어 이미지 7장 다운로드</a> · <a href="README.md">연구 설명·실패 기록</a> · <a href="final-2/verification.json">최종 검증 치수/해시</a></p>
+<div class="summary" id="status">전체 모의검사 통과 · 전후 62장 · 화면 비율9개 · 동일 기기 밀도5단계 · 실행중 변경8조건 · 웹 비교7비율 · 터치/변환/저장93항목. 단위 테스트241개·프로덕션 웹 빌드 통과. 실제 Android 기기는 미검증.</div>
+<h2>아이콘</h2><div class="icon-grid">
+<figure><img src="icon-verification/before-icon.png" alt="이전 아이콘"><figcaption>이전</figcaption></figure>
+<figure><img src="icon-verification/after-icon.png" alt="새 아이콘"><figcaption>새 스토어 512×512</figcaption></figure>
+<figure><img src="icon-verification/launcher-circle.png" alt="원형 launcher 모의"><figcaption>원형 launcher 모의</figcaption></figure>
+<figure><img src="icon-verification/launcher-rounded-square.png" alt="둥근 사각 launcher 모의"><figcaption>둥근 사각 launcher 모의</figcaption></figure></div>
+<h2>전체 화면</h2><div class="toolbar"><button id="both" aria-pressed="true">전후 비교</button><button id="after" aria-pressed="false">새 디자인만</button><button id="all" aria-pressed="true">모든 화면</button><button id="key" aria-pressed="false">핵심 화면</button></div>
+<p class="dim">왼쪽: 1.0.5/code7의 고정 비율 소스 재현. 오른쪽: 현재 가용 화면 반응형. 둘 다 Android 계산을 모의하고 위24/아래48px 안전영역을 주었어. 검은 띠는 OS 시스템바 그림이 아니라 비어 있는 모의 안전영역이야. 결과·리액션 비교는 표시용 fixture, 스토어 GOOD TRY는 실제 플레이 결과야.</p>
+<div class="grid" id="screens"></div></main>
+<script>
+const entries=[['studio','스튜디오'],['cover','커버'],['home','메인'],['settings','Settings'],['privacy','개인정보 창']];
+for(const[m,label]of[['limitless','LIMITLESS'],['timeless','TIMELESS'],['endless','ENDLESS']])for(const[s,l]of[['start','START'],['announcement','시작 안내'],['game','게임'],['pause','일시정지'],['result','결과 fixture']])entries.push([`${m}-${s}`,`${label} · ${l}`]);
+for(const stage of[1,6,14,23,30])for(const[s,label]of[['announcement','안내'],['game','게임']])entries.push([`lesson-${stage}-${s}`,`튜토리얼 ${stage} · ${label}`]);entries.push(['long-grade','UNBELIEVABLE 리액션 문구']);
+const keyNames=new Set(['studio','cover','home','settings','limitless-start','limitless-game','timeless-game','endless-game','limitless-pause','limitless-result','lesson-1-game','long-grade']);
+for(const[name,label]of entries){const card=document.createElement('section');card.className='card';card.dataset.name=name;const h=document.createElement('h3');h.textContent=label;card.append(h);const pair=document.createElement('div');pair.className='pair';for(const side of['before','after']){const f=document.createElement('figure'),a=document.createElement('a'),img=document.createElement('img'),c=document.createElement('figcaption');a.href=`final-2/${side}-${name}.png`;img.src=a.href;img.loading='lazy';img.alt=`${label} ${side}`;c.textContent=side==='before'?'이전':'수정';a.append(img);f.append(a,c);pair.append(f);}card.append(pair);document.querySelector('#screens').append(card);}
+function press(id,other){document.getElementById(id).setAttribute('aria-pressed','true');document.getElementById(other).setAttribute('aria-pressed','false');}
+document.getElementById('both').onclick=()=>{document.querySelector('#screens').classList.remove('after-only');press('both','after');};document.getElementById('after').onclick=()=>{document.querySelector('#screens').classList.add('after-only');press('after','both');};
+document.getElementById('all').onclick=()=>{document.querySelectorAll('.card').forEach(e=>e.classList.remove('hidden'));press('all','key');};document.getElementById('key').onclick=()=>{document.querySelectorAll('.card').forEach(e=>e.classList.toggle('hidden',!keyNames.has(e.dataset.name)));press('key','all');};
+// Optional enhancement when served via HTTP; file:// still shows every asset.
+fetch('final-2/verification.json').then(r=>r.json()).then(r=>{document.getElementById('status').textContent=`전체 검사 ${r.pass?'통과':'실패/미완료'} · 전후 ${r.captures.length}장 · 화면 비율 ${r.ratios.length}개 · 동일 기기 밀도 ${r.density.length}단계 · 웹 비교 ${r.web.length}비율 · 실기기 미검증. 단위 테스트 241개·웹 빌드 통과.`;}).catch(()=>{});
+</script></html>
