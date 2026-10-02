@@ -1,0 +1,223 @@
+{
+  "capturedAt": "2026-10-02T03:38:30.133Z",
+  "priorCandidate": "../attempt-2/verification.json",
+  "settingsBeforeRevision": "97b9b0c222b78cdd4d9f579107d27771fe60ee1b",
+  "conditions": {
+    "viewport": [
+      390,
+      844
+    ],
+    "dpr": 2,
+    "png": [
+      780,
+      1688
+    ],
+    "clock": "2026-10-02T00:00:00Z",
+    "seed": 20261002,
+    "locale": "en-US",
+    "timezone": "Asia/Seoul",
+    "profile": "fresh localStorage, music/sound/haptics off",
+    "native": "trackNativeFrame(true) simulation, legacy hapticsOn:true, navigator.vibrate spy",
+    "animation": "finite finished, infinite paused at zero",
+    "browser": "154.0.8037.93"
+  },
+  "screens": [
+    {
+      "size": [
+        390,
+        844
+      ],
+      "native": true,
+      "prior": {
+        "x": 40.567291259765625,
+        "y": 39.32008361816406,
+        "width": 308.86541748046875,
+        "height": 362.45361328125
+      },
+      "after": {
+        "x": 71.4538345336914,
+        "y": 75.56544494628906,
+        "width": 247.09234619140625,
+        "height": 289.962890625
+      },
+      "pass": true
+    },
+    {
+      "size": [
+        360,
+        740
+      ],
+      "native": true,
+      "prior": {
+        "x": 39.1818962097168,
+        "y": 22.1998348236084,
+        "width": 281.6217956542969,
+        "height": 330.4849548339844
+      },
+      "after": {
+        "x": 67.34407043457031,
+        "y": 55.248329162597656,
+        "width": 225.2974395751953,
+        "height": 264.3879699707031
+      },
+      "pass": true
+    },
+    {
+      "size": [
+        430,
+        932
+      ],
+      "native": true,
+      "prior": {
+        "x": 44.7280387878418,
+        "y": 43.73191833496094,
+        "width": 340.5439453125,
+        "height": 399.6282958984375
+      },
+      "after": {
+        "x": 78.78243255615234,
+        "y": 83.69475555419922,
+        "width": 272.43511962890625,
+        "height": 319.70263671875
+      },
+      "pass": true
+    },
+    {
+      "size": [
+        390,
+        640
+      ],
+      "native": true,
+      "prior": {
+        "x": 86.25768280029297,
+        "y": 19.20008087158203,
+        "width": 217.484619140625,
+        "height": 255.209228515625
+      },
+      "after": {
+        "x": 108.00614929199219,
+        "y": 44.72100830078125,
+        "width": 173.98768615722656,
+        "height": 204.1673583984375
+      },
+      "pass": true
+    },
+    {
+      "size": [
+        800,
+        1280
+      ],
+      "native": true,
+      "prior": {
+        "x": 182.51536560058594,
+        "y": 38.40016174316406,
+        "width": 434.96923828125,
+        "height": 510.41845703125
+      },
+      "after": {
+        "x": 226.01229858398438,
+        "y": 89.4420166015625,
+        "width": 347.9753723144531,
+        "height": 408.334716796875
+      },
+      "pass": true
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "native": true,
+      "prior": {
+        "x": 381.49676513671875,
+        "y": 23.04013442993164,
+        "width": 260.98150634765625,
+        "height": 306.2510070800781
+      },
+      "after": {
+        "x": 407.59490966796875,
+        "y": 53.66524124145508,
+        "width": 208.78521728515625,
+        "height": 245.0007781982422
+      },
+      "pass": true
+    },
+    {
+      "size": [
+        390,
+        844
+      ],
+      "native": false,
+      "prior": {
+        "x": 40.567291259765625,
+        "y": 39.32008361816406,
+        "width": 308.86541748046875,
+        "height": 362.45361328125
+      },
+      "after": {
+        "x": 71.4538345336914,
+        "y": 75.56544494628906,
+        "width": 247.09234619140625,
+        "height": 289.962890625
+      },
+      "pass": true
+    },
+    {
+      "size": [
+        390,
+        560
+      ],
+      "native": false,
+      "prior": {
+        "x": 97.74708557128906,
+        "y": 18.62517547607422,
+        "width": 194.50584411621094,
+        "height": 228.2496337890625
+      },
+      "after": {
+        "x": 117.19766998291016,
+        "y": 41.45014190673828,
+        "width": 155.60467529296875,
+        "height": 182.5997314453125
+      },
+      "pass": true
+    }
+  ],
+  "settings": {
+    "switches": 2,
+    "musicToggle": true,
+    "soundToggle": true,
+    "legacyHapticsIgnored": true,
+    "buzzCalls": 0,
+    "progressPreserved": true,
+    "pass": true
+  },
+  "errors": [],
+  "captures": [
+    {
+      "file": "after-main.png",
+      "sha256": "bb5f6c5abc49be53c65d883ff4873fc923e61db784e49290ab108b9b3f3c7bdf",
+      "size": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "after-settings.png",
+      "sha256": "7c42751be1b494814fc74020b318ee0e57589ac1c3856e11daf0dc82fcb5a089",
+      "size": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "before-settings.png",
+      "sha256": "2dfc9a95027480d11ce0bd1b6165d4afe1b601238956c0326877f795a32a213e",
+      "size": [
+        780,
+        1688
+      ]
+    }
+  ],
+  "pass": true
+}

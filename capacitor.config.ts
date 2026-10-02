@@ -2,7 +2,7 @@ import type { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
   appId: "io.github.junyyyong.makezero",
-  appName: "TAP to TEN",
+  appName: "TAPtoTEN",
   webDir: "dist",
   // The window behind the WebView, so launch does not flash a colour the app
   // never shows. It matches the studio card the app opens on — see

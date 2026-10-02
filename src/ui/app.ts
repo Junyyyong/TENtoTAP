@@ -902,7 +902,7 @@ export class App {
     this.settingsScreen.render(this.settings);
     // Turning a channel on should demonstrate itself: silence after tapping
     // "on" reads as a broken switch.
-    if (change.soundOn || change.hapticsOn) feedback.item();
+    if (change.soundOn) feedback.item();
   }
 
   private applySettings(): void {
@@ -910,7 +910,8 @@ export class App {
     feedback.setSound(this.settings.soundOn);
     this.cheer.setSound(this.settings.soundOn);
     this.music.setEnabled(this.settings.musicOn);
-    feedback.setHaptics(this.settings.hapticsOn);
+    // Retain the legacy save field without re-enabling the removed feature.
+    feedback.setHaptics(false);
   }
 
 }

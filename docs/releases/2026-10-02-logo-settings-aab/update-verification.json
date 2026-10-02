@@ -1,0 +1,20 @@
+{
+  "verifiedAt": "2026-10-02T03:49:19.717Z",
+  "artifact": "releases/TAPtoTEN-1.0.7-code9.aab",
+  "labels": {
+    "app_name": "Package 'io.github.junyyyong.makezero':\n0x7f0d001c - string/app_name\n\t(default) - [STR] \"TAPtoTEN\"",
+    "title_activity_main": "Package 'io.github.junyyyong.makezero':\n0x7f0d0029 - string/title_activity_main\n\t(default) - [STR] \"TAPtoTEN\""
+  },
+  "capacitorAppName": "TAPtoTEN",
+  "vibrationControlAbsent": true,
+  "runtimeHapticsDisabled": true,
+  "musicAndSoundRetained": true,
+  "unchangedGameAndSaveSources": [
+    "src/ui/storage.ts",
+    "src/ui/persistentStore.ts",
+    "src/core/game.ts",
+    "src/core/rules.ts"
+  ],
+  "physicalDeviceAndPlayUpdate": "NOT RUN",
+  "pass": true
+}

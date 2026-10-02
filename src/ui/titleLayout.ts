@@ -1,8 +1,10 @@
 import { nativeCanvasScale } from './nativeFrame';
+import { trackMainLogoSize } from './mainLogo';
 
 /** Keep the original menu bands where they fit; otherwise use reachable
  * natural flow. Never shrink text to fix a short window. Web stays unchanged. */
 export function trackTitleLayout(screen: HTMLElement): void {
+  trackMainLogoSize(screen);
   if (!screen.closest('#app.is-native-frame')) return;
   const logo = screen.querySelector<HTMLElement>('.brand-mark')!;
   const modes = screen.querySelector<HTMLElement>('.mode-list')!;

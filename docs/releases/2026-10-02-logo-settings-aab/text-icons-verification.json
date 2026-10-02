@@ -1,0 +1,125 @@
+{
+  "verifiedAt": "2026-10-02T03:47:24.359Z",
+  "artifact": "releases/TAPtoTEN-1.0.7-code9.aab",
+  "sha256": "397c7978e3694344e50d22340b3b346b312a3b13bd53c8c04d7f81195fa50c0f",
+  "sameApplicationIdAndCertificate": true,
+  "minSdk": 24,
+  "targetSdk": 36,
+  "versionCodeIncreased": true,
+  "icons": [
+    {
+      "entry": "base/res/mipmap-hdpi-v4/ic_launcher.png",
+      "source": "android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "packagedSha256": "56190f7aa83523abcae502b76cbddcf6e0eff9315922245d3723d32e2b569589",
+      "sourceSha256": "08750efe2e21cb24eeb303dc4d2a7c5e52844147fcb2b0d5b82440561d0f47d2",
+      "visiblePixelsMatch": true
+    },
+    {
+      "entry": "base/res/mipmap-hdpi-v4/ic_launcher_foreground.png",
+      "source": "android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "packagedSha256": "bbfc71b4a5ec25256bcd4866165ec2b168218b3688fb74b89f186df50ccb7cb8",
+      "sourceSha256": "3c9ce36140f63971c82edf03c2b8042ed95f2baf708457e65c28f9d3cd73b9ee",
+      "visiblePixelsMatch": true
+    },
+    {
+      "entry": "base/res/mipmap-hdpi-v4/ic_launcher_round.png",
+      "source": "android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+      "packagedSha256": "bd9c268d96ad57b5e824b7c76c40288335b1fe6cf754d149acfeb9dddf484eff",
+      "sourceSha256": "f8e9d9e9b505866b7942a30d4d65496485902f29b562a2ff80afc679502a8cea",
+      "visiblePixelsMatch": true
+    },
+    {
+      "entry": "base/res/mipmap-mdpi-v4/ic_launcher.png",
+      "source": "android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+      "packagedSha256": "66d913bdc0aeeb503a8042bdc1785e97892445dfbbf90ba89f627f098874266a",
+      "sourceSha256": "df8abe4d400b27cf86e0c7f77d771b9ab21f886851642da73cd779edfcdd47cc",
+      "visiblePixelsMatch": true
+    },
+    {
+      "entry": "base/res/mipmap-mdpi-v4/ic_launcher_foreground.png",
+      "source": "android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+      "packagedSha256": "e839d649e484329639b1540c82e26916ee50bfd6278c339be6b0b7220bfcf6f4",
+      "sourceSha256": "7c035f45e1f42501a52727e3f6eca1da1b6fef72d0b7766adabed31f23e476e0",
+      "visiblePixelsMatch": true
+    },
+    {
+      "entry": "base/res/mipmap-mdpi-v4/ic_launcher_round.png",
+      "source": "android/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+      "packagedSha256": "2f996185e8a7d4cded39dacdef0fc253a4970b6053d557b6272b8560e98e908b",
+      "sourceSha256": "d043ccd2fbe4f482048097adba9a23d3239315d13f03d118bb53831b228ed21e",
+      "visiblePixelsMatch": true
+    },
+    {
+      "entry": "base/res/mipmap-xhdpi-v4/ic_launcher.png",
+      "source": "android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+      "packagedSha256": "1c06e774b2e877fe416d87d511aecceddf516f572a49f31ecab42e76a81caa65",
+      "sourceSha256": "3d61ae26a6ac723bc7257845a9e58888009985a87bbcebd894b6e4c03ed96417",
+      "visiblePixelsMatch": true
+    },
+    {
+      "entry": "base/res/mipmap-xhdpi-v4/ic_launcher_foreground.png",
+      "source": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+      "packagedSha256": "42d76231ad7c775d2692cc122799f73559e448e16e4a142c7275f701e7107469",
+      "sourceSha256": "cdc79a7e58639278a834430b8b7c0b065bbd05ba760b7fb79accc167fec163b5",
+      "visiblePixelsMatch": true
+    },
+    {
+      "entry": "base/res/mipmap-xhdpi-v4/ic_launcher_round.png",
+      "source": "android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+      "packagedSha256": "1f747234e7a22cf03f77e8d5c8a7de9ceb4241e64b0af986ba3f2a17bd07a93b",
+      "sourceSha256": "f204bb7b5c519b2841e73e5ddcf6afdfe2a96e72626e56506e059277eddefba0",
+      "visiblePixelsMatch": true
+    },
+    {
+      "entry": "base/res/mipmap-xxhdpi-v4/ic_launcher.png",
+      "source": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+      "packagedSha256": "83c70fcb3355046febe33b02b80c258156e0c4d563e0b718aa84625582e7d594",
+      "sourceSha256": "6053696cbe8d1e0a96a07ef78ca80dfa91d161398dbd014a9eaaf796b759702b",
+      "visiblePixelsMatch": true
+    },
+    {
+      "entry": "base/res/mipmap-xxhdpi-v4/ic_launcher_foreground.png",
+      "source": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "packagedSha256": "7c4c74c9522fa2c59cff6f037fdf288b2a9154f585cbd4804e487eda4130c809",
+      "sourceSha256": "36aa3044c42bd43697605153e2cb9c50da2629da56825eb4411dbbe2c2aebe6a",
+      "visiblePixelsMatch": true
+    },
+    {
+      "entry": "base/res/mipmap-xxhdpi-v4/ic_launcher_round.png",
+      "source": "android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+      "packagedSha256": "3a19692157249cb73f4ba71032e3e9e6f1dccb624fea6564b74d45468b5f701c",
+      "sourceSha256": "a304cd0e4dccd27870b2ac9adbad607b8918145eb3c3ad3f9552bb4ca5be4d6f",
+      "visiblePixelsMatch": true
+    },
+    {
+      "entry": "base/res/mipmap-xxxhdpi-v4/ic_launcher.png",
+      "source": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "packagedSha256": "0a307b3bf36e142c9a8609be52d640c1b4ee294abae2f2d04f7ce496c7aecf34",
+      "sourceSha256": "5db46987b45fdc2cebf4e2676532cc9eea1f18f9cc494456a4c2508995d6418c",
+      "visiblePixelsMatch": true
+    },
+    {
+      "entry": "base/res/mipmap-xxxhdpi-v4/ic_launcher_foreground.png",
+      "source": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "packagedSha256": "20dfbecd22783fc307e94a23187901cbf94cf08a72b185a5c6fce98b9afe1388",
+      "sourceSha256": "84f278f2fb08375fa7d7e2a3620339386f8c6753a60a985975ca3b6c6b810ce8",
+      "visiblePixelsMatch": true
+    },
+    {
+      "entry": "base/res/mipmap-xxxhdpi-v4/ic_launcher_round.png",
+      "source": "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+      "packagedSha256": "95f8c9a11422afae17796bb7e53c2b89971d7fa5ee5b7e4a0952acac3cd3f983",
+      "sourceSha256": "888dbd1738ae686ad01b8e47159c2721623882c990cd212c5ef5633503d3645a",
+      "visiblePixelsMatch": true
+    }
+  ],
+  "dexContainsLifecycleTextZoom100": true,
+  "fontScaleConfigChanges": "0x40001ff4",
+  "unchangedGameAndSaveSources": [
+    "src/ui/storage.ts",
+    "src/ui/persistentStore.ts",
+    "src/core/game.ts",
+    "src/core/rules.ts"
+  ],
+  "realDeviceTest": "NOT RUN; dex inspection and JVM lifecycle doubles are not a phone/WebView test"
+}

@@ -1,0 +1,66 @@
+{
+  "capturedAt": "2026-10-02T03:34:35.105Z",
+  "priorCandidate": "../attempt-2/verification.json",
+  "settingsBeforeRevision": "97b9b0c222b78cdd4d9f579107d27771fe60ee1b",
+  "conditions": {
+    "viewport": [
+      390,
+      844
+    ],
+    "dpr": 2,
+    "png": [
+      780,
+      1688
+    ],
+    "clock": "2026-10-02T00:00:00Z",
+    "seed": 20261002,
+    "locale": "en-US",
+    "timezone": "Asia/Seoul",
+    "profile": "fresh localStorage, music/sound/haptics off",
+    "native": "trackNativeFrame(true) simulation, legacy hapticsOn:true, navigator.vibrate spy",
+    "animation": "finite finished, infinite paused at zero",
+    "browser": "154.0.8037.93"
+  },
+  "screens": [
+    {
+      "size": [
+        390,
+        844
+      ],
+      "native": true,
+      "prior": {
+        "x": 40.567291259765625,
+        "y": 39.32008361816406,
+        "width": 308.86541748046875,
+        "height": 362.45361328125
+      },
+      "after": {
+        "x": 71.4538345336914,
+        "y": 75.56544494628906,
+        "width": 247.09234619140625,
+        "height": 289.962890625
+      },
+      "pass": true
+    }
+  ],
+  "settings": {},
+  "errors": [],
+  "captures": [
+    {
+      "file": "after-main.png",
+      "sha256": "bb5f6c5abc49be53c65d883ff4873fc923e61db784e49290ab108b9b3f3c7bdf",
+      "size": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "after-settings.png",
+      "sha256": "82d76f4c6e0c577db2e0a2e50695502255b95fea550e4040aa009af3493a0164",
+      "size": [
+        780,
+        1688
+      ]
+    }
+  ]
+}

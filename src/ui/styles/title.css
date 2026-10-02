@@ -107,6 +107,9 @@
   width: min(calc(68 * var(--layout-vw, 1vw)), 250px);
   height: auto;
   filter: none;
+  /* Paint only: preserve the existing flex box, logo center and other UI. */
+  transform: scale(var(--main-logo-scale, 1));
+  transform-origin: center;
 }
 
 .tagline {

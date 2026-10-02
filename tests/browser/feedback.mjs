@@ -1,11 +1,9 @@
 /**
- * Checks that the game actually makes a noise and buzzes the phone.
+ * Checks synthesized sound and that the removed vibration feature stays off.
  *
- * Neither can be asserted from a unit test: the sounds are synthesised by the
- * browser's own audio hardware and the vibration is a device call. Both also
- * fail silently by nature — a broken sound is indistinguishable from a quiet
- * one — so the only way to know they still work is to count the calls in a
- * real browser.
+ * Counts browser audio and vibration calls. A legacy saved hapticsOn:true
+ * must no longer request device vibration; the remaining sound channel and
+ * Settings switch still work. This is not a physical speaker/motor test.
  *
  *   npm run preview   then   node tests/browser/feedback.mjs
  */
@@ -119,14 +117,8 @@ async function sweepRow() {
   if (s.notes < picked) fail(`sound: ${picked} blocks picked but only ${s.notes} notes played`);
   else ok(`sound — ${picked} picks + ${made ? "clear" : "refusal"} = ${s.notes} notes`);
 
-  if (s.buzz.length < picked) fail(`vibration: ${picked} blocks picked but only ${s.buzz.length} buzzes`);
-  else ok(`vibration — ${s.buzz.length} buzzes (last ${JSON.stringify(s.buzz.at(-1))})`);
-
-  // A refusal must not feel like a success. It is the one pattern that is a
-  // sequence rather than a single short tick.
-  const last = s.buzz.at(-1);
-  if (!made && !Array.isArray(last)) fail("a refusal buzzed once — indistinguishable from success");
-  else ok(made ? "a clear buzzes with the success pattern" : "a refusal is two short knocks — not the success one");
+  if (s.buzz.length > 0) fail('removed vibration feature was re-enabled by the legacy saved flag');
+  else ok('legacy hapticsOn:true cannot re-enable vibration');
 }
 
 // ── sound off, haptics on ──────────────────────────────────────────────
@@ -137,8 +129,8 @@ async function sweepRow() {
   const s = await spy();
   if (s.notes > 0) fail(`sound is off but ${s.notes} notes played`);
   else ok("sound off — nothing plays");
-  if (s.buzz.length === 0) fail("only sound was turned off, but the vibration stopped too");
-  else ok("turning off sound leaves vibration alone");
+  if (s.buzz.length > 0) fail('removed vibration feature ran while sound was off');
+  else ok('sound off and no vibration');
 }
 
 // ── haptics off, sound on ──────────────────────────────────────────────
@@ -161,6 +153,8 @@ async function sweepRow() {
   await page.waitForTimeout(2400);
   await page.click("#btn-title-settings");
   await page.waitForTimeout(360);
+  if (await page.locator('#switch-haptics').count()) fail('vibration switch still appears in Settings');
+  else ok('Settings has no vibration switch');
   await page.click("#switch-sound");
   await page.waitForTimeout(160);
   const off = await page.getAttribute("#switch-sound", "aria-checked");
@@ -173,5 +167,5 @@ async function sweepRow() {
 }
 
 if (errors.length) for (const e of errors) fail(`page error: ${e}`);
-else ok("no page errors during sound and vibration");
+else ok("no page errors during sound and legacy vibration checks");
 await browser.close();
