@@ -1,7 +1,9 @@
 import { aliveCount, valueAt } from "../core/board";
 import {
   canSplit,
+  breakLimitlessCombo,
   commitSelection,
+  hasLimitlessCombo,
   newGame,
   payoutFor,
   penalizeMistake,
@@ -149,6 +151,7 @@ export class App {
       onSplit: (index) => this.onSplit(index),
       onReject: (values, colors) => {
         if (this.flow.current !== 'inGame' || this.state.status !== 'playing') return;
+        this.state = breakLimitlessCombo(this.state);
         this.hud.combo = 0;
         this.held = 0;
         feedback.reject();
@@ -159,6 +162,13 @@ export class App {
           this.hud.showTimePenalty();
           this.render(); // Including the normal time-up flow if the penalty reaches zero.
         }, colors);
+      },
+      onCancel: () => {
+        if (this.flow.current !== 'inGame' || this.state.status !== 'playing' || !hasLimitlessCombo(this.state.config)) return;
+        this.state = breakLimitlessCombo(this.state);
+        this.hud.combo = 0;
+        feedback.resetCombo();
+        this.render();
       },
       onSelectionChange: (values, colors) => {
         // A block joining the selection is the one event the board does not
@@ -475,7 +485,7 @@ export class App {
     if (!result.ok) return;
     this.held = 0;
     feedback.clear(selection.length);
-    this.hud.combo += 1;
+    this.hud.combo = hasLimitlessCombo(state.config) ? state.limitlessCombo : this.hud.combo + 1;
     this.view.popScore(anchor, result.score);
     this.state = state;
     this.recordScore();

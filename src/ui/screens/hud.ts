@@ -1,5 +1,5 @@
 import { aliveCount, emptyIndices } from "../../core/board";
-import { canSplit, targetsOf } from "../../core/game";
+import { canSplit, hasLimitlessCombo, LIMITLESS_COMBO_POINTS, LIMITLESS_COMBO_START, targetsOf } from "../../core/game";
 import type { GameState } from "../../core/game";
 import { el, formatClock } from "../dom";
 
@@ -222,6 +222,13 @@ export class Hud {
     // The one rule this mode has that the others do not, said where it is
     // needed: landing on ten clears, so a bigger sum means stepping over it.
     if (state.config.mode === "timeless") return "Past 10 aims for 20 · past 20 for 30";
+    if (hasLimitlessCombo(state.config)) {
+      const combo = state.limitlessCombo;
+      if (combo === 0) return `${LIMITLESS_COMBO_START} COMBO → +${LIMITLESS_COMBO_POINTS} BONUS`;
+      return combo >= LIMITLESS_COMBO_START
+        ? `${combo} COMBO · +${LIMITLESS_COMBO_POINTS} BONUS`
+        : `${combo} COMBO · BONUS AT ${LIMITLESS_COMBO_START}`;
+    }
     if (state.config.mode !== "story") return "Make ten to score";
     return "Clear every block to win the picture";
   }

@@ -1,0 +1,41 @@
+{
+  "verifiedAt": "2026-10-08T07:50:41.589Z",
+  "pass": true,
+  "artifact": "releases/TAPtoTEN-1.0.8-code10.aab",
+  "baselineArtifact": "releases/TAPtoTEN-1.0.7-code9.aab",
+  "applicationIdAndCertificateUnchanged": true,
+  "labels": {
+    "app_name": "Package 'io.github.junyyyong.makezero':\n0x7f0d001c - string/app_name\n\t(default) - [STR] \"TAPtoTEN\"",
+    "title_activity_main": "Package 'io.github.junyyyong.makezero':\n0x7f0d0029 - string/title_activity_main\n\t(default) - [STR] \"TAPtoTEN\""
+  },
+  "unchangedLauncherIcons": [
+    "base/res/mipmap-hdpi-v4/ic_launcher.png",
+    "base/res/mipmap-hdpi-v4/ic_launcher_foreground.png",
+    "base/res/mipmap-hdpi-v4/ic_launcher_round.png",
+    "base/res/mipmap-mdpi-v4/ic_launcher.png",
+    "base/res/mipmap-mdpi-v4/ic_launcher_foreground.png",
+    "base/res/mipmap-mdpi-v4/ic_launcher_round.png",
+    "base/res/mipmap-xhdpi-v4/ic_launcher.png",
+    "base/res/mipmap-xhdpi-v4/ic_launcher_foreground.png",
+    "base/res/mipmap-xhdpi-v4/ic_launcher_round.png",
+    "base/res/mipmap-xxhdpi-v4/ic_launcher.png",
+    "base/res/mipmap-xxhdpi-v4/ic_launcher_foreground.png",
+    "base/res/mipmap-xxhdpi-v4/ic_launcher_round.png",
+    "base/res/mipmap-xxxhdpi-v4/ic_launcher.png",
+    "base/res/mipmap-xxxhdpi-v4/ic_launcher_foreground.png",
+    "base/res/mipmap-xxxhdpi-v4/ic_launcher_round.png"
+  ],
+  "unchangedSources": [
+    "src/ui/storage.ts",
+    "src/ui/persistentStore.ts",
+    "src/core/rules.ts",
+    "android/app/src/main/java/io/github/junyyyong/makezero/MainActivity.java"
+  ],
+  "unchangedCss": {
+    "path": "assets/index--FZkLO0x.css",
+    "sha256": "f41858afd574115430838b6b1a1118ff916ca1080731e482e158fbc0e7a1faf4"
+  },
+  "comboCodeBundled": true,
+  "priorBrowserVerification": "docs/research/2026-10-08-limitless-combo/run-2/verification.json",
+  "physicalDeviceAndPlayUpdate": "NOT RUN"
+}

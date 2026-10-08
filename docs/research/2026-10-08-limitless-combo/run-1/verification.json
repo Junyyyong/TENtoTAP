@@ -1,0 +1,315 @@
+{
+  "capturedAt": "2026-10-08T07:35:12.147Z",
+  "beforeRevision": "f68c7a8cc6ee0ce0b55da44ae2145edbb30e4eb7",
+  "conditions": {
+    "css": [
+      390,
+      844
+    ],
+    "dpr": 2,
+    "png": [
+      780,
+      1688
+    ],
+    "clock": "2026-10-08T00:00:00Z",
+    "randomSeed": 20261008,
+    "profile": "fresh localStorage, learningStage31, music/sound off",
+    "native": "trackNativeFrame(true) simulation; no physical phone or native Preferences",
+    "fixture": "App main round, controlled 9×9 alternating 4/6 board, 60 seconds frozen; real touch answers",
+    "harness": "route exposes development App; no game source changed for inspection",
+    "browser": "154.0.8037.98"
+  },
+  "cases": [
+    {
+      "version": "before",
+      "action": "answer 1",
+      "state": {
+        "score": 10,
+        "combo": null,
+        "remainingMs": 60000,
+        "notice": "Make ten to score",
+        "selected": [],
+        "best": 25,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "before",
+      "action": "answer 2",
+      "state": {
+        "score": 20,
+        "combo": null,
+        "remainingMs": 60000,
+        "notice": "Make ten to score",
+        "selected": [],
+        "best": 25,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "before",
+      "action": "answer 3",
+      "state": {
+        "score": 30,
+        "combo": null,
+        "remainingMs": 60000,
+        "notice": "Make ten to score",
+        "selected": [],
+        "best": 30,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "before",
+      "action": "answer 4",
+      "state": {
+        "score": 40,
+        "combo": null,
+        "remainingMs": 60000,
+        "notice": "Make ten to score",
+        "selected": [],
+        "best": 40,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "before",
+      "action": "answer 5",
+      "state": {
+        "score": 50,
+        "combo": null,
+        "remainingMs": 60000,
+        "notice": "Make ten to score",
+        "selected": [],
+        "best": 50,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "before",
+      "action": "answer 6",
+      "state": {
+        "score": 60,
+        "combo": null,
+        "remainingMs": 60000,
+        "notice": "Make ten to score",
+        "selected": [],
+        "best": 60,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "before",
+      "action": "cancel one selected tile with real 3px touch movement",
+      "state": {
+        "score": 60,
+        "combo": null,
+        "remainingMs": 60000,
+        "notice": "Make ten to score",
+        "selected": [
+          14
+        ],
+        "best": 60,
+        "flow": "inGame",
+        "sum": "4"
+      },
+      "pass": true
+    },
+    {
+      "version": "after",
+      "action": "answer 1",
+      "state": {
+        "score": 10,
+        "combo": 1,
+        "remainingMs": 60000,
+        "notice": "1 COMBO · BONUS AT 5",
+        "selected": [],
+        "best": 25,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "after",
+      "action": "answer 2",
+      "state": {
+        "score": 20,
+        "combo": 2,
+        "remainingMs": 60000,
+        "notice": "2 COMBO · BONUS AT 5",
+        "selected": [],
+        "best": 25,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "after",
+      "action": "answer 3",
+      "state": {
+        "score": 30,
+        "combo": 3,
+        "remainingMs": 60000,
+        "notice": "3 COMBO · BONUS AT 5",
+        "selected": [],
+        "best": 30,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "after",
+      "action": "answer 4",
+      "state": {
+        "score": 40,
+        "combo": 4,
+        "remainingMs": 60000,
+        "notice": "4 COMBO · BONUS AT 5",
+        "selected": [],
+        "best": 40,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "after",
+      "action": "answer 5",
+      "state": {
+        "score": 70,
+        "combo": 5,
+        "remainingMs": 60000,
+        "notice": "5 COMBO · +20 BONUS",
+        "selected": [],
+        "best": 70,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+30",
+      "pass": true
+    },
+    {
+      "version": "after",
+      "action": "answer 6",
+      "state": {
+        "score": 100,
+        "combo": 6,
+        "remainingMs": 60000,
+        "notice": "6 COMBO · +20 BONUS",
+        "selected": [],
+        "best": 100,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+30",
+      "pass": true
+    },
+    {
+      "version": "after",
+      "action": "cancel one selected tile with real 3px touch movement",
+      "state": {
+        "score": 100,
+        "combo": 0,
+        "remainingMs": 60000,
+        "notice": "5 COMBO → +20 BONUS",
+        "selected": [
+          14
+        ],
+        "best": 100,
+        "flow": "inGame",
+        "sum": "4"
+      },
+      "pass": true
+    },
+    {
+      "action": "pause/resume automatic deselection preserves earned streak",
+      "state": {
+        "score": 170,
+        "combo": 5,
+        "remainingMs": 60000,
+        "notice": "5 COMBO · +20 BONUS",
+        "selected": [],
+        "best": 170,
+        "flow": "inGame",
+        "sum": "?"
+      },
+      "pass": true
+    }
+  ],
+  "captures": [
+    {
+      "file": "before-5-combo.png",
+      "sha256": "74669cc0310927e65a40f012b5b031888ba1dbe86a8403799a7ac6c832d8d856",
+      "dimensions": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "before-6-combo.png",
+      "sha256": "4b4824e42bc015fcacf980c4cbec4e732497eb2ce39bd0152796dd6941cc4f1d",
+      "dimensions": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "before-cancel.png",
+      "sha256": "9d0944d1d12a8d270dd0bd1b7d6c8d0895e0d3f319a028de86ba3567011a7144",
+      "dimensions": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "after-5-combo.png",
+      "sha256": "e94c24d96bf6fcc2a71bb5fe8001e7e12194c35fecd4d65f055adba3b92ccba2",
+      "dimensions": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "after-6-combo.png",
+      "sha256": "afc5ffa433ae0ac16f83c3736bff1eb4a85e53819d87801cc0750eb23ac78740",
+      "dimensions": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "after-cancel.png",
+      "sha256": "3efc320e0a2ee5dc9fa6f6ed8d342a41f3f49d356859a2cb9761cc10b5592cb9",
+      "dimensions": [
+        780,
+        1688
+      ]
+    }
+  ],
+  "errors": []
+}

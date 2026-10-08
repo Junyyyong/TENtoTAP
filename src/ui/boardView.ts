@@ -28,6 +28,8 @@ export interface BoardViewOptions {
   onSplit?(index: number): void;
   /** Fired when a selection is refused — the combo it was building is over. */
   onReject?(values: readonly number[], colors: readonly number[]): void;
+  /** A chosen tile/selection was cancelled, not auto-cleared by a correct answer. */
+  onCancel?(): void;
   /** Keeps the bottom sum indicator in sync with taps and drags. */
   onSelectionChange?(values: readonly number[], colors: readonly number[]): void;
   /**
@@ -83,6 +85,7 @@ export class BoardView {
     grid.addEventListener("pointercancel", this.onPointerCancel);
     grid.addEventListener("contextmenu", (event) => event.preventDefault());
     options.wrap.addEventListener("pointerdown", (event) => {
+      if (!this.interactive) return;
       if (this.tileIndexFrom(event.target) === null) this.clearSelection();
     });
 
@@ -206,6 +209,7 @@ export class BoardView {
   clearSelection(): void {
     if (this.selection.length === 0) return;
     this.selection = [];
+    this.options.onCancel?.();
     this.emitSelection();
     this.render();
   }
@@ -292,6 +296,7 @@ export class BoardView {
     if (at >= 0) {
       // A tap toggles exactly that block, matching familiar mobile selection.
       this.selection.splice(at, 1);
+      this.options.onCancel?.();
       // A finger can move inside the same tile during a tap. Do not let the
       // drag sweep immediately reselect the block this gesture just cancelled.
       this.gestureSettled = true;
@@ -354,9 +359,7 @@ export class BoardView {
     this.dragging = false;
     this.gestureSettled = false;
     this.lastPoint = null;
-    this.selection = [];
-    this.emitSelection();
-    this.render();
+    this.clearSelection();
   };
 
   /**

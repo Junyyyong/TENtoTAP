@@ -27,6 +27,8 @@ export interface GameState {
   config: RunConfig;
   board: Board;
   score: number;
+  /** Consecutive answers in the LIMITLESS main round; never persisted. */
+  limitlessCombo: number;
   hintsLeft: number;
   /** Moves still available to take back. */
   undosLeft: number;
@@ -64,6 +66,21 @@ export interface CommitOutcome {
   state: GameState;
   result: MatchResult;
   rowsRemoved: number;
+}
+
+export const LIMITLESS_COMBO_START = 5;
+export const LIMITLESS_COMBO_POINTS = 20;
+
+/** Only the 60-second main round receives combo scoring. */
+export function hasLimitlessCombo(config: RunConfig): boolean {
+  return config.mode === 'timeAttack' && !!config.scoreAttack &&
+    !config.learningStage && !config.timeAttackLevel;
+}
+
+/** Cancelling a selection breaks the streak, but costs no points or time. */
+export function breakLimitlessCombo(state: GameState): GameState {
+  if (state.status !== 'playing' || !hasLimitlessCombo(state.config) || state.limitlessCombo === 0) return state;
+  return { ...state, limitlessCombo: 0 };
 }
 
 /*
@@ -186,6 +203,7 @@ export function newGame(config: RunConfig, seed: number = randomSeed()): GameSta
     config,
     board,
     score: 0,
+    limitlessCombo: 0,
     hintsLeft: config.hints,
     undosLeft: config.undos,
     splitsLeft: config.splits,
@@ -234,7 +252,7 @@ export function penalizeMistake(state: GameState): GameState {
   const remainingMs = Math.max(0, state.remainingMs - 1000);
   // A penalty is not elapsed playing time and must not advance spawn clocks,
   // change the board/score, or introduce a pause in the game loop.
-  return { ...state, remainingMs, status: remainingMs === 0 ? 'timeUp' : 'playing' };
+  return { ...state, limitlessCombo: 0, remainingMs, status: remainingMs === 0 ? 'timeUp' : 'playing' };
 }
 
 /**
@@ -268,7 +286,7 @@ export function commitSelection(state: GameState, indices: readonly number[]): C
   }
   const result = evaluateSelection(state.board, indices, targetsOf(state.config));
   if (!result.ok || state.status !== "playing" || (state.config.learningStage && state.transitionMs)) {
-    return { state, result, rowsRemoved: 0 };
+    return { state: result.ok ? state : breakLimitlessCombo(state), result, rowsRemoved: 0 };
   }
   const cells = state.board.cells.map((cell) => ({ ...cell }));
   for (const i of indices) cells[i]!.cleared = true;
@@ -283,14 +301,19 @@ export function commitSelection(state: GameState, indices: readonly number[]): C
     state.config.spawn || state.config.keepBoard
       ? { board: { width: state.board.width, cells }, removed: 0 }
       : collapseRows({ width: state.board.width, cells });
+  const limitlessCombo = hasLimitlessCombo(state.config) ? state.limitlessCombo + 1 : 0;
+  const comboBonus = limitlessCombo >= LIMITLESS_COMBO_START ? LIMITLESS_COMBO_POINTS : 0;
+  // Return the total actually earned so the pop, records and results agree.
+  const earned = { ...result, score: result.score + comboBonus };
   const scored: GameState = {
     ...state,
     board,
-    score: state.score + result.score,
+    score: state.score + earned.score,
+    limitlessCombo,
     previous: state.config.undos > 0 ? state : undefined,
   };
   const next = settleStatus(reward(scored, state.score));
-  return { state: next, result, rowsRemoved: removed };
+  return { state: next, result: earned, rowsRemoved: removed };
 }
 
 /**

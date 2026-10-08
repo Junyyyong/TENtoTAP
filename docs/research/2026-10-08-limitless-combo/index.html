@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TAPtoTEN · 5콤보 보너스</title>
+<style>
+body{font-family:system-ui,sans-serif;background:#f4f5f7;color:#363c46;max-width:1100px;margin:auto;padding:24px}
+h1{font-size:24px}p{line-height:1.6}section{margin:24px 0}.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+figure{margin:0;background:white;border:1px solid #cdd2dc;border-radius:12px;overflow:hidden}figcaption{padding:12px;font-weight:700}img{width:100%;height:auto;display:block}
+a{color:#2876bb}@media(max-width:540px){.pair{gap:8px}body{padding:12px}figcaption{font-size:12px}}
+</style>
+<h1>LIMITLESS · 5콤보부터 정답마다 +20점</h1>
+<p>정답·판 교체에는 유지, 선택 취소·오답에는 초기화. 흰색/회색 UI와 원래 컬러 블록은 유지했다.<br>
+390×844 CSS px/DPR 2. Android 프레임 모의검사이며 실제 기기 화면은 아니다. 4/6 반복 보드·시간 고정의 검사 조건이다.</p>
+<section><h2>5번째 정답</h2><div class="pair">
+<figure><figcaption>전 · 50점 / 추가 점수 없음</figcaption><img src="run-2/before-5-combo.png" alt="변경 전 다섯 번 정답 50점"></figure>
+<figure><figcaption>후 · 70점 / 5 COMBO · +20 BONUS</figcaption><img src="run-2/after-5-combo.png" alt="변경 후 다섯 번째 정답의 추가 점수"></figure>
+</div></section>
+<section><h2>6번째 정답에도 +20점</h2><div class="pair">
+<figure><figcaption>전 · 60점</figcaption><img src="run-2/before-6-combo.png" alt="변경 전 여섯 번 정답 60점"></figure>
+<figure><figcaption>후 · 100점 / 6 COMBO · +20 BONUS</figcaption><img src="run-2/after-6-combo.png" alt="변경 후 여섯 번째 정답도 추가 점수"></figure>
+</div></section>
+<section><h2>선택 중 블록 하나를 다시 눌러 취소</h2><div class="pair">
+<figure><figcaption>전 · 선택 하나만 취소, 추가 점수 규칙 없음</figcaption><img src="run-2/before-cancel.png" alt="이전의 선택 취소"></figure>
+<figure><figcaption>후 · 콤보 0, 기존 점수/시간과 남은 선택 유지</figcaption><img src="run-2/after-cancel.png" alt="선택 취소 후 콤보 보너스 조건 초기화"></figure>
+</div></section>
+<p><a href="README.md">연구 기록·설계와 검증 한계</a> · <a href="run-2/verification.json">최종 검사 결과</a> · <a href="run-1/verification.json">첫 검사 결과 보존</a></p>
+</html>

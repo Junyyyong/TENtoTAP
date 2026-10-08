@@ -23,6 +23,7 @@ function stateWith(board: Board, overrides: Partial<GameState> = {}): GameState 
     config,
     board,
     score: 0,
+    limitlessCombo: 0,
     hintsLeft: config.hints,
     undosLeft: config.undos,
     splitsLeft: config.splits,

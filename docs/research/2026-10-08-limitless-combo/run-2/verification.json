@@ -1,0 +1,659 @@
+{
+  "capturedAt": "2026-10-08T07:37:31.758Z",
+  "beforeRevision": "f68c7a8cc6ee0ce0b55da44ae2145edbb30e4eb7",
+  "conditions": {
+    "css": [
+      390,
+      844
+    ],
+    "dpr": 2,
+    "png": [
+      780,
+      1688
+    ],
+    "clock": "2026-10-08T00:00:00Z",
+    "randomSeed": 20261008,
+    "profile": "fresh localStorage, learningStage31, music/sound off",
+    "native": "trackNativeFrame(true) simulation; no physical phone or native Preferences",
+    "fixture": "App main round, controlled 9×9 alternating 4/6 board, 60 seconds frozen; real touch answers",
+    "harness": "route exposes development App; no game source changed for inspection",
+    "browser": "154.0.8037.98"
+  },
+  "cases": [
+    {
+      "version": "before",
+      "action": "answer 1",
+      "state": {
+        "score": 10,
+        "combo": null,
+        "remainingMs": 60000,
+        "notice": "Make ten to score",
+        "selected": [],
+        "best": 25,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "before",
+      "action": "answer 2",
+      "state": {
+        "score": 20,
+        "combo": null,
+        "remainingMs": 60000,
+        "notice": "Make ten to score",
+        "selected": [],
+        "best": 25,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "before",
+      "action": "answer 3",
+      "state": {
+        "score": 30,
+        "combo": null,
+        "remainingMs": 60000,
+        "notice": "Make ten to score",
+        "selected": [],
+        "best": 30,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "before",
+      "action": "answer 4",
+      "state": {
+        "score": 40,
+        "combo": null,
+        "remainingMs": 60000,
+        "notice": "Make ten to score",
+        "selected": [],
+        "best": 40,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "before",
+      "action": "answer 5",
+      "state": {
+        "score": 50,
+        "combo": null,
+        "remainingMs": 60000,
+        "notice": "Make ten to score",
+        "selected": [],
+        "best": 50,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "before",
+      "action": "answer 6",
+      "state": {
+        "score": 60,
+        "combo": null,
+        "remainingMs": 60000,
+        "notice": "Make ten to score",
+        "selected": [],
+        "best": 60,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "before",
+      "action": "cancel one selected tile with real 3px touch movement",
+      "state": {
+        "score": 60,
+        "combo": null,
+        "remainingMs": 60000,
+        "notice": "Make ten to score",
+        "selected": [
+          14
+        ],
+        "best": 60,
+        "flow": "inGame",
+        "sum": "4"
+      },
+      "pass": true
+    },
+    {
+      "version": "after",
+      "action": "answer 1",
+      "state": {
+        "score": 10,
+        "combo": 1,
+        "remainingMs": 60000,
+        "notice": "1 COMBO · BONUS AT 5",
+        "selected": [],
+        "best": 25,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "after",
+      "action": "answer 2",
+      "state": {
+        "score": 20,
+        "combo": 2,
+        "remainingMs": 60000,
+        "notice": "2 COMBO · BONUS AT 5",
+        "selected": [],
+        "best": 25,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "after",
+      "action": "answer 3",
+      "state": {
+        "score": 30,
+        "combo": 3,
+        "remainingMs": 60000,
+        "notice": "3 COMBO · BONUS AT 5",
+        "selected": [],
+        "best": 30,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "after",
+      "action": "answer 4",
+      "state": {
+        "score": 40,
+        "combo": 4,
+        "remainingMs": 60000,
+        "notice": "4 COMBO · BONUS AT 5",
+        "selected": [],
+        "best": 40,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+10",
+      "pass": true
+    },
+    {
+      "version": "after",
+      "action": "answer 5",
+      "state": {
+        "score": 70,
+        "combo": 5,
+        "remainingMs": 60000,
+        "notice": "5 COMBO · +20 BONUS",
+        "selected": [],
+        "best": 70,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+30",
+      "pass": true
+    },
+    {
+      "version": "after",
+      "action": "answer 6",
+      "state": {
+        "score": 100,
+        "combo": 6,
+        "remainingMs": 60000,
+        "notice": "6 COMBO · +20 BONUS",
+        "selected": [],
+        "best": 100,
+        "flow": "inGame",
+        "sum": "10"
+      },
+      "pop": "+30",
+      "pass": true
+    },
+    {
+      "version": "after",
+      "action": "cancel one selected tile with real 3px touch movement",
+      "state": {
+        "score": 100,
+        "combo": 0,
+        "remainingMs": 60000,
+        "notice": "5 COMBO → +20 BONUS",
+        "selected": [
+          14
+        ],
+        "best": 100,
+        "flow": "inGame",
+        "sum": "4"
+      },
+      "pass": true
+    },
+    {
+      "action": "pause/resume automatic deselection preserves earned streak",
+      "state": {
+        "score": 170,
+        "combo": 5,
+        "remainingMs": 60000,
+        "notice": "5 COMBO · +20 BONUS",
+        "selected": [],
+        "best": 170,
+        "flow": "inGame",
+        "sum": "?"
+      },
+      "pass": true
+    },
+    {
+      "action": "blank tap setup",
+      "state": {
+        "score": 170,
+        "combo": 5,
+        "remainingMs": 60000,
+        "notice": "5 COMBO · +20 BONUS",
+        "selected": [
+          22
+        ],
+        "best": 170,
+        "flow": "inGame",
+        "sum": "4"
+      }
+    },
+    {
+      "action": "blank touch diagnostics",
+      "blank": {
+        "x": 195,
+        "y": 187,
+        "target": "board-wrap"
+      },
+      "state": {
+        "score": 170,
+        "combo": 0,
+        "remainingMs": 60000,
+        "notice": "5 COMBO → +20 BONUS",
+        "selected": [],
+        "best": 170,
+        "flow": "inGame",
+        "sum": "?"
+      }
+    },
+    {
+      "action": "tap blank board area cancels pending selection, no time/point cost",
+      "state": {
+        "score": 170,
+        "combo": 0,
+        "remainingMs": 60000,
+        "notice": "5 COMBO → +20 BONUS",
+        "selected": [],
+        "best": 170,
+        "flow": "inGame",
+        "sum": "?"
+      },
+      "pass": true
+    },
+    {
+      "action": "wrong answer resets and keeps existing -1 second penalty",
+      "state": {
+        "score": 240,
+        "combo": 0,
+        "remainingMs": 59000,
+        "notice": "5 COMBO → +20 BONUS",
+        "selected": [],
+        "best": 240,
+        "flow": "inGame",
+        "sum": "12"
+      },
+      "pass": true
+    },
+    {
+      "action": "best includes earned bonus; other records/stage preserved",
+      "data": {
+        "learningStage": 31,
+        "bestLimitlessScore": 240,
+        "bestEndless": 123,
+        "bestTimeless": 456,
+        "stage": 1,
+        "bestStory": 0,
+        "bestTimeAttack": 0,
+        "bestLearningScore": 0,
+        "bestTimeAttackLevels": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "bestEndlessMs": 0,
+        "fewestLeft": -1,
+        "seenChapters": [],
+        "bestTimes": [],
+        "collected": [],
+        "tutorialDone": false
+      },
+      "pass": true
+    }
+  ],
+  "captures": [
+    {
+      "file": "before-5-combo.png",
+      "sha256": "99be6a3e85eaf9c617f72c7f3ace36c98c1f4362686fe79c8d02381071d99f20",
+      "dimensions": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "before-6-combo.png",
+      "sha256": "b0fa5700df62f7e601e9ecb8571e581d805157d423d7c1d7f0983d2bf40af555",
+      "dimensions": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "before-cancel.png",
+      "sha256": "c29e23910106d2cc05b1c257cebd1c87eebe27190aab30a946d2b3384830ed79",
+      "dimensions": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "after-5-combo.png",
+      "sha256": "e15213afef610f4b3fa28a129cb1519edb7abb346b95e8795f7643f65f5da676",
+      "dimensions": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "after-6-combo.png",
+      "sha256": "bc8527ef79f900af615f11d56104d62681d703e835b24e28f224574df4855cbd",
+      "dimensions": [
+        780,
+        1688
+      ]
+    },
+    {
+      "file": "after-cancel.png",
+      "sha256": "855a912ff875b3b9d3dd8f03d7297fa64fd1305e5f698a0633c2b57e904b768e",
+      "dimensions": [
+        780,
+        1688
+      ]
+    }
+  ],
+  "errors": [],
+  "selectionRegression": [
+    {
+      "scenario": "LIMITLESS 2-block lesson",
+      "input": "mouse",
+      "action": "cancel with 3 CSS px movement",
+      "actual": {
+        "indices": [],
+        "terms": [],
+        "total": "?",
+        "incorrect": false,
+        "penalty": false,
+        "commits": [],
+        "rejects": [],
+        "moves": 3
+      }
+    },
+    {
+      "scenario": "LIMITLESS 2-block lesson",
+      "input": "touch",
+      "action": "cancel with 3 CSS px movement",
+      "actual": {
+        "indices": [],
+        "terms": [],
+        "total": "?",
+        "incorrect": false,
+        "penalty": false,
+        "commits": [],
+        "rejects": [],
+        "moves": 1
+      }
+    },
+    {
+      "scenario": "LIMITLESS 3-block lesson",
+      "input": "mouse",
+      "action": "cancel with 3 CSS px movement",
+      "actual": {
+        "indices": [],
+        "terms": [],
+        "total": "?",
+        "incorrect": false,
+        "penalty": false,
+        "commits": [],
+        "rejects": [],
+        "moves": 3
+      }
+    },
+    {
+      "scenario": "LIMITLESS 3-block lesson",
+      "input": "touch",
+      "action": "cancel with 3 CSS px movement",
+      "actual": {
+        "indices": [],
+        "terms": [],
+        "total": "?",
+        "incorrect": false,
+        "penalty": false,
+        "commits": [],
+        "rejects": [],
+        "moves": 1
+      }
+    },
+    {
+      "scenario": "LIMITLESS 4-block lesson",
+      "input": "mouse",
+      "action": "cancel with 3 CSS px movement",
+      "actual": {
+        "indices": [],
+        "terms": [],
+        "total": "?",
+        "incorrect": false,
+        "penalty": false,
+        "commits": [],
+        "rejects": [],
+        "moves": 3
+      }
+    },
+    {
+      "scenario": "LIMITLESS 4-block lesson",
+      "input": "touch",
+      "action": "cancel with 3 CSS px movement",
+      "actual": {
+        "indices": [],
+        "terms": [],
+        "total": "?",
+        "incorrect": false,
+        "penalty": false,
+        "commits": [],
+        "rejects": [],
+        "moves": 1
+      }
+    },
+    {
+      "scenario": "LIMITLESS 5-block lesson",
+      "input": "mouse",
+      "action": "cancel with 3 CSS px movement",
+      "actual": {
+        "indices": [],
+        "terms": [],
+        "total": "?",
+        "incorrect": false,
+        "penalty": false,
+        "commits": [],
+        "rejects": [],
+        "moves": 3
+      }
+    },
+    {
+      "scenario": "LIMITLESS 5-block lesson",
+      "input": "touch",
+      "action": "cancel with 3 CSS px movement",
+      "actual": {
+        "indices": [],
+        "terms": [],
+        "total": "?",
+        "incorrect": false,
+        "penalty": false,
+        "commits": [],
+        "rejects": [],
+        "moves": 1
+      }
+    },
+    {
+      "scenario": "LIMITLESS score round",
+      "input": "mouse",
+      "action": "cancel with 3 CSS px movement",
+      "actual": {
+        "indices": [],
+        "terms": [],
+        "total": "?",
+        "incorrect": false,
+        "penalty": false,
+        "commits": [],
+        "rejects": [],
+        "moves": 3
+      }
+    },
+    {
+      "scenario": "LIMITLESS score round",
+      "input": "touch",
+      "action": "cancel with 3 CSS px movement",
+      "actual": {
+        "indices": [],
+        "terms": [],
+        "total": "?",
+        "incorrect": false,
+        "penalty": false,
+        "commits": [],
+        "rejects": [],
+        "moves": 1
+      }
+    },
+    {
+      "scenario": "TIMELESS 10/20/30",
+      "input": "mouse",
+      "action": "cancel with 3 CSS px movement",
+      "actual": {
+        "indices": [],
+        "terms": [],
+        "total": "?",
+        "incorrect": false,
+        "penalty": false,
+        "commits": [],
+        "rejects": [],
+        "moves": 3
+      }
+    },
+    {
+      "scenario": "TIMELESS 10/20/30",
+      "input": "touch",
+      "action": "cancel with 3 CSS px movement",
+      "actual": {
+        "indices": [],
+        "terms": [],
+        "total": "?",
+        "incorrect": false,
+        "penalty": false,
+        "commits": [],
+        "rejects": [],
+        "moves": 1
+      }
+    },
+    {
+      "scenario": "ENDLESS 10",
+      "input": "mouse",
+      "action": "cancel with 3 CSS px movement",
+      "actual": {
+        "indices": [],
+        "terms": [],
+        "total": "?",
+        "incorrect": false,
+        "penalty": false,
+        "commits": [],
+        "rejects": [],
+        "moves": 3
+      }
+    },
+    {
+      "scenario": "ENDLESS 10",
+      "input": "touch",
+      "action": "cancel with 3 CSS px movement",
+      "actual": {
+        "indices": [],
+        "terms": [],
+        "total": "?",
+        "incorrect": false,
+        "penalty": false,
+        "commits": [],
+        "rejects": [],
+        "moves": 1
+      }
+    },
+    {
+      "scenario": "new drag after cancel",
+      "actual": {
+        "indices": [],
+        "terms": [
+          1,
+          2,
+          7
+        ],
+        "total": "10",
+        "incorrect": false,
+        "penalty": false,
+        "commits": [
+          [
+            0,
+            1,
+            2
+          ]
+        ],
+        "rejects": [],
+        "moves": 2
+      }
+    },
+    {
+      "scenario": "real wrong answer",
+      "actual": {
+        "indices": [],
+        "terms": [
+          9,
+          3
+        ],
+        "total": "12",
+        "incorrect": true,
+        "penalty": false,
+        "commits": [],
+        "rejects": [
+          [
+            9,
+            3
+          ]
+        ],
+        "moves": 0
+      }
+    }
+  ],
+  "pass": true
+}
